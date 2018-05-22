@@ -1,0 +1,199 @@
+
+[root@localhost ~]# history
+    1  pwd
+    2  cd /tmp
+    3  ls
+    4  cd vmware-tools-distrib/
+    5  ./vmware-install.pl 
+    6  init 6
+    7  ifconfig
+    8  yum update
+    9  yum install -y git docker net-tools
+   10  yum install git docker net-tools
+   11  yum install git docker
+   12  yum install  net-tools
+   13  yum install docker
+   14  yum install epel-release 
+   15  yum install docker
+   16  yum install docker-io
+   17  yum install epel-release
+   18  ps -ef | grep epel-release
+   19  ps -ef | grep docker
+   20  yum install docker-io
+   21  yum install git docker net-tools
+   22  chkconfig docker status
+   23  chkconfig docker on
+   24  service docker status
+   25  service docker start
+   26  docker run hello-world
+   27  docker info
+   28  docker version
+   29  docker images
+   30  docker run hello-world
+   31  docker ps -l
+   32  shutdown -r now
+   33  pwd
+   34  ls -lah
+   35  history
+   36  docker ps
+   37  docker run hello-world
+   38  docker ps
+   39  docker image
+   40  docker info
+   41  df -hk
+   42  df -hg
+   43  df -hm
+   44  df -hg
+   45  df -hG
+   46  df -h
+   47  docker images
+   48  docker ps
+   49  docker rmi 83f0de727d85
+   50  docker run --rm 83f0de727d85
+   51  docker images
+   52  docker ps -a
+   53  docker 
+   54  docker ps -a
+   55  docker rm hello-world
+   56  docker ps -a
+   57  docker rm 29747d0bee59
+   58  docker ps -a
+   59  docker ps
+   60  docker ps -a
+   61  docker images
+   62  docker rmi 83f0de727d85
+   63  docker images
+   64  which git
+   65  git --version
+   66  pwd
+   67  git clone https://github.com/gshipley/installcentos.git
+   68  ls
+   69  cd installcentos/
+   70  ls -l
+   71  ls
+   72  sudo yum install epel-release
+   73  sestatus
+   74  iptables -l
+   75  iptables -L
+   76  free -m
+   77  df -h
+   78  df -hk
+   79  df -hm
+   80  df -hf
+   81  df -f
+   82  disk -free
+   83  free -m
+   84  top
+   85  docker images
+   86  docker ps
+   87  ps -ef | grep docker
+   88  top -head
+   89  top head
+   90  top --help
+   91  top -help
+   92  top help
+   93  top -b -d 5 | head -n 10
+   94  docker images
+   95  docker ps
+   96  ps -ef | grep docker
+   97  free -m
+   98  ps -ef | grep docker
+   99  kill -9 14629
+  100  kill -9 18783
+  101  init 5
+  102  init 6
+  103  pwd
+  104  ls
+  105  ls -lah
+  106  ls
+  107  yum install -y git docker net-tools
+  108  docker images
+  109  docker rm 83f0de727d85
+  110  yum install -y git docker net-tools
+  111  sudo yum install -y java-1.8.0-openjdk
+  112  java -version
+  113  sudo yum install -y wget
+  114  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  115  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+  116  yum install jenkins
+  117  ps -ef |grep java
+  118  netstat -lntp 1330
+  119  yum install -y jenkins
+  120  netstat -lntp 1330
+  121  sudo systemctl start jenkins.service
+  122  sudo systemctl enable jenkins.service
+  123  systemctl start jenkins
+  124  service start jenkins
+  125  service enable jenkins
+  126  sudo systemctl start jenkins.service
+  127  vi /etc/sysconfig/jenkins 
+  128  jenkins -version
+  129  yum install jenkins
+  130  systemctl start jenkins
+  131  ip addr
+  132  wget http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.8/bin/apache-tomcat-9.0.8.tar.gz
+  133  ls
+  134  exit
+  135  ls
+  136  exit
+  137  history
+  138  top -b -d 5 | head -n 10
+  139  free -m
+  140  ps -ef | grep docker
+  141  free -m
+  142  top -b -d 5 | head -n 10
+  143  df -h
+  144  free -m
+  145  ifconfig
+  146  ps -ef|grep jenkins
+  147  systemctl status jenkins
+  148  service status jenkins
+  149  service status all
+  150  service list all
+  151  exit
+  152  ls /etc/sudoers
+  153  ls /etc/sudoers.d/
+  154  ls -l /etc/sudoers.d/
+  155  ls -l /etc/
+  156  vi /etc/sudoers
+  157  sudo usermod -aG wheel docker
+  158  exit
+  159  vi /etc/sudoers
+  160  cd /etc
+  161  ls
+  162  ls -l sudoers
+  163  awk -F':' '{ print $1}' /etc/passwd
+  164  cd ..
+  165  visudo
+  166  exit
+  167  pwd
+  168  ls
+  169  sudo mv apache-tomcat-9.0.8.tar.gz  /home/docker
+  170  ls
+  171  exit
+  172  visudo
+  173  iptables -L
+  174  iptables -L -n
+  175  ls -l /etc/sysconfig/iptables
+  176  vi /etc/sysconfig/iptables
+  177  sudo iptables -I INPUT 1 -p tcp --dport 8443 -j ACCEPT
+  178  sudo iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+  179  sudo iptables -I INPUT 1 -p tcp --dport 443 -j ACCEPT
+  180  sudo iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
+  181  vi /etc/sysconfig/iptables
+  182  iptables -L -n
+  183  sudo netstat -an | grep "LISTEN "
+  184  sudo systemctl restart jenkins
+  185  systemctl restart jenkins
+  186  exit
+  187  history
+  188  gedit  /home/docker/tomcat9/conf/tomcat-users.xml
+  189  ip addr show
+  190  sudo netstat -an | grep "LISTEN "
+  191  sudo systemctl restart jenkins
+  192  sudo cat /etc/sysconfig/jenkins 
+  193  sudo cat /etc/sysconfig/jenkins |grep  JENKINS_PORT
+  194  clear
+  195  history
+[root@localhost ~]# 
+

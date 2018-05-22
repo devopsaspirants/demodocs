@@ -1,0 +1,168 @@
+<html xmlns:tomboy="http://beatniksoftware.com/tomboy" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns:link="http://beatniksoftware.com/tomboy/link"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>(Untitled 6)</title><style type="text/css">
+	body {  }
+	h1 { font-size: xx-large;
+     	     font-weight: bold;
+     	     border-bottom: 1px solid black; }
+	div.note {
+		   position: relative;
+		   display: block;
+		   padding: 5pt;
+		   margin: 5pt; 
+		   white-space: -moz-pre-wrap; /* Mozilla */
+ 	      	   white-space: -pre-wrap;     /* Opera 4 - 6 */
+ 	      	   white-space: -o-pre-wrap;   /* Opera 7 */
+ 	      	   white-space: pre-wrap;      /* CSS3 */
+ 	      	   word-wrap: break-word;      /* IE 5.5+ */ }
+	</style></head><body><div class="note" id="(Untitled 6)"><a name="(untitled%206)"></a><h1>Jenkins Installation Steps Notes</h1>
+<a style="color:#3465A4" href="https://www.youtube.com/watch?v=Lxd6JMMxuwo">https://www.youtube.com/watch?v=Lxd6JMMxuwo</a>
+Describe your new note here.
+
+Steps for Installation:
+
+Step1:  
+
+		sudo yum install epel-release
+
+Step2:
+		sudo yum update
+Step3:
+		sudo reboot  (i will not do reboot)
+Step4:
+		sudo yum install -y java-1.8.0-openjdk
+Step5:
+		java -version
+Step6:
+		sudo yum install -y wget
+Step7:
+		RedHat Linux RPM packages for Jenkins
+
+To use this repository, run the following command:
+
+sudo wget -O <a style="color:#3465A4" href="/etc/yum.repos.d/jenkins.repo">/etc/yum.repos.d/jenkins.repo</a> <a style="color:#3465A4" href="https://pkg.jenkins.io/redhat-stable/jenkins.repo">https://pkg.jenkins.io/redhat-stable/jenkins.repo</a>
+
+sudo rpm --import <a style="color:#3465A4" href="https://pkg.jenkins.io/redhat-stable/jenkins.io.key">https://pkg.jenkins.io/redhat-stable/jenkins.io.key</a>
+
+Step8:
+		With that set up, the Jenkins package can be installed with:
+
+yum install jenkins
+
+Name 	Last modified 	Size
+jenkins-2.107.3-1.1.noarch.rpm 	2018/05/09	70.9M
+
+Step9:
+		Start the Jenkins service and set it to run at boot time:
+
+sudo systemctl start jenkins.service
+sudo systemctl enable jenkins.service
+
+
+Step10:
+			netstat -lntp 1330
+Step11:
+			192.168.33.141
+Step12:
+		wget <a style="color:#3465A4" href="http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.8/bin/apache-tomcat-9.0.8.tar.gz">http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.8/bin/apache-tomcat-9.0.8.tar.gz</a>
+Step13:
+		visudo
+		## Allow root to run any commands anywhere
+root    ALL=(ALL)       ALL
+docker  ALL=(ALL)       ALL
+
+		sudo usermod -aG wheel docker
+
+Step14:
+		sudo mv apache-tomcat-9.0.8.tar.gz  <a style="color:#3465A4" href="/home/docker">/home/docker</a>
+		
+		tar xzf apache-tomcat-9.0.8.tar.gz
+
+		sudo mv apache-tomcat-9.0.8  tomcat9
+Step15: 
+		gedit  <a style="color:#3465A4" href="/home/docker/tomcat9/conf/tomcat-users.xml">/home/docker/tomcat9/conf/tomcat-users.xml</a>
+
+Step16:
+			<a style="color:#3465A4" href="http://updates.jenkins-ci.org/download/war/">http://updates.jenkins-ci.org/download/war/</a>
+Step17:
+			download "<a style="color:#3465A4" href="http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war">http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war</a>"
+Step18:
+				wget <a style="color:#3465A4" href="http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war">http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war</a>
+
+Step19:
+			iptables -L -n
+
+		sudo iptables -I INPUT 1 -p tcp --dport 8443 -j ACCEPT
+		sudo iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+		sudo iptables -I INPUT 1 -p tcp --dport 443 -j ACCEPT
+		sudo iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
+
+		sudo netstat -an | grep "LISTEN "
+Step20:
+check all environment  variables values in CentOS 6.9
+					$ printenv
+
+Step21:
+			#Add jenkins to start up
+				
+$ chkconfig jenkins on
+
+$ sudo service jenkins start
+$ sudo service jenkins restart
+$ sudo service jenkins enable
+Usage: <a style="color:#3465A4" href="/etc/init.d/jenkins">/etc/init.d/jenkins</a> {start|stop|status|try-restart|restart|force-reload|reload|probe}
+ 
+$ vi <a style="color:#3465A4" href="/etc/sysconfig/jenkins">/etc/sysconfig/jenkins</a> 
+
+$ sudo cat <a style="color:#3465A4" href="/etc/sysconfig/jenkins">/etc/sysconfig/jenkins</a> |grep 8090
+$  sudo cat <a style="color:#3465A4" href="/etc/sysconfig/jenkins">/etc/sysconfig/jenkins</a> | grep JENKINS_PORT
+
+JENKINS_PORT="8090"
+
+$ jenkins -version
+
+I have changed the jenkins port to 8090
+
+#Check if jenkins installed
+<a style="color:#3465A4" href="http://serveripaddress:8080/">http://serveripaddress:8080/</a>
+
+Admin password is created and stored in the log file  “/var/log/jenkins/jenkins.log“. Run the below command to get the password.
+
+$ sudo ls -l  <a style="color:#3465A4" href="/var/log/jenkins/jenkins.log">/var/log/jenkins/jenkins.log</a>
+
+# grep -A 5 password <a style="color:#3465A4" href="/var/log/jenkins/jenkins.log">/var/log/jenkins/jenkins.log</a>
+username: 	 admin
+password:	 632dcbb6d1f44fd590e0f31db57e5833
+
+Step22:
+Setting JAVA environment variables:
+
+[docker@localhost ~]$ sudo find / -name java
+[sudo] password for docker: 
+<a style="color:#3465A4" href="/var/lib/alternatives/java">/var/lib/alternatives/java</a>
+<a style="color:#3465A4" href="/usr/bin/java">/usr/bin/java</a>
+<a style="color:#3465A4" href="/usr/lib/java">/usr/lib/java</a>
+<a style="color:#3465A4" href="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.171-3.b10.el6_9.x86_64/jre/bin/java">/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.171-3.b10.el6_9.x86_64/jre/bin/java</a>
+<a style="color:#3465A4" href="/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.41.x86_64/jre/bin/java">/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.41.x86_64/jre/bin/java</a>
+<a style="color:#3465A4" href="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.181.x86_64/jre/bin/java">/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.181.x86_64/jre/bin/java</a>
+<a style="color:#3465A4" href="/usr/lib64/libreoffice/ure/share/java">/usr/lib64/libreoffice/ure/share/java</a>
+<a style="color:#3465A4" href="/usr/lib64/libreoffice/share/Scripts/java">/usr/lib64/libreoffice/share/Scripts/java</a>
+<a style="color:#3465A4" href="/usr/share/doc/db4-devel-4.7.25/java">/usr/share/doc/db4-devel-4.7.25/java</a>
+<a style="color:#3465A4" href="/usr/share/doc/db4-devel-4.7.25/ref/java">/usr/share/doc/db4-devel-4.7.25/ref/java</a>
+<a style="color:#3465A4" href="/usr/share/java">/usr/share/java</a>
+<a style="color:#3465A4" href="/etc/java">/etc/java</a>
+<a style="color:#3465A4" href="/etc/alternatives/java">/etc/alternatives/java</a>
+<a style="color:#3465A4" href="/etc/pki/java">/etc/pki/java</a>
+<a style="color:#3465A4" href="/etc/pki/ca-trust/extracted/java">/etc/pki/ca-trust/extracted/java</a>
+
+
+Step23:<span style="font-style:italic;font-size:small;color:#888A85">Tue 22 May 2018 01:22:24 PM IST</span>
+
+gedit  <a style="color:#3465A4" href="/home/docker/tomcat9/conf/tomcat-users.xml">/home/docker/tomcat9/conf/tomcat-users.xml</a>
+
+<span style="font-style:italic;font-size:small;color:#888A85">Tue 22 May 2018 10:10:18 PM IST</span>
+Step24:
+Step25:
+
+
+
+
+</div></body></html>

@@ -1,0 +1,966 @@
+[docker@localhost Desktop]$ su -
+Password: 
+[root@localhost ~]# history
+    1  pwd
+    2  cd /tmp
+    3  ls
+    4  cd vmware-tools-distrib/
+    5  ./vmware-install.pl 
+    6  init 6
+    7  ifconfig
+    8  yum update
+    9  yum install -y git docker net-tools
+   10  yum install git docker net-tools
+   11  yum install git docker
+   12  yum install  net-tools
+   13  yum install docker
+   14  yum install epel-release 
+   15  yum install docker
+   16  yum install docker-io
+   17  yum install epel-release
+   18  ps -ef | grep epel-release
+   19  ps -ef | grep docker
+   20  yum install docker-io
+   21  yum install git docker net-tools
+   22  chkconfig docker status
+   23  chkconfig docker on
+   24  service docker status
+   25  service docker start
+   26  docker run hello-world
+   27  docker info
+   28  docker version
+   29  docker images
+   30  docker run hello-world
+   31  docker ps -l
+   32  shutdown -r now
+   33  pwd
+   34  ls -lah
+   35  history
+   36  docker ps
+   37  docker run hello-world
+   38  docker ps
+   39  docker image
+   40  docker info
+   41  df -hk
+   42  df -hg
+   43  df -hm
+   44  df -hg
+   45  df -hG
+   46  df -h
+   47  docker images
+   48  docker ps
+   49  docker rmi 83f0de727d85
+   50  docker run --rm 83f0de727d85
+   51  docker images
+   52  docker ps -a
+   53  docker 
+   54  docker ps -a
+   55  docker rm hello-world
+   56  docker ps -a
+   57  docker rm 29747d0bee59
+   58  docker ps -a
+   59  docker ps
+   60  docker ps -a
+   61  docker images
+   62  docker rmi 83f0de727d85
+   63  docker images
+   64  which git
+   65  git --version
+   66  pwd
+   67  git clone https://github.com/gshipley/installcentos.git
+   68  ls
+   69  cd installcentos/
+   70  ls -l
+   71  ls
+   72  sudo yum install epel-release
+   73  sestatus
+   74  iptables -l
+   75  iptables -L
+   76  free -m
+   77  df -h
+   78  df -hk
+   79  df -hm
+   80  df -hf
+   81  df -f
+   82  disk -free
+   83  free -m
+   84  top
+   85  docker images
+   86  docker ps
+   87  ps -ef | grep docker
+   88  top -head
+   89  top head
+   90  top --help
+   91  top -help
+   92  top help
+   93  top -b -d 5 | head -n 10
+   94  docker images
+   95  docker ps
+   96  ps -ef | grep docker
+   97  free -m
+   98  ps -ef | grep docker
+   99  kill -9 14629
+  100  kill -9 18783
+  101  init 5
+  102  init 6
+  103  pwd
+  104  ls
+  105  ls -lah
+  106  ls
+  107  yum install -y git docker net-tools
+  108  docker images
+  109  docker rm 83f0de727d85
+  110  yum install -y git docker net-tools
+  111  history
+[root@localhost ~]# top -b -d 5 | head -n 10
+top - 22:44:33 up 3 min,  3 users,  load average: 0.05, 0.08, 0.03
+Tasks: 223 total,   1 running, 222 sleeping,   0 stopped,   0 zombie
+Cpu(s):  1.5%us,  3.8%sy,  0.0%ni, 94.1%id,  0.5%wa,  0.0%hi,  0.1%si,  0.0%st
+Mem:   4039516k total,   674840k used,  3364676k free,    31964k buffers
+Swap:  2097148k total,        0k used,  2097148k free,   254204k cached
+
+   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                       
+     1 root      20   0 19340 1560 1240 S  0.0  0.0   0:02.22 init                                                                          
+     2 root      20   0     0    0    0 S  0.0  0.0   0:00.03 kthreadd                                                                      
+     3 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 migration/0                                                                   
+^C[root@localhost ~]# free -m
+             total       used       free     shared    buffers     cached
+Mem:          3944        658       3286          3         31        248
+-/+ buffers/cache:        379       3565
+Swap:         2047          0       2047
+[root@localhost ~]# ps -ef | grep docker
+root       2974      1  0 22:41 ?        00:00:00 /usr/bin/docker -d
+docker     3341      1  0 22:42 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+docker     3351   3329  0 22:42 ?        00:00:00 gnome-session
+docker     3359      1  0 22:42 ?        00:00:00 dbus-launch --sh-syntax --exit-with-session
+docker     3360      1  0 22:42 ?        00:00:00 /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+docker     3434      1  0 22:42 ?        00:00:00 /usr/libexec/gconfd-2
+docker     3438      1  0 22:42 ?        00:00:00 /usr/libexec/gnome-settings-daemon
+docker     3444      1  0 22:42 ?        00:00:00 seahorse-daemon
+docker     3449      1  0 22:42 ?        00:00:00 /usr/libexec/gvfsd
+docker     3457   3351  0 22:42 ?        00:00:00 metacity
+docker     3466      1  0 22:42 ?        00:00:00 /usr/bin/pulseaudio --start --log-target=syslog
+docker     3469   3351  0 22:42 ?        00:00:00 gnome-panel
+docker     3474   3351  1 22:42 ?        00:00:02 nautilus
+docker     3476      1  0 22:42 ?        00:00:00 /usr/libexec/bonobo-activation-server --ac-activate --ior-output-fd=18
+docker     3477   3466  0 22:42 ?        00:00:00 /usr/libexec/pulse/gconf-helper
+docker     3483   3351  0 22:42 ?        00:00:00 gnome-power-manager
+docker     3485      1  0 22:42 ?        00:00:00 /usr/libexec/trashapplet --oaf-activate-iid=OAFIID:GNOME_Panel_TrashApplet_Factory --oaf-ior-fd=24
+docker     3488      1  0 22:42 ?        00:00:00 /usr/libexec/gvfs-gdu-volume-monitor
+docker     3489      1  0 22:42 ?        00:00:00 /usr/libexec/wnck-applet --oaf-activate-iid=OAFIID:GNOME_Wncklet_Factory --oaf-ior-fd=18
+docker     3493   3351  0 22:42 ?        00:00:00 /usr/libexec/evolution/2.32/evolution-alarm-notify
+docker     3502   3351  0 22:42 ?        00:00:00 gpk-update-icon
+docker     3507      1  0 22:42 ?        00:00:00 /usr/lib/vmware-tools/sbin64/vmtoolsd -n vmusr --blockFd 3
+docker     3508   3351  0 22:42 ?        00:00:00 /usr/sbin/restorecond -u
+docker     3514      1  0 22:42 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.7 /org/gtk/gvfs/exec_spaw/0
+docker     3516   3351  0 22:42 ?        00:00:00 nm-applet --sm-disable
+docker     3520   3351  0 22:42 ?        00:00:00 bluetooth-applet
+docker     3537   3351  0 22:42 ?        00:00:00 /usr/libexec/gdu-notification-daemon
+docker     3543   3351  0 22:42 ?        00:00:00 abrt-applet
+docker     3547   3351  0 22:42 ?        00:00:00 /usr/libexec/polkit-gnome-authentication-agent-1
+docker     3550      1  0 22:42 ?        00:00:00 /usr/libexec/im-settings-daemon
+docker     3551   3351  0 22:42 ?        00:00:00 python /usr/share/system-config-printer/applet.py
+docker     3553   3351  0 22:42 ?        00:00:00 gnome-volume-control-applet
+docker     3555      1  0 22:42 ?        00:00:00 gnome-screensaver
+docker     3636      1  0 22:42 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+docker     3658      1  0 22:42 ?        00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+docker     3721      1  0 22:42 ?        00:00:00 /usr/libexec/gconf-im-settings-daemon
+docker     3730      1  1 22:42 ?        00:00:02 /usr/bin/gnote --panel-applet --oaf-activate-iid=OAFIID:GnoteApplet_Factory --oaf-ior-fd=19
+docker     3732      1  0 22:42 ?        00:00:00 /usr/libexec/notification-area-applet --oaf-activate-iid=OAFIID:GNOME_NotificationAreaApplet_Factory --oaf-ior-fd=28
+docker     3734      1  0 22:42 ?        00:00:00 /usr/libexec/clock-applet --oaf-activate-iid=OAFIID:GNOME_ClockApplet_Factory --oaf-ior-fd=40
+docker     3735      1  0 22:42 ?        00:00:00 /usr/libexec/gdm-user-switch-applet --oaf-activate-iid=OAFIID:GNOME_FastUserSwitchApplet_Factory --oaf-ior-fd=34
+docker     3755      1  0 22:42 ?        00:00:00 /usr/libexec/gvfsd-metadata
+docker     3761      1  0 22:42 ?        00:00:00 /usr/libexec/gvfsd-burn --spawner :1.7 /org/gtk/gvfs/exec_spaw/1
+docker     3784      1  2 22:42 ?        00:00:03 /usr/bin/gnome-terminal -x /bin/sh -c cd '/home/docker/Desktop' && exec $SHELL
+docker     3785   3784  0 22:42 ?        00:00:00 gnome-pty-helper
+docker     3786   3784  0 22:42 pts/0    00:00:00 /bin/bash
+docker     3854   3784  0 22:43 pts/1    00:00:00 /bin/bash
+root       3914   3808  0 22:45 pts/0    00:00:00 grep docker
+[root@localhost ~]# free -m
+             total       used       free     shared    buffers     cached
+Mem:          3944        658       3285          3         31        248
+-/+ buffers/cache:        379       3565
+Swap:         2047          0       2047
+[root@localhost ~]# top -b -d 5 | head -n 10
+top - 22:45:10 up 4 min,  3 users,  load average: 0.10, 0.09, 0.04
+Tasks: 223 total,   1 running, 222 sleeping,   0 stopped,   0 zombie
+Cpu(s):  1.3%us,  3.3%sy,  0.0%ni, 94.8%id,  0.4%wa,  0.0%hi,  0.1%si,  0.0%st
+Mem:   4039516k total,   675120k used,  3364396k free,    32000k buffers
+Swap:  2097148k total,        0k used,  2097148k free,   254192k cached
+
+   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                       
+  3177 root      20   0  236m  45m  11m S  1.9  1.2   0:11.10 Xorg                                                                          
+  3916 root      20   0 15016 1296  900 R  1.9  0.0   0:00.02 top                                                                           
+     1 root      20   0 19340 1560 1240 S  0.0  0.0   0:02.22 init                                                                          
+[root@localhost ~]# df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/VolGroup-lv_root
+                       18G  6.3G   11G  39% /
+tmpfs                 1.9G   80K  1.9G   1% /dev/shm
+/dev/sda1             477M   60M  392M  14% /boot
+/dev/sr0              4.2G  4.2G     0 100% /media/CentOS_6.5_Final
+[root@localhost ~]# df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/VolGroup-lv_root
+                       18G  6.5G  9.9G  40% /
+tmpfs                 1.9G   52M  1.9G   3% /dev/shm
+/dev/sda1             477M   60M  392M  14% /boot
+/dev/sr0              4.2G  4.2G     0 100% /media/CentOS_6.5_Final
+[root@localhost ~]# free -m
+             total       used       free     shared    buffers     cached
+Mem:          3944       2354       1589         71         45       1447
+-/+ buffers/cache:        862       3082
+Swap:         2047          0       2047
+[root@localhost ~]# ifconfig
+docker0   Link encap:Ethernet  HWaddr BA:CE:07:F4:1C:C8  
+          inet addr:172.17.42.1  Bcast:0.0.0.0  Mask:255.255.0.0
+          inet6 addr: fe80::b8ce:7ff:fef4:1cc8/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 b)  TX bytes:468 (468.0 b)
+
+eth0      Link encap:Ethernet  HWaddr 00:0C:29:4C:27:C5  
+          inet addr:192.168.33.141  Bcast:192.168.33.255  Mask:255.255.255.0
+          inet6 addr: fe80::20c:29ff:fe4c:27c5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:103863 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:37401 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:124081298 (118.3 MiB)  TX bytes:2681003 (2.5 MiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:522 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:522 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:46746 (45.6 KiB)  TX bytes:46746 (45.6 KiB)
+
+[root@localhost ~]# ps -ef|grep jenkins
+root       5421   3808  0 00:45 pts/0    00:00:00 grep jenkins
+You have new mail in /var/spool/mail/root
+[root@localhost ~]# systemctl status jenkins
+-bash: systemctl: command not found
+[root@localhost ~]# service status jenkins
+status: unrecognized service
+[root@localhost ~]# service status all
+status: unrecognized service
+[root@localhost ~]# service list all
+list: unrecognized service
+[root@localhost ~]# exit
+logout
+[docker@localhost Desktop]$ vi /etc/sudoers
+[docker@localhost Desktop]$ ls /etc/sudoers.d/
+ls: cannot open directory /etc/sudoers.d/: Permission denied
+[docker@localhost Desktop]$ su ls /etc/sudoers.d/
+su: user ls does not exist
+[docker@localhost Desktop]$ su -
+Password: 
+[root@localhost ~]# ls /etc/sudoers
+/etc/sudoers
+[root@localhost ~]# ls /etc/sudoers.d/
+[root@localhost ~]# ls -l /etc/sudoers.d/
+total 0
+[root@localhost ~]# ls -l /etc/
+total 1776
+drwxr-xr-x.  3 root root   4096 May 17 23:26 abrt
+drwxr-xr-x.  4 root root   4096 Feb 17  2016 acpi
+-rw-r--r--.  1 root root     44 May 21 22:36 adjtime
+-rw-r--r--.  1 root root   1512 Jan 12  2010 aliases
+-rw-r--r--.  1 root root  12288 May  9 02:02 aliases.db
+drwxr-xr-x.  2 root root   4096 May 17 23:29 alsa
+drwxr-xr-x.  2 root root   4096 May 21 22:53 alternatives
+-rw-------.  1 root root    541 Aug 24  2016 anacrontab
+-rw-r--r--.  1 root root    245 Nov 11  2010 anthy-conf
+-rw-r--r--.  1 root root    148 Jan 12  2016 asound.conf
+-rw-r--r--.  1 root root      1 Mar 22  2017 at.deny
+drwxr-x---.  3 root root   4096 May 17 23:30 audisp
+drwxr-x---.  3 root root   4096 May 17 23:30 audit
+-rw-r--r--.  1 root root  13641 Nov 15  2017 autofs.conf
+-rw-------.  1 root root    232 Nov 15  2017 autofs_ldap_auth.conf
+-rw-r--r--.  1 root root    667 Nov 15  2017 auto.master
+-rw-r--r--.  1 root root    524 Nov 15  2017 auto.misc
+-rwxr-xr-x.  1 root root   1260 Nov 15  2017 auto.net
+-rwxr-xr-x.  1 root root    687 Nov 15  2017 auto.smb
+drwxr-xr-x.  2 root root   4096 May 17 23:25 avahi
+drwxr-xr-x.  2 root root   4096 May 17 23:40 bash_completion.d
+-rw-r--r--.  1 root root   2699 Mar 22  2017 bashrc
+drwxr-xr-x.  2 root root   4096 Jan 26 13:11 blkid
+drwxr-xr-x.  2 root root   4096 May 17 23:27 bluetooth
+drwxr-xr-x.  2 root root   4096 May  9 00:52 bonobo-activation
+-rw-r--r--.  1 root root   1780 Oct 15  2009 cas.conf
+-rw-r--r--.  1 root root     27 Mar 28  2017 centos-release
+drwxr-xr-x.  2 root root   4096 May 17 23:27 certmonger
+-rw-r--r--.  1 root root    812 Oct  4  2017 cgconfig.conf
+drwxr-xr-x.  2 root root   4096 Oct  4  2017 cgconfig.d
+-rw-r--r--.  1 root root    234 Oct  4  2017 cgrules.conf
+-rw-r--r--.  1 root root    131 Oct  4  2017 cgsnapshot_blacklist.conf
+drwxr-xr-x.  2 root root   4096 May 11  2016 chkconfig.d
+drwxr-xr-x.  5 root root   4096 May 11  2016 ConsoleKit
+drwxr-xr-x.  2 root root   4096 May 17 23:28 cron.d
+drwxr-xr-x.  2 root root   4096 May 17 23:30 cron.daily
+-rw-------.  1 root root      0 Aug 24  2016 cron.deny
+drwxr-xr-x.  2 root root   4096 May 17 23:27 cron.hourly
+drwxr-xr-x.  2 root root   4096 May  9 00:56 cron.monthly
+-rw-r--r--.  1 root root    457 Sep 27  2011 crontab
+drwxr-xr-x.  2 root root   4096 Sep 27  2011 cron.weekly
+-rw-r--r--.  1 root root      0 May  9 00:51 crypttab
+-rw-r--r--.  1 root root   1625 Mar 22  2017 csh.cshrc
+-rw-r--r--.  1 root root    794 Mar 22  2017 csh.login
+drwxr-xr-x.  5 root lp     4096 May 22 00:03 cups
+drwxr-xr-x.  4 root root   4096 May 17 23:24 dbus-1
+drwxr-xr-x.  2 root root   4096 May 17 23:24 default
+drwxr-xr-x.  2 root root   4096 May 17 23:24 depmod.d
+drwxr-x---.  4 root root   4096 May 17 23:28 dhcp
+-rw-r--r--.  1 root root   4439 Feb  6  2017 DIR_COLORS
+-rw-r--r--.  1 root root   5139 Feb  6  2017 DIR_COLORS.256color
+-rw-r--r--.  1 root root   4113 Feb  6  2017 DIR_COLORS.lightbgcolor
+-rw-r--r--.  1 root root  21214 May 17 23:27 dnsmasq.conf
+drwxr-xr-x.  2 root root   4096 Oct  3  2017 dnsmasq.d
+drwxr-xr-x.  2 root root   4096 May 17 23:42 docker
+-rw-r--r--.  1 root root    519 May 12  2016 dracut.conf
+drwxr-xr-x.  2 root root   4096 May 12  2016 dracut.conf.d
+-rw-r--r--.  1 root root   3384 May 11  2016 drirc
+-rw-r--r--.  1 root root   4843 Nov 11  2010 enscript.cfg
+-rw-r--r--.  1 root root      0 Mar 22  2017 environment
+-rw-r--r--.  1 root root     28 Mar 22  2017 ethers
+drwxr-xr-x.  2 root root   4096 May 17 23:31 event.d
+-rw-r--r--.  1 root root      0 Jan 12  2010 exports
+lrwxrwxrwx.  1 root root     56 May  9 00:52 favicon.png -> /usr/share/icons/hicolor/16x16/apps/system-logo-icon.png
+drwxr-xr-x.  2 root root   4096 May  9 00:53 festival
+-rw-r--r--.  1 root root     64 Mar 22  2017 filesystems
+drwxr-xr-x.  3 root root   4096 May 17 23:29 firefox
+drwxr-xr-x.  4 root root   4096 May 17 23:24 fonts
+drwxr-xr-x.  2 root root   4096 May 17 23:29 foomatic
+-rw-r--r--.  1 root root     20 Mar 10  2015 fprintd.conf
+-rw-r--r--.  1 root root    779 May  9 02:16 fstab
+-rw-r--r--.  1 root root      0 Jun 20  2017 gai.conf
+drwxr-xr-x.  7 root root   4096 Mar 22  2017 gconf
+drwxr-xr-x.  2 root root   4096 Nov 12  2016 gcrypt
+drwxr-xr-x.  6 root root   4096 May 17 23:27 gdm
+drwxr-xr-x.  3 root root   4096 May 15  2017 ghostscript
+drwxr-xr-x.  3 root root   4096 May 11  2016 gnome-vfs-2.0
+drwxr-xr-x.  2 root root   4096 Jun 30  2014 gnupg
+-rw-r--r--.  1 root root    851 May 22 00:17 group
+-rw-r--r--.  1 root root    836 May 17 23:40 group-
+lrwxrwxrwx.  1 root root     22 May  9 00:58 grub.conf -> ../boot/grub/grub.conf
+----------.  1 root root    697 May 22 00:17 gshadow
+----------.  1 root root    685 May 17 23:40 gshadow-
+-rw-r--r--.  1 root root    801 Jul 19  2011 gssapi_mech.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:31 gtk-2.0
+drwxr-xr-x.  3 root root   4096 Oct 15  2014 hal
+-rw-r--r--.  1 root root      9 Mar 22  2017 host.conf
+-rw-r--r--.  1 root root    158 Jan 12  2010 hosts
+-rw-r--r--.  1 root root    370 Jan 12  2010 hosts.allow
+-rw-r--r--.  1 root root    460 Jan 12  2010 hosts.deny
+drwxr-xr-x.  2 root root   4096 May 17 23:27 hp
+drwxr-xr-x.  4 root root   4096 May 17 23:29 httpd
+-rw-r--r--.  1 root root   4850 Mar 23  2017 idmapd.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:26 init
+-rw-r--r--.  1 root root      0 May 11  2016 init.conf
+lrwxrwxrwx.  1 root root     11 May 17 23:23 init.d -> rc.d/init.d
+-rw-r--r--.  1 root root    884 May  9 00:58 inittab
+-rw-r--r--.  1 root root    942 Jan 12  2010 inputrc
+drwxr-xr-x.  2 root root   4096 May  9 00:55 ipa
+drwxr-xr-x.  2 root root   4096 May 17 23:26 iproute2
+-rw-r--r--.  1 root root     47 Mar 28  2017 issue
+-rw-r--r--.  1 root root     46 Mar 28  2017 issue.net
+drwxr-xr-x.  3 root root   4096 May 17 23:25 java
+drwxr-xr-x.  2 root root   4096 May 10  2016 jvm
+drwxr-xr-x.  2 root root   4096 May 10  2016 jvm-commmon
+drwxr-xr-x.  3 root root   4096 May  9 00:54 kde
+drwxr-xr-x.  4 root root   4096 May  9 00:54 kdump-adv-conf
+-rw-r--r--.  1 root root   8120 May 17 23:26 kdump.conf
+-rw-r--r--.  1 root root    449 Nov 22  2016 krb5.conf
+-rw-r--r--.  1 root root   1662 Nov 11  2010 latrace.conf
+drwxr-xr-x.  3 root root   4096 May  9 00:57 latrace.d
+-rw-r--r--.  1 root root  61597 May 17 23:40 ld.so.cache
+-rw-r--r--.  1 root root     28 Jul 25  2013 ld.so.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:26 ld.so.conf.d
+-rw-r-----.  1 root root    191 Dec 19  2015 libaudit.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:26 libnl
+drwxr-xr-x.  5 root root   4096 May 17 23:26 libreport
+-rw-r--r--.  1 root root   2293 Jul 25  2015 libuser.conf
+-rw-r--r--.  1 root root    286 May 17 23:23 localtime
+-rw-r--r--.  1 root root   1816 Feb  9  2016 login.defs
+-rw-r--r--.  1 root root    662 Aug 29  2007 logrotate.conf
+drwxr-xr-x.  2 root root   4096 May 22 00:17 logrotate.d
+-rw-r--r--.  1 root root    152 May  9 00:55 lsb-release
+drwxr-xr-x.  2 root root   4096 May  9 00:55 lsb-release.d
+-rw-r--r--.  1 root root  10814 Feb 21  2006 ltrace.conf
+drwxr-xr-x.  6 root root   4096 May 17 23:29 lvm
+drwxr-xr-x.  2 root root   4096 May 17 23:40 lxc
+-rw-r--r--.  1 root root    111 May 11  2016 magic
+-rw-r--r--.  1 root root    272 Nov 18  2009 mailcap
+-rw-r--r--.  1 root root   1909 Dec 17  2014 mail.rc
+drwxr-xr-x.  2 root root   4096 May  9 00:52 makedev.d
+-rw-r--r--.  1 root root   4940 Mar 22  2017 man.config
+drwxr-xr-x.  3 root root   4096 May 17 23:25 maven
+-rw-r--r--.  1 root root  43591 Sep 23  2011 mime.types
+-rw-r--r--.  1 root root    827 Mar 23  2017 mke2fs.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:29 modprobe.d
+-rw-r--r--.  1 root root      0 Jan 12  2010 motd
+-rw-r--r--.  1 root root    520 May 21 22:42 mtab
+-rw-r--r--.  1 root root   2620 Aug 17  2010 mtools.conf
+-rw-r--r--.  1 root root    251 Jan 27  2017 my.cnf
+-rw-r--r--.  1 root root   7846 Nov 12  2010 nanorc
+-rw-r--r--.  1 root root    767 Nov 30  2009 netconfig
+drwxr-xr-x.  5 root root   4096 May 17 23:28 NetworkManager
+-rw-r--r--.  1 root root     58 Oct  4  2017 networks
+-rw-r--r--.  1 root root   3605 Nov 15  2017 nfsmount.conf
+-rw-r--r--.  1 root root   1688 May  5  2010 nsswitch.conf
+drwxr-xr-x.  3 root root   4096 May 17 23:27 ntp
+-rw-r--r--.  1 root root   1778 Dec 18 19:21 ntp.conf
+drwxr-xr-x.  2 root root   4096 May  9 00:53 obex-data-server
+drwxr-xr-x.  2 root root   4096 May 11  2016 oddjob
+-rw-r--r--.  1 root root   4922 May 11  2016 oddjobd.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:27 oddjobd.conf.d
+drwxr-xr-x.  3 root root   4096 May 17 23:25 openldap
+drwxr-xr-x.  2 root root   4096 Sep 23  2011 opt
+drwxr-xr-x.  2 root root   4096 May 17 23:26 PackageKit
+drwxr-xr-x.  2 root root   4096 May 18 00:01 pam.d
+drwxr-xr-x.  3 root root   4096 May 17 23:25 pango
+-rw-r--r--.  1 root root   1762 May 22 00:17 passwd
+-rw-r--r--.  1 root root   1690 May 17 23:40 passwd-
+-rw-r--r--.  1 root root   1362 Aug 23  2010 pbm2ppa.conf
+drwxr-xr-x.  2 root root   4096 May  9 00:55 pcmcia
+-rw-r--r--.  1 root root   2872 Aug 21  2010 pinforc
+drwxr-xr-x.  3 root root   4096 Jan 28  2014 pkcs11
+drwxr-xr-x. 10 root root   4096 May 17 23:25 pki
+drwxr-xr-x.  2 root root   4096 May 17 23:26 plymouth
+drwxr-xr-x.  5 root root   4096 May  9 00:51 pm
+-rw-r--r--.  1 root root    370 Oct 15  2014 pm-utils-hd-apm-restore.conf
+-rw-r--r--.  1 root root   6300 Aug 23  2010 pnm2ppa.conf
+drwxr-xr-x.  5 root root   4096 Mar 17  2015 polkit-1
+drwxr-xr-x.  2 root root   4096 Aug 21  2010 popt.d
+drwxr-xr-x.  2 root root   4096 May 17 23:26 portreserve
+drwxr-xr-x.  2 root root   4096 May 17 23:27 postfix
+drwxr-xr-x.  3 root root   4096 May 17 23:27 ppp
+-rw-r--r--.  1 root root    789 Jul 19  2013 prelink.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:23 prelink.conf.d
+-rw-r--r--.  1 root root    399 May 22 00:03 printcap
+-rw-r--r--.  1 root root   1841 Mar 22  2017 profile
+drwxr-xr-x.  2 root root   4096 May 17 23:30 profile.d
+-rw-r--r--.  1 root root   6455 Jan 12  2010 protocols
+drwxr-xr-x.  2 root root   4096 May 17 23:26 pulse
+drwxr-xr-x.  2 root root   4096 May 17 23:26 purple
+-rw-r--r--.  1 root root    220 Oct 13  2008 quotagrpadmins
+-rw-r--r--.  1 root root    259 Jul 23  2015 quotatab
+lrwxrwxrwx.  1 root root      7 May 17 23:26 rc -> rc.d/rc
+lrwxrwxrwx.  1 root root     10 May 17 23:26 rc0.d -> rc.d/rc0.d
+lrwxrwxrwx.  1 root root     10 May 17 23:26 rc1.d -> rc.d/rc1.d
+lrwxrwxrwx.  1 root root     10 May 17 23:26 rc2.d -> rc.d/rc2.d
+lrwxrwxrwx.  1 root root     10 May 17 23:26 rc3.d -> rc.d/rc3.d
+lrwxrwxrwx.  1 root root     10 May 17 23:26 rc4.d -> rc.d/rc4.d
+lrwxrwxrwx.  1 root root     10 May 17 23:26 rc5.d -> rc.d/rc5.d
+lrwxrwxrwx.  1 root root     10 May 17 23:26 rc6.d -> rc.d/rc6.d
+drwxr-xr-x. 10 root root   4096 May 17 23:26 rc.d
+lrwxrwxrwx.  1 root root     13 May 17 23:26 rc.local -> rc.d/rc.local
+lrwxrwxrwx.  1 root root     15 May 17 23:26 rc.sysinit -> rc.d/rc.sysinit
+-rw-r--r--.  1 root root    966 Nov 23  2013 readahead.conf
+drwxr-xr-x.  2 root root   4096 May  9 00:55 redhat-lsb
+lrwxrwxrwx.  1 root root     14 May 17 23:23 redhat-release -> centos-release
+-rw-r--r--.  1 root root   1484 Oct 15  2014 request-key.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:29 request-key.d
+-rw-r--r--.  1 root root     92 May 22 00:02 resolv.conf
+-rw-r--r--.  1 root root   1615 May  4  2010 rpc
+drwxr-xr-x.  2 root root   4096 May 17 23:39 rpm
+-rw-r--r--.  1 root root   2876 May 17 23:29 rsyslog.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:29 rsyslog.d
+-rw-r--r--.  1 root root    930 Oct  4  2017 rwtab
+drwxr-xr-x.  2 root root   4096 May 17 23:26 rwtab.d
+drwxr-xr-x.  2 root root   4096 May 17 23:26 samba
+drwxr-xr-x.  3 root root   4096 May 17 23:27 sane.d
+drwxr-xr-x.  2 root root   4096 May 17 23:27 sasl2
+drwxr-xr-x.  3 root root   4096 May  9 00:56 scl
+-rw-------.  1 root root    122 Jan 12  2010 securetty
+drwxr-xr-x.  6 root root   4096 May 17 23:26 security
+drwxr-xr-x.  3 root root   4096 Jan 26 13:25 selinux
+-rw-r--r--.  1 root root 641020 Mar 22  2017 services
+-rw-r--r--.  1 root root    216 Nov 18  2016 sestatus.conf
+drwxr-xr-x.  2 root root   4096 May  9 00:54 setuptool.d
+drwxr-xr-x.  3 root root   4096 May 17 23:26 sgml
+----------.  1 root root   1090 May 22 00:17 shadow
+----------.  1 root root   1067 May 17 23:40 shadow-
+-rw-r--r--.  1 root root     61 May  9 00:56 shells
+drwxr-xr-x.  4 root root   4096 May 17 23:23 skel
+-rw-r--r--.  1 root root   6717 Mar 22  2017 smartd.conf
+drwxr-xr-x.  2 root root   4096 May 17 23:29 snmp
+-rw-r--r--.  1 root root    256 Nov 15  2017 sos.conf
+drwxr-xr-x.  3 root root   4096 May  9 00:54 sound
+drwxr-xr-x.  2 root root   4096 May 17 23:29 ssh
+drwxr-xr-x.  2 root root   4096 May 17 23:24 ssl
+drwx------.  2 root root   4096 Mar 14 04:12 sssd
+-rw-r--r--.  1 root root    212 Oct  4  2017 statetab
+drwxr-xr-x.  2 root root   4096 Oct  4  2017 statetab.d
+-rw-r-----.  1 root root   1786 Sep 25  2012 sudo.conf
+-r--r-----.  1 root root   3729 Dec  8  2015 sudoers
+drwxr-x---.  2 root root   4096 Jun 23  2017 sudoers.d
+-rw-r-----.  1 root root   3181 Jun  7  2017 sudo-ldap.conf
+drwxr-xr-x.  7 root root   4096 May 22 00:24 sysconfig
+-rw-r--r--.  1 root root   1057 Oct  4  2017 sysctl.conf
+drwxr-xr-x.  2 root root   4096 Oct  4  2017 sysctl.d
+lrwxrwxrwx.  1 root root     14 May 17 23:23 system-release -> centos-release
+-rw-r--r--.  1 root root     25 Mar 28  2017 system-release-cpe
+drwxr-xr-x.  2 root root   4096 Mar 16  2015 terminfo
+-rw-r--r--.  1 root root   1314 May 21 22:41 tpvmlp.conf
+-rw-r--r--.  1 root root     45 Feb 12  2014 Trolltech.conf
+drwxr-xr-x.  4 root root   4096 May 17 23:26 udev
+-rw-r--r--.  1 root root    480 May  9 02:14 updatedb.conf
+-rw-r--r--.  1 root root    478 Jan 26  2015 updatedb.conf.rpmnew
+-rw-r--r--.  1 root root   1982 Dec 12  2016 vimrc
+-rw-r--r--.  1 root root   1982 Dec 12  2016 virc
+drwxr-xr-x.  3 root root   4096 May  9 02:14 vmware-caf
+drwxr-xr-x.  6 root root   4096 May 21 22:41 vmware-tools
+-rw-r--r--.  1 root root   3008 Jul 23  2015 warnquota.conf
+-rw-r--r--.  1 root root   4479 Mar 22  2017 wgetrc
+drwxr-xr-x.  2 root root   4096 May 17 23:27 wpa_supplicant
+drwxr-xr-x.  6 root root   4096 May 17 23:26 X11
+drwxr-xr-x.  4 root root   4096 May  9 00:54 xdg
+drwxr-xr-x.  2 root root   4096 May 17 23:30 xinetd.d
+drwxr-xr-x.  2 root root   4096 May 27  2014 xml
+-rw-r--r--.  1 root root    585 May 11  2016 yp.conf
+drwxr-xr-x.  5 root root   4096 May 17 23:26 yum
+-rw-r--r--.  1 root root    969 Mar 22  2017 yum.conf
+drwxr-xr-x.  2 root root   4096 May 21 22:58 yum.repos.d
+[root@localhost ~]# vi /etc/sudoers
+[root@localhost ~]# sudo usermod -aG wheel docker
+[root@localhost ~]# exit
+logout
+[docker@localhost Desktop]$ vi /etc/sudoers
+[docker@localhost Desktop]$ vi /etc/sudoers
+sudoers    sudoers.d/ 
+[docker@localhost Desktop]$ vi /etc/sudoers
+sudoers    sudoers.d/ 
+[docker@localhost Desktop]$ vi /etc/sudoers
+[docker@localhost Desktop]$ cd ..
+[docker@localhost ~]$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[docker@localhost ~]$ pwd
+/home/docker
+[docker@localhost ~]$ sudo
+usage: sudo [-D level] -h | -K | -k | -V
+usage: sudo -v [-AknS] [-D level] [-g groupname|#gid] [-p prompt] [-u user name|#uid]
+usage: sudo -l[l] [-AknS] [-D level] [-g groupname|#gid] [-p prompt] [-U user name] [-u user name|#uid] [-g groupname|#gid]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C fd] [-D level] [-g groupname|#gid] [-p prompt] [-u user name|#uid] [-g
+            groupname|#gid] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C fd] [-D level] [-g groupname|#gid] [-p prompt] [-u user name|#uid] file ...
+[docker@localhost ~]$ sudo su -
+[sudo] password for docker: 
+docker is not in the sudoers file.  This incident will be reported.
+[docker@localhost ~]$ su -
+Password: 
+[root@localhost ~]# vi /etc/sudoers
+[root@localhost ~]# cd /etc
+[root@localhost etc]# ls
+abrt                       dnsmasq.conf      jvm-commmon       pango                         sasl2
+acpi                       dnsmasq.d         kde               passwd                        scl
+adjtime                    docker            kdump-adv-conf    passwd-                       securetty
+aliases                    dracut.conf       kdump.conf        pbm2ppa.conf                  security
+aliases.db                 dracut.conf.d     krb5.conf         pcmcia                        selinux
+alsa                       drirc             latrace.conf      pinforc                       services
+alternatives               enscript.cfg      latrace.d         pkcs11                        sestatus.conf
+anacrontab                 environment       ld.so.cache       pki                           setuptool.d
+anthy-conf                 ethers            ld.so.conf        plymouth                      sgml
+asound.conf                event.d           ld.so.conf.d      pm                            shadow
+at.deny                    exports           libaudit.conf     pm-utils-hd-apm-restore.conf  shadow-
+audisp                     favicon.png       libnl             pnm2ppa.conf                  shells
+audit                      festival          libreport         polkit-1                      skel
+autofs.conf                filesystems       libuser.conf      popt.d                        smartd.conf
+autofs_ldap_auth.conf      firefox           localtime         portreserve                   snmp
+auto.master                fonts             login.defs        postfix                       sos.conf
+auto.misc                  foomatic          logrotate.conf    ppp                           sound
+auto.net                   fprintd.conf      logrotate.d       prelink.conf                  ssh
+auto.smb                   fstab             lsb-release       prelink.conf.d                ssl
+avahi                      gai.conf          lsb-release.d     printcap                      sssd
+bash_completion.d          gconf             ltrace.conf       profile                       statetab
+bashrc                     gcrypt            lvm               profile.d                     statetab.d
+blkid                      gdm               lxc               protocols                     sudo.conf
+bluetooth                  ghostscript       magic             pulse                         sudoers
+bonobo-activation          gnome-vfs-2.0     mailcap           purple                        sudoers.d
+cas.conf                   gnupg             mail.rc           quotagrpadmins                sudo-ldap.conf
+centos-release             group             makedev.d         quotatab                      sysconfig
+certmonger                 group-            man.config        rc                            sysctl.conf
+cgconfig.conf              grub.conf         maven             rc0.d                         sysctl.d
+cgconfig.d                 gshadow           mime.types        rc1.d                         system-release
+cgrules.conf               gshadow-          mke2fs.conf       rc2.d                         system-release-cpe
+cgsnapshot_blacklist.conf  gssapi_mech.conf  modprobe.d        rc3.d                         terminfo
+chkconfig.d                gtk-2.0           motd              rc4.d                         tpvmlp.conf
+ConsoleKit                 hal               mtab              rc5.d                         Trolltech.conf
+cron.d                     host.conf         mtools.conf       rc6.d                         udev
+cron.daily                 hosts             my.cnf            rc.d                          updatedb.conf
+cron.deny                  hosts.allow       nanorc            rc.local                      updatedb.conf.rpmnew
+cron.hourly                hosts.deny        netconfig         rc.sysinit                    vimrc
+cron.monthly               hp                NetworkManager    readahead.conf                virc
+crontab                    httpd             networks          redhat-lsb                    vmware-caf
+cron.weekly                idmapd.conf       nfsmount.conf     redhat-release                vmware-tools
+crypttab                   init              nsswitch.conf     request-key.conf              warnquota.conf
+csh.cshrc                  init.conf         ntp               request-key.d                 wgetrc
+csh.login                  init.d            ntp.conf          resolv.conf                   wpa_supplicant
+cups                       inittab           obex-data-server  rpc                           X11
+dbus-1                     inputrc           oddjob            rpm                           xdg
+default                    ipa               oddjobd.conf      rsyslog.conf                  xinetd.d
+depmod.d                   iproute2          oddjobd.conf.d    rsyslog.d                     xml
+dhcp                       issue             openldap          rwtab                         yp.conf
+DIR_COLORS                 issue.net         opt               rwtab.d                       yum
+DIR_COLORS.256color        java              PackageKit        samba                         yum.conf
+DIR_COLORS.lightbgcolor    jvm               pam.d             sane.d                        yum.repos.d
+[root@localhost etc]# ls -l sudo
+sudo.conf       sudoers         sudoers.d/      sudo-ldap.conf  
+[root@localhost etc]# ls -l sudoers
+-r--r-----. 1 root root 3729 Dec  8  2015 sudoers
+[root@localhost etc]# awk -F':' '{ print $1}' /etc/passwd
+root
+bin
+daemon
+adm
+lp
+sync
+shutdown
+halt
+mail
+uucp
+operator
+games
+gopher
+ftp
+nobody
+dbus
+usbmuxd
+vcsa
+rpc
+rtkit
+avahi-autoipd
+abrt
+rpcuser
+nfsnobody
+haldaemon
+gdm
+ntp
+apache
+saslauth
+postfix
+pulse
+sshd
+tcpdump
+docker
+dockerroot
+jenkins
+[root@localhost etc]# cd ..
+[root@localhost /]# visudo
+[root@localhost /]# exit
+logout
+[docker@localhost ~]$ sudo su -
+[sudo] password for docker: 
+[root@localhost ~]# visudo
+visudo: /etc/sudoers.tmp unchanged
+[root@localhost ~]# iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere            state RELATED,ESTABLISHED 
+ACCEPT     icmp --  anywhere             anywhere            
+ACCEPT     all  --  anywhere             anywhere            
+ACCEPT     tcp  --  anywhere             anywhere            state NEW tcp dpt:ssh 
+REJECT     all  --  anywhere             anywhere            reject-with icmp-host-prohibited 
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+DOCKER     all  --  anywhere             anywhere            
+ACCEPT     all  --  anywhere             anywhere            ctstate RELATED,ESTABLISHED 
+ACCEPT     all  --  anywhere             anywhere            
+REJECT     all  --  anywhere             anywhere            reject-with icmp-host-prohibited 
+ACCEPT     all  --  anywhere             anywhere            
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain DOCKER (1 references)
+target     prot opt source               destination         
+[root@localhost ~]# iptables -L -n
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED 
+ACCEPT     icmp --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0           state NEW tcp dpt:22 
+REJECT     all  --  0.0.0.0/0            0.0.0.0/0           reject-with icmp-host-prohibited 
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+DOCKER     all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           ctstate RELATED,ESTABLISHED 
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+REJECT     all  --  0.0.0.0/0            0.0.0.0/0           reject-with icmp-host-prohibited 
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain DOCKER (1 references)
+target     prot opt source               destination         
+[root@localhost ~]# ls -l /etc/sysconfig/iptables
+-rw-------. 1 root root 476 May  9 00:58 /etc/sysconfig/iptables
+[root@localhost ~]# vi /etc/sysconfig/iptables
+[root@localhost ~]# sudo iptables -I INPUT 1 -p tcp --dport 8443 -j ACCEPT
+[root@localhost ~]# sudo iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+[root@localhost ~]# sudo iptables -I INPUT 1 -p tcp --dport 443 -j ACCEPT
+[root@localhost ~]# sudo iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
+[root@localhost ~]# vi /etc/sysconfig/iptables
+[root@localhost ~]# iptables -L -n
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0           tcp dpt:80 
+ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0           tcp dpt:443 
+ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0           tcp dpt:8080 
+ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0           tcp dpt:8443 
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED 
+ACCEPT     icmp --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0           state NEW tcp dpt:22 
+REJECT     all  --  0.0.0.0/0            0.0.0.0/0           reject-with icmp-host-prohibited 
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+DOCKER     all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           ctstate RELATED,ESTABLISHED 
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+REJECT     all  --  0.0.0.0/0            0.0.0.0/0           reject-with icmp-host-prohibited 
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain DOCKER (1 references)
+target     prot opt source               destination         
+[root@localhost ~]# sudo netstat -an | grep "LISTEN "
+tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      
+tcp        0      0 0.0.0.0:55860               0.0.0.0:*                   LISTEN      
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      
+tcp        0      0 127.0.0.1:631               0.0.0.0:*                   LISTEN      
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      
+tcp        0      0 ::ffff:127.0.0.1:8005       :::*                        LISTEN      
+tcp        0      0 :::8009                     :::*                        LISTEN      
+tcp        0      0 :::111                      :::*                        LISTEN      
+tcp        0      0 :::8080                     :::*                        LISTEN      
+tcp        0      0 :::56885                    :::*                        LISTEN      
+tcp        0      0 :::22                       :::*                        LISTEN      
+tcp        0      0 ::1:631                     :::*                        LISTEN      
+tcp        0      0 ::1:25                      :::*                        LISTEN      
+[root@localhost ~]# sudo systemctl restart jenkins
+sudo: systemctl: command not found
+[root@localhost ~]# systemctl restart jenkins
+-bash: systemctl: command not found
+[root@localhost ~]# exit
+logout
+[docker@localhost ~]$ sudo systemctl restart jenkins
+[sudo] password for docker: 
+sudo: systemctl: command not found
+[docker@localhost ~]$ sudo yum install -y java-1.8.0-openjdk.x86_64
+Loaded plugins: fastestmirror, refresh-packagekit, security
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+epel/metalink                                                                                                | 5.1 kB     00:00     
+ * base: centos.excellmedia.net
+ * epel: mirror.dmmlabs.jp
+ * extras: centos.excellmedia.net
+ * updates: centos.excellmedia.net
+base                                                                                                         | 3.7 kB     00:00     
+extras                                                                                                       | 3.4 kB     00:00     
+jenkins                                                                                                      | 2.9 kB     00:00     
+updates                                                                                                      | 3.4 kB     00:00     
+Package 1:java-1.8.0-openjdk-1.8.0.171-3.b10.el6_9.x86_64 already installed and latest version
+Nothing to do
+[docker@localhost ~]$ systemctl start jenkins
+bash: systemctl: command not found
+[docker@localhost ~]$ printenv
+ORBIT_SOCKETDIR=/tmp/orbit-docker
+HOSTNAME=localhost.localdomain
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+SHELL=/bin/bash
+TERM=xterm
+XDG_SESSION_COOKIE=6fa04a09314ff20d63a1c6b400000016-1526922723.894171-1211001913
+HISTSIZE=1000
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/docker/.gtkrc-1.2-gnome2
+WINDOWID=39845892
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+IMSETTINGS_MODULE=none
+USER=docker
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+SSH_AUTH_SOCK=/tmp/keyring-G6jL0S/socket.ssh
+GNOME_KEYRING_SOCKET=/tmp/keyring-G6jL0S/socket
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3351,unix/unix:/tmp/.ICE-unix/3351
+USERNAME=docker
+DESKTOP_SESSION=gnome
+MAIL=/var/spool/mail/docker
+PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/docker/bin
+QT_IM_MODULE=xim
+PWD=/home/docker
+XMODIFIERS=@im=none
+GDM_KEYBOARD_LAYOUT=us
+LANG=en_US.UTF-8
+GNOME_KEYRING_PID=3341
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome
+HISTCONTROL=ignoredups
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SHLVL=2
+HOME=/home/docker
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LOGNAME=docker
+CVS_RSH=ssh
+QTLIB=/usr/lib64/qt-3.3/lib
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-slYdaNsl8F,guid=5aa8edd4943221b1008c3a8800000040
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+WINDOWPATH=1
+DISPLAY=:0.0
+G_BROKEN_FILENAMES=1
+XAUTHORITY=/var/run/gdm/auth-for-docker-8N851F/database
+COLORTERM=gnome-terminal
+_=/usr/bin/printenv
+OLDPWD=/home/docker/Desktop
+[docker@localhost ~]$ ls -l /usr/lib/jvm
+total 12
+drwxr-xr-x. 3 root root 4096 May 17 23:25 java-1.6.0-openjdk-1.6.0.41.x86_64
+drwxr-xr-x. 3 root root 4096 May 17 23:28 java-1.7.0-openjdk-1.7.0.181.x86_64
+drwxr-xr-x. 3 root root 4096 May  2 00:38 java-1.8.0-openjdk-1.8.0.171-3.b10.el6_9.x86_64
+lrwxrwxrwx. 1 root root   21 May 21 22:53 jre -> /etc/alternatives/jre
+lrwxrwxrwx. 1 root root   27 May 17 23:25 jre-1.6.0 -> /etc/alternatives/jre_1.6.0
+lrwxrwxrwx. 1 root root   38 May 17 23:25 jre-1.6.0-openjdk.x86_64 -> java-1.6.0-openjdk-1.6.0.41.x86_64/jre
+lrwxrwxrwx. 1 root root   27 May 17 23:28 jre-1.7.0 -> /etc/alternatives/jre_1.7.0
+lrwxrwxrwx. 1 root root   39 May 17 23:28 jre-1.7.0-openjdk.x86_64 -> java-1.7.0-openjdk-1.7.0.181.x86_64/jre
+lrwxrwxrwx. 1 root root   27 May 21 22:53 jre-1.8.0 -> /etc/alternatives/jre_1.8.0
+lrwxrwxrwx. 1 root root   51 May 21 22:53 jre-1.8.0-openjdk-1.8.0.171-3.b10.el6_9.x86_64 -> java-1.8.0-openjdk-1.8.0.171-3.b10.el6_9.x86_64/jre
+lrwxrwxrwx. 1 root root   51 May 21 22:53 jre-1.8.0-openjdk.x86_64 -> java-1.8.0-openjdk-1.8.0.171-3.b10.el6_9.x86_64/jre
+lrwxrwxrwx. 1 root root   29 May 21 22:53 jre-openjdk -> /etc/alternatives/jre_openjdk
+[docker@localhost ~]$ echo JAVA_HOME
+JAVA_HOME
+[docker@localhost ~]$ echo $JAVA_HOME
+
+[docker@localhost ~]$ echo $PATH
+/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/docker/bin
+[docker@localhost ~]$ env
+ORBIT_SOCKETDIR=/tmp/orbit-docker
+HOSTNAME=localhost.localdomain
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+SHELL=/bin/bash
+TERM=xterm
+XDG_SESSION_COOKIE=6fa04a09314ff20d63a1c6b400000016-1526922723.894171-1211001913
+HISTSIZE=1000
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/docker/.gtkrc-1.2-gnome2
+WINDOWID=39845892
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+IMSETTINGS_MODULE=none
+USER=docker
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+SSH_AUTH_SOCK=/tmp/keyring-G6jL0S/socket.ssh
+GNOME_KEYRING_SOCKET=/tmp/keyring-G6jL0S/socket
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3351,unix/unix:/tmp/.ICE-unix/3351
+USERNAME=docker
+DESKTOP_SESSION=gnome
+MAIL=/var/spool/mail/docker
+PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/docker/bin
+QT_IM_MODULE=xim
+PWD=/home/docker
+XMODIFIERS=@im=none
+GDM_KEYBOARD_LAYOUT=us
+LANG=en_US.UTF-8
+GNOME_KEYRING_PID=3341
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome
+HISTCONTROL=ignoredups
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SHLVL=2
+HOME=/home/docker
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LOGNAME=docker
+CVS_RSH=ssh
+QTLIB=/usr/lib64/qt-3.3/lib
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-slYdaNsl8F,guid=5aa8edd4943221b1008c3a8800000040
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+WINDOWPATH=1
+DISPLAY=:0.0
+G_BROKEN_FILENAMES=1
+XAUTHORITY=/var/run/gdm/auth-for-docker-8N851F/database
+COLORTERM=gnome-terminal
+_=/usr/bin/env
+OLDPWD=/home/docker/Desktop
+[docker@localhost ~]$ 
+[docker@localhost ~]$ 
+[docker@localhost ~]$ java -version
+openjdk version "1.8.0_171"
+OpenJDK Runtime Environment (build 1.8.0_171-b10)
+OpenJDK 64-Bit Server VM (build 25.171-b10, mixed mode)
+[docker@localhost ~]$ javac -version
+bash: javac: command not found
+[docker@localhost ~]$ chkconfig jenkins on
+You do not have enough privileges to perform this operation.
+[docker@localhost ~]$ sudo chkconfig jenkins on
+[sudo] password for docker: 
+[docker@localhost ~]$ sudo chkconfig jenkins status
+chkconfig version 1.3.49.5 - Copyright (C) 1997-2000 Red Hat, Inc.
+This may be freely redistributed under the terms of the GNU Public License.
+
+usage:   chkconfig [--list] [--type <type>] [name]
+         chkconfig --add <name>
+         chkconfig --del <name>
+         chkconfig --override <name>
+         chkconfig [--level <levels>] [--type <type>] <name> <on|off|reset|resetpriorities>
+[docker@localhost ~]$ sudo chkconfig status jenkins
+chkconfig version 1.3.49.5 - Copyright (C) 1997-2000 Red Hat, Inc.
+This may be freely redistributed under the terms of the GNU Public License.
+
+usage:   chkconfig [--list] [--type <type>] [name]
+         chkconfig --add <name>
+         chkconfig --del <name>
+         chkconfig --override <name>
+         chkconfig [--level <levels>] [--type <type>] <name> <on|off|reset|resetpriorities>
+[docker@localhost ~]$ sudo chkconfig --list jenkins
+jenkins        	0:off	1:off	2:on	3:on	4:on	5:on	6:off
+[docker@localhost ~]$ systemctl start jenkins
+bash: systemctl: command not found
+[docker@localhost ~]$ sudo systemctl start jenkins
+sudo: systemctl: command not found
+[docker@localhost ~]$ sudo systemctl restart jenkins
+sudo: systemctl: command not found
+[docker@localhost ~]$ sudo systemctl status jenkins
+sudo: systemctl: command not found
+[docker@localhost ~]$ systemctl status jenkins
+bash: systemctl: command not found
+[docker@localhost ~]$ bash
+[docker@localhost ~]$ sudo systemctl status jenkins
+sudo: systemctl: command not found
+[docker@localhost ~]$ systemctl status jenkins
+bash: systemctl: command not found
+[docker@localhost ~]$ service jenkins start
+/etc/sysconfig/jenkins not readable. Perhaps you forgot 'sudo'?
+[docker@localhost ~]$ sudo service jenkins start
+Starting Jenkins                                           [  OK  ]
+[docker@localhost ~]$ sudo service enable jenkins
+enable: unrecognized service
+[docker@localhost ~]$ sudo service jenkins enable
+Usage: /etc/init.d/jenkins {start|stop|status|try-restart|restart|force-reload|reload|probe}
+[docker@localhost ~]$ sudo find / -name java
+[sudo] password for docker: 
+/var/lib/alternatives/java
+/usr/bin/java
+/usr/lib/java
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.171-3.b10.el6_9.x86_64/jre/bin/java
+/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.41.x86_64/jre/bin/java
+/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.181.x86_64/jre/bin/java
+/usr/lib64/libreoffice/ure/share/java
+/usr/lib64/libreoffice/share/Scripts/java
+/usr/share/doc/db4-devel-4.7.25/java
+/usr/share/doc/db4-devel-4.7.25/ref/java
+/usr/share/java
+/etc/java
+/etc/alternatives/java
+/etc/pki/java
+/etc/pki/ca-trust/extracted/java
+[docker@localhost ~]$ 
+

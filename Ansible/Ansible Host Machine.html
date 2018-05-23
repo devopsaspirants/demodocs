@@ -1,0 +1,74 @@
+<html xmlns:tomboy="http://beatniksoftware.com/tomboy" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns:link="http://beatniksoftware.com/tomboy/link"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Ansible Host Machine</title><style type="text/css">
+	body {  }
+	h1 { font-size: xx-large;
+     	     font-weight: bold;
+     	     border-bottom: 1px solid black; }
+	div.note {
+		   position: relative;
+		   display: block;
+		   padding: 5pt;
+		   margin: 5pt; 
+		   white-space: -moz-pre-wrap; /* Mozilla */
+ 	      	   white-space: -pre-wrap;     /* Opera 4 - 6 */
+ 	      	   white-space: -o-pre-wrap;   /* Opera 7 */
+ 	      	   white-space: pre-wrap;      /* CSS3 */
+ 	      	   word-wrap: break-word;      /* IE 5.5+ */ }
+	</style></head><body><div class="note" id="Ansible Host Machine"><a name="ansible%20host%20machine"></a><h1>Ansible Host Machine</h1>
+Ansible Host Machine is installed on CentOS 6.9 
+
+this is Puppetmaster machine  <a style="color:#3465A4" href="root@192.168.33.133">root@192.168.33.133</a> changed to now 192.168.33.145
+
+Ansible Node Machine IP <a style="color:#3465A4" href="root@192.168.33.140">root@192.168.33.140</a>
+192.168.33.140
+
+ip addr show ens33 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+
+<a style="color:#3465A4" href="https://github.com/kellydemo/demodocs.git">https://github.com/kellydemo/demodocs.git</a>
+
+Slave Jenkins: <a style="color:#3465A4" href="/var/jenkins">/var/jenkins</a>
+
+IP addr show : 192.168.33.145
+
+Cookbook-creation
+cd <a style="color:#3465A4" href="/root/chef-repo/cookbooks/">/root/chef-repo/cookbooks/</a>
+
+chef generate cookbook apache
+
+knife cookbook list
+
+cd apache 
+
+or
+
+cd <a style="color:#3465A4" href="/root/chef-repo/cookbooks/apache">/root/chef-repo/cookbooks/apache</a>
+
+cd recipes/
+
+or 
+
+cd <a style="color:#3465A4" href="/root/chef-repo/cookbooks/apache/recipes/">/root/chef-repo/cookbooks/apache/recipes/</a>
+
+
+vi default.rb
+
+
+<a style="color:#3465A4" href="/root/chef-repo/cookbooks/apache/recipes">/root/chef-repo/cookbooks/apache/recipes</a>
+
+[root@puppet recipes]# pwd
+<a style="color:#3465A4" href="/root/chef-repo/cookbooks/apache/recipes">/root/chef-repo/cookbooks/apache/recipes</a>
+[root@puppet recipes]# cd ../../../
+[root@puppet chef-repo]# pwd
+<a style="color:#3465A4" href="/root/chef-repo">/root/chef-repo</a>
+
+
+
+knife cookbook upload apache
+[root@puppet chef-repo]# knife cookbook upload apache
+[root@puppet chef-repo]# knife cookbook test apache
+
+
+
+
+
+
+</div></body></html>

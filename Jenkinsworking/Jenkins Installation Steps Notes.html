@@ -1,4 +1,4 @@
-<html xmlns:tomboy="http://beatniksoftware.com/tomboy" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns:link="http://beatniksoftware.com/tomboy/link"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Jenkins Installation Steps Notes</title><style type="text/css">
+<html xmlns:tomboy="http://beatniksoftware.com/tomboy" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns:link="http://beatniksoftware.com/tomboy/link"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>(Untitled 6)</title><style type="text/css">
 	body {  }
 	h1 { font-size: xx-large;
      	     font-weight: bold;
@@ -13,10 +13,7 @@
  	      	   white-space: -o-pre-wrap;   /* Opera 7 */
  	      	   white-space: pre-wrap;      /* CSS3 */
  	      	   word-wrap: break-word;      /* IE 5.5+ */ }
-	</style></head><body><div class="note" id="Jenkins Installation Steps Notes"><a name="jenkins%20installation%20steps%20notes"></a><h1>Jenkins Installation Steps Notes</h1><a style="color:#3465A4" href="https://www.youtube.com/watch?v=Lxd6JMMxuwo">https://www.youtube.com/watch?v=Lxd6JMMxuwo</a> Describe your new note here. Steps for Installation: Step1: 
-
-Jenkins Installation Steps Notes
-
+	</style></head><body><div class="note" id="(Untitled 6)"><a name="(untitled%206)"></a><h1>Jenkins Installation Steps Notes</h1>
 <a style="color:#3465A4" href="https://www.youtube.com/watch?v=Lxd6JMMxuwo">https://www.youtube.com/watch?v=Lxd6JMMxuwo</a>
 Describe your new note here.
 
@@ -82,6 +79,24 @@ Step14:
 		sudo mv apache-tomcat-9.0.8  tomcat9
 Step15: 
 		gedit  <a style="color:#3465A4" href="/home/docker/tomcat9/conf/tomcat-users.xml">/home/docker/tomcat9/conf/tomcat-users.xml</a>
+username: docker
+password: docker
+
+--------Add below lines in tomcat-users.xml---file--------------------------------------------
+&lt;tomcat-users xmlns="<a style="color:#3465A4" href="http://tomcat.apache.org/xml">http://tomcat.apache.org/xml</a>"
+              xmlns:xsi="<a style="color:#3465A4" href="http://www.w3.org/2001/XMLSchema-instance">http://www.w3.org/2001/XMLSchema-instance</a>"
+              xsi:schemaLocation="<a style="color:#3465A4" href="http://tomcat.apache.org/xml">http://tomcat.apache.org/xml</a> tomcat-users.xsd"
+              version="1.0"&gt;
+
+  &lt;role rolename="manager-gui"/&gt;
+  &lt;role rolename="manager-script"/&gt;
+  &lt;role rolename="manager-jmx"/&gt;  
+  &lt;role rolename="manager-status"/&gt;
+  &lt;role rolename="admin-gui"/&gt;
+  &lt;role rolename="admin-script"/&gt;
+  &lt;user username="docker" password="docker" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script"/&gt;
+&lt;/tomcat-users&gt;
+-------------------------------------------------------------------------------------------------------------
 
 Step16:
 			<a style="color:#3465A4" href="http://updates.jenkins-ci.org/download/war/">http://updates.jenkins-ci.org/download/war/</a>
@@ -164,6 +179,36 @@ gedit  <a style="color:#3465A4" href="/home/docker/tomcat9/conf/tomcat-users.xml
 <span style="font-style:italic;font-size:small;color:#888A85">Tue 22 May 2018 10:10:18 PM IST</span>
 Step24:
 Step25:
+Installed Git
+Yum update and EPEL repository installed
+Installed Docker
+Installed JAVA JDK 1.8 i.e java8
+Install Tomcat 9
+Installed  JENKINS
+
+
+
+
+NTPD service commands:
+
+sudo <a style="color:#3465A4" href="/usr/sbin/ntpdate">/usr/sbin/ntpdate</a> pool.ntp.org
+
+sudo <a style="color:#3465A4" href="/etc/init.d/ntpd">/etc/init.d/ntpd</a> restart
+
+
+service ntp status
+
+
+service ntpd enable
+
+service start jenkins
+
+service enable jenkins
+
+<a style="color:#3465A4" href="/etc/init.d/jenkins">/etc/init.d/jenkins</a>
+
+
+vi <a style="color:#3465A4" href="/etc/ntp.conf">/etc/ntp.conf</a>
 
 
 

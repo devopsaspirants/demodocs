@@ -1,0 +1,1935 @@
+[root@puppet Desktop]# cd ..
+[root@puppet ~]# cd ~/chef-repo
+[root@puppet chef-repo]# knife client list
+ERROR: CONFIGURATION ERROR:"https://api.chef.io/organizations/ovm" is an invalid chef_server_url.
+[root@puppet chef-repo]# knife configure -i
+ERROR: CONFIGURATION ERROR:"https://api.chef.io/organizations/ovm" is an invalid chef_server_url.
+[root@puppet chef-repo]# knife configure -i
+ERROR: CONFIGURATION ERROR:"https://api.chef.io/organizations/ovm" is an invalid chef_server_url.
+[root@puppet chef-repo]# knife client list
+ERROR: CONFIGURATION ERROR:"https://api.chef.io/organizations/ovm" is an invalid chef_server_url.
+[root@puppet chef-repo]# knife configure -i
+ERROR: CONFIGURATION ERROR:"https://api.chef.io/organizations/ovm" is an invalid chef_server_url.
+[root@puppet chef-repo]# cd ..
+[root@puppet ~]# yum install -y wget curl
+Loaded plugins: fastestmirror, refresh-packagekit, security
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.net.in
+ * epel: mirror.xeonbd.com
+ * extras: centos.excellmedia.net
+ * updates: centos.excellmedia.net
+Package wget-1.12-10.el6.x86_64 already installed and latest version
+Package curl-7.19.7-53.el6_9.x86_64 already installed and latest version
+Nothing to do
+[root@puppet ~]# yum install -y wget curl git
+Loaded plugins: fastestmirror, refresh-packagekit, security
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.net.in
+ * epel: mirror.xeonbd.com
+ * extras: centos.excellmedia.net
+ * updates: centos.excellmedia.net
+Package wget-1.12-10.el6.x86_64 already installed and latest version
+Package curl-7.19.7-53.el6_9.x86_64 already installed and latest version
+Package git-1.7.1-9.el6_9.x86_64 already installed and latest version
+Nothing to do
+[root@puppet ~]# hostname
+puppet.mydomain.local
+[root@puppet ~]# chef shell-init bash
+export PATH="/opt/chefdk/bin:/root/.chefdk/gem/ruby/2.4.0/bin:/opt/chefdk/embedded/bin:/usr/local/rvm/gems/ruby-1.9.3-p327/bin:/usr/local/rvm/gems/ruby-1.9.3-p327@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p327/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/rvm/bin:/root/bin:/opt/chefdk/gitbin"
+export GEM_ROOT="/opt/chefdk/embedded/lib/ruby/gems/2.4.0"
+export GEM_HOME="/root/.chefdk/gem/ruby/2.4.0"
+export GEM_PATH="/root/.chefdk/gem/ruby/2.4.0:/opt/chefdk/embedded/lib/ruby/gems/2.4.0"
+_chef_comp() {
+    local COMMANDS="exec env gem generate shell-init install update push push-archive show-policy diff provision export clean-policy-revisions clean-policy-cookbooks delete-policy-group delete-policy undelete verify"
+    COMPREPLY=($(compgen -W "$COMMANDS" -- ${COMP_WORDS[COMP_CWORD]} ))
+}
+complete -F _chef_comp chef
+
+[root@puppet ~]# chef --version
+Chef Development Kit Version: 2.5.3
+chef-client version: 13.8.5
+delivery version: master (73ebb72a6c42b3d2ff5370c476be800fee7e5427)
+berks version: ERROR
+kitchen version: 1.20.0
+inspec version: 1.51.21
+[root@puppet ~]# chef --version
+Chef Development Kit Version: 2.0.28
+chef-client version: 13.2.20
+delivery version: master (17c1b0fed9be4c70f69091a6d21a4cbf0df60a23)
+berks version: 6.2.0
+kitchen version: 1.16.0
+inspec version: 1.31.1
+[root@puppet ~]# chef verify
+[WARN] This is an internal command used by the ChefDK development team. If you are a ChefDK user, please do not run it.
+Running verification for component 'berkshelf'
+Running verification for component 'test-kitchen'
+Running verification for component 'tk-policyfile-provisioner'
+Running verification for component 'chef-client'
+Running verification for component 'chef-dk'
+Running verification for component 'chef-provisioning'
+Running verification for component 'chefspec'
+Running verification for component 'generated-cookbooks-pass-chefspec'
+Running verification for component 'fauxhai'
+Running verification for component 'knife-spork'
+Running verification for component 'kitchen-vagrant'
+Running verification for component 'package installation'
+Running verification for component 'openssl'
+Running verification for component 'inspec'
+Running verification for component 'delivery-cli'
+Running verification for component 'git'
+Running verification for component 'opscode-pushy-client'
+Running verification for component 'chef-sugar'
+......................./opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-provisioning-aws-2.2.2/lib/chef/resource/aws_route53_record_set.rb:48: warning: constant ::Fixnum is deprecated
+.............
+---------------------------------------------
+Verification of component 'fauxhai' succeeded.
+Verification of component 'kitchen-vagrant' succeeded.
+Verification of component 'openssl' succeeded.
+Verification of component 'delivery-cli' succeeded.
+Verification of component 'opscode-pushy-client' succeeded.
+Verification of component 'test-kitchen' succeeded.
+Verification of component 'knife-spork' succeeded.
+Verification of component 'inspec' succeeded.
+Verification of component 'berkshelf' succeeded.
+Verification of component 'chefspec' succeeded.
+Verification of component 'git' succeeded.
+Verification of component 'tk-policyfile-provisioner' succeeded.
+Verification of component 'chef-sugar' succeeded.
+Verification of component 'chef-client' succeeded.
+Verification of component 'chef-dk' succeeded.
+Verification of component 'chef-provisioning' succeeded.
+Verification of component 'generated-cookbooks-pass-chefspec' succeeded.
+Verification of component 'package installation' succeeded.
+[root@puppet ~]# 
+[root@puppet ~]# 
+[root@puppet ~]# chef --version
+Chef Development Kit Version: 2.0.28
+chef-client version: 13.2.20
+delivery version: master (17c1b0fed9be4c70f69091a6d21a4cbf0df60a23)
+berks version: 6.2.0
+kitchen version: 1.16.0
+inspec version: 1.31.1
+[root@puppet ~]# chef shell-init bash
+export PATH="/opt/chefdk/bin:/root/.chefdk/gem/ruby/2.4.0/bin:/opt/chefdk/embedded/bin:/usr/local/rvm/gems/ruby-1.9.3-p327/bin:/usr/local/rvm/gems/ruby-1.9.3-p327@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p327/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/rvm/bin:/root/bin:/opt/chefdk/gitbin"
+export GEM_ROOT="/opt/chefdk/embedded/lib/ruby/gems/2.4.0"
+export GEM_HOME="/root/.chefdk/gem/ruby/2.4.0"
+export GEM_PATH="/root/.chefdk/gem/ruby/2.4.0:/opt/chefdk/embedded/lib/ruby/gems/2.4.0"
+_chef_comp() {
+    local COMMANDS="exec env gem generate shell-init install update push push-archive show-policy diff provision export clean-policy-revisions clean-policy-cookbooks delete-policy-group delete-policy undelete verify"
+    COMPREPLY=($(compgen -W "$COMMANDS" -- ${COMP_WORDS[COMP_CWORD]} ))
+}
+complete -F _chef_comp chef
+
+[root@puppet ~]# ls
+anaconda-ks.cfg                 chef-repo         Documents   install.log         Pictures   Videos
+chefdk-2.0.28-1.el6.x86_64.rpm  chef-starter.zip  Downloads   install.log.syslog  Public
+chefdk-2.5.3-1.el6.x86_64.rpm   Desktop           GitProject  Music               Templates
+[root@puppet ~]# ls -l
+total 205772
+-rw-------. 1 root root      1616 Feb  8 04:56 anaconda-ks.cfg
+-rw-r--r--. 1 root root 102952780 Jul 14  2017 chefdk-2.0.28-1.el6.x86_64.rpm
+-rw-r--r--. 1 root root 107628890 Apr 13 18:08 chefdk-2.5.3-1.el6.x86_64.rpm
+drwxr-xr-x. 5 root root      4096 Apr 13 17:50 chef-repo
+-rw-r--r--. 1 root root      7826 Apr 13 20:07 chef-starter.zip
+dr-xr-x---. 2 root root      4096 Apr 12 15:19 Desktop
+dr-xr-x---. 2 root root      4096 Apr 12 15:19 Documents
+dr-xr-x---. 5 root root      4096 Apr 13 20:07 Downloads
+drwxr-xr-x. 3 root root      4096 Apr 13 16:42 GitProject
+-rw-r--r--. 1 root root     50698 Feb  8 04:56 install.log
+-rw-r--r--. 1 root root     10031 Feb  8 04:54 install.log.syslog
+dr-xr-x---. 2 root root      4096 Apr 12 15:19 Music
+dr-xr-x---. 2 root root      4096 Apr 12 15:19 Pictures
+dr-xr-x---. 2 root root      4096 Apr 12 15:19 Public
+dr-xr-x---. 2 root root      4096 Apr 12 15:19 Templates
+dr-xr-x---. 2 root root      4096 Apr 12 15:19 Videos
+[root@puppet ~]# date
+Fri Apr 13 20:13:13 IST 2018
+[root@puppet ~]# unzip chef-starter.zip
+Archive:  chef-starter.zip
+replace chef-repo/cookbooks/chefignore? [y]es, [n]o, [A]ll, [N]one, [r]ename: A
+  inflating: chef-repo/cookbooks/chefignore  
+  inflating: chef-repo/cookbooks/starter/files/default/sample.txt  
+  inflating: chef-repo/cookbooks/starter/metadata.rb  
+  inflating: chef-repo/cookbooks/starter/attributes/default.rb  
+  inflating: chef-repo/cookbooks/starter/templates/default/sample.erb  
+  inflating: chef-repo/cookbooks/starter/recipes/default.rb  
+  inflating: chef-repo/README.md     
+  inflating: chef-repo/.gitignore    
+  inflating: chef-repo/.chef/knife.rb  
+  inflating: chef-repo/roles/starter.rb  
+  inflating: chef-repo/.chef/kellydemo2.pem  
+[root@puppet ~]# cd ~/chef-repo
+[root@puppet chef-repo]# pwd
+/root/chef-repo
+[root@puppet chef-repo]# knife client list
+ovm-validator
+[root@puppet chef-repo]# knife cookbook list
+
+[root@puppet chef-repo]# ls
+cookbooks  README.md  roles
+[root@puppet chef-repo]# cd cookbooks/
+[root@puppet cookbooks]# ls
+chefignore  starter
+[root@puppet cookbooks]# cd starter/
+[root@puppet starter]# ls
+attributes  files  metadata.rb  recipes  templates
+[root@puppet starter]# cd recipes/
+[root@puppet recipes]# ls
+default.rb
+[root@puppet recipes]# cat default.rb 
+# This is a Chef recipe file. It can be used to specify resources which will
+# apply configuration to a server.
+
+log "Welcome to Chef, #{node["starter_name"]}!" do
+  level :info
+end
+
+# For more information, see the documentation: https://docs.chef.io/essentials_cookbook_recipes.html
+[root@puppet recipes]# cd ..
+[root@puppet starter]# cd ..
+[root@puppet cookbooks]# cd ..
+[root@puppet chef-repo]# knife cookbook create sample
+FATAL: knife cookbook create has been removed. Please use `chef generate cookbook` from the ChefDK
+[root@puppet chef-repo]# chef generate cookbook sample
+Generating cookbook sample
+- Ensuring correct cookbook file content
+- Committing cookbook files to git
+- Ensuring delivery configuration
+- Ensuring correct delivery build cookbook content
+- Adding delivery configuration to feature branch
+- Adding build cookbook to feature branch
+- Merging delivery content feature branch to master
+
+Your cookbook is ready. Type `cd sample` to enter it.
+
+There are several commands you can run to get started locally developing and testing your cookbook.
+Type `delivery local --help` to see a full list.
+
+Why not start by writing a test? Tests for the default recipe are stored at:
+
+test/smoke/default/default_test.rb
+
+If you'd prefer to dive right in, the default recipe can be found at:
+
+recipes/default.rb
+
+[root@puppet chef-repo]# ls
+cookbooks  README.md  roles  sample
+[root@puppet chef-repo]# cd sample/
+[root@puppet sample]# ls
+Berksfile  chefignore  metadata.rb  README.md  recipes  spec  test
+[root@puppet sample]# ls
+Berksfile  chefignore  metadata.rb  README.md  recipes  spec  test
+[root@puppet sample]# cd recipes/
+[root@puppet recipes]# ls
+default.rb
+[root@puppet recipes]# cat default.rb 
+#
+# Cookbook:: sample
+# Recipe:: default
+#
+# Copyright:: 2018, The Authors, All Rights Reserved.
+[root@puppet recipes]# vi default.rb 
+[root@puppet recipes]# ls
+default.rb
+[root@puppet recipes]# ls -l
+total 4
+-rw-r--r--. 1 root root 249 Apr 13 21:34 default.rb
+[root@puppet recipes]# cd
+[root@puppet ~]# pwd
+/root
+[root@puppet ~]# cd chef-repo/
+[root@puppet chef-repo]# knife cookbook list
+
+[root@puppet chef-repo]# knife cookbook upload sample
+ERROR: Could not find cookbook sample in your cookbook path, skipping it
+Uploaded 0 cookbook.
+[root@puppet chef-repo]# cd cookbooks/
+[root@puppet cookbooks]# knife cookbook upload sample
+ERROR: Could not find cookbook sample in your cookbook path, skipping it
+Uploaded 0 cookbook.
+[root@puppet cookbooks]# ls
+chefignore  starter
+[root@puppet cookbooks]# cd starter/
+[root@puppet starter]# ls
+attributes  files  metadata.rb  recipes  templates
+[root@puppet starter]# cd recipes/
+[root@puppet recipes]# ls
+default.rb
+[root@puppet recipes]# cd ..
+[root@puppet starter]# cd ..
+[root@puppet cookbooks]# ls
+chefignore  starter
+[root@puppet cookbooks]# cd ..
+[root@puppet chef-repo]# ls
+cookbooks  README.md  roles  sample
+[root@puppet chef-repo]# cd sample/
+[root@puppet sample]# ls
+Berksfile  chefignore  metadata.rb  README.md  recipes  spec  test
+[root@puppet sample]# cd recipes/
+[root@puppet recipes]# knife cookbook upload sample
+ERROR: Could not find cookbook sample in your cookbook path, skipping it
+Uploaded 0 cookbook.
+[root@puppet recipes]# ls
+default.rb
+[root@puppet recipes]# knife cookbook test sample
+WARNING: DEPRECATED: Please use ChefSpec or Cookstyle to syntax-check cookbooks.
+checking sample
+ERROR: Chef::Exceptions::CookbookNotFoundInRepo: Cannot find a cookbook named sample; did you forget to add metadata to a cookbook? (https://docs.chef.io/config_rb_metadata.html)
+[root@puppet recipes]# knife cookbook test default
+WARNING: DEPRECATED: Please use ChefSpec or Cookstyle to syntax-check cookbooks.
+checking default
+ERROR: Chef::Exceptions::CookbookNotFoundInRepo: Cannot find a cookbook named default; did you forget to add metadata to a cookbook? (https://docs.chef.io/config_rb_metadata.html)
+[root@puppet recipes]# cd 
+[root@puppet ~]# cd chef-repo/
+[root@puppet chef-repo]# ls
+cookbooks  README.md  roles  sample
+[root@puppet chef-repo]# knife cookbook test sample
+WARNING: DEPRECATED: Please use ChefSpec or Cookstyle to syntax-check cookbooks.
+checking sample
+ERROR: Chef::Exceptions::CookbookNotFoundInRepo: Cannot find a cookbook named sample; did you forget to add metadata to a cookbook? (https://docs.chef.io/config_rb_metadata.html)
+[root@puppet chef-repo]# knife cookbook upload sample
+ERROR: Could not find cookbook sample in your cookbook path, skipping it
+Uploaded 0 cookbook.
+[root@puppet chef-repo]# knife cookbook upload sample
+ERROR: Could not find cookbook sample in your cookbook path, skipping it
+Uploaded 0 cookbook.
+[root@puppet chef-repo]# chef-client 
+[2018-04-13T21:45:53+05:30] WARN: *****************************************
+[2018-04-13T21:45:53+05:30] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2018-04-13T21:45:53+05:30] WARN: *****************************************
+Starting Chef Client, version 13.2.20
+Creating a new client identity for puppet.mydomain.local using the validator key.
+
+================================================================================
+Chef encountered an error attempting to create the client "puppet.mydomain.local"
+================================================================================
+
+System Info:
+------------
+chef_version=13.2.20
+ruby=ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+program_name=chef-client worker: ppid=10459;start=21:45:53;
+executable=/opt/chefdk/bin/chef-client
+
+
+Running handlers:
+[2018-04-13T21:45:56+05:30] ERROR: Running exception handlers
+[2018-04-13T21:45:56+05:30] ERROR: Running exception handlers
+Running handlers complete
+[2018-04-13T21:45:56+05:30] ERROR: Exception handlers complete
+[2018-04-13T21:45:56+05:30] ERROR: Exception handlers complete
+Chef Client failed. 0 resources updated in 03 seconds
+[2018-04-13T21:45:56+05:30] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+[2018-04-13T21:45:56+05:30] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+[2018-04-13T21:45:56+05:30] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+[2018-04-13T21:45:56+05:30] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+[2018-04-13T21:45:56+05:30] ERROR: I can't write your private key to /etc/chef/client.pem - check permissions?
+[2018-04-13T21:45:56+05:30] ERROR: I can't write your private key to /etc/chef/client.pem - check permissions?
+[2018-04-13T21:45:56+05:30] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+[2018-04-13T21:45:56+05:30] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+[root@puppet chef-repo]# knife cookbook upload sample
+ERROR: Could not find cookbook sample in your cookbook path, skipping it
+Uploaded 0 cookbook.
+[root@puppet chef-repo]# knife client list
+ovm-validator
+[root@puppet chef-repo]# ls -l /var/chef/cache/chef-stacktrace.out 
+-rw-r-----. 1 root root 2114 Apr 13 21:45 /var/chef/cache/chef-stacktrace.out
+[root@puppet chef-repo]# ls -lah /var/chef/cache/chef-stacktrace.out 
+-rw-r-----. 1 root root 2.1K Apr 13 21:45 /var/chef/cache/chef-stacktrace.out
+[root@puppet chef-repo]# knife client list
+ovm-validator
+[root@puppet chef-repo]# knife cookbook upload sample
+ERROR: Could not find cookbook sample in your cookbook path, skipping it
+Uploaded 0 cookbook.
+[root@puppet chef-repo]# hostname
+puppet.mydomain.local
+[root@puppet chef-repo]# ls /etc/host
+ls: cannot access /etc/host: No such file or directory
+[root@puppet chef-repo]# ls /etc/
+abrt                     dracut.conf.d     krb5.conf         pinforc                       scl
+acpi                     drirc             latrace.conf      pkcs11                        securetty
+adjtime                  enscript.cfg      latrace.d         pki                           security
+aliases                  environment       ld.so.cache       plymouth                      selinux
+aliases.db               ethers            ld.so.conf        pm                            services
+alsa                     exports           ld.so.conf.d      pm-utils-hd-apm-restore.conf  sestatus.conf
+alternatives             favicon.png       libaudit.conf     pnm2ppa.conf                  setuptool.d
+anacrontab               festival          libnl             polkit-1                      sgml
+anthy-conf               filesystems       libreport         popt.d                        shadow
+asound.conf              firefox           libuser.conf      portreserve                   shadow-
+at.deny                  fonts             localtime         postfix                       shells
+audisp                   foomatic          login.defs        ppp                           skel
+audit                    fprintd.conf      logrotate.conf    prelink.cache                 smartd.conf
+autofs.conf              fstab             logrotate.d       prelink.conf                  sos.conf
+autofs_ldap_auth.conf    gai.conf          lsb-release       prelink.conf.d                sound
+auto.master              gconf             lsb-release.d     printcap                      ssh
+auto.misc                gcrypt            ltrace.conf       profile                       ssl
+auto.net                 gdm               lvm               profile.d                     sssd
+auto.smb                 ghostscript       magic             protocols                     statetab
+avahi                    gnome-vfs-2.0     mailcap           pulse                         statetab.d
+bash.bashrc              gnupg             mail.rc           puppet                        subversion
+bash_completion.d        group             makedev.d         purple                        sudo.conf
+bashrc                   group-            man.config        quotagrpadmins                sudoers
+blkid                    grub.conf         maven             quotatab                      sudoers.d
+bluetooth                gshadow           mime.types        rc                            sudo-ldap.conf
+bonobo-activation        gshadow-          mke2fs.conf       rc0.d                         sysconfig
+cas.conf                 gssapi_mech.conf  modprobe.d        rc1.d                         sysctl.conf
+centos-release           gtk-2.0           motd              rc2.d                         sysctl.d
+certmonger               hal               mtab              rc3.d                         system-release
+chkconfig.d              hiera.yaml        mtools.conf       rc4.d                         system-release-cpe
+ConsoleKit               host.conf         my.cnf            rc5.d                         terminfo
+cron.d                   hosts             nanorc            rc6.d                         tpvmlp.conf
+cron.daily               hosts.allow       netconfig         rc.d                          Trolltech.conf
+cron.deny                hosts.deny        NetworkManager    rc.local                      udev
+cron.hourly              hp                networks          rc.sysinit                    updatedb.conf
+cron.monthly             httpd             nfsmount.conf     rdma                          vimrc
+crontab                  idmapd.conf       nsswitch.conf     readahead.conf                virc
+cron.weekly              init              ntp               redhat-lsb                    vmware-caf
+crypttab                 init.conf         ntp.conf          redhat-release                vmware-tools
+csh.cshrc                init.d            obex-data-server  request-key.conf              warnquota.conf
+csh.login                inittab           oddjob            request-key.d                 wgetrc
+cups                     inputrc           oddjobd.conf      resolv.conf                   wpa_supplicant
+dbus-1                   ipa               oddjobd.conf.d    rpc                           wvdial.conf
+default                  iproute2          openldap          rpm                           X11
+depmod.d                 issue             opt               rsyslog.conf                  xdg
+dhcp                     issue.net         PackageKit        rsyslog.d                     xinetd.d
+DIR_COLORS               java              pam.d             rvmrc                         xml
+DIR_COLORS.256color      jvm               pango             rwtab                         yp.conf
+DIR_COLORS.lightbgcolor  jvm-commmon       passwd            rwtab.d                       yum
+dnsmasq.conf             kde               passwd-           samba                         yum.conf
+dnsmasq.d                kdump-adv-conf    pbm2ppa.conf      sane.d                        yum.repos.d
+dracut.conf              kdump.conf        pcmcia            sasl2                         zprofile
+[root@puppet chef-repo]# ls /etc/hosts
+/etc/hosts
+[root@puppet chef-repo]# cd /etc/hosts
+bash: cd: /etc/hosts: Not a directory
+[root@puppet chef-repo]# cat /etc/hosts
+127.0.0.1   puppet.mydomain.local localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+[root@puppet chef-repo]# vi /etc/hosts
+[root@puppet chef-repo]# vi /etc/hosts
+[root@puppet chef-repo]# hostname
+puppet.mydomain.local
+[root@puppet chef-repo]# hostname localhost
+[root@puppet chef-repo]# hostname
+localhost
+[root@puppet chef-repo]# vi /etc/hosts
+[root@puppet chef-repo]# hostname
+localhost
+[root@puppet chef-repo]# cd cookbooks/
+[root@puppet cookbooks]# ls
+chefignore  starter
+[root@puppet cookbooks]# ls
+chefignore  sample  starter
+You have new mail in /var/spool/mail/root
+[root@puppet cookbooks]# knife cookbook upload sample
+Uploading sample       [0.1.0]
+Uploaded 1 cookbook.
+[root@puppet cookbooks]# 
+[root@puppet cookbooks]# cd ..
+[root@puppet chef-repo]# vi /etc/hosts
+[root@puppet chef-repo]# hostname
+localhost
+[root@puppet chef-repo]# hostname puppet.mydomain.local
+[root@puppet chef-repo]# hostname
+puppet.mydomain.local
+[root@puppet chef-repo]# knife cookbook upload sample
+Uploading sample         [0.1.0]
+Uploaded 1 cookbook.
+[root@puppet chef-repo]# 
+[root@puppet chef-repo]# 
+[root@puppet chef-repo]# chef generate cookbook sample1
+Generating cookbook sample1
+- Ensuring correct cookbook file content
+- Committing cookbook files to git
+- Ensuring delivery configuration
+- Ensuring correct delivery build cookbook content
+- Adding delivery configuration to feature branch
+- Adding build cookbook to feature branch
+- Merging delivery content feature branch to master
+
+Your cookbook is ready. Type `cd sample1` to enter it.
+
+There are several commands you can run to get started locally developing and testing your cookbook.
+Type `delivery local --help` to see a full list.
+
+Why not start by writing a test? Tests for the default recipe are stored at:
+
+test/smoke/default/default_test.rb
+
+If you'd prefer to dive right in, the default recipe can be found at:
+
+recipes/default.rb
+
+[root@puppet chef-repo]# knife cookbook list
+sample   0.1.0
+[root@puppet chef-repo]# chef cookbook list
+Unknown command `cookbook'.
+Usage:
+    chef -h/--help
+    chef -v/--version
+    chef command [arguments...] [options...]
+
+
+Available Commands:
+    exec                    Runs the command in context of the embedded ruby
+    env                     Prints environment variables used by ChefDK
+    gem                     Runs the `gem` command in context of the embedded ruby
+    generate                Generate a new app, cookbook, or component
+    shell-init              Initialize your shell to use ChefDK as your primary ruby
+    install                 Install cookbooks from a Policyfile and generate a locked cookbook set
+    update                  Updates a Policyfile.lock.json with latest run_list and cookbooks
+    push                    Push a local policy lock to a policy group on the server
+    push-archive            Push a policy archive to a policy group on the server
+    show-policy             Show policyfile objects on your Chef Server
+    diff                    Generate an itemized diff of two Policyfile lock documents
+    provision               Provision VMs and clusters via cookbook
+    export                  Export a policy lock as a Chef Zero code repo
+    clean-policy-revisions  Delete unused policy revisions on the server
+    clean-policy-cookbooks  Delete unused policyfile cookbooks on the server
+    delete-policy-group     Delete a policy group on the server
+    delete-policy           Delete all revisions of a policy on the server
+    undelete                Undo a delete command
+[root@puppet chef-repo]# cd cookbooks/
+[root@puppet cookbooks]# chef generate cookbook sample1
+Generating cookbook sample1
+- Ensuring correct cookbook file content
+- Committing cookbook files to git
+- Ensuring delivery configuration
+- Ensuring correct delivery build cookbook content
+- Adding delivery configuration to feature branch
+- Adding build cookbook to feature branch
+- Merging delivery content feature branch to master
+
+Your cookbook is ready. Type `cd sample1` to enter it.
+
+There are several commands you can run to get started locally developing and testing your cookbook.
+Type `delivery local --help` to see a full list.
+
+Why not start by writing a test? Tests for the default recipe are stored at:
+
+test/smoke/default/default_test.rb
+
+If you'd prefer to dive right in, the default recipe can be found at:
+
+recipes/default.rb
+
+[root@puppet cookbooks]# ls
+chefignore  sample  sample1  starter
+[root@puppet cookbooks]# chef cookbook list
+Unknown command `cookbook'.
+Usage:
+    chef -h/--help
+    chef -v/--version
+    chef command [arguments...] [options...]
+
+
+Available Commands:
+    exec                    Runs the command in context of the embedded ruby
+    env                     Prints environment variables used by ChefDK
+    gem                     Runs the `gem` command in context of the embedded ruby
+    generate                Generate a new app, cookbook, or component
+    shell-init              Initialize your shell to use ChefDK as your primary ruby
+    install                 Install cookbooks from a Policyfile and generate a locked cookbook set
+    update                  Updates a Policyfile.lock.json with latest run_list and cookbooks
+    push                    Push a local policy lock to a policy group on the server
+    push-archive            Push a policy archive to a policy group on the server
+    show-policy             Show policyfile objects on your Chef Server
+    diff                    Generate an itemized diff of two Policyfile lock documents
+    provision               Provision VMs and clusters via cookbook
+    export                  Export a policy lock as a Chef Zero code repo
+    clean-policy-revisions  Delete unused policy revisions on the server
+    clean-policy-cookbooks  Delete unused policyfile cookbooks on the server
+    delete-policy-group     Delete a policy group on the server
+    delete-policy           Delete all revisions of a policy on the server
+    undelete                Undo a delete command
+[root@puppet cookbooks]# kinfe cookbook list
+bash: kinfe: command not found
+[root@puppet cookbooks]# knife cookbook list
+sample   0.1.0
+[root@puppet cookbooks]# knife cookbook show sample1
+ERROR: The object you are looking for could not be found
+Response: Cannot find a cookbook named sample1
+[root@puppet cookbooks]# chef  cookbook show sample1
+Unknown command `cookbook'.
+Usage:
+    chef -h/--help
+    chef -v/--version
+    chef command [arguments...] [options...]
+
+
+Available Commands:
+    exec                    Runs the command in context of the embedded ruby
+    env                     Prints environment variables used by ChefDK
+    gem                     Runs the `gem` command in context of the embedded ruby
+    generate                Generate a new app, cookbook, or component
+    shell-init              Initialize your shell to use ChefDK as your primary ruby
+    install                 Install cookbooks from a Policyfile and generate a locked cookbook set
+    update                  Updates a Policyfile.lock.json with latest run_list and cookbooks
+    push                    Push a local policy lock to a policy group on the server
+    push-archive            Push a policy archive to a policy group on the server
+    show-policy             Show policyfile objects on your Chef Server
+    diff                    Generate an itemized diff of two Policyfile lock documents
+    provision               Provision VMs and clusters via cookbook
+    export                  Export a policy lock as a Chef Zero code repo
+    clean-policy-revisions  Delete unused policy revisions on the server
+    clean-policy-cookbooks  Delete unused policyfile cookbooks on the server
+    delete-policy-group     Delete a policy group on the server
+    delete-policy           Delete all revisions of a policy on the server
+    undelete                Undo a delete command
+[root@puppet cookbooks]# knife cookbook upload sample1
+Uploading sample1        [0.1.0]
+Uploaded 1 cookbook.
+[root@puppet cookbooks]# ls
+chefignore  sample  sample1  starter
+[root@puppet cookbooks]# knife cookbook list
+sample    0.1.0
+sample1   0.1.0
+[root@puppet cookbooks]# ls
+chefignore  sample  sample1  starter
+[root@puppet cookbooks]# cd sample1
+[root@puppet sample1]# ls
+Berksfile  chefignore  metadata.rb  README.md  recipes  spec  test
+[root@puppet sample1]# cd recipes/
+[root@puppet recipes]# ls
+default.rb
+[root@puppet recipes]# vi default.rb 
+[root@puppet recipes]# ls
+default.rb
+[root@puppet recipes]# ls -l
+total 4
+-rw-r--r--. 1 root root 314 Apr 16 23:03 default.rb
+[root@puppet recipes]# cd ..
+[root@puppet sample1]# cd ..
+[root@puppet cookbooks]# cd ..
+[root@puppet chef-repo]# knife cookbook upload sample1
+Uploading sample1        [0.1.0]
+Uploaded 1 cookbook.
+[root@puppet chef-repo]# ping 192.168.33.131
+PING 192.168.33.131 (192.168.33.131) 56(84) bytes of data.
+64 bytes from 192.168.33.131: icmp_seq=1 ttl=64 time=2.22 ms
+64 bytes from 192.168.33.131: icmp_seq=2 ttl=64 time=0.380 ms
+^C
+--- 192.168.33.131 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1110ms
+rtt min/avg/max/mdev = 0.380/1.302/2.225/0.923 ms
+[root@puppet chef-repo]# 
+[root@puppet chef-repo]# 
+[root@puppet chef-repo]# knife bootstrap 192.168.33.131 -x root -P root@123 -N "node1" -r "recipe[sample1]"
+Creating new client for node1
+Creating new node for node1
+Connecting to 192.168.33.131
+ERROR: Network Error: Connection refused - connect(2) for 192.168.33.131:22
+Check your knife configuration and network settings
+[root@puppet chef-repo]# chef-client
+[2018-04-16T23:13:05+05:30] WARN: *****************************************
+[2018-04-16T23:13:05+05:30] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2018-04-16T23:13:05+05:30] WARN: *****************************************
+Starting Chef Client, version 13.2.20
+Creating a new client identity for puppet.mydomain.local using the validator key.
+
+================================================================================
+Chef encountered an error attempting to create the client "puppet.mydomain.local"
+================================================================================
+
+System Info:
+------------
+chef_version=13.2.20
+ruby=ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+program_name=chef-client worker: ppid=14521;start=23:13:05;
+executable=/opt/chefdk/bin/chef-client
+
+
+Running handlers:
+[2018-04-16T23:13:08+05:30] ERROR: Running exception handlers
+[2018-04-16T23:13:08+05:30] ERROR: Running exception handlers
+Running handlers complete
+[2018-04-16T23:13:08+05:30] ERROR: Exception handlers complete
+[2018-04-16T23:13:08+05:30] ERROR: Exception handlers complete
+Chef Client failed. 0 resources updated in 02 seconds
+[2018-04-16T23:13:08+05:30] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+[2018-04-16T23:13:08+05:30] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+[2018-04-16T23:13:08+05:30] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+[2018-04-16T23:13:08+05:30] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+[2018-04-16T23:13:08+05:30] ERROR: I can't write your private key to /etc/chef/client.pem - check permissions?
+[2018-04-16T23:13:08+05:30] ERROR: I can't write your private key to /etc/chef/client.pem - check permissions?
+[2018-04-16T23:13:08+05:30] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+[2018-04-16T23:13:08+05:30] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+[root@puppet chef-repo]# knife bootstrap 192.168.33.131 -x root -P root@123 -N "node1" -r "recipe[sample1]"
+Node node1 exists, overwrite it? (Y/N) Y
+Client node1 exists, overwrite it? (Y/N) Y
+Creating new client for node1
+Creating new node for node1
+Connecting to 192.168.33.131
+ERROR: Network Error: Connection refused - connect(2) for 192.168.33.131:22
+Check your knife configuration and network settings
+[root@puppet chef-repo]# knife bootstrap 192.168.124.1 -x root -P root@123 -N "server1" -r "recipe[sample1]"
+Creating new client for server1
+Creating new node for server1
+Connecting to 192.168.124.1
+ERROR: Network Error: Connection refused - connect(2) for 192.168.124.1:22
+Check your knife configuration and network settings
+You have new mail in /var/spool/mail/root
+[root@puppet chef-repo]# knife bootstrap 192.168.124.1 -x root -P root@123 -N "server12" -r "recipe[sample1]"
+Creating new client for server12
+Creating new node for server12
+Connecting to 192.168.124.1
+ERROR: Network Error: Connection refused - connect(2) for 192.168.124.1:22
+Check your knife configuration and network settings
+You have new mail in /var/spool/mail/root
+[root@puppet chef-repo]# history
+  129  cd ruby-2.2.4
+  130  ./configure 
+  131  make
+  132  sudo make install
+  133  ruby --version
+  134  rvm install 2.2.4
+  135  sudo gem update --system
+  136  gem update --system
+  137  gem update --no-rdoc --no-ri --system
+  138  ruby --version
+  139  rvm -v
+  140  cd /etc/puppet/environments
+  141  pwd
+  142   rubygems --version
+  143  gem update
+  144  ruby --version
+  145  rubygems --version
+  146  rvm list rubies
+  147   service --status-all | grep running
+  148  pwd
+  149  cd /etc/yum.repos.d/
+  150  pwd
+  151  vi puppetlabs.repo
+  152   vi /etc/puppet/puppet.conf
+  153  ls
+  154  yum install puppet-server
+  155   vi /etc/puppet/puppet.conf
+  156  head -20 /etc/puppet/puppet.conf
+  157  puppet master --verbose --no-daemonize
+  158  rvm list rubies
+  159  rubygems --version
+  160  rvm -v
+  161  puppet master --verbose --no-daemonize
+  162  rvm install 1.8.7
+  163  rvm list rubies
+  164  rvm install 1.8.7
+  165  wget http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p374.tar.gz
+  166  tar xvfvz ruby-1.8.7-p374.tar.gz
+  167  cd ruby-1.8.7-p374
+  168  ./configure
+  169  make
+  170  make install
+  171  pwd
+  172  rvm list rubies
+  173  puppet master --verbose --no-daemonize
+  174  make
+  175  make install
+  176  rvm install 1.8.7
+  177  cd ..
+  178  rvm install 1.8.7
+  179  ls
+  180  cd ruby-1.8.7-p374
+  181  ls
+  182  rm -i *.*
+  183  rm *.*
+  184  rm -i *.*
+  185  rm -y *.*
+  186  rm --help
+  187  rm -I *.*
+  188  ls
+  189  rm -r *.*
+  190  rm -r *
+  191  ls
+  192  rm -rI *
+  193  ls
+  194  cd ..
+  195  rm -r ruby-1.8.7-p374
+  196  ls
+  197  cd ruby-1.8.7-p374
+  198  ls
+  199  ls -al
+  200  rm -rI *
+  201  cd ..
+  202  rm -r ruby-1.8.7-p374
+  203  rm ruby-1.8.7-p374
+  204  rm -rf ruby-1.8.7-p374
+  205  ls
+  206  rm -ri ruby-1.8.7-p374.tar.gz
+  207  ls
+  208  rvm -v
+  209  rvm list rubies
+  210  mremove ruby-1.8.7-p374
+  211  ls
+  212  ruby --version
+  213  rvm remove ruby-1.8.7-p374
+  214  rvm remove ruby-2.2.4
+  215  ls
+  216  cd ~
+  217  pwd
+  218  rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rp
+  219  rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+  220  cd /etc/yum.repos.d/
+  221  ls
+  222  vi puppetlabs.repo
+  223  yum clean all
+  224  yum install puppet-server
+  225  reboot
+  226  pwd
+  227  ls
+  228  ifconfig
+  229  who
+  230  vi /etc/sysconfig/network
+  231  vi /etc/hosts
+  232  hostname
+  233  vi /etc/hosts
+  234  hostname
+  235  service --status-all | grep stopped
+  236  service --status-all | grep running
+  237  rpm -qa ntp
+  238  rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+  239  cd /etc/yum.repos.d/
+  240  ls
+  241  vi puppetlabs.repo
+  242  yum install puppet-server
+  243  yum list installed | grep puppet
+  244  yum remove puppet
+  245  yum list installed | grep puppet
+  246  yum install puppet-server
+  247  yum clean all
+  248  yum clean metadata
+  249  yum clean dbcache 
+  250  yum makecache 
+  251  mv /var/lib/rpm/__db* /tmp
+  252  rpm –rebuilddb 
+  253  rpm –-rebuilddb 
+  254  rpm --rebuilddb
+  255  yum install puppet-server
+  256  yum list installed | grep puppet
+  257  vi /etc/puppet/puppet.conf
+  258  puppet master --verbose --no-daemonize
+  259  ruby --version
+  260  ls
+  261  cd /etc/puppet/environments
+  262  ls
+  263  cd production/
+  264  ls
+  265  cd ..
+  266  cd development/
+  267  ls
+  268  cd ..
+  269  ls
+  270  ruby --version
+  271  vi /etc/puppet/puppet.conf
+  272  head -20 /etc/puppet/puppet.conf
+  273  service puppetmaster start
+  274  service puppetmaster stop
+  275  yum list installed | grep httpd 
+  276  yum list installed | grep httpd-devel
+  277  yum list installed | grep mod_ssl
+  278  yum list installed | grep ruby-devel
+  279  yum list installed | grep rubygems
+  280  yum list installed | grep gcc
+  281  service --status-all | grep running
+  282  rvm -v
+  283  yum install httpd httpd-devel mod_ssl ruby-devel rubygems gcc
+  284  chkconfig httpd on
+  285  gem -v
+  286  gem install rack passenger
+  287  passenger-install-apache2-module
+  288  yum install libcurl-devel
+  289  passenger-install-apache2-module
+  290  vi /etc/httpd/conf.d/puppet.conf
+  291  yum install mlocate
+  292  updatedb
+  293  locate mod_passenger.so
+  294  vi /etc/httpd/conf.d/puppet.conf
+  295  yum install vim
+  296  ls -lah /etc/puppetlabs/puppet/ssl/certs/
+  297  vi /etc/httpd/conf.d/puppet.conf
+  298  locate ca_crt.pem
+  299  vi /etc/httpd/conf.d/puppet.conf
+  300  locate puppet-server.example.pem
+  301  locate puppet-server.example.com.pem
+  302  locate private_keys
+  303  locate certs
+  304  locate ca_crt.pem
+  305  locate private_keys
+  306  locate puppet/ssl/certs
+  307  ls -lah /var/lib/puppet/ssl/certs/
+  308  locate puppet.mydomain.local.pem
+  309  vi /etc/httpd/conf.d/puppet.conf
+  310  vim /etc/httpd/conf.d/puppet.conf
+  311  ls -lah /var/lib/puppet/ssl/private_keys/
+  312  locate puppet.mydomain.local.pem
+  313  vim /etc/httpd/conf.d/puppet.conf
+  314  ls -lah /var/lib/puppet/ssl/ca/
+  315  vim /etc/httpd/conf.d/puppet.conf
+  316  cat /etc/httpd/conf.d/puppet.conf
+  317  vim /etc/httpd/conf.d/puppet.conf
+  318  vim /etc/httpd/conf/httpd.conf 
+  319  service httpd start
+  320  service httpd status
+  321  service httpd stop
+  322  service httpd start
+  323  ls /usr/share/puppet/rack/puppetmasterd/public
+  324  ls /usr/share/puppet/
+  325  ls /usr/share/puppet/ext/
+  326  locate puppetmasterd/public
+  327  locate puppetmasterd
+  328  updatedb
+  329  locate public
+  330  service httpd stop
+  331  mkdir -p /usr/share/puppet/rack/puppetmasterd
+  332  mkdir -p /usr/share/puppet/rack/puppetmasterd/public
+  333  mkdir -p /usr/share/puppet/rack/puppetmasterd/tmp
+  334  cp /usr/share/puppet/ext/rack/config.ru /usr/share/puppet/rack/puppetmasterd/
+  335  ls -lah  /usr/share/puppet/rack/puppetmasterd/
+  336  chown puppet:puppet /usr/share/puppet/rack/puppetmasterd/config.ru
+  337  ls -lah  /usr/share/puppet/rack/puppetmasterd/
+  338  service httpd restart
+  339  vim /etc/httpd/conf/httpd.conf 
+  340  vim /etc/httpd/conf.d/puppet.conf
+  341  netstat -anl | grep 8140
+  342  who
+  343  pwd
+  344  uptime
+  345  ls
+  346  ifconfig
+  347  who
+  348  ls -lah /etc/yum.repos.d/
+  349  yum install puppet-dashboard
+  350  yum install mysql-server
+  351  service mysqld start
+  352  mysql
+  353  cd /usr/share/puppet-dashboard/
+  354  ls
+  355  cd config/
+  356  ls
+  357  vim database.yml
+  358  vim /etc/my.cnf
+  359  service mysqld restart
+  360  mysql
+  361  cd /usr/share/puppet-dashboard/
+  362  ls
+  363  rake gems:refresh_specs
+  364  pwd
+  365  rake RAILS_ENV=production db:migrate
+  366  gem -v
+  367  rake -v
+  368  locate rubygems
+  369  ruby setup.rb
+  370  rake gems:refresh_specs
+  371  pwd
+  372  uptime
+  373  who
+  374  gem install rake
+  375  rake -v\
+  376  rake -v
+  377  rake --v
+  378  gem -v
+  379  rake -v
+  380  ls /usr/local/bin/
+  381  cd rake
+  382  ls /usr/local/bin/rake
+  383  cat /usr/local/bin/rake
+  384  gem install rake
+  385  rake
+  386  ls
+  387  cd /usr/share/puppet-dashboard
+  388  pwd
+  389  ls
+  390  cat Rakefile 
+  391  rake
+  392  locate rake | grep rake
+  393  pwd
+  394  cd /usr/share/puppet-dashboard/
+  395  ls
+  396  rake gems:refresh_specs --trace
+  397  ruby -v
+  398  bundler -v
+  399  yum list installed | grep Bundler
+  400  yum list installed | grep bundler
+  401  yum list installed | grep mysql
+  402  rubygems -v
+  403  ruby -v
+  404  rails -v
+  405  gem -v
+  406  gem list
+  407  gem -v
+  408  rails -v
+  409  exit
+  410  who
+  411  uptime
+  412  ls /usr/share/puppet-dashboard/
+  413  cd /usr/share/puppet-dashboard/
+  414  pwd
+  415  rake RAILS_ENV=production db:migrate
+  416   cd config/
+  417  ls
+  418  vim database.yml
+  419  vim /etc/my.cnf
+  420  service mysqld restart
+  421  mysql
+  422  cd /usr/share/puppet-dashboard/
+  423  ls
+  424  gem list
+  425  puppet-master --version
+  426  puppet --version
+  427  puppet master --version
+  428  rpm -qa | grep puppet
+  429  puppet agent --version
+  430  locate config.ru
+  431  ruby --version
+  432  service puppet status
+  433   puppet resource package nginx
+  434  puppet cert list
+  435  service puppetmaster status
+  436  rvm list rubies
+  437  rubygems --version
+  438  yum list installed | grep puppet
+  439  yum list installed | grep rubygems
+  440  rvm --version
+  441  rvm list ruby
+  442  rvm list rubies
+  443  rvm list default
+  444  rpm -qa | grep ruby
+  445  ruby --version
+  446  gem -v
+  447  rake gems:refresh_specs
+  448  which rake
+  449  locate config/environment.rb
+  450  cd config/
+  451  ls
+  452  vim environment.rb
+  453  gem -v
+  454  pwd
+  455  cd ..
+  456  ruby setup.rb
+  457  rails -v
+  458  which rails
+  459  ryby -v
+  460  ruby -v
+  461  gem --version
+  462  gem list
+  463  gem install rails
+  464  gem install --no-document rails
+  465  rails -v
+  466  which rails
+  467  rake gems:refresh_specs
+  468  gem list
+  469  gem remove rails
+  470  gem remove --no-document rails
+  471  gem mremove  rails
+  472  gem uninstall rails
+  473  gem list
+  474  rake gems:refresh_specs
+  475  gem install --no-document rails
+  476  gem install --no-document bundler
+  477  bundler -v
+  478  rvm install --no-document 2.3.1
+  479  rvm install --no-rdoc --no-ri 2.3.1
+  480  rvm install --no-ri 2.3.1
+  481  rvm install 2.3.1
+  482  ruby -v
+  483  rvm list rubies
+  484  gem install --no-document bundler
+  485  bundler -v
+  486  rake gems:refresh_specs
+  487  gem -v
+  488  gem uninstall rails
+  489  rvm install 2.3.1
+  490  rvm reinstall 2.3.1
+  491  gem install --no-document bundler
+  492  bundle update --local
+  493  gem update --no-document bundler --local
+  494  gem update bundler
+  495  update bundler
+  496  bundle update --local
+  497  gem list
+  498  bundle install --local --no-prune
+  499  bundle env
+  500  rake gems:refresh_specs
+  501  rake gems:refresh_specs --trace
+  502  rpm -qa | grep ruby
+  503  yum list installed | grep rubygems
+  504  rvm install rubygems 1.8.2 --force
+  505  yum list installed | grep rubygems
+  506  rpm -qa | grep ruby
+  507  rvm list rubies
+  508  rvm uninstall 2.3.1
+  509  rvm list rubies
+  510  rvm install rubygems 1.8.2 --force
+  511  rvm install 1.9.3-p327
+  512  rvm install rubygems 1.8.2 --force
+  513  rvm list rubies
+  514  rpm -qa | grep ruby
+  515  ruby -v
+  516  rails -v
+  517  yum list installed | grep rubygems
+  518  rake gems:refresh_specs
+  519  rails -v
+  520  gem uninstall rails
+  521  gem list -d rails
+  522  gem install --no-document rails
+  523  gem install --no-ro rails
+  524  gem install --no-ri rails
+  525  gem install --no-rdoc --no-ri rails
+  526  rails -v
+  527  gem install rails
+  528  rake RAILS_ENV=production db:migrate
+  529  gem update
+  530  gem list
+  531  rails -v
+  532  gem uninstall rails -v 5.1.4
+  533  gem install rails
+  534  gem install rails -v 4.2.4
+  535  gem install rails -v 4.0.0
+  536  sudo gem cleanup
+  537  gem install rails -v 3.2.13
+  538  gem list
+  539  rails -v
+  540  gem install rails -v 3.2.0
+  541  gem install rails -v 3.1.0
+  542  gem install rails -v 3.0.0
+  543  rails -v
+  544  gem install rails
+  545  gem install rails -v 2.0.0
+  546  rails -v
+  547  rake RAILS_ENV=production db:migrate
+  548   gem install mysql
+  549  yum install mysql-server
+  550  mysql
+  551  rake RAILS_ENV=production db:migrate
+  552  rvm get head
+  553  rvm reload
+  554  rvm -v
+  555  rvm reset
+  556  rvm -v
+  557  which bundle
+  558  gem install bundler
+  559  which bundle
+  560  rake RAILS_ENV=production db:migrate
+  561  sudo gem cleanup
+  562  rake RAILS_ENV=production db:migrate
+  563  rails -v
+  564  gem list
+  565  rails -v
+  566  gem uninstall rails -v 5.1.4
+  567  rails -v
+  568  rake RAILS_ENV=production db:migrate
+  569  gem uninstall rails -v 5.1.4
+  570  gem list -d rails
+  571  rake gems:refresh_specs
+  572  ruby -v
+  573  rvm list rubies
+  574  gem uninstall rails
+  575  rvm uninstall 2.2.4p230
+  576  ruby -v
+  577  sudo gem cleanup
+  578  rake gems:refresh_specs
+  579  gem install rails -v 2.0.0
+  580  gem install rails -v 3.0.0
+  581  gem install --no-ri --no-rdoc rails -v 3.0.0
+  582  rails -v
+  583  ruby -v
+  584  rvm uninstall 2.2.4p230
+  585  rake RAILS_ENV=production db:migrate
+  586  rvm install rubygems 1.8.2 --force
+  587  rvm install 1.9.3-p327
+  588  rvm reinstall 1.9.3-p327
+  589  rvm install rubygems 1.8.2 --force
+  590  rake RAILS_ENV=production db:migrate
+  591  rake gems:refresh_specs
+  592  rake RAILS_ENV=production db:migrate
+  593  rake RAILS_ENV=production db:migrate --trace
+  594  ruby -v
+  595  gem -v
+  596  rails -v
+  597  ls /usr/local/mysql/bin/
+  598  ls /usr/local/mysql/
+  599  ls /usr/local/mysql
+  600  ls -lah /usr/local/mysql/bin/
+  601  ls -lah /usr/local/
+  602  locate /mysql
+  603  gem install mysql
+  604  rake gems:refresh_specs
+  605  rake RAILS_ENV=production db:migrate
+  606  rails -v
+  607  aptitude install redmine-mysql
+  608  sudo aptitude install redmine-mysql
+  609  rvm install rubygems 1.8.25 --force
+  610  rails -v
+  611  ruby -v
+  612  gem list
+  613  rake RAILS_ENV=production db:migrate
+  614  rvm list rubies
+  615  rubygems -v
+  616  yum list installed | grep rubygems
+  617  gem update --system 1.8.25
+  618  gem install mysql
+  619  sudo gem cleanup
+  620  rake RAILS_ENV=production db:migrate
+  621  gem update
+  622  gem -v
+  623  ruby -v
+  624  rvm list rubies
+  625  rails -v
+  626  rake RAILS_ENV=production db:migrate
+  627  which mysql_config
+  628  ls -lah /usr/local/lib/ruby/gems/
+  629  gem -v
+  630  yum list installed | grep rubygems
+  631  rake RAILS_ENV=production db:migrate
+  632  rails -v
+  633  gem -v
+  634  rvm list rubies
+  635  ruby -v
+  636  yum list installed | grep rubygems
+  637  ls -lah /usr/local/lib/ruby/gems/
+  638  cd 2.2.0
+  639  ls -lah /usr/local/lib/ruby/gems/2.2.0/
+  640  cd gems
+  641  ls -lah /usr/local/lib/ruby/gems/2.2.0/gems/
+  642  which mysql_config
+  643  gem install mysql
+  644  pwd
+  645  cd /usr/local/lib/ruby/gems/2.2.0/gems/
+  646  pwd
+  647  cd rails-3.0.0
+  648  ls
+  649  ls /bin/
+  650  cd ..
+  651  pwd
+  652  mysql -v
+  653  ls /opt/local/include/
+  654  ls /opt/local/
+  655  ls -lah /opt/local/include
+  656  ls -lah /opt/
+  657  ls -lah /usr/bin/mysql_config
+  658  cd /usr/share/puppet-dashboard
+  659  pwd
+  660  gem install mysql -- --with-mysql-config=/usr/bin/mysql_config
+  661  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/bin/
+  662  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/bin/ruby 
+  663  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/
+  664  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/share/
+  665  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/lib/
+  666  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1
+  667  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/
+  668  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/mysql/
+  669  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/
+  670  cd /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1
+  671  pwd
+  672  ls -l
+  673  locate *.c
+  674  locate mysql.c
+  675  ls -l
+  676  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/
+  677  cd /usr/share/puppet-dashboard
+  678  pwd
+  679  cp -R /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1  /usr/local/lib/ruby/gems/2.2.0/gems/
+  680  cd /usr/local/lib/ruby/gems/2.2.0/gems/
+  681  ls -l
+  682  cd /usr/share/puppet-dashboard
+  683  rake RAILS_ENV=production db:migrate
+  684  gem install mysql
+  685  ls -lah /usr/local/
+  686  ls -lah /usr/local/lib/
+  687  ls -lah /usr/local/rvm/
+  688  ls -lah /usr/local/rvm/gems/
+  689  ls -lah /usr/local/lib/
+  690  ls -lah /usr/local/lib/ruby/
+  691  ls -lah /usr/local/lib/ruby/gems/
+  692  ls -lah /usr/local/lib/ruby/gems/2.2.0/
+  693  ls -lah /usr/local/lib/ruby/gems/2.2.0/gems/
+  694  ls -lah /usr/local/lib/ruby/gems/2.2.0/gems/mysql-2.9.1/
+  695  pwd
+  696  cd /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/
+  697  ls
+  698  ls -l
+  699  ruby ./mysql.rb 
+  700  cd /usr/share/puppet-dashboard
+  701  rake RAILS_ENV=production db:migrate
+  702  gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
+  703  gem list
+  704  rake db:create
+  705  locate Gemfile
+  706  gem update --include-dependencies --system
+  707  rake RAILS_ENV=production db:migrate
+  708  ruby -v
+  709  rails -v
+  710  gem -v
+  711  gem install mysql
+  712  gem -v
+  713  gem uninstall --version 2.7.5
+  714  gem cleanup
+  715  gem list
+  716  gem -v
+  717  rake gems:refresh_specs
+  718  gem uninstall --version 2.7.5
+  719  gem uninstall rjb --version '>1.3.4'
+  720  gem uninstall --version '>1.3.4'
+  721  gem uninstall --version '2.7.5'
+  722  gem uninstall gem --version '2.7.5'
+  723  gem -v
+  724  gem cleanup --dryrun
+  725  gem cleanup
+  726  gem cleanup -d
+  727  gem uninstall --all
+  728  y
+  729  gem list
+  730  gem -v
+  731  gem uninstall --all
+  732  gem cleanup -d
+  733  gem cleanup
+  734  gem uninstall --version '2.7.5'
+  735  gem cleanup --dryrun
+  736  rake gems:refresh_specs
+  737  gem uninstall rails
+  738  rvm reinstall 1.9.3-p327
+  739  rvm install rubygems 1.8.2 --force
+  740  rake gems:refresh_specs
+  741  rake RAILS_ENV=production db:migrate
+  742  ifconfig
+  743  who
+  744  rvm list rubies
+  745  hostname
+  746  ls -lah /etc/httpd/conf.d/puppet.conf 
+  747  vi /etc/httpd/conf.d/puppet.conf
+  748  cat /etc/httpd/conf.d/puppet.conf
+  749  who
+  750  ifconfig
+  751  vi /etc/hosts
+  752  uname -r
+  753  uptime
+  754  date
+  755  exit
+  756  su -
+  757  exit
+  758  ifconfig
+  759  who
+  760  vim /etc/hosts
+  761  sudo su -
+  762  logout
+  763  ls
+  764  pwd
+  765  iwconfig
+  766  sudo service httpd restart
+  767  pwd
+  768  ls -lah
+  769  vi /etc/hosts
+  770  hostname
+  771  ifconfig
+  772  vi /etc/hosts
+  773  pwd
+  774  ls
+  775  locate chef-starter.zip
+  776  yum -y install mlocate
+  777  locate chef-starter.zip
+  778  locate . chef-starter.zip
+  779  locate . chef-starter.zip |grep zip
+  780  locate chef-starter.zip
+  781  mlocate chef-starter.zip
+  782  pwd
+  783  cd /home/Master/
+  784  cd Downloads/
+  785  ls
+  786  tar xvzf chef-starter.zip 
+  787  who
+  788  unzip chef-starter.zip 
+  789  ls
+  790  pwd
+  791  ls
+  792  cd Downloads/
+  793  ls
+  794  who
+  795  pwd
+  796  ls
+  797  su -
+  798  ls
+  799  pwd
+  800  ifconfig
+  801  su -
+  802  pwd
+  803  ls
+  804  tar xvzf chef-starter.zip 
+  805  unzip chef-starter.zip 
+  806  ls -lah
+  807  cd chef-repo/
+  808  ls
+  809  uname -r
+  810  pwd
+  811  cd ..
+  812  pwd
+  813  rpm -ivh /root/Downloads/chefdk-2.5.3-1.el6.x86_64.rpm 
+  814  ls -l /opt/chefdk/
+  815  pwd
+  816  check verify
+  817  chef verify
+  818  which ruby
+  819  chef --version
+  820  chef shell-init bash
+  821  pwd
+  822  cd ~/chef-repo
+  823  knife client list
+  824  knife ssl fetch
+  825  ls -l /root/chef-repo/.chef/trusted_certs
+  826  cat /root/chef-repo/.chef/trusted_certs/centos_example_com.crt
+  827  ls -l /root/chef-repo/.chef/trusted_certs/
+  828  knife client list
+  829  ls -l
+  830  cd ..
+  831  pwd
+  832  yum install -y wget curl git
+  833  chef --version
+  834  chef verify
+  835  ls
+  836  cd chef-repo/
+  837  pwd
+  838  mkdir -p ~/chef-repo/.chef
+  839  ls
+  840  ls -lah
+  841  date
+  842  cd ~/chef-repo/.chef
+  843  ls
+  844  cd trusted_certs/
+  845  ls
+  846  cd ..
+  847  vi chef-validator.pem
+  848  vi ovm-validator.pem
+  849  ls
+  850  pwd
+  851  cd ..
+  852  pwd
+  853  ls
+  854  ls -lah
+  855  knife client lis
+  856  knife client list
+  857  cd ~
+  858  pwd
+  859  unzip chef-starter.zip
+  860  cd ~/chef-repo
+  861  knife client list
+  862  ls -l /root/chef-repo/.chef/trusted_certs
+  863  knife client list
+  864  knife configure -i
+  865  cat ~/.chef/knife.rb
+  866  ls
+  867  ls -lah
+  868  cat .chef/knife.rb 
+  869  knife configure -i
+  870  knife client list
+  871  pwd
+  872  chef --version
+  873  chef shell-init bash
+  874  knife client list
+  875  knife ssl fetch
+  876  knife user list
+  877  knife ssl fetch
+  878  knife client list
+  879  knife configure --initial
+  880  cd ..
+  881  pwd
+  882  chef --version
+  883  chef verify
+  884  yum install git
+  885  git --version
+  886  ifconfig
+  887  system
+  888  nmcli device status
+  889  ip addr show
+  890  setup
+  891  pwd
+  892  mkdir GitProject
+  893  cd GitProject
+  894  git init
+  895  ls -a
+  896  git status
+  897  cat sample.txt
+  898  vi sample.txt
+  899  cat sample.txt
+  900  git add sample.txt
+  901  git status
+  902  git commite -m "created newfile"
+  903  git commit -m "created newfile"
+  904  git log
+  905  git log --oneline
+  906  git show 5df1659
+  907  cd
+  908  pwd
+  909  ls -lah
+  910  cd Downloads/
+  911  ls -lah
+  912  tar -zxvf gitkraken-amd64.tar.gz 
+  913  ls -lah
+  914  sudo rsync -va --delete-after gitkraken/ /opt/GitKraken/
+  915  cd /opt/GitKraken
+  916  ls
+  917  ./gitkraken
+  918  cd
+  919  pwd
+  920  cd Downloads/
+  921  ls -lah
+  922  cd gitkraken
+  923  ls
+  924  use gitkraken 
+  925  ls -lah
+  926  cd
+  927  pwd
+  928  cd Downloads/
+  929  ls -lah
+  930  yum install CycligentGitTool-0.5.2-linux-x64.rpm
+  931  ls -lah
+  932  unzip GitEye-2.1.0-linux.x86_64.zip
+  933  ls
+  934  cd Giteyes/
+  935  ls
+  936  unzip GitEye-2.1.0-linux.x86_64.zip
+  937  cd
+  938  pwd
+  939  ls -lah
+  940  unzip chef-starter.zip 
+  941  ls -lah
+  942  cd chef-repo/
+  943  ls -la
+  944  knife client list
+  945  chef-client -v
+  946  curl -L https://www.opscode.com/chef/install.sh | bash
+  947  cd ..
+  948  pwd
+  949  curl -L https://www.opscode.com/chef/install.sh | bash
+  950  cd chef-repo/
+  951  knife client list
+  952  knife ssl fetch
+  953  ls -l /root/chef-repo/.chef/trusted_certs
+  954  cd ..
+  955  cd Downloads/
+  956  ls -lah 
+  957  yum -y install chefdk-2.5.3-1.el6.x86_64.rpm
+  958  cd ..
+  959  cd chef-repo/
+  960  knife ssl fetch
+  961  knife client list
+  962  knife ssl fetch
+  963  cd ..
+  964  yum remove chef
+  965  yum remove chefdk-2.5.3-1.el6.x86_64.rpm
+  966  yum list installed chef
+  967  yum list installed chef*
+  968  yum list installed
+  969  yum list installed|grep chef
+  970  yum remove chefdk.x86_64
+  971  ls -lah
+  972  pwd
+  973  unzip chef-starter.zip
+  974  cd ~/chef-repo
+  975  knife client list
+  976  knife ssl fetch
+  977  cd ..
+  978  cd Downloads/
+  979  ls -lah *.rpm
+  980  rpm -ivh chefdk-2.5.3-1.el6.x86_64.rpm
+  981  cd ..
+  982  cd chef-repo/
+  983  cd ..
+  984  chef verify
+  985  chef --version
+  986  yum install -y chef
+  987  chef verify
+  988  yum install berks
+  989  chef shell-init bash
+  990  cd chef-repo/
+  991  chef shell-init bash
+  992  chef verify
+  993  knife client list
+  994  chef verify
+  995  knife ssl fetch
+  996  knife client list
+  997  restart
+  998  init 6
+  999  cd ..
+ 1000  cd ~/chef-repo
+ 1001  knife client list
+ 1002  knife configure -i
+ 1003  knife client list
+ 1004  knife configure -i
+ 1005  cd ..
+ 1006  yum install -y wget curl
+ 1007  yum install -y wget curl git
+ 1008  hostname
+ 1009  chef shell-init bash
+ 1010  chef --version
+ 1011  chef verify
+ 1012  chef --version
+ 1013  chef shell-init bash
+ 1014  ls
+ 1015  ls -l
+ 1016  date
+ 1017  unzip chef-starter.zip
+ 1018  cd ~/chef-repo
+ 1019  pwd
+ 1020  knife client list
+ 1021  knife cookbook list
+ 1022  ls
+ 1023  cd cookbooks/
+ 1024  ls
+ 1025  cd starter/
+ 1026  ls
+ 1027  cd recipes/
+ 1028  ls
+ 1029  cat default.rb 
+ 1030  cd ..
+ 1031  knife cookbook create sample
+ 1032  chef generate cookbook sample
+ 1033  ls
+ 1034  cd sample/
+ 1035  ls
+ 1036  cd recipes/
+ 1037  ls
+ 1038  cat default.rb 
+ 1039  vi default.rb 
+ 1040  ls
+ 1041  ls -l
+ 1042  cd
+ 1043  pwd
+ 1044  cd chef-repo/
+ 1045  knife cookbook list
+ 1046  knife cookbook upload sample
+ 1047  cd cookbooks/
+ 1048  knife cookbook upload sample
+ 1049  ls
+ 1050  cd starter/
+ 1051  ls
+ 1052  cd recipes/
+ 1053  ls
+ 1054  cd ..
+ 1055  ls
+ 1056  cd ..
+ 1057  ls
+ 1058  cd sample/
+ 1059  ls
+ 1060  cd recipes/
+ 1061  knife cookbook upload sample
+ 1062  ls
+ 1063  knife cookbook test sample
+ 1064  knife cookbook test default
+ 1065  cd 
+ 1066  cd chef-repo/
+ 1067  ls
+ 1068  knife cookbook test sample
+ 1069  knife cookbook upload sample
+ 1070  chef-client 
+ 1071  knife cookbook upload sample
+ 1072  knife client list
+ 1073  ls -l /var/chef/cache/chef-stacktrace.out 
+ 1074  ls -lah /var/chef/cache/chef-stacktrace.out 
+ 1075  knife client list
+ 1076  knife cookbook upload sample
+ 1077  hostname
+ 1078  ls /etc/host
+ 1079  ls /etc/
+ 1080  ls /etc/hosts
+ 1081  cd /etc/hosts
+ 1082  cat /etc/hosts
+ 1083  vi /etc/hosts
+ 1084  hostname
+ 1085  hostname localhost
+ 1086  hostname
+ 1087  vi /etc/hosts
+ 1088  hostname
+ 1089  cd cookbooks/
+ 1090  ls
+ 1091  knife cookbook upload sample
+ 1092  cd ..
+ 1093  vi /etc/hosts
+ 1094  hostname
+ 1095  hostname puppet.mydomain.local
+ 1096  hostname
+ 1097  knife cookbook upload sample
+ 1098  chef generate cookbook sample1
+ 1099  knife cookbook list
+ 1100  chef cookbook list
+ 1101  cd cookbooks/
+ 1102  chef generate cookbook sample1
+ 1103  ls
+ 1104  chef cookbook list
+ 1105  kinfe cookbook list
+ 1106* 
+ 1107  knife cookbook show sample1
+ 1108* 
+ 1109  knife cookbook upload sample1
+ 1110  ls
+ 1111  knife cookbook list
+ 1112  ls
+ 1113  cd sample1
+ 1114  ls
+ 1115  cd recipes/
+ 1116  ls
+ 1117  vi default.rb 
+ 1118  ls
+ 1119  ls -l
+ 1120  cd ..
+ 1121  knife cookbook upload sample1
+ 1122  ping 192.168.33.131
+ 1123  knife bootstrap 192.168.33.131 -x root -P root@123 -N "node1" -r "recipe[sample1]"
+ 1124  chef-client
+ 1125  knife bootstrap 192.168.33.131 -x root -P root@123 -N "node1" -r "recipe[sample1]"
+ 1126  knife bootstrap 192.168.124.1 -x root -P root@123 -N "server1" -r "recipe[sample1]"
+ 1127  knife bootstrap 192.168.124.1 -x root -P root@123 -N "server12" -r "recipe[sample1]"
+ 1128  history
+[root@puppet chef-repo]# vi /etc/ss
+ssh/  ssl/  sssd/ 
+[root@puppet chef-repo]# vi /etc/ssh/sshd_config 
+[root@puppet chef-repo]# cat /etc/ssh/sshd_config 
+#	$OpenBSD: sshd_config,v 1.80 2008/07/02 02:24:18 djm Exp $
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/local/bin:/bin:/usr/bin
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options change a
+# default value.
+
+Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+# Disable legacy (protocol version 1) support in the server for new
+# installations. In future the default will change to require explicit
+# activation of protocol 1
+Protocol 2
+
+# HostKey for protocol version 1
+#HostKey /etc/ssh/ssh_host_key
+# HostKeys for protocol version 2
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_dsa_key
+
+# Lifetime and size of ephemeral version 1 server key
+#KeyRegenerationInterval 1h
+#ServerKeyBits 1024
+
+# Logging
+# obsoletes QuietMode and FascistLogging
+#SyslogFacility AUTH
+SyslogFacility AUTHPRIV
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+#PermitRootLogin yes
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#RSAAuthentication yes
+#PubkeyAuthentication yes
+#AuthorizedKeysFile	.ssh/authorized_keys
+#AuthorizedKeysCommand none
+#AuthorizedKeysCommandRunAs nobody
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#RhostsRSAAuthentication no
+# similar for protocol version 2
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# RhostsRSAAuthentication and HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+#PasswordAuthentication yes
+#PermitEmptyPasswords no
+PasswordAuthentication yes
+
+# Change to no to disable s/key passwords
+#ChallengeResponseAuthentication yes
+ChallengeResponseAuthentication no
+
+# Kerberos options
+#KerberosAuthentication no
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
+#KerberosGetAFSToken no
+#KerberosUseKuserok yes
+
+# GSSAPI options
+#GSSAPIAuthentication no
+GSSAPIAuthentication yes
+#GSSAPICleanupCredentials yes
+GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes
+#GSSAPIKeyExchange no
+
+# Set this to 'yes' to enable PAM authentication, account processing, 
+# and session processing. If this is enabled, PAM authentication will 
+# be allowed through the ChallengeResponseAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via ChallengeResponseAuthentication may bypass
+# the setting of "PermitRootLogin without-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and ChallengeResponseAuthentication to 'no'.
+#UsePAM no
+UsePAM yes
+
+# Accept locale-related environment variables
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+AcceptEnv XMODIFIERS
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+#X11Forwarding no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PrintMotd yes
+#PrintLastLog yes
+#TCPKeepAlive yes
+#UseLogin no
+#UsePrivilegeSeparation yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#ShowPatchLevel no
+#UseDNS yes
+#PidFile /var/run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+
+# no default banner path
+#Banner none
+
+# override default of no subsystems
+Subsystem	sftp	/usr/libexec/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	ForceCommand cvs server
+[root@puppet chef-repo]# 
+[root@puppet chef-repo]# knife bootstrap 192.168.124.1 -x root -P root@123 -N "server123" -r "recipe[sample1]"
+Creating new client for server123
+Creating new node for server123
+Connecting to 192.168.124.1
+ERROR: Network Error: Connection refused - connect(2) for 192.168.124.1:22
+Check your knife configuration and network settings
+[root@puppet chef-repo]# service sshd start
+[root@puppet chef-repo]# knife bootstrap 192.168.124.1 -x root -P root@123 -N "server123" -r "recipe[sample1]"
+Node server123 exists, overwrite it? (Y/N) y
+Client server123 exists, overwrite it? (Y/N) y
+Creating new client for server123
+Creating new node for server123
+Connecting to 192.168.124.1
+ERROR: Network Error: Connection refused - connect(2) for 192.168.124.1:22
+Check your knife configuration and network settings
+[root@puppet chef-repo]# knife bootstrap 13.127.207.148  -x ec2@user -i /testpass.pem -N "server1" -r "recipe[sample1]"Creating new client for server1
+Creating new node for server1
+Connecting to 13.127.207.148
+Failed to authenticate ec2@user - trying password auth
+[root@puppet chef-repo]# pwd
+/root/chef-repo
+[root@puppet chef-repo]# knife bootstrap 13.127.207.148 --sudo  -x ec2-user -i /root/chef-repo/testpass.pem -N "server1" -r "recipe[sample1]"
+Node server1 exists, overwrite it? (Y/N) y
+Client server1 exists, overwrite it? (Y/N) y
+Creating new client for server1
+Creating new node for server1
+Connecting to 13.127.207.148
+13.127.207.148 -----> Installing Chef Omnibus (-v 13)
+13.127.207.148 downloading https://omnitruck-direct.chef.io/chef/install.sh
+13.127.207.148   to file /tmp/install.sh.2665/install.sh
+13.127.207.148 trying wget...
+13.127.207.148 el 6 x86_64
+13.127.207.148 Getting information for chef stable 13 for el...
+13.127.207.148 downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=13&p=el&pv=6&m=x86_64
+13.127.207.148   to file /tmp/install.sh.2670/metadata.txt
+13.127.207.148 trying wget...
+13.127.207.148 sha1	e36f79a258cbe1a2dbf80bf99b9e900470e625dc
+13.127.207.148 sha256	ab41d18eeac19ff8b3106ef33d8e2756b64d944d33974e3e661adbc8b71349ae
+13.127.207.148 url	https://packages.chef.io/files/stable/chef/13.8.5/el/6/chef-13.8.5-1.el6.x86_64.rpm
+13.127.207.148 version	13.8.5
+13.127.207.148 downloaded metadata file looks valid...
+13.127.207.148 downloading https://packages.chef.io/files/stable/chef/13.8.5/el/6/chef-13.8.5-1.el6.x86_64.rpm
+13.127.207.148   to file /tmp/install.sh.2670/chef-13.8.5-1.el6.x86_64.rpm
+13.127.207.148 trying wget...
+13.127.207.148 Comparing checksum with sha256sum...
+13.127.207.148 Installing chef 13
+13.127.207.148 installing with rpm...
+13.127.207.148 warning: /tmp/install.sh.2670/chef-13.8.5-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+13.127.207.148 Preparing...                          ################################# [100%]
+13.127.207.148 Updating / installing...
+13.127.207.148    1:chef-13.8.5-1.el6                ################################# [100%]
+13.127.207.148 Thank you for installing Chef!
+13.127.207.148 Starting the first Chef Client run...
+13.127.207.148 Starting Chef Client, version 13.8.5
+13.127.207.148 resolving cookbooks for run list: ["sample1"]
+13.127.207.148 Synchronizing Cookbooks:
+13.127.207.148   - sample1 (0.1.0)
+13.127.207.148 Installing Cookbook Gems:
+13.127.207.148 Compiling Cookbooks...
+13.127.207.148 Converging 3 resources
+13.127.207.148 Recipe: sample1::default
+13.127.207.148   * yum_package[httpd] action install
+13.127.207.148     - install version 2.2.34-1.16.amzn1 of package httpd
+13.127.207.148   * service[httpd] action nothing (skipped due to action :nothing)
+13.127.207.148   * file[/var/www/html/index.html] action create
+13.127.207.148     - create new file /var/www/html/index.html
+13.127.207.148     - update content in file /var/www/html/index.html from none to 90e631
+13.127.207.148     --- /var/www/html/index.html	2018-04-21 06:53:32.296940000 +0000
+13.127.207.148     +++ /var/www/html/.chef-index20180421-2741-pgmif1.html	2018-04-21 06:53:32.296940000 +0000
+13.127.207.148     @@ -1 +1,2 @@
+13.127.207.148     +<html><body> Welcome to chef..</body></html>
+13.127.207.148 
+13.127.207.148 Running handlers:
+13.127.207.148 Running handlers complete
+13.127.207.148 Chef Client finished, 2/3 resources updated in 13 seconds
+[root@puppet chef-repo]# pwd
+/root/chef-repo
+[root@puppet chef-repo]# 
+[root@puppet chef-repo]# 
+[root@puppet chef-repo]# knife bootstrap 192.168.33.131 --sudo  -x root -P root@123 -N "server2" -r "recipe[sample1]"
+Creating new client for server2
+Creating new node for server2
+Connecting to 192.168.33.131
+192.168.33.131 -----> Existing Chef installation detected
+192.168.33.131 Starting the first Chef Client run...
+192.168.33.131 Starting Chef Client, version 14.0.202
+192.168.33.131 resolving cookbooks for run list: ["sample1"]
+192.168.33.131 Synchronizing Cookbooks:
+192.168.33.131   - sample1 (0.2.0)
+192.168.33.131 Installing Cookbook Gems:
+192.168.33.131 Compiling Cookbooks...
+192.168.33.131 Converging 3 resources
+192.168.33.131 Recipe: sample1::default
+192.168.33.131   * dnf_package[httpd] action install (up to date)
+192.168.33.131   * service[httpd] action start
+192.168.33.131     - start service service[httpd]
+192.168.33.131   * file[/var/www/html/index.html] action create
+192.168.33.131     - create new file /var/www/html/index.html
+192.168.33.131     - update content in file /var/www/html/index.html from none to 90e631
+192.168.33.131     --- /var/www/html/index.html	2018-04-23 16:53:18.896712697 +0530
+192.168.33.131     +++ /var/www/html/.chef-index20180423-32413-1vltm0q.html	2018-04-23 16:53:18.896712697 +0530
+192.168.33.131     @@ -1 +1,2 @@
+192.168.33.131     +<html><body> Welcome to chef..</body></html>
+192.168.33.131     - restore selinux security context
+192.168.33.131 
+192.168.33.131 Running handlers:
+192.168.33.131 Running handlers complete
+192.168.33.131 Chef Client finished, 2/3 resources updated in 20 seconds
+[root@puppet chef-repo]# 
+

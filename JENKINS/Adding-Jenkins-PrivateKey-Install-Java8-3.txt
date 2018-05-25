@@ -1,0 +1,372 @@
+[root@puppet Desktop]# ls -lah
+total 4.0M
+dr-xr-x---.  3 root root   4.0K May 23 19:14 .
+dr-xr-x---. 41 root Master 4.0K May 22 21:22 ..
+-rw-r--r--.  1 root root    25K May 22 19:16 All-History-Commands.txt
+drwxr-xr-x.  2 root root   4.0K May 23 19:14 Ansible
+-rw-r--r--.  1 root root   2.5K May 23 19:13 Ansible Host Machine.html
+-rw-r--r--.  1 root root    39K Apr 25 15:30 AWS-VMNode-Addition-CMD-for-Chef-Workstation.txt
+-rw-r--r--.  1 root root    70K Apr 25 15:37 Bootstrap-chef-Repo-CMD-Workstation.txt
+-rw-r--r--.  1 root root   3.8M Apr 25 15:36 Chef-Recipe-creation-CMD-workstation.txt
+-rw-r--r--.  1 root root    28K Apr 25 15:34 GIT-Install-local-CMD-for-GITHub.txt
+-rw-r--r--.  1 root root   1.4K May 21 18:27 Jenkins Installation Steps Notes.html
+-r--------.  1 root root   1.7K Apr 21 12:19 testpass.pem
+[root@puppet Desktop]# cd ..
+[root@puppet ~]# pwd
+/root
+[root@puppet ~]# ls -lah
+total 202M
+dr-xr-x---. 41 root Master 4.0K May 22 21:22 .
+dr-xr-xr-x. 25 root root   4.0K May 22 18:55 ..
+dr-xr-x---.  3 root root   4.0K Apr 12 19:35 .abrt
+-rw-------.  1 root root   1.6K Feb  8 04:56 anaconda-ks.cfg
+drwx------.  4 root root   4.0K Apr 25 16:58 .ansible
+-rw-r--r--.  1 root root   1.2K Apr 25 16:54 Ansible Host Machine.html
+-rw-------.  1 root root    19K May 22 19:12 .bash_history
+-rw-r--r--.  1 root root     18 May 20  2009 .bash_logout
+-rw-r--r--.  1 root root    176 May 20  2009 .bash_profile
+-rw-r--r--.  1 root root    176 Sep 23  2004 .bashrc
+drwxr-xr-x.  3 root root   4.0K Apr 12 20:09 .berkshelf
+drwxr-xr-x.  3 root root   4.0K Apr 13 20:09 .bundle
+dr-xr-x---.  6 root root   4.0K Apr 25 17:56 .cache
+drwxr-xr-x.  2 root root   4.0K Apr 12 22:01 .chef
+-rw-r--r--.  1 root root    99M Jul 14  2017 chefdk-2.0.28-1.el6.x86_64.rpm
+-rw-r--r--.  1 root root   103M Apr 13 18:08 chefdk-2.5.3-1.el6.x86_64.rpm
+drwxr-xr-x.  5 root root   4.0K Apr 21 12:31 chef-repo
+-rw-r--r--.  1 root root   7.7K Apr 13 20:07 chef-starter.zip
+dr-xr-x---.  8 root root   4.0K Apr 25 16:20 .config
+-rw-r--r--.  1 root root    100 Sep 23  2004 .cshrc
+dr-xr-x---.  3 root root   4.0K Apr 12 15:19 .dbus
+drwxr-xr-x.  3 root root   4.0K Apr 19 23:29 demo
+drwxr-xr-x. 11 root root   4.0K May 22 20:50 demo2
+drwxr-xr-x.  3 root root   4.0K May 22 21:23 demodocs
+dr-xr-x---.  3 root root   4.0K May 23 19:14 Desktop
+drwxr-xr-x. 11 root root   4.0K May 22 21:21 docsdemodocs
+dr-xr-x---.  2 root root   4.0K Apr 12 15:19 Documents
+dr-xr-x---.  5 root root   4.0K Apr 21 12:19 Downloads
+-rw-------.  1 root root     16 Apr 12 15:19 .esd_auth
+dr-xr-x---.  4 root root   4.0K May 22 19:13 .gconf
+dr-xr-x---.  3 root root   4.0K Feb  8 23:20 .gem
+drwxr-xr-x.  3 root root   4.0K Apr 13 16:42 GitProject
+dr-xr-x---.  9 root root   4.0K Apr 18 19:51 .gnome2
+drwx------.  2 root root   4.0K Apr 12 15:25 .gnome2_private
+dr-xr-x---.  3 root root   4.0K May 23 19:41 .gnote
+dr-xr-x---.  2 root root   4.0K May 22 19:13 .gnupg
+-rw-r--r--.  1 root root    107 May 22 19:13 .gtk-bookmarks
+dr-x------.  2 root root      0 May 22 19:13 .gvfs
+-rw-------.  1 root root   1.3K May 22 19:13 .ICEauthority
+-rw-rw-r--.  1 root root    623 May 22 19:13 .imsettings.log
+drwxr-xr-x.  3 root root   4.0K Apr 12 20:09 .inspec
+-rw-r--r--.  1 root root    50K Feb  8 04:56 install.log
+-rw-r--r--.  1 root root   9.8K Feb  8 04:54 install.log.syslog
+drwxr-xr-x.  3 root root   4.0K Apr 18 19:53 libreoffice
+dr-xr-x---.  3 root root   4.0K Apr 12 15:19 .local
+drwxr-xr-x.  4 root root   4.0K Apr 12 15:25 .mozilla
+dr-xr-x---.  2 root root   4.0K Apr 12 15:19 Music
+-rw-------.  1 root root    340 Feb 13 23:40 .mysql_history
+dr-xr-x---.  2 root root   4.0K Apr 12 15:19 .nautilus
+-rw-r--r--.  1 root root     15 Apr 25 18:08 nginx.retry
+-rw-r--r--.  1 root root    386 Apr 25 18:05 nginx.yml
+dr-xr-x---.  2 root root   4.0K Apr 12 15:19 Pictures
+dr-xr-x---.  3 root root   4.0K Feb  8 22:33 .pki
+dr-xr-x---.  2 root root   4.0K Apr 12 15:19 Public
+drwx------.  2 root root   4.0K Apr 12 15:19 .pulse
+-rw-------.  1 root root    256 Apr 12 15:19 .pulse-cookie
+-rw-------.  1 root root   1.0K Feb  8 23:19 .rnd
+dr-xr-x---.  2 root root   4.0K Apr 25 16:59 .ssh
+dr-xr-x---.  3 root root   4.0K Feb  9 00:38 .subversion
+-rw-r--r--.  1 root root    129 Dec  4  2004 .tcshrc
+dr-xr-x---.  2 root root   4.0K Apr 12 15:19 Templates
+drwx------.  3 root root   4.0K Apr 13 17:21 .thumbnails
+dr-xr-x---.  2 root root   4.0K Apr 12 15:19 Videos
+-rw-------.  1 root root   3.8K Apr 25 16:05 .viminfo
+[root@puppet ~]# cd .ssh
+[root@puppet .ssh]# ls -lah
+total 20K
+dr-xr-x---.  2 root root   4.0K Apr 25 16:59 .
+dr-xr-x---. 41 root Master 4.0K May 22 21:22 ..
+-rw-------.  1 root root   1.7K Apr 25 16:59 id_rsa
+-rw-r--r--.  1 root root    408 Apr 25 16:59 id_rsa.pub
+-rw-r--r--.  1 root root   1.6K Apr 25 17:10 known_hosts
+[root@puppet .ssh]# cat id_rsa
+-----BEGIN RSA PRIVATE KEY-----
+MIIEoQIBAAKCAQEApe2yi/GWEALJmlwQ6vwquSqFEP4n1gHqA59gy2Q1kWPjMKYN
+JjykeKiDvacP4Qzdqch4TnlgfmkIOzyJVs7Ct/FeWMG2YPC8RDxNNKsaPWSkQe9e
+yIxvoXK6HbeZypI3h9wNvxn51QdnPUlct6u0/MDHThx6f43+SVYA3tKblCMGRd7r
+LucQitOUEFcq29euR+eweWSXNBDXuuesX6UHh4JlW4/ZDJA4jvVpSxBH+7//hvsU
+w7OYCGpuJSg5Pbw6nWCYJURO8h33zBLC1iJquExDlpchl++Ii92IpR12lxl/nLGI
+HeEiRWou6LD/bSO26fAz6BDqzxiVL3ntCj9CEwIBIwKCAQAqqtYj/EsosEJ4Jk1+
+QNfJNtHCin9FqLiElrJ9cYoeEl794Y5aShup/3JVVtgyjkegr+Rr81NTtJu3dfdu
+F+jteJSaevRiEgSGkynLtvgealYflVLjHMw/dUXNIJVCt+Jkw46BmPcZhY+TaqLQ
+JNbEppmmXxgvbafJtweJwSCxD+fPkDCenIs9oOicszTa6D2+OgqwlU8rY41qkYIP
+GWz8/NBuVS95qeoj4scgwLTBwQ8IcrwnyYS5ewODDWCfrjbWQpuNc6CmlHchKPyy
+N4ayIL46At6/lsZPLYgyfNLGj/0wJaVYXCNw1PEduGKxxBalwdBa0+CCw+4J84nf
+Q82jAoGBAN0vP9tnTJHv8vJnkgp9lw+kQXt7Vqh3LEapP2NME5F0n+7Az0KAxnvZ
+vsM37SL3/zelaqfeqM5KoQPnwi/+wHATeympGWxf8hAeltGrdbhWG3AXlj7TYHj2
+rxnDc14E3/+f9/uUGpyY1YyAHRHcVFLTsuehn9R6AGH2kt/dcANvAoGBAMAL4BnQ
+jwvHp8O5KKgnZCBOGdKIOxAwmk6sHRZnEiOQYKFfdU+yprxii9iTw/RLJ1SH0jvY
+iVPQB3kG3K3ucrxlG0pyhaq1Bvvzo6iuf22teJpkg/JNRLcL7yRWNnMcQm56YAmH
+fKaEAzGfqm3BDbauErA6jnRYkAdLF4M6VcmdAoGBAJerXvzZHo/0/l0T0dtOzfwY
+3HHuLMtKZ4DpFYXrBhqZHTYAjh75N6ViHGibYMeFe85izMrh0taZkvtdF3FeOtCC
+YxVAwPnbZChPfVyS1GElGiD6OyPEJOU7cME1kPADV8U6fijalee5QfnxcwTu2rxz
+6GRRkitMWAipFEG8ahD7AoGAFfK6hpt+D/mPhBUpN8n80H30UpM58zjBLZADUwR3
+GgHfKGKuUkBNkd9gcIXqglG7Wh4mp8D5wG+L01E9yrwqXqx4JcPyBOF9JBvYMIj4
+ntH/J5Z1escAifK8PqrEZO1Ja7Y23ISDRjr5DPxN/eotc/ajDNN9/qsJJWeq6m0R
+HlsCgYB3r7dR/lemg3Y6Ma5BAVdZ6nEVEt1DMqfA+wGtgBTzFkgvX/ihRSrID/Bf
+g19Kh9s9vYY5xg58wYnlcxyjg+wI2m2epTHBgNPZwodamx1ii3WQke7C/JbwguRW
+A2hIK4bqO+bO+IAwiHIh9X6SwNHZaZaTCVSuMrobRxTro3PsZQ==
+-----END RSA PRIVATE KEY-----
+[root@puppet .ssh]# pwd
+/root/.ssh
+[root@puppet .ssh]# cd ~
+[root@puppet ~]# pwd
+/root
+[root@puppet ~]# echo "-----BEGIN RSA PRIVATE KEY-----
+> MIIEoAIBAAKCAQEAzlx51jIyO6ohBTLGTmYG3UaTEakF8T30HY4mPoKM6puQefS1
+> FTXfTr+7W83IDUGJdJ2bQRCpuoaB/avuUt/TuRi1W8PkihUmuICzpZU6loBtZ+M1
+> Lf9x7Ke1erdmc1wRIScK+0V6JgkfJG6wpT9p5TWjrIFvWVaB5TI4up9l5u/XkkTV
+> jZXon3et3PDbCsOD/s7SrGRN5RHnLkwt61GMNNse38GayfcYBT5Jdp9mUNNGQrFo
+> feFdWGugaAfPN7yFtpVg15IRnqiCQNTS4ILguLoynazXq1KXA6xyrS0d4a5V/V8H
+> wqH7XiuBg8xhlq8L3lJ5YjIziBuShSrc8fBBMwIBIwKCAQBwBlDEvCnl4ANL9v3w
+> C4ARuJj69Vr/TYSFEqcL/bo2NzEsQwM3ZmNIAa7aEJ/MroxygXGJuJanFdGJtRr5
+> yfaXrlPSusyFeTJG5sfsLHBDEoSI2m1TfAqlCpW3pWOAc87I2q4wog8b9lK8AZMX
+> 4JiSXvJzlrjKGQSvnuuYgmqErRxcc4nC2FTCznVTK4KVSXv1avpfGGxm2s9UcqzL
+> CwjvJpzhoelYRYff0BVC4kfmS/sSfBxEFLw0yUnOzrrAbgYt1+QwKW8ajseI1bGA
+> ZqlfK5LIcH4XfGn00OrY5+HtPPnrJP4qiRzWpKdwJeso5hMeq0t4pVQEUdkgczMr
+> tAXDAoGBAOmQ3Pt5hsR0FvsJnkaNzDSw9YnN3BPcaK/H3cxIr9TnUBa3iaFQLRQd
+> Sh4jkPX7DX0AE6tNrvwzRL5JM1W5xac7K5M41RLLBewNyAjQWMAjIcivO2Np5j1n
+> 9zq8xCndG1HCTz+ve59ik7kiuY597UAUAxRv7y2ifAk1WE5LI4MHAoGBAOIurfdB
+> WDcwUCuK9PTIR4XoFDhKTcMwPpEOPNJ9cnDzUWBtoe1Qclp0ForlUqiFHt/PuR1U
+> d/j5zwlRBtCiOaqts7ACppB6SrrYq5CPbQOH904RbFYWKNnLQdgq87InIrEeHHqc
+> X62Ynl4Lv4A5NOvwIVMu94YTj4AUC9IS7Ol1AoGAVsDHG5OJ0/Ca0kVmrH3PgUkK
+> vifkB2B+p7Ci1tkrXbUAfXdfAWbsLArhA+FTGYkiRF8dP6CC0rP09jhyJye+cVB9
+> 5jmuOi4mxWQ0WwuOrcPn+hUzUM+QCC3uHSGKsHayYDI6sUEt6r423l1a3Sd1YPF9
+> fJ6aqozO/BsgzJ+Q2OUCgYBNjFjnDxbuWbUWPkVbPVpZy+ms5kaMEIp64E9eHGHA
+> U2xbk01177ItpCT8a+HTYNdirZ6Nto+IkCm6DSbociJmZ3DOodK1MT4xbtu8iPIt
+> GKyPy3WZ27Y8CyyEoQMYgnJLWsfvhhIs496GpPEzRtBQ5J22HrtD6XMHV1SCiiVX
+> WwKBgEMD3j5jdG0fU8O+8EhI8PIvqOTjtHIOtUkyu5+g2111BNXZ/58Wr383H9Gk
+> Cx+YE63OSZeVOAmK/r72RaKzpLqAFZTrxX+fOnKBmNZKXj5xGj96qYNW/E6DiQiF
+> neHj6TjJD1OP201byfz7sgWLysfTTSsXdX+KLLTzf+bzdjik
+> -----END RSA PRIVATE KEY-----" >> ~/.ssh/authorized_keys
+[root@puppet ~]# ls -lah .ssh/
+total 24K
+dr-xr-x---.  2 root root   4.0K May 23 20:10 .
+dr-xr-x---. 41 root Master 4.0K May 22 21:22 ..
+-rw-r--r--.  1 root root   1.7K May 23 20:10 authorized_keys
+-rw-------.  1 root root   1.7K Apr 25 16:59 id_rsa
+-rw-r--r--.  1 root root    408 Apr 25 16:59 id_rsa.pub
+-rw-r--r--.  1 root root   1.6K Apr 25 17:10 known_hosts
+[root@puppet ~]# cat .ssh/authorized_keys 
+-----BEGIN RSA PRIVATE KEY-----
+MIIEoAIBAAKCAQEAzlx51jIyO6ohBTLGTmYG3UaTEakF8T30HY4mPoKM6puQefS1
+FTXfTr+7W83IDUGJdJ2bQRCpuoaB/avuUt/TuRi1W8PkihUmuICzpZU6loBtZ+M1
+Lf9x7Ke1erdmc1wRIScK+0V6JgkfJG6wpT9p5TWjrIFvWVaB5TI4up9l5u/XkkTV
+jZXon3et3PDbCsOD/s7SrGRN5RHnLkwt61GMNNse38GayfcYBT5Jdp9mUNNGQrFo
+feFdWGugaAfPN7yFtpVg15IRnqiCQNTS4ILguLoynazXq1KXA6xyrS0d4a5V/V8H
+wqH7XiuBg8xhlq8L3lJ5YjIziBuShSrc8fBBMwIBIwKCAQBwBlDEvCnl4ANL9v3w
+C4ARuJj69Vr/TYSFEqcL/bo2NzEsQwM3ZmNIAa7aEJ/MroxygXGJuJanFdGJtRr5
+yfaXrlPSusyFeTJG5sfsLHBDEoSI2m1TfAqlCpW3pWOAc87I2q4wog8b9lK8AZMX
+4JiSXvJzlrjKGQSvnuuYgmqErRxcc4nC2FTCznVTK4KVSXv1avpfGGxm2s9UcqzL
+CwjvJpzhoelYRYff0BVC4kfmS/sSfBxEFLw0yUnOzrrAbgYt1+QwKW8ajseI1bGA
+ZqlfK5LIcH4XfGn00OrY5+HtPPnrJP4qiRzWpKdwJeso5hMeq0t4pVQEUdkgczMr
+tAXDAoGBAOmQ3Pt5hsR0FvsJnkaNzDSw9YnN3BPcaK/H3cxIr9TnUBa3iaFQLRQd
+Sh4jkPX7DX0AE6tNrvwzRL5JM1W5xac7K5M41RLLBewNyAjQWMAjIcivO2Np5j1n
+9zq8xCndG1HCTz+ve59ik7kiuY597UAUAxRv7y2ifAk1WE5LI4MHAoGBAOIurfdB
+WDcwUCuK9PTIR4XoFDhKTcMwPpEOPNJ9cnDzUWBtoe1Qclp0ForlUqiFHt/PuR1U
+d/j5zwlRBtCiOaqts7ACppB6SrrYq5CPbQOH904RbFYWKNnLQdgq87InIrEeHHqc
+X62Ynl4Lv4A5NOvwIVMu94YTj4AUC9IS7Ol1AoGAVsDHG5OJ0/Ca0kVmrH3PgUkK
+vifkB2B+p7Ci1tkrXbUAfXdfAWbsLArhA+FTGYkiRF8dP6CC0rP09jhyJye+cVB9
+5jmuOi4mxWQ0WwuOrcPn+hUzUM+QCC3uHSGKsHayYDI6sUEt6r423l1a3Sd1YPF9
+fJ6aqozO/BsgzJ+Q2OUCgYBNjFjnDxbuWbUWPkVbPVpZy+ms5kaMEIp64E9eHGHA
+U2xbk01177ItpCT8a+HTYNdirZ6Nto+IkCm6DSbociJmZ3DOodK1MT4xbtu8iPIt
+GKyPy3WZ27Y8CyyEoQMYgnJLWsfvhhIs496GpPEzRtBQ5J22HrtD6XMHV1SCiiVX
+WwKBgEMD3j5jdG0fU8O+8EhI8PIvqOTjtHIOtUkyu5+g2111BNXZ/58Wr383H9Gk
+Cx+YE63OSZeVOAmK/r72RaKzpLqAFZTrxX+fOnKBmNZKXj5xGj96qYNW/E6DiQiF
+neHj6TjJD1OP201byfz7sgWLysfTTSsXdX+KLLTzf+bzdjik
+-----END RSA PRIVATE KEY-----
+[root@puppet ~]# ls -lah .ssh/
+total 24K
+dr-xr-x---.  2 root root   4.0K May 23 20:10 .
+dr-xr-x---. 41 root Master 4.0K May 22 21:22 ..
+-rw-r--r--.  1 root root   1.7K May 23 20:10 authorized_keys
+-rw-------.  1 root root   1.7K Apr 25 16:59 id_rsa
+-rw-r--r--.  1 root root    408 Apr 25 16:59 id_rsa.pub
+-rw-r--r--.  1 root root   1.6K Apr 25 17:10 known_hosts
+[root@puppet ~]# which java\
+> ^C
+You have new mail in /var/spool/mail/root
+[root@puppet ~]# which java
+/usr/bin/java
+[root@puppet ~]# java --version
+Unrecognized option: --version
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+[root@puppet ~]# java -version
+java version "1.7.0_131"
+OpenJDK Runtime Environment (rhel-2.6.9.0.el6_8-x86_64 u131-b00)
+OpenJDK 64-Bit Server VM (build 24.131-b00, mixed mode)
+[root@puppet ~]# yum install -y java
+Loaded plugins: fastestmirror, refresh-packagekit, security
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+ * base: centos.excellmedia.net
+ * epel: del-mirrors.extreme-ix.org
+ * extras: centos.excellmedia.net
+ * updates: centos.excellmedia.net
+Package 1:java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64 already installed and latest version
+Nothing to do
+[root@puppet ~]# yum install -y java-1.8.0-openjdk
+Loaded plugins: fastestmirror, refresh-packagekit, security
+Setting up Install Process
+Loading mirror speeds from cached hostfile
+ * base: centos.excellmedia.net
+ * epel: del-mirrors.extreme-ix.org
+ * extras: centos.excellmedia.net
+ * updates: centos.excellmedia.net
+Resolving Dependencies
+--> Running transaction check
+---> Package java-1.8.0-openjdk.x86_64 1:1.8.0.171-8.b10.el6_9 will be installed
+--> Processing Dependency: java-1.8.0-openjdk-headless = 1:1.8.0.171-8.b10.el6_9 for package: 1:java-1.8.0-openjdk-1.8.0.171-8.b10.el6_9.x86_64
+--> Running transaction check
+---> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.171-8.b10.el6_9 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===================================================================================================================
+ Package                               Arch             Version                            Repository         Size
+===================================================================================================================
+Installing:
+ java-1.8.0-openjdk                    x86_64           1:1.8.0.171-8.b10.el6_9            updates           206 k
+Installing for dependencies:
+ java-1.8.0-openjdk-headless           x86_64           1:1.8.0.171-8.b10.el6_9            updates            32 M
+
+Transaction Summary
+===================================================================================================================
+Install       2 Package(s)
+
+Total download size: 32 M
+Installed size: 103 M
+Downloading Packages:
+(1/2): java-1.8.0-openjdk-1.8.0.171-8.b10.el6_9.x86_64.rpm                                  | 206 kB     00:00     
+(2/2): java-1.8.0-openjdk-headless-1.8.0.171-8.b10.el6_9.x86_64.rpm                         |  32 MB     00:22     
+-------------------------------------------------------------------------------------------------------------------
+Total                                                                              1.4 MB/s |  32 MB     00:23     
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Installing : 1:java-1.8.0-openjdk-headless-1.8.0.171-8.b10.el6_9.x86_64                                      1/2 
+  Installing : 1:java-1.8.0-openjdk-1.8.0.171-8.b10.el6_9.x86_64                                               2/2 
+  Verifying  : 1:java-1.8.0-openjdk-1.8.0.171-8.b10.el6_9.x86_64                                               1/2 
+  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.171-8.b10.el6_9.x86_64                                      2/2 
+
+Installed:
+  java-1.8.0-openjdk.x86_64 1:1.8.0.171-8.b10.el6_9                                                                
+
+Dependency Installed:
+  java-1.8.0-openjdk-headless.x86_64 1:1.8.0.171-8.b10.el6_9                                                       
+
+Complete!
+[root@puppet ~]# df -hm
+Filesystem           1M-blocks  Used Available Use% Mounted on
+/dev/mapper/vg_puppetmaster-lv_root
+                         10263  8876       860  92% /
+tmpfs                     1973    14      1960   1% /dev/shm
+/dev/sda1                  477    42       410  10% /boot
+/dev/sr0                  3788  3788         0 100% /media/CentOS_6.9_Final
+[root@puppet ~]# df -hk
+Filesystem           1K-blocks    Used Available Use% Mounted on
+/dev/mapper/vg_puppetmaster-lv_root
+                      10508540 9088380    879696  92% /
+tmpfs                  2020296   13956   2006340   1% /dev/shm
+/dev/sda1               487652   42233    419819  10% /boot
+/dev/sr0               3878870 3878870         0 100% /media/CentOS_6.9_Final
+[root@puppet ~]# df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/vg_puppetmaster-lv_root
+                       11G  8.7G  860M  92% /
+tmpfs                 2.0G   14M  2.0G   1% /dev/shm
+/dev/sda1             477M   42M  410M  10% /boot
+/dev/sr0              3.7G  3.7G     0 100% /media/CentOS_6.9_Final
+[root@puppet ~]# free -m
+             total       used       free     shared    buffers     cached
+Mem:          3945       3169        776         30         83       1998
+-/+ buffers/cache:       1087       2858
+Swap:         1227          0       1227
+[root@puppet ~]# echo $JAVA_HOME
+
+[root@puppet ~]# env
+ORBIT_SOCKETDIR=/tmp/orbit-root
+HOSTNAME=puppet.mydomain.local
+rvm_bin_path=/usr/local/rvm/bin
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+GEM_HOME=/usr/local/rvm/gems/ruby-1.9.3-p327
+SHELL=/bin/bash
+TERM=xterm
+XDG_SESSION_COOKIE=94311697650183ee5ad6344f00000027-1526996612.294708-1789544485
+HISTSIZE=1000
+IRBRC=/usr/local/rvm/rubies/ruby-1.9.3-p327/.irbrc
+GTK_RC_FILES=/etc/gtk/gtkrc:/root/.gtkrc-1.2-gnome2
+WINDOWID=69220108
+QTDIR=/usr/lib64/qt-3.3
+OLDPWD=/root/.ssh
+MY_RUBY_HOME=/usr/local/rvm/rubies/ruby-1.9.3-p327
+QTINC=/usr/lib64/qt-3.3/include
+IMSETTINGS_MODULE=none
+USER=root
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+_system_type=Linux
+rvm_path=/usr/local/rvm
+SSH_AUTH_SOCK=/tmp/keyring-VDI0Pj/socket.ssh
+GNOME_KEYRING_SOCKET=/tmp/keyring-VDI0Pj/socket
+USERNAME=root
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/4885,unix/unix:/tmp/.ICE-unix/4885
+rvm_prefix=/usr/local
+DESKTOP_SESSION=gnome
+MAIL=/var/spool/mail/root
+PATH=/usr/local/rvm/gems/ruby-1.9.3-p327/bin:/usr/local/rvm/gems/ruby-1.9.3-p327@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p327/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/rvm/bin:/root/bin
+QT_IM_MODULE=xim
+PWD=/root
+XMODIFIERS=@im=none
+GDM_KEYBOARD_LAYOUT=us
+LANG=en_US.UTF-8
+GNOME_KEYRING_PID=4875
+GDM_LANG=en_US.UTF-8
+_system_arch=x86_64
+_system_version=6
+GDMSESSION=gnome
+HISTCONTROL=ignoredups
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+rvm_version=1.29.3 (master)
+SHLVL=2
+HOME=/root
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LOGNAME=root
+CVS_RSH=ssh
+QTLIB=/usr/lib64/qt-3.3/lib
+GEM_PATH=/usr/local/rvm/gems/ruby-1.9.3-p327:/usr/local/rvm/gems/ruby-1.9.3-p327@global
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-IL1YTnuKPv,guid=a17eef5a4d8ed9d67e5ca5e20000043f
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+WINDOWPATH=1
+DISPLAY=:0.0
+RUBY_VERSION=ruby-1.9.3-p327
+_system_name=CentOS
+G_BROKEN_FILENAMES=1
+XAUTHORITY=/var/run/gdm/auth-for-root-xCS76w/database
+COLORTERM=gnome-terminal
+_=/usr/bin/env
+[root@puppet ~]# which java
+/usr/bin/java
+[root@puppet ~]# java -version
+openjdk version "1.8.0_171"
+OpenJDK Runtime Environment (build 1.8.0_171-b10)
+OpenJDK 64-Bit Server VM (build 25.171-b10, mixed mode)
+[root@puppet ~]# echo $PATH
+/usr/local/rvm/gems/ruby-1.9.3-p327/bin:/usr/local/rvm/gems/ruby-1.9.3-p327@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p327/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/rvm/bin:/root/bin
+[root@puppet ~]# date
+Thu May 24 16:33:49 IST 2018
+[root@puppet ~]# service ntpd status
+ntpd (pid  2810) is running...
+[root@puppet ~]# 
+

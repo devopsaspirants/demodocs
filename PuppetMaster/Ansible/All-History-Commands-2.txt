@@ -1,0 +1,1007 @@
+[root@puppet Desktop]# cd ../chef-
+chef-repo/        chef-starter.zip  
+[root@puppet Desktop]# cd ../chef-repo/cookbooks/
+[root@puppet cookbooks]# pwd
+/root/chef-repo/cookbooks
+[root@puppet cookbooks]# history
+    1  ls /opt/local/
+    2  ls -lah /opt/local/include
+    3  ls -lah /opt/
+    4  ls -lah /usr/bin/mysql_config
+    5  cd /usr/share/puppet-dashboard
+    6  pwd
+    7  gem install mysql -- --with-mysql-config=/usr/bin/mysql_config
+    8  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/bin/
+    9  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/bin/ruby 
+   10  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/
+   11  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/share/
+   12  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/lib/
+   13  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1
+   14  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/
+   15  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/mysql/
+   16  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/
+   17  cd /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1
+   18  pwd
+   19  ls -l
+   20  locate *.c
+   21  locate mysql.c
+   22  ls -l
+   23  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/
+   24  cd /usr/share/puppet-dashboard
+   25  pwd
+   26  cp -R /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1  /usr/local/lib/ruby/gems/2.2.0/gems/
+   27  cd /usr/local/lib/ruby/gems/2.2.0/gems/
+   28  ls -l
+   29  cd /usr/share/puppet-dashboard
+   30  rake RAILS_ENV=production db:migrate
+   31  gem install mysql
+   32  ls -lah /usr/local/
+   33  ls -lah /usr/local/lib/
+   34  ls -lah /usr/local/rvm/
+   35  ls -lah /usr/local/rvm/gems/
+   36  ls -lah /usr/local/lib/
+   37  ls -lah /usr/local/lib/ruby/
+   38  ls -lah /usr/local/lib/ruby/gems/
+   39  ls -lah /usr/local/lib/ruby/gems/2.2.0/
+   40  ls -lah /usr/local/lib/ruby/gems/2.2.0/gems/
+   41  ls -lah /usr/local/lib/ruby/gems/2.2.0/gems/mysql-2.9.1/
+   42  pwd
+   43  cd /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/
+   44  ls
+   45  ls -l
+   46  ruby ./mysql.rb 
+   47  cd /usr/share/puppet-dashboard
+   48  rake RAILS_ENV=production db:migrate
+   49  gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
+   50  gem list
+   51  rake db:create
+   52  locate Gemfile
+   53  gem update --include-dependencies --system
+   54  rake RAILS_ENV=production db:migrate
+   55  ruby -v
+   56  rails -v
+   57  gem -v
+   58  gem install mysql
+   59  gem -v
+   60  gem uninstall --version 2.7.5
+   61  gem cleanup
+   62  gem list
+   63  gem -v
+   64  rake gems:refresh_specs
+   65  gem uninstall --version 2.7.5
+   66  gem uninstall rjb --version '>1.3.4'
+   67  gem uninstall --version '>1.3.4'
+   68  gem uninstall --version '2.7.5'
+   69  gem uninstall gem --version '2.7.5'
+   70  gem -v
+   71  gem cleanup --dryrun
+   72  gem cleanup
+   73  gem cleanup -d
+   74  gem uninstall --all
+   75  y
+   76  gem list
+   77  gem -v
+   78  gem uninstall --all
+   79  gem cleanup -d
+   80  gem cleanup
+   81  gem uninstall --version '2.7.5'
+   82  gem cleanup --dryrun
+   83  rake gems:refresh_specs
+   84  gem uninstall rails
+   85  rvm reinstall 1.9.3-p327
+   86  rvm install rubygems 1.8.2 --force
+   87  rake gems:refresh_specs
+   88  rake RAILS_ENV=production db:migrate
+   89  ifconfig
+   90  who
+   91  rvm list rubies
+   92  hostname
+   93  ls -lah /etc/httpd/conf.d/puppet.conf 
+   94  vi /etc/httpd/conf.d/puppet.conf
+   95  cat /etc/httpd/conf.d/puppet.conf
+   96  who
+   97  ifconfig
+   98  vi /etc/hosts
+   99  uname -r
+  100  uptime
+  101  date
+  102  exit
+  103  su -
+  104  exit
+  105  ifconfig
+  106  who
+  107  vim /etc/hosts
+  108  sudo su -
+  109  logout
+  110  ls
+  111  pwd
+  112  iwconfig
+  113  sudo service httpd restart
+  114  pwd
+  115  ls -lah
+  116  vi /etc/hosts
+  117  hostname
+  118  ifconfig
+  119  vi /etc/hosts
+  120  pwd
+  121  ls
+  122  locate chef-starter.zip
+  123  yum -y install mlocate
+  124  locate chef-starter.zip
+  125  locate . chef-starter.zip
+  126  locate . chef-starter.zip |grep zip
+  127  locate chef-starter.zip
+  128  mlocate chef-starter.zip
+  129  pwd
+  130  cd /home/Master/
+  131  cd Downloads/
+  132  ls
+  133  tar xvzf chef-starter.zip 
+  134  who
+  135  unzip chef-starter.zip 
+  136  ls
+  137  pwd
+  138  ls
+  139  cd Downloads/
+  140  ls
+  141  who
+  142  pwd
+  143  ls
+  144  su -
+  145  ls
+  146  pwd
+  147  ifconfig
+  148  su -
+  149  pwd
+  150  ls
+  151  tar xvzf chef-starter.zip 
+  152  unzip chef-starter.zip 
+  153  ls -lah
+  154  cd chef-repo/
+  155  ls
+  156  uname -r
+  157  pwd
+  158  cd ..
+  159  pwd
+  160  rpm -ivh /root/Downloads/chefdk-2.5.3-1.el6.x86_64.rpm 
+  161  ls -l /opt/chefdk/
+  162  pwd
+  163  check verify
+  164  chef verify
+  165  which ruby
+  166  chef --version
+  167  chef shell-init bash
+  168  pwd
+  169  cd ~/chef-repo
+  170  knife client list
+  171  knife ssl fetch
+  172  ls -l /root/chef-repo/.chef/trusted_certs
+  173  cat /root/chef-repo/.chef/trusted_certs/centos_example_com.crt
+  174  ls -l /root/chef-repo/.chef/trusted_certs/
+  175  knife client list
+  176  ls -l
+  177  cd ..
+  178  pwd
+  179  yum install -y wget curl git
+  180  chef --version
+  181  chef verify
+  182  ls
+  183  cd chef-repo/
+  184  pwd
+  185  mkdir -p ~/chef-repo/.chef
+  186  ls
+  187  ls -lah
+  188  date
+  189  cd ~/chef-repo/.chef
+  190  ls
+  191  cd trusted_certs/
+  192  ls
+  193  cd ..
+  194  vi chef-validator.pem
+  195  vi ovm-validator.pem
+  196  ls
+  197  pwd
+  198  cd ..
+  199  pwd
+  200  ls
+  201  ls -lah
+  202  knife client lis
+  203  knife client list
+  204  cd ~
+  205  pwd
+  206  unzip chef-starter.zip
+  207  cd ~/chef-repo
+  208  knife client list
+  209  ls -l /root/chef-repo/.chef/trusted_certs
+  210  knife client list
+  211  knife configure -i
+  212  cat ~/.chef/knife.rb
+  213  ls
+  214  ls -lah
+  215  cat .chef/knife.rb 
+  216  knife configure -i
+  217  knife client list
+  218  pwd
+  219  chef --version
+  220  chef shell-init bash
+  221  knife client list
+  222  knife ssl fetch
+  223  knife user list
+  224  knife ssl fetch
+  225  knife client list
+  226  knife configure --initial
+  227  cd ..
+  228  pwd
+  229  chef --version
+  230  chef verify
+  231  yum install git
+  232  git --version
+  233  ifconfig
+  234  system
+  235  nmcli device status
+  236  ip addr show
+  237  setup
+  238  pwd
+  239  mkdir GitProject
+  240  cd GitProject
+  241  git init
+  242  ls -a
+  243  git status
+  244  cat sample.txt
+  245  vi sample.txt
+  246  cat sample.txt
+  247  git add sample.txt
+  248  git status
+  249  git commite -m "created newfile"
+  250  git commit -m "created newfile"
+  251  git log
+  252  git log --oneline
+  253  git show 5df1659
+  254  cd
+  255  pwd
+  256  ls -lah
+  257  cd Downloads/
+  258  ls -lah
+  259  tar -zxvf gitkraken-amd64.tar.gz 
+  260  ls -lah
+  261  sudo rsync -va --delete-after gitkraken/ /opt/GitKraken/
+  262  cd /opt/GitKraken
+  263  ls
+  264  ./gitkraken
+  265  cd
+  266  pwd
+  267  cd Downloads/
+  268  ls -lah
+  269  cd gitkraken
+  270  ls
+  271  use gitkraken 
+  272  ls -lah
+  273  cd
+  274  pwd
+  275  cd Downloads/
+  276  ls -lah
+  277  yum install CycligentGitTool-0.5.2-linux-x64.rpm
+  278  ls -lah
+  279  unzip GitEye-2.1.0-linux.x86_64.zip
+  280  ls
+  281  cd Giteyes/
+  282  ls
+  283  unzip GitEye-2.1.0-linux.x86_64.zip
+  284  cd
+  285  pwd
+  286  ls -lah
+  287  unzip chef-starter.zip 
+  288  ls -lah
+  289  cd chef-repo/
+  290  ls -la
+  291  knife client list
+  292  chef-client -v
+  293  curl -L https://www.opscode.com/chef/install.sh | bash
+  294  cd ..
+  295  pwd
+  296  curl -L https://www.opscode.com/chef/install.sh | bash
+  297  cd chef-repo/
+  298  knife client list
+  299  knife ssl fetch
+  300  ls -l /root/chef-repo/.chef/trusted_certs
+  301  cd ..
+  302  cd Downloads/
+  303  ls -lah 
+  304  yum -y install chefdk-2.5.3-1.el6.x86_64.rpm
+  305  cd ..
+  306  cd chef-repo/
+  307  knife ssl fetch
+  308  knife client list
+  309  knife ssl fetch
+  310  cd ..
+  311  yum remove chef
+  312  yum remove chefdk-2.5.3-1.el6.x86_64.rpm
+  313  yum list installed chef
+  314  yum list installed chef*
+  315  yum list installed
+  316  yum list installed|grep chef
+  317  yum remove chefdk.x86_64
+  318  ls -lah
+  319  pwd
+  320  unzip chef-starter.zip
+  321  cd ~/chef-repo
+  322  knife client list
+  323  knife ssl fetch
+  324  cd ..
+  325  cd Downloads/
+  326  ls -lah *.rpm
+  327  rpm -ivh chefdk-2.5.3-1.el6.x86_64.rpm
+  328  cd ..
+  329  cd chef-repo/
+  330  cd ..
+  331  chef verify
+  332  chef --version
+  333  yum install -y chef
+  334  chef verify
+  335  yum install berks
+  336  chef shell-init bash
+  337  cd chef-repo/
+  338  chef shell-init bash
+  339  chef verify
+  340  knife client list
+  341  chef verify
+  342  knife ssl fetch
+  343  knife client list
+  344  restart
+  345  init 6
+  346  ssh ec2-user@13.127.207.148 -i/root/chef-repo/testpass.pem
+  347  pwd
+  348  ssh ec2-user@13.127.207.148 -i testpass.pem
+  349  ssh ec2-user@13.127.207.148 -i /testpass.pem
+  350  cd ..
+  351  cd chef-repo/
+  352  ls -lah
+  353  cd .chef/
+  354  ls -l
+  355  pwd
+  356  ssh -i /testpass.pem ec2-user@13.127.207.148
+  357  cd ..
+  358  pwd
+  359  ls
+  360  cd Desktop/
+  361  ssh ec2-user@13.127.207.148 -i /testpass.pem
+  362  ssh ec2-user@13.127.207.148 -i ~"/testpass.pem"
+  363  pwd
+  364  ssh ec2-user@13.127.207.148 -i ~"/root/Desktop/testpass.pem"
+  365  ls -lart
+  366  chmod 777 testpass.pem 
+  367  ls -lart
+  368  ssh ec2-user@13.127.207.148 -i /root/Desktop/testpass.pem
+  369  ssh ec2-user@13.127.207.148 -i ~/root/Desktop/testpass.pem
+  370  ssh ec2-user@13.127.207.148 -i ~"/root/Desktop/testpass.pem"
+  371  cd ..\
+  372  cd chef-repo/
+  373  ls
+  374  cd .chef/
+  375  ls -ltr
+  376  chmod 655 testpass.pem
+  377  ls -ltr
+  378  chmod 644 testpass.pem
+  379  ls -ltr
+  380  cd ..
+  381  ping ec2-user@13.127.207.148
+  382  ssh -i "/root/chef-repo/.chef/testpass.pem" ec2-user@13.127.207.148
+  383  ssh -i "/root/Desktop/testpass.pem" ec2-user@13.127.207.148
+  384  su -
+  385  hostname
+  386  who
+  387  pwd
+  388  cd ..
+  389  pwd
+  390  ls
+  391  cls
+  392  clear
+  393  history
+  394  vi /etc/sysconfig/network
+  395  vi /etc/hosts
+  396  ifconfig
+  397  hostname
+  398  vim /etc/httpd/conf.d/puppet.conf
+  399  vi /etc/puppet/puppet.conf
+  400  vi /etc/hosts
+  401  hostname
+  402  ping 192.168.33.135
+  403  hostname
+  404  who
+  405  vi /etc/hosts
+  406  ifconfig
+  407  cd ..
+  408  ls -lah .ssh
+  409  clear
+  410  cls
+  411  clear
+  412  history
+  413  ssh -i "/root/Desktop/testpass.pem" ec2-user@13.127.207.148
+  414  pwd
+  415  cd Desktop/
+  416  chmod 400 testpass.pem 
+  417  ls -lart
+  418  ssh -i "/root/Desktop/testpass.pem" ec2-user@13.127.207.148
+  419  top
+  420  top | head
+  421  mysql
+  422  ifconfig
+  423  ping 192.168.33.140
+  424  nslookup 192.168.33.140
+  425  ifconfig
+  426  ip addr
+  427  root@123
+  428  exit
+  429  ifconfig
+  430  su -
+  431  exit
+  432  cd ..
+  433  ls -l
+  434  cd GitProject/
+  435  git status
+  436  history
+  437  git show 5df1659
+  438  git status
+  439  ls
+  440  pwd
+  441  ls -l
+  442  ls -lah
+  443  hostname
+  444  cd ..
+  445  cd Downloads/
+  446  ls
+  447  cd ..
+  448  ls -lah
+  449  ls
+  450  rpm -ivh chefdk-2.5.3-1.el6.x86_64.rpm
+  451  chef verify
+  452  chef --version
+  453  wget https://packages.chef.io/files/stable/chefdk/2.0.28/el/6/chefdk-2.0.28-1.el6.x86_64.rpm
+  454  chef exec chef -v
+  455  which ruby
+  456  berks install
+  457  pwd
+  458  ls
+  459  chef generate app chef-repo
+  460  knife ssl fetch
+  461  rpm -ivh chefdk-2.0.28-1.el6.x86_64.rpm 
+  462  ls -l
+  463  rpm -e chefdk-2.5.3-1.el6.x86_64.rpm
+  464  rpm -e chefdk-2.0.28-1.el6.x86_64.rpm 
+  465  rpm -qa chef
+  466  rpm -qa chef*
+  467  rpm -qa chefdk-2.5.3-1.el6.x86_64.rpm
+  468  rpm -ivh chefdk-2.0.28-1.el6.x86_64.rpm 
+  469  rpm -qa chef*
+  470  rpm -qa chef
+  471  rpm -ivh chefdk-2.5.3-1.el6.x86_64.rpm
+  472  rpm -qa chef
+  473  rpm -qa chef*
+  474  yum list |grep chef
+  475  rpm -qa | grep -i chef
+  476  rpm -e chefdk-2.5.3-1.el6.x86_64
+  477  rpm -ivh chefdk-2.0.28-1.el6.x86_64.rpm 
+  478  ls
+  479  rpm -qpr chefdk-2.5.3-1.el6.x86_64.rpm
+  480  rpm -qpR chefdk-2.5.3-1.el6.x86_64.rpm
+  481  rpm -qpR chefdk-2.0.28-1.el6.x86_64.rpm 
+  482  rpm -ql chefdk
+  483  rpm -qpR chefdk-2.0.28-1.el6.x86_64.rpm 
+  484  rpm -qpR chefdk-2.5.3-1.el6.x86_64.rpm
+  485  rpm -qa --last
+  486  rpm -Uvh chefdk
+  487  rpm -Uvh chefdk-2.0.28-1.el6.x86_64.rpm 
+  488  rpm -qip chefdk-2.0.28-1.el6.x86_64.rpm 
+  489  rpm -qip chefdk-2.5.3-1.el6.x86_64.rpm
+  490  mkdir demo2
+  491  cd demo2/
+  492  ls
+  493  git clone https://github.com/kellydemo7/demo2.git
+  494  ls -lah
+  495  cd ..
+  496  pwd
+  497  ls -lah
+  498  git clone https://github.com/kellydemo7/demo2.git
+  499  ls
+  500  git clone https://github.com/kellydemo7/demo.git
+  501  cd chef-repo/
+  502  cd cookbooks/
+  503  cd sample
+  504  cd /
+  505  cd sample1
+  506  pwd
+  507  ls
+  508  cd /root/chef-repo/cookbooks/sample1/
+  509  knife cookbook upload sample1 
+  510  knife cookbook upload sample1
+  511  ls
+  512  ci metadata.rb 
+  513  vi metadata.rb 
+  514  knife cookbook upload sample1
+  515  ls
+  516  cd ../..
+  517  pwd
+  518  ls
+  519  cd roles/
+  520  ls
+  521  ll
+  522  vi webserver.rb
+  523  knife role from webserver.rb 
+  524  knife role webserver.rb 
+  525  knife role from file webserver.rb 
+  526  date
+  527  /etc/init.d/ntpd restart
+  528  date
+  529  /etc/init.d/ntpd restart
+  530  systemctl enable ntpd
+  531  date -s "10 May 2018 10:03:00"
+  532  date
+  533  knife role from file webserver.rb 
+  534  date -s "10 May 2018 10:03:00"
+  535  knife role from file webserver.rb 
+  536  /etc/init.d/ntpd restart
+  537  date
+  538  sudo yum install ntp
+  539  /etc/init.d/ntpd restart
+  540  date
+  541  knife role from file webserver.rb 
+  542  date
+  543  ls -l
+  544  vi webserver.rb 
+  545  knife role list
+  546  cd ..
+  547  knife role list
+  548  knife role from file webserver.rb
+  549  cd /root/chef-repo/cookbooks/
+  550  ls
+  551  mkdir apache
+  552  ls
+  553  rm -rf apache
+  554  ls
+  555  chef generate cookbook apache
+  556  chef cookbook list
+  557  knife cookbook list
+  558  ls
+  559  cd apache
+  560  ls
+  561  pwd
+  562  cd recipes/
+  563  ls
+  564  vi default.rb 
+  565  ls -l
+  566  pwd
+  567  cd ../../../
+  568  pwd
+  569  knife cookbook upload apache
+  570  cd cookbooks/apache/
+  571  ls
+  572  vi metadata.rb 
+  573  cd ../../../
+  574  cd chef-repo/
+  575  pwd
+  576  knife cookbook upload apache
+  577  knife cookbook test apache
+  578  chef-client 
+  579  ls -l
+  580  cd cookbooks/
+  581  ls -l
+  582  cd apache/
+  583  ls -l
+  584  ls -l recipes/
+  585  cd ..
+  586  ls -l sample1
+  587  ls -l sample1/recipes/
+  588  cd ..
+  589  knife cookbook upload apache
+  590  knife cookbook list
+  591  ls
+  592  cd roles/
+  593  knife role from webserver.rb
+  594  knife role from file webserver.rb
+  595  cd ..
+  596  cd ~/chef-repo
+  597  knife client list
+  598  knife configure -i
+  599  knife client list
+  600  knife configure -i
+  601  cd ..
+  602  yum install -y wget curl
+  603  yum install -y wget curl git
+  604  hostname
+  605  chef shell-init bash
+  606  chef --version
+  607  chef verify
+  608  chef --version
+  609  chef shell-init bash
+  610  ls
+  611  ls -l
+  612  date
+  613  unzip chef-starter.zip
+  614  cd ~/chef-repo
+  615  pwd
+  616  knife client list
+  617  knife cookbook list
+  618  ls
+  619  cd cookbooks/
+  620  ls
+  621  cd starter/
+  622  ls
+  623  cd recipes/
+  624  ls
+  625  cat default.rb 
+  626  cd ..
+  627  knife cookbook create sample
+  628  chef generate cookbook sample
+  629  ls
+  630  cd sample/
+  631  ls
+  632  cd recipes/
+  633  ls
+  634  cat default.rb 
+  635  vi default.rb 
+  636  ls
+  637  ls -l
+  638  cd
+  639  pwd
+  640  cd chef-repo/
+  641  knife cookbook list
+  642  knife cookbook upload sample
+  643  cd cookbooks/
+  644  knife cookbook upload sample
+  645  ls
+  646  cd starter/
+  647  ls
+  648  cd recipes/
+  649  ls
+  650  cd ..
+  651  ls
+  652  cd ..
+  653  ls
+  654  cd sample/
+  655  ls
+  656  cd recipes/
+  657  knife cookbook upload sample
+  658  ls
+  659  knife cookbook test sample
+  660  knife cookbook test default
+  661  cd 
+  662  cd chef-repo/
+  663  ls
+  664  knife cookbook test sample
+  665  knife cookbook upload sample
+  666  chef-client 
+  667  knife cookbook upload sample
+  668  knife client list
+  669  ls -l /var/chef/cache/chef-stacktrace.out 
+  670  ls -lah /var/chef/cache/chef-stacktrace.out 
+  671  knife client list
+  672  knife cookbook upload sample
+  673  hostname
+  674  ls /etc/host
+  675  ls /etc/
+  676  ls /etc/hosts
+  677  cd /etc/hosts
+  678  cat /etc/hosts
+  679  vi /etc/hosts
+  680  hostname
+  681  hostname localhost
+  682  hostname
+  683  vi /etc/hosts
+  684  hostname
+  685  cd cookbooks/
+  686  ls
+  687  knife cookbook upload sample
+  688  cd ..
+  689  vi /etc/hosts
+  690  hostname
+  691  hostname puppet.mydomain.local
+  692  hostname
+  693  knife cookbook upload sample
+  694  chef generate cookbook sample1
+  695  knife cookbook list
+  696  chef cookbook list
+  697  cd cookbooks/
+  698  chef generate cookbook sample1
+  699  ls
+  700  chef cookbook list
+  701  kinfe cookbook list
+  702  knife cookbook show sample1
+  703  knife cookbook upload sample1
+  704  ls
+  705  knife cookbook list
+  706  ls
+  707  cd sample1
+  708  ls
+  709  cd recipes/
+  710  ls
+  711  vi default.rb 
+  712  ls
+  713  ls -l
+  714  cd ..
+  715  knife cookbook upload sample1
+  716  ping 192.168.33.131
+  717  knife bootstrap 192.168.33.131 -x root -P root@123 -N "node1" -r "recipe[sample1]"
+  718  chef-client
+  719  knife bootstrap 192.168.33.131 -x root -P root@123 -N "node1" -r "recipe[sample1]"
+  720  knife bootstrap 192.168.124.1 -x root -P root@123 -N "server1" -r "recipe[sample1]"
+  721  knife bootstrap 192.168.124.1 -x root -P root@123 -N "server12" -r "recipe[sample1]"
+  722  history
+  723  vi /etc/ssh/sshd_config 
+  724  cat /etc/ssh/sshd_config 
+  725  knife bootstrap 192.168.124.1 -x root -P root@123 -N "server123" -r "recipe[sample1]"
+  726  service sshd start
+  727  knife bootstrap 192.168.124.1 -x root -P root@123 -N "server123" -r "recipe[sample1]"
+  728  knife bootstrap 13.127.207.148  -x ec2@user -i /testpass.pem -N "server1" -r "recipe[sample1]"
+  729  pwd
+  730  knife bootstrap 13.127.207.148 --sudo  -x ec2-user -i /root/chef-repo/testpass.pem -N "server1" -r "recipe[sample1]"
+  731  pwd
+  732  knife bootstrap 192.168.33.131 --sudo  -x root -P root@123 -N "server2" -r "recipe[sample1]"
+  733  pwd
+  734  pwd
+  735  cd ..
+  736  pwd
+  737  cd Desktop/
+  738  ssh ec2-user@13.127-207-148 -i "/root/Desktop/testpass.pem" 
+  739  history
+  740  ssh -i "/root/Desktop/testpass.pem" ec2-user@13.127.207.148
+  741  ssh -i "/root/Desktop/testpass.pem" root@13.127.207.148
+  742  ssh -i "/root/Desktop/testpass.pem" --sudo ec2-user@13.127.207.148
+  743  date
+  744  cat /var/chef/cache/chef-stacktrace.out |more
+  745  ls /etc/chef/
+  746  locate /etc/chef
+  747  tail -f 
+  748  tail -f /var/chef/cache/chef-stacktrace.out
+  749  ping 192.168.124.1
+  750  ping 192.168.33.131
+  751  tail -f /var/chef/cache/chef-stacktrace.out
+  752  ansible-playbook nginx.yml
+  753  ansible-playbook -v nginx.yml
+  754  ansible-playbook -vvvv nginx.yml
+  755  ansible-playbook -vv nginx.yml
+  756  ansible-playbook -v nginx.yml
+  757  vi nginx.yml 
+  758  ansible-playbook -v nginx.yml
+  759  cd ..
+  760  pwd
+  761  su -
+  762  cd ..
+  763  pwd
+  764  su -
+  765  hostname
+  766  rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+  767  yum install ansible
+  768  ansible --version
+  769  vi /etc/ansible/hosts 
+  770  ansible -m ping 'test-servers'
+  771  ping 192.168.33.139
+  772  ssh-keygen
+  773  ssh-copy-id -i root@192.168.33.139
+  774  vi /etc/ssh/sshd_config
+  775  ssh-copy-id -i root@192.168.33.139
+  776  ssh-copy-id -i root@192.168.33.140
+  777  ping 192.168.33.140
+  778  ansible -m ping 'test-servers'
+  779  vi /etc/ansible/hosts 
+  780  ansible -m ping 'test-servers'
+  781  vi nginx.yml
+  782  vi /etc/ansible/hosts 
+  783  ansible -m ping 'test-servers'
+  784  vi nginx.yml
+  785  vi /etc/ansible/hosts 
+  786  vi nginx.yml
+  787  ls /etc/sysconfig/network
+  788  ls -l /etc/sysconfig/network
+  789  cat /etc/sysconfig/network
+  790  chkconfig --list ntpd
+  791  ntpq -p
+  792  ntpstat
+  793  timedatectl status
+  794  timedatectl set-ntp true
+  795  sudo /etc/init.d/ntp restart
+  796  yum install ntpd
+  797  service ntpd restart
+  798  sudo /etc/init.d/ntp restart
+  799  timedatectl set-ntp true
+  800  date
+  801  ntpstat
+  802  ntpq -p
+  803  ntpq -pn
+  804  ntpq -pn 5
+  805  ntpq -p 5
+  806  ntpq -pn
+  807  ntpq -p
+  808  firewall-cmd --add-service=ntp --permanent
+  809  ntpdate pool.ntp.org
+  810  chkconfig ntpd on
+  811  /etc/init.d/ntpd start
+  812  vi /etc/ntp.conf
+  813  date
+  814  /etc/init.d/ntpd start
+  815  date
+  816  ntpstat
+  817  date
+  818  sudo /etc/init.d/ntp restart
+  819  service ntpd restart
+  820  date
+  821  vi /etc/ansible/hosts
+  822  vi /etc/ntp.conf
+  823  vi /etc/sysconfig/network
+  824  pwd
+  825  ls -lah /etc/ansible/
+  826  ls -lah /etc/ansible/roles/
+  827  vi /etc/ansible/ansible.cfg 
+  828  vi /etc/ansible/hosts
+  829  pwd
+  830  whoami
+  831  su -
+  832  ls -lah
+  833  ls
+  834  date
+  835  time
+  836  cls
+  837  clear
+  838  yum update -y firefox
+  839  yum install -y firefox.x86_64 0:52.8.0-1.el6.centos
+  840  yum install -y net-tools
+  841  history
+  842  date
+  843  ls
+  844  exit
+  845  history
+  846  pwd
+  847  history
+  848  cd ~
+  849  pwd
+  850  cd GitProject/
+  851  ls
+  852  gedit sample.txt 
+  853  git status
+  854  git show 5df1659
+  855  git log --oneline
+  856  git log
+  857  cd..
+  858  cd ..
+  859  pwd
+  860  ls
+  861  mkdir demodocs
+  862  cd demodocs/
+  863  ls
+  864  git clone https://github.com/kellydemo/demodocs.git
+  865  ls
+  866  cd ..
+  867  cd GitProject/
+  868  ls
+  869  ls -lah
+  870  ip addr
+  871  ls
+  872  pwd
+  873  ls -lah
+  874  cd ..
+  875  pwd
+  876  ls -lah
+  877  cd .ssh
+  878  ls -lah
+  879  cat id_rsa
+  880  pwd
+  881  cd ~
+  882  pwd
+  883  echo "-----BEGIN RSA PRIVATE KEY-----
+  884  MIIEoAIBAAKCAQEAzlx51jIyO6ohBTLGTmYG3UaTEakF8T30HY4mPoKM6puQefS1
+  885  FTXfTr+7W83IDUGJdJ2bQRCpuoaB/avuUt/TuRi1W8PkihUmuICzpZU6loBtZ+M1
+  886  Lf9x7Ke1erdmc1wRIScK+0V6JgkfJG6wpT9p5TWjrIFvWVaB5TI4up9l5u/XkkTV
+  887  jZXon3et3PDbCsOD/s7SrGRN5RHnLkwt61GMNNse38GayfcYBT5Jdp9mUNNGQrFo
+  888  feFdWGugaAfPN7yFtpVg15IRnqiCQNTS4ILguLoynazXq1KXA6xyrS0d4a5V/V8H
+  889  wqH7XiuBg8xhlq8L3lJ5YjIziBuShSrc8fBBMwIBIwKCAQBwBlDEvCnl4ANL9v3w
+  890  C4ARuJj69Vr/TYSFEqcL/bo2NzEsQwM3ZmNIAa7aEJ/MroxygXGJuJanFdGJtRr5
+  891  yfaXrlPSusyFeTJG5sfsLHBDEoSI2m1TfAqlCpW3pWOAc87I2q4wog8b9lK8AZMX
+  892  4JiSXvJzlrjKGQSvnuuYgmqErRxcc4nC2FTCznVTK4KVSXv1avpfGGxm2s9UcqzL
+  893  CwjvJpzhoelYRYff0BVC4kfmS/sSfBxEFLw0yUnOzrrAbgYt1+QwKW8ajseI1bGA
+  894  ZqlfK5LIcH4XfGn00OrY5+HtPPnrJP4qiRzWpKdwJeso5hMeq0t4pVQEUdkgczMr
+  895  tAXDAoGBAOmQ3Pt5hsR0FvsJnkaNzDSw9YnN3BPcaK/H3cxIr9TnUBa3iaFQLRQd
+  896  Sh4jkPX7DX0AE6tNrvwzRL5JM1W5xac7K5M41RLLBewNyAjQWMAjIcivO2Np5j1n
+  897  9zq8xCndG1HCTz+ve59ik7kiuY597UAUAxRv7y2ifAk1WE5LI4MHAoGBAOIurfdB
+  898  WDcwUCuK9PTIR4XoFDhKTcMwPpEOPNJ9cnDzUWBtoe1Qclp0ForlUqiFHt/PuR1U
+  899  d/j5zwlRBtCiOaqts7ACppB6SrrYq5CPbQOH904RbFYWKNnLQdgq87InIrEeHHqc
+  900  X62Ynl4Lv4A5NOvwIVMu94YTj4AUC9IS7Ol1AoGAVsDHG5OJ0/Ca0kVmrH3PgUkK
+  901  vifkB2B+p7Ci1tkrXbUAfXdfAWbsLArhA+FTGYkiRF8dP6CC0rP09jhyJye+cVB9
+  902  5jmuOi4mxWQ0WwuOrcPn+hUzUM+QCC3uHSGKsHayYDI6sUEt6r423l1a3Sd1YPF9
+  903  fJ6aqozO/BsgzJ+Q2OUCgYBNjFjnDxbuWbUWPkVbPVpZy+ms5kaMEIp64E9eHGHA
+  904  U2xbk01177ItpCT8a+HTYNdirZ6Nto+IkCm6DSbociJmZ3DOodK1MT4xbtu8iPIt
+  905  GKyPy3WZ27Y8CyyEoQMYgnJLWsfvhhIs496GpPEzRtBQ5J22HrtD6XMHV1SCiiVX
+  906  WwKBgEMD3j5jdG0fU8O+8EhI8PIvqOTjtHIOtUkyu5+g2111BNXZ/58Wr383H9Gk
+  907  Cx+YE63OSZeVOAmK/r72RaKzpLqAFZTrxX+fOnKBmNZKXj5xGj96qYNW/E6DiQiF
+  908  neHj6TjJD1OP201byfz7sgWLysfTTSsXdX+KLLTzf+bzdjik
+  909  -----END RSA PRIVATE KEY-----" >> ~/.ssh/authorized_keys
+  910  ls -lah .ssh/
+  911  cat .ssh/authorized_keys 
+  912  ls -lah .ssh/
+  913  which java\
+  914  which java
+  915  java --version
+  916  java -version
+  917  yum install -y java
+  918  yum install -y java-1.8.0-openjdk
+  919  df -hm
+  920  df -hk
+  921  df -h
+  922  free -m
+  923  echo $JAVA_HOME
+  924  env
+  925  which java
+  926  java -version
+  927  echo $PATH
+  928  date
+  929  service ntpd status
+  930  pwd
+  931  ls -lah
+  932  cd GitProject/
+  933  ls -lah
+  934  git status
+  935  git log
+  936  git log --oneline
+  937  git show 5df1659
+  938  df -h
+  939  free -m
+  940  diskf -l
+  941  df -k
+  942  df -h
+  943  exit
+  944  fdisk -l
+  945  df -h
+  946  echo "- - -" > /sys/class/scsi_host/host0/scan
+  947  fdisk /dev/sda
+  948  vgdisplay
+  949  lvdisplay
+  950  fdisk -l
+  951  pvscan
+  952  lvdisplay
+  953  vgdisplay
+  954  fdisk -l
+  955  fdisk /dev/sda
+  956  fdisk -l
+  957  partx -a /dev/sda3
+  958  pvcreate /dev/sda3
+  959  partx -a /dev/sda3
+  960  vgdisplay
+  961  fdisk -l
+  962  lvdisplay
+  963  pvcreate /dev/sda3
+  964  partprobe -a /dev/sda3
+  965  partprobe --h
+  966  partprobe -d /dev/sda3
+  967  partprobe -d
+  968  partprobe -s
+  969  partprobe -d /dev/sda3
+  970  partprobe -s /dev/sda3
+  971  partprobe -s
+  972  partprobe /dev/sda3
+  973  partprobe -a /dev/sda3
+  974  partprobe -d /dev/sda3
+  975  pvcreate /dev/sda3
+  976  init 6
+  977  lvdisplay
+  978  cd !
+  979  cd ~
+  980  lvdisplay
+  981  vgdisplay
+  982  fdisk -l
+  983  pvcreate /dev/sda3
+  984  fdisk -l
+  985  lvdisplay
+  986  vgdisplay
+  987  vgextend vg_puppetmaster /dev/sda3
+  988  pvscan
+  989  lvdisplay
+  990  lvextend lv_root /dev/sda3
+  991  lvextend /dev/vg_puppetmaster/lv_root /dev/sda3
+  992  resize2fs /dev/vg_puppetmaster/lv_root
+  993  df -h
+  994  vgdisplay
+  995  lvdisplay
+  996  fdisk -l
+  997  cd ../chef-repo/cookbooks/
+  998  pwd
+  999  history
+[root@puppet cookbooks]# knife bootstrap 192.168.126.198 -x root -P root@123 -N "server2" -r "recipe[sample]"
+

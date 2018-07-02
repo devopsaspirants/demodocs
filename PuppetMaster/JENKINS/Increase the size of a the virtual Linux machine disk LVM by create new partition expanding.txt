@@ -1,0 +1,385 @@
+[root@puppet Desktop]# lvdisplay
+File descriptor 6 (/dev/pts/0) leaked on lvdisplay invocation. Parent PID 3878: /bin/bash
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_root
+  LV Name                lv_root
+  VG Name                vg_puppetmaster
+  LV UUID                rfAN9c-ejKX-7N9Z-BJZm-MnYF-W10w-ijs59H
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:35 +0530
+  LV Status              available
+  # open                 1
+  LV Size                10.31 GiB
+  Current LE             2639
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:0
+   
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_swap
+  LV Name                lv_swap
+  VG Name                vg_puppetmaster
+  LV UUID                b0qocQ-TFSe-nE6a-7SZH-Y9fz-ZQpD-BJlpf1
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:36 +0530
+  LV Status              available
+  # open                 1
+  LV Size                1.20 GiB
+  Current LE             307
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:1
+   
+[root@puppet Desktop]# cd !
+bash: cd: !: No such file or directory
+[root@puppet Desktop]# cd ~
+[root@puppet ~]# lvdisplay
+File descriptor 6 (/dev/pts/0) leaked on lvdisplay invocation. Parent PID 3878: /bin/bash
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_root
+  LV Name                lv_root
+  VG Name                vg_puppetmaster
+  LV UUID                rfAN9c-ejKX-7N9Z-BJZm-MnYF-W10w-ijs59H
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:35 +0530
+  LV Status              available
+  # open                 1
+  LV Size                10.31 GiB
+  Current LE             2639
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:0
+   
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_swap
+  LV Name                lv_swap
+  VG Name                vg_puppetmaster
+  LV UUID                b0qocQ-TFSe-nE6a-7SZH-Y9fz-ZQpD-BJlpf1
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:36 +0530
+  LV Status              available
+  # open                 1
+  LV Size                1.20 GiB
+  Current LE             307
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:1
+   
+[root@puppet ~]# vgdisplay
+File descriptor 6 (/dev/pts/0) leaked on vgdisplay invocation. Parent PID 3878: /bin/bash
+  --- Volume group ---
+  VG Name               vg_puppetmaster
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  3
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               2
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               11.51 GiB
+  PE Size               4.00 MiB
+  Total PE              2946
+  Alloc PE / Size       2946 / 11.51 GiB
+  Free  PE / Size       0 / 0   
+  VG UUID               pG4bXn-6eT5-p41T-ExuM-Hsfj-wrcL-xtEGke
+   
+[root@puppet ~]# fdisk -l
+
+Disk /dev/sda: 32.2 GB, 32212254720 bytes
+255 heads, 63 sectors/track, 3916 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x000b03f2
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *           1          64      512000   83  Linux
+Partition 1 does not end on cylinder boundary.
+/dev/sda2              64        1567    12069888   8e  Linux LVM
+/dev/sda3            1567        3916    18872358   8e  Linux LVM
+
+Disk /dev/mapper/vg_puppetmaster-lv_root: 11.1 GB, 11068768256 bytes
+255 heads, 63 sectors/track, 1345 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+
+Disk /dev/mapper/vg_puppetmaster-lv_swap: 1287 MB, 1287651328 bytes
+255 heads, 63 sectors/track, 156 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+[root@puppet ~]# pvcreate /dev/sda3
+File descriptor 6 (/dev/pts/0) leaked on pvcreate invocation. Parent PID 3878: /bin/bash
+  Physical volume "/dev/sda3" successfully created
+[root@puppet ~]# fdisk -l
+
+Disk /dev/sda: 32.2 GB, 32212254720 bytes
+255 heads, 63 sectors/track, 3916 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x000b03f2
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *           1          64      512000   83  Linux
+Partition 1 does not end on cylinder boundary.
+/dev/sda2              64        1567    12069888   8e  Linux LVM
+/dev/sda3            1567        3916    18872358   8e  Linux LVM
+
+Disk /dev/mapper/vg_puppetmaster-lv_root: 11.1 GB, 11068768256 bytes
+255 heads, 63 sectors/track, 1345 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+
+Disk /dev/mapper/vg_puppetmaster-lv_swap: 1287 MB, 1287651328 bytes
+255 heads, 63 sectors/track, 156 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+[root@puppet ~]# lvdisplay
+File descriptor 6 (/dev/pts/0) leaked on lvdisplay invocation. Parent PID 3878: /bin/bash
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_root
+  LV Name                lv_root
+  VG Name                vg_puppetmaster
+  LV UUID                rfAN9c-ejKX-7N9Z-BJZm-MnYF-W10w-ijs59H
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:35 +0530
+  LV Status              available
+  # open                 1
+  LV Size                10.31 GiB
+  Current LE             2639
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:0
+   
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_swap
+  LV Name                lv_swap
+  VG Name                vg_puppetmaster
+  LV UUID                b0qocQ-TFSe-nE6a-7SZH-Y9fz-ZQpD-BJlpf1
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:36 +0530
+  LV Status              available
+  # open                 1
+  LV Size                1.20 GiB
+  Current LE             307
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:1
+   
+[root@puppet ~]# vgdisplay
+File descriptor 6 (/dev/pts/0) leaked on vgdisplay invocation. Parent PID 3878: /bin/bash
+  --- Volume group ---
+  VG Name               vg_puppetmaster
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  3
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               2
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               11.51 GiB
+  PE Size               4.00 MiB
+  Total PE              2946
+  Alloc PE / Size       2946 / 11.51 GiB
+  Free  PE / Size       0 / 0   
+  VG UUID               pG4bXn-6eT5-p41T-ExuM-Hsfj-wrcL-xtEGke
+   
+[root@puppet ~]# vgextend vg_puppetmaster /dev/sda3
+File descriptor 6 (/dev/pts/0) leaked on vgextend invocation. Parent PID 3878: /bin/bash
+  Volume group "vg_puppetmaster" successfully extended
+[root@puppet ~]# pvscan
+File descriptor 6 (/dev/pts/0) leaked on pvscan invocation. Parent PID 3878: /bin/bash
+  PV /dev/sda2   VG vg_puppetmaster   lvm2 [11.51 GiB / 0    free]
+  PV /dev/sda3   VG vg_puppetmaster   lvm2 [18.00 GiB / 18.00 GiB free]
+  Total: 2 [29.50 GiB] / in use: 2 [29.50 GiB] / in no VG: 0 [0   ]
+[root@puppet ~]# lvdisplay
+File descriptor 6 (/dev/pts/0) leaked on lvdisplay invocation. Parent PID 3878: /bin/bash
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_root
+  LV Name                lv_root
+  VG Name                vg_puppetmaster
+  LV UUID                rfAN9c-ejKX-7N9Z-BJZm-MnYF-W10w-ijs59H
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:35 +0530
+  LV Status              available
+  # open                 1
+  LV Size                10.31 GiB
+  Current LE             2639
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:0
+   
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_swap
+  LV Name                lv_swap
+  VG Name                vg_puppetmaster
+  LV UUID                b0qocQ-TFSe-nE6a-7SZH-Y9fz-ZQpD-BJlpf1
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:36 +0530
+  LV Status              available
+  # open                 1
+  LV Size                1.20 GiB
+  Current LE             307
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:1
+   
+[root@puppet ~]# lvextend lv_root /dev/sda3
+File descriptor 6 (/dev/pts/0) leaked on lvextend invocation. Parent PID 3878: /bin/bash
+  Path required for Logical Volume "lv_root".
+  Please provide a volume group name
+  Run `lvextend --help' for more information.
+[root@puppet ~]# lvextend /dev/vg_puppetmaster/lv_root /dev/sda3
+File descriptor 6 (/dev/pts/0) leaked on lvextend invocation. Parent PID 3878: /bin/bash
+  Size of logical volume vg_puppetmaster/lv_root changed from 10.31 GiB (2639 extents) to 28.30 GiB (7246 extents).
+  Logical volume lv_root successfully resized.
+[root@puppet ~]# 
+[root@puppet ~]# 
+[root@puppet ~]# resize2fs /dev/vg_puppetmaster/lv_root
+resize2fs 1.41.12 (17-May-2010)
+Filesystem at /dev/vg_puppetmaster/lv_root is mounted on /; on-line resizing required
+old desc_blocks = 1, new_desc_blocks = 2
+Performing an on-line resize of /dev/vg_puppetmaster/lv_root to 7419904 (4k) blocks.
+The filesystem on /dev/vg_puppetmaster/lv_root is now 7419904 blocks long.
+
+[root@puppet ~]# df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/vg_puppetmaster-lv_root
+                       28G  9.3G   18G  36% /
+tmpfs                 2.0G  224K  2.0G   1% /dev/shm
+/dev/sda1             477M   42M  410M  10% /boot
+.host:/               231G  175G   56G  76% /mnt/hgfs
+/dev/sr0              3.7G  3.7G     0 100% /media/CentOS_6.9_Final
+[root@puppet ~]# 
+[root@puppet ~]# 
+[root@puppet ~]# vgdisplay
+File descriptor 6 (/dev/pts/0) leaked on vgdisplay invocation. Parent PID 3878: /bin/bash
+  --- Volume group ---
+  VG Name               vg_puppetmaster
+  System ID             
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  5
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               2
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               29.50 GiB
+  PE Size               4.00 MiB
+  Total PE              7553
+  Alloc PE / Size       7553 / 29.50 GiB
+  Free  PE / Size       0 / 0   
+  VG UUID               pG4bXn-6eT5-p41T-ExuM-Hsfj-wrcL-xtEGke
+   
+[root@puppet ~]# 
+[root@puppet ~]# 
+[root@puppet ~]# lvdisplay
+File descriptor 6 (/dev/pts/0) leaked on lvdisplay invocation. Parent PID 3878: /bin/bash
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_root
+  LV Name                lv_root
+  VG Name                vg_puppetmaster
+  LV UUID                rfAN9c-ejKX-7N9Z-BJZm-MnYF-W10w-ijs59H
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:35 +0530
+  LV Status              available
+  # open                 1
+  LV Size                28.30 GiB
+  Current LE             7246
+  Segments               2
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:0
+   
+  --- Logical volume ---
+  LV Path                /dev/vg_puppetmaster/lv_swap
+  LV Name                lv_swap
+  VG Name                vg_puppetmaster
+  LV UUID                b0qocQ-TFSe-nE6a-7SZH-Y9fz-ZQpD-BJlpf1
+  LV Write Access        read/write
+  LV Creation host, time puppetmaster, 2018-02-08 04:46:36 +0530
+  LV Status              available
+  # open                 1
+  LV Size                1.20 GiB
+  Current LE             307
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:1
+   
+[root@puppet ~]# fdisk -l
+
+Disk /dev/sda: 32.2 GB, 32212254720 bytes
+255 heads, 63 sectors/track, 3916 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x000b03f2
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *           1          64      512000   83  Linux
+Partition 1 does not end on cylinder boundary.
+/dev/sda2              64        1567    12069888   8e  Linux LVM
+/dev/sda3            1567        3916    18872358   8e  Linux LVM
+
+Disk /dev/mapper/vg_puppetmaster-lv_root: 30.4 GB, 30391926784 bytes
+255 heads, 63 sectors/track, 3694 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+
+Disk /dev/mapper/vg_puppetmaster-lv_swap: 1287 MB, 1287651328 bytes
+255 heads, 63 sectors/track, 156 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+[root@puppet ~]# 
+

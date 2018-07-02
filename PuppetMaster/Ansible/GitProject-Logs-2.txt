@@ -1,0 +1,92 @@
+[root@puppet Desktop]# cd ~
+[root@puppet ~]# pwd
+/root
+[root@puppet ~]# cd GitProject/
+[root@puppet GitProject]# ls
+sample.txt
+[root@puppet GitProject]# gedit sample.txt 
+[root@puppet GitProject]# git status
+# On branch master
+nothing to commit (working directory clean)
+[root@puppet GitProject]# git show 5df1659
+commit 5df1659ce8fe0898ceec1d26e6b46b1138798e5d
+Author: root <root@puppet.mydomain.local>
+Date:   Fri Apr 13 16:43:57 2018 +0530
+
+    created newfile
+
+diff --git a/sample.txt b/sample.txt
+new file mode 100644
+index 0000000..6c12b55
+--- /dev/null
++++ b/sample.txt
+@@ -0,0 +1,2 @@
++abhishek mittal
++Jegan R
+[root@puppet GitProject]# 
+[root@puppet GitProject]# 
+[root@puppet GitProject]# git log --oneline
+5df1659 created newfile
+[root@puppet GitProject]# git log
+commit 5df1659ce8fe0898ceec1d26e6b46b1138798e5d
+Author: root <root@puppet.mydomain.local>
+Date:   Fri Apr 13 16:43:57 2018 +0530
+
+    created newfile
+[root@puppet GitProject]# 
+[root@puppet GitProject]# 
+[root@puppet GitProject]# cd..
+bash: cd..: command not found
+You have new mail in /var/spool/mail/root
+[root@puppet GitProject]# cd ..
+[root@puppet ~]# pwd
+/root
+[root@puppet ~]# ls
+anaconda-ks.cfg                 chef-repo         Desktop       GitProject          Music        Public
+Ansible Host Machine.html       chef-starter.zip  docsdemodocs  install.log         nginx.retry  Templates
+chefdk-2.0.28-1.el6.x86_64.rpm  demo              Documents     install.log.syslog  nginx.yml    Videos
+chefdk-2.5.3-1.el6.x86_64.rpm   demo2             Downloads     libreoffice         Pictures
+[root@puppet ~]# 
+[root@puppet ~]# 
+[root@puppet ~]# mkdir demodocs
+[root@puppet ~]# cd demo
+demo/     demo2/    demodocs/ 
+[root@puppet ~]# cd demodocs/
+[root@puppet demodocs]# ls
+[root@puppet demodocs]# git clone https://github.com/kellydemo/demodocs.git
+Initialized empty Git repository in /root/demodocs/demodocs/.git/
+remote: Counting objects: 102, done.
+remote: Total 102 (delta 0), reused 0 (delta 0), pack-reused 102
+Receiving objects: 100% (102/102), 27.74 MiB | 140 KiB/s, done.
+Resolving deltas: 100% (1/1), done.
+[root@puppet demodocs]# ls
+demodocs
+[root@puppet demodocs]# cd ..
+[root@puppet ~]# cd GitProject/
+[root@puppet GitProject]# ls
+sample.txt
+[root@puppet GitProject]# ls -lah
+total 16K
+drwxr-xr-x.  3 root root   4.0K Apr 13 16:42 .
+dr-xr-x---. 41 root Master 4.0K May 22 21:22 ..
+drwxr-xr-x.  8 root root   4.0K Apr 13 16:43 .git
+-rw-r--r--.  1 root root     24 Apr 13 16:42 sample.txt
+[root@puppet GitProject]# ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:0c:29:62:03:c5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.33.145/24 brd 192.168.33.255 scope global eth0
+    inet6 fe80::20c:29ff:fe62:3c5/64 scope link 
+       valid_lft forever preferred_lft forever
+3: pan0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN 
+    link/ether c6:48:6f:ed:86:6e brd ff:ff:ff:ff:ff:ff
+[root@puppet GitProject]# ls
+sample.txt
+[root@puppet GitProject]# pwd
+/root/GitProject
+[root@puppet GitProject]# 
+

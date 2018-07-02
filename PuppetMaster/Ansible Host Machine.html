@@ -1,0 +1,105 @@
+<html xmlns:tomboy="http://beatniksoftware.com/tomboy" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns:link="http://beatniksoftware.com/tomboy/link"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Ansible Host Machine</title><style type="text/css">
+	body {  }
+	h1 { font-size: xx-large;
+     	     font-weight: bold;
+     	     border-bottom: 1px solid black; }
+	div.note {
+		   position: relative;
+		   display: block;
+		   padding: 5pt;
+		   margin: 5pt; 
+		   white-space: -moz-pre-wrap; /* Mozilla */
+ 	      	   white-space: -pre-wrap;     /* Opera 4 - 6 */
+ 	      	   white-space: -o-pre-wrap;   /* Opera 7 */
+ 	      	   white-space: pre-wrap;      /* CSS3 */
+ 	      	   word-wrap: break-word;      /* IE 5.5+ */ }
+	</style></head><body><div class="note" id="Ansible Host Machine"><a name="ansible%20host%20machine"></a><h1>Ansible Host Machine</h1>
+Ansible Host Machine is installed on CentOS 6.9 
+
+this is Puppetmaster machine  <a style="color:#3465A4" href="root@192.168.33.133">root@192.168.33.133</a> changed to now 192.168.33.145 and now it is changed to 192.168.126.158
+
+Ansible Node Machine IP <a style="color:#3465A4" href="root@192.168.33.140">root@192.168.33.140</a>
+192.168.33.140 IP changed to now it is 192.168.126.198
+
+ip addr show ens33 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+
+<a style="color:#3465A4" href="https://github.com/kellydemo/demodocs.git">https://github.com/kellydemo/demodocs.git</a>
+
+git clone <a style="color:#3465A4" href="https://github.com/kellydemo7/hello-world.git">https://github.com/kellydemo7/hello-world.git</a>
+
+Slave Jenkins: <a style="color:#3465A4" href="/var/jenkins">/var/jenkins</a>
+
+IP addr show : 192.168.33.145
+
+Cookbook-creation
+cd <a style="color:#3465A4" href="/root/chef-repo/cookbooks/">/root/chef-repo/cookbooks/</a>
+
+chef generate cookbook apache
+
+knife cookbook list
+
+knife node run_list add -z  recipe[helloworld]
+knife server2 run_list add -z  recipe[sample]
+
+cd apache 
+
+or
+
+cd <a style="color:#3465A4" href="/root/chef-repo/cookbooks/apache">/root/chef-repo/cookbooks/apache</a>
+
+cd recipes/
+
+or 
+
+cd <a style="color:#3465A4" href="/root/chef-repo/cookbooks/apache/recipes/">/root/chef-repo/cookbooks/apache/recipes/</a>
+
+
+vi default.rb
+
+
+<a style="color:#3465A4" href="/root/chef-repo/cookbooks/apache/recipes">/root/chef-repo/cookbooks/apache/recipes</a>
+
+[root@puppet recipes]# pwd
+<a style="color:#3465A4" href="/root/chef-repo/cookbooks/apache/recipes">/root/chef-repo/cookbooks/apache/recipes</a>
+[root@puppet recipes]# cd ../../../
+[root@puppet chef-repo]# pwd
+<a style="color:#3465A4" href="/root/chef-repo">/root/chef-repo</a>
+
+
+
+knife cookbook upload apache
+[root@puppet chef-repo]# knife cookbook upload apache
+[root@puppet chef-repo]# knife cookbook test apache
+
+Public Key of Master Jenkins added in root .ssh authroised Key file:
+
+echo "-----BEGIN RSA PRIVATE KEY-----
+MIIEoAIBAAKCAQEAzlx51jIyO6ohBTLGTmYG3UaTEakF8T30HY4mPoKM6puQefS1
+FTXfTr+7W83IDUGJdJ2bQRCpuoaB/avuUt/TuRi1W8PkihUmuICzpZU6loBtZ+M1
+Lf9x7Ke1erdmc1wRIScK+0V6JgkfJG6wpT9p5TWjrIFvWVaB5TI4up9l5u/XkkTV
+jZXon3et3PDbCsOD/s7SrGRN5RHnLkwt61GMNNse38GayfcYBT5Jdp9mUNNGQrFo
+feFdWGugaAfPN7yFtpVg15IRnqiCQNTS4ILguLoynazXq1KXA6xyrS0d4a5V/V8H
+wqH7XiuBg8xhlq8L3lJ5YjIziBuShSrc8fBBMwIBIwKCAQBwBlDEvCnl4ANL9v3w
+C4ARuJj69Vr/TYSFEqcL/bo2NzEsQwM3ZmNIAa7aEJ/MroxygXGJuJanFdGJtRr5
+yfaXrlPSusyFeTJG5sfsLHBDEoSI2m1TfAqlCpW3pWOAc87I2q4wog8b9lK8AZMX
+4JiSXvJzlrjKGQSvnuuYgmqErRxcc4nC2FTCznVTK4KVSXv1avpfGGxm2s9UcqzL
+CwjvJpzhoelYRYff0BVC4kfmS/sSfBxEFLw0yUnOzrrAbgYt1+QwKW8ajseI1bGA
+ZqlfK5LIcH4XfGn00OrY5+HtPPnrJP4qiRzWpKdwJeso5hMeq0t4pVQEUdkgczMr
+tAXDAoGBAOmQ3Pt5hsR0FvsJnkaNzDSw9YnN3BPcaK/H3cxIr9TnUBa3iaFQLRQd
+Sh4jkPX7DX0AE6tNrvwzRL5JM1W5xac7K5M41RLLBewNyAjQWMAjIcivO2Np5j1n
+9zq8xCndG1HCTz+ve59ik7kiuY597UAUAxRv7y2ifAk1WE5LI4MHAoGBAOIurfdB
+WDcwUCuK9PTIR4XoFDhKTcMwPpEOPNJ9cnDzUWBtoe1Qclp0ForlUqiFHt/PuR1U
+d/j5zwlRBtCiOaqts7ACppB6SrrYq5CPbQOH904RbFYWKNnLQdgq87InIrEeHHqc
+X62Ynl4Lv4A5NOvwIVMu94YTj4AUC9IS7Ol1AoGAVsDHG5OJ0/Ca0kVmrH3PgUkK
+vifkB2B+p7Ci1tkrXbUAfXdfAWbsLArhA+FTGYkiRF8dP6CC0rP09jhyJye+cVB9
+5jmuOi4mxWQ0WwuOrcPn+hUzUM+QCC3uHSGKsHayYDI6sUEt6r423l1a3Sd1YPF9
+fJ6aqozO/BsgzJ+Q2OUCgYBNjFjnDxbuWbUWPkVbPVpZy+ms5kaMEIp64E9eHGHA
+U2xbk01177ItpCT8a+HTYNdirZ6Nto+IkCm6DSbociJmZ3DOodK1MT4xbtu8iPIt
+GKyPy3WZ27Y8CyyEoQMYgnJLWsfvhhIs496GpPEzRtBQ5J22HrtD6XMHV1SCiiVX
+WwKBgEMD3j5jdG0fU8O+8EhI8PIvqOTjtHIOtUkyu5+g2111BNXZ/58Wr383H9Gk
+Cx+YE63OSZeVOAmK/r72RaKzpLqAFZTrxX+fOnKBmNZKXj5xGj96qYNW/E6DiQiF
+neHj6TjJD1OP201byfz7sgWLysfTTSsXdX+KLLTzf+bzdjik
+-----END RSA PRIVATE KEY-----" &gt;&gt; <a style="color:#3465A4" href="~/.ssh/authorized_keys">~/.ssh/authorized_keys</a>
+
+
+</div></body></html>

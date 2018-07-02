@@ -1,0 +1,1059 @@
+[root@puppet Desktop]# cd ..
+[root@puppet ~]# ls -l
+total 120
+-rw-------. 1 root root  1616 Feb  8 04:56 anaconda-ks.cfg
+drwxr-xr-x. 5 root root  4096 Apr 13 17:50 chef-repo
+-rw-r--r--. 1 root root  7824 Apr 13 17:49 chef-starter.zip
+dr-xr-x---. 2 root root  4096 Apr 12 15:19 Desktop
+dr-xr-x---. 2 root root  4096 Apr 12 15:19 Documents
+dr-xr-x---. 5 root root  4096 Apr 13 18:08 Downloads
+drwxr-xr-x. 3 root root  4096 Apr 13 16:42 GitProject
+-rw-r--r--. 1 root root 50698 Feb  8 04:56 install.log
+-rw-r--r--. 1 root root 10031 Feb  8 04:54 install.log.syslog
+dr-xr-x---. 2 root root  4096 Apr 12 15:19 Music
+dr-xr-x---. 2 root root  4096 Apr 12 15:19 Pictures
+dr-xr-x---. 2 root root  4096 Apr 12 15:19 Public
+dr-xr-x---. 2 root root  4096 Apr 12 15:19 Templates
+dr-xr-x---. 2 root root  4096 Apr 12 15:19 Videos
+[root@puppet ~]# cd GitProject/
+[root@puppet GitProject]# git status
+# On branch master
+nothing to commit (working directory clean)
+[root@puppet GitProject]# history
+    4  ruby --version
+    5  rubygems --version
+    6  rvm list rubies
+    7   service --status-all | grep running
+    8  pwd
+    9  cd /etc/yum.repos.d/
+   10  pwd
+   11  vi puppetlabs.repo
+   12   vi /etc/puppet/puppet.conf
+   13  ls
+   14  yum install puppet-server
+   15   vi /etc/puppet/puppet.conf
+   16  head -20 /etc/puppet/puppet.conf
+   17  puppet master --verbose --no-daemonize
+   18  rvm list rubies
+   19  rubygems --version
+   20  rvm -v
+   21  puppet master --verbose --no-daemonize
+   22  rvm install 1.8.7
+   23  rvm list rubies
+   24  rvm install 1.8.7
+   25  wget http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p374.tar.gz
+   26  tar xvfvz ruby-1.8.7-p374.tar.gz
+   27  cd ruby-1.8.7-p374
+   28  ./configure
+   29  make
+   30  make install
+   31  pwd
+   32  rvm list rubies
+   33  puppet master --verbose --no-daemonize
+   34  make
+   35  make install
+   36  rvm install 1.8.7
+   37  cd ..
+   38  rvm install 1.8.7
+   39  yum groupinstall -y "Development Tools"
+   40  yum install openssl-devel
+   41  curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+   42  curl -L get.rvm.io | bash -s stable
+   43  rvm -v
+   44  ruby --version
+   45  cd /etc/puppet/environments
+   46  ruby --version
+   47  rvm -v
+   48  curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+   49  curl -L get.rvm.io | bash -s stable
+   50  source /etc/profile.d/rvm.sh
+   51  rvm reload
+   52  rvm requirements run
+   53  rvm install 2.2.4
+   54  rvm -v
+   55  ruby --version
+   56  rvm use 2.2.4 --default
+   57  wget http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.4.tar.gz
+   58  tar xvfvz ruby-2.2.4.tar.gz
+   59  cd ruby-2.2.4
+   60  ./configure 
+   61  make
+   62  sudo make install
+   63  ruby --version
+   64  rvm install 2.2.4
+   65  sudo gem update --system
+   66  gem update --system
+   67  gem update --no-rdoc --no-ri --system
+   68  ruby --version
+   69  rvm -v
+   70  cd /etc/puppet/environments
+   71  pwd
+   72   rubygems --version
+   73  gem update
+   74  ruby --version
+   75  rubygems --version
+   76  rvm list rubies
+   77   service --status-all | grep running
+   78  pwd
+   79  cd /etc/yum.repos.d/
+   80  pwd
+   81  vi puppetlabs.repo
+   82   vi /etc/puppet/puppet.conf
+   83  ls
+   84  yum install puppet-server
+   85   vi /etc/puppet/puppet.conf
+   86  head -20 /etc/puppet/puppet.conf
+   87  puppet master --verbose --no-daemonize
+   88  rvm list rubies
+   89  rubygems --version
+   90  rvm -v
+   91  puppet master --verbose --no-daemonize
+   92  rvm install 1.8.7
+   93  rvm list rubies
+   94  rvm install 1.8.7
+   95  wget http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p374.tar.gz
+   96  tar xvfvz ruby-1.8.7-p374.tar.gz
+   97  cd ruby-1.8.7-p374
+   98  ./configure
+   99  make
+  100  make install
+  101  pwd
+  102  rvm list rubies
+  103  puppet master --verbose --no-daemonize
+  104  make
+  105  make install
+  106  rvm install 1.8.7
+  107  cd ..
+  108  rvm install 1.8.7
+  109  yum groupinstall -y "Development Tools"
+  110  yum install openssl-devel
+  111  curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+  112  curl -L get.rvm.io | bash -s stable
+  113  rvm -v
+  114  ruby --version
+  115  cd /etc/puppet/environments
+  116  ruby --version
+  117  rvm -v
+  118  curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+  119  curl -L get.rvm.io | bash -s stable
+  120  source /etc/profile.d/rvm.sh
+  121  rvm reload
+  122  rvm requirements run
+  123  rvm install 2.2.4
+  124  rvm -v
+  125  ruby --version
+  126  rvm use 2.2.4 --default
+  127  wget http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.4.tar.gz
+  128  tar xvfvz ruby-2.2.4.tar.gz
+  129  cd ruby-2.2.4
+  130  ./configure 
+  131  make
+  132  sudo make install
+  133  ruby --version
+  134  rvm install 2.2.4
+  135  sudo gem update --system
+  136  gem update --system
+  137  gem update --no-rdoc --no-ri --system
+  138  ruby --version
+  139  rvm -v
+  140  cd /etc/puppet/environments
+  141  pwd
+  142   rubygems --version
+  143  gem update
+  144  ruby --version
+  145  rubygems --version
+  146  rvm list rubies
+  147   service --status-all | grep running
+  148  pwd
+  149  cd /etc/yum.repos.d/
+  150  pwd
+  151  vi puppetlabs.repo
+  152   vi /etc/puppet/puppet.conf
+  153  ls
+  154  yum install puppet-server
+  155   vi /etc/puppet/puppet.conf
+  156  head -20 /etc/puppet/puppet.conf
+  157  puppet master --verbose --no-daemonize
+  158  rvm list rubies
+  159  rubygems --version
+  160  rvm -v
+  161  puppet master --verbose --no-daemonize
+  162  rvm install 1.8.7
+  163  rvm list rubies
+  164  rvm install 1.8.7
+  165  wget http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p374.tar.gz
+  166  tar xvfvz ruby-1.8.7-p374.tar.gz
+  167  cd ruby-1.8.7-p374
+  168  ./configure
+  169  make
+  170  make install
+  171  pwd
+  172  rvm list rubies
+  173  puppet master --verbose --no-daemonize
+  174  make
+  175  make install
+  176  rvm install 1.8.7
+  177  cd ..
+  178  rvm install 1.8.7
+  179  ls
+  180  cd ruby-1.8.7-p374
+  181  ls
+  182  rm -i *.*
+  183  rm *.*
+  184  rm -i *.*
+  185  rm -y *.*
+  186  rm --help
+  187  rm -I *.*
+  188  ls
+  189  rm -r *.*
+  190  rm -r *
+  191  ls
+  192  rm -rI *
+  193  ls
+  194  cd ..
+  195  rm -r ruby-1.8.7-p374
+  196  ls
+  197  cd ruby-1.8.7-p374
+  198  ls
+  199  ls -al
+  200  rm -rI *
+  201  cd ..
+  202  rm -r ruby-1.8.7-p374
+  203  rm ruby-1.8.7-p374
+  204  rm -rf ruby-1.8.7-p374
+  205  ls
+  206  rm -ri ruby-1.8.7-p374.tar.gz
+  207  ls
+  208  rvm -v
+  209  rvm list rubies
+  210  mremove ruby-1.8.7-p374
+  211  ls
+  212  ruby --version
+  213  rvm remove ruby-1.8.7-p374
+  214  rvm remove ruby-2.2.4
+  215  ls
+  216  cd ~
+  217  pwd
+  218  rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rp
+  219  rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+  220  cd /etc/yum.repos.d/
+  221  ls
+  222  vi puppetlabs.repo
+  223  yum clean all
+  224  yum install puppet-server
+  225  reboot
+  226  pwd
+  227  ls
+  228  ifconfig
+  229  who
+  230  vi /etc/sysconfig/network
+  231  vi /etc/hosts
+  232  hostname
+  233  vi /etc/hosts
+  234  hostname
+  235  service --status-all | grep stopped
+  236  service --status-all | grep running
+  237  rpm -qa ntp
+  238  rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+  239  cd /etc/yum.repos.d/
+  240  ls
+  241  vi puppetlabs.repo
+  242  yum install puppet-server
+  243  yum list installed | grep puppet
+  244  yum remove puppet
+  245  yum list installed | grep puppet
+  246  yum install puppet-server
+  247  yum clean all
+  248  yum clean metadata
+  249  yum clean dbcache 
+  250  yum makecache 
+  251  mv /var/lib/rpm/__db* /tmp
+  252  rpm –rebuilddb 
+  253  rpm –-rebuilddb 
+  254  rpm --rebuilddb
+  255  yum install puppet-server
+  256  yum list installed | grep puppet
+  257  vi /etc/puppet/puppet.conf
+  258  puppet master --verbose --no-daemonize
+  259  ruby --version
+  260  ls
+  261  cd /etc/puppet/environments
+  262  ls
+  263  cd production/
+  264  ls
+  265  cd ..
+  266  cd development/
+  267  ls
+  268  cd ..
+  269  ls
+  270  ruby --version
+  271  vi /etc/puppet/puppet.conf
+  272  head -20 /etc/puppet/puppet.conf
+  273  service puppetmaster start
+  274  service puppetmaster stop
+  275  yum list installed | grep httpd 
+  276  yum list installed | grep httpd-devel
+  277  yum list installed | grep mod_ssl
+  278  yum list installed | grep ruby-devel
+  279  yum list installed | grep rubygems
+  280  yum list installed | grep gcc
+  281  service --status-all | grep running
+  282  rvm -v
+  283  yum install httpd httpd-devel mod_ssl ruby-devel rubygems gcc
+  284  chkconfig httpd on
+  285  gem -v
+  286  gem install rack passenger
+  287  passenger-install-apache2-module
+  288  yum install libcurl-devel
+  289  passenger-install-apache2-module
+  290  vi /etc/httpd/conf.d/puppet.conf
+  291  yum install mlocate
+  292  updatedb
+  293  locate mod_passenger.so
+  294  vi /etc/httpd/conf.d/puppet.conf
+  295  yum install vim
+  296  ls -lah /etc/puppetlabs/puppet/ssl/certs/
+  297  vi /etc/httpd/conf.d/puppet.conf
+  298  locate ca_crt.pem
+  299  vi /etc/httpd/conf.d/puppet.conf
+  300  locate puppet-server.example.pem
+  301  locate puppet-server.example.com.pem
+  302  locate private_keys
+  303  locate certs
+  304  locate ca_crt.pem
+  305  locate private_keys
+  306  locate puppet/ssl/certs
+  307  ls -lah /var/lib/puppet/ssl/certs/
+  308  locate puppet.mydomain.local.pem
+  309  vi /etc/httpd/conf.d/puppet.conf
+  310  vim /etc/httpd/conf.d/puppet.conf
+  311  ls -lah /var/lib/puppet/ssl/private_keys/
+  312  locate puppet.mydomain.local.pem
+  313  vim /etc/httpd/conf.d/puppet.conf
+  314  ls -lah /var/lib/puppet/ssl/ca/
+  315  vim /etc/httpd/conf.d/puppet.conf
+  316  cat /etc/httpd/conf.d/puppet.conf
+  317  vim /etc/httpd/conf.d/puppet.conf
+  318  vim /etc/httpd/conf/httpd.conf 
+  319  service httpd start
+  320  service httpd status
+  321  service httpd stop
+  322  service httpd start
+  323  ls /usr/share/puppet/rack/puppetmasterd/public
+  324  ls /usr/share/puppet/
+  325  ls /usr/share/puppet/ext/
+  326  locate puppetmasterd/public
+  327  locate puppetmasterd
+  328  updatedb
+  329  locate public
+  330  service httpd stop
+  331  mkdir -p /usr/share/puppet/rack/puppetmasterd
+  332  mkdir -p /usr/share/puppet/rack/puppetmasterd/public
+  333  mkdir -p /usr/share/puppet/rack/puppetmasterd/tmp
+  334  cp /usr/share/puppet/ext/rack/config.ru /usr/share/puppet/rack/puppetmasterd/
+  335  ls -lah  /usr/share/puppet/rack/puppetmasterd/
+  336  chown puppet:puppet /usr/share/puppet/rack/puppetmasterd/config.ru
+  337  ls -lah  /usr/share/puppet/rack/puppetmasterd/
+  338  service httpd restart
+  339  vim /etc/httpd/conf/httpd.conf 
+  340  vim /etc/httpd/conf.d/puppet.conf
+  341  netstat -anl | grep 8140
+  342  who
+  343  pwd
+  344  uptime
+  345  ls
+  346  ifconfig
+  347  who
+  348  ls -lah /etc/yum.repos.d/
+  349  yum install puppet-dashboard
+  350  yum install mysql-server
+  351  service mysqld start
+  352  mysql
+  353  cd /usr/share/puppet-dashboard/
+  354  ls
+  355  cd config/
+  356  ls
+  357  vim database.yml
+  358  vim /etc/my.cnf
+  359  service mysqld restart
+  360  mysql
+  361  cd /usr/share/puppet-dashboard/
+  362  ls
+  363  rake gems:refresh_specs
+  364  pwd
+  365  rake RAILS_ENV=production db:migrate
+  366  gem -v
+  367  rake -v
+  368  locate rubygems
+  369  ruby setup.rb
+  370  rake gems:refresh_specs
+  371  pwd
+  372  uptime
+  373  who
+  374  gem install rake
+  375  rake -v\
+  376  rake -v
+  377  rake --v
+  378  gem -v
+  379  rake -v
+  380  ls /usr/local/bin/
+  381  cd rake
+  382  ls /usr/local/bin/rake
+  383  cat /usr/local/bin/rake
+  384  gem install rake
+  385  rake
+  386  ls
+  387  cd /usr/share/puppet-dashboard
+  388  pwd
+  389  ls
+  390  cat Rakefile 
+  391  rake
+  392  locate rake | grep rake
+  393  pwd
+  394  cd /usr/share/puppet-dashboard/
+  395  ls
+  396  rake gems:refresh_specs --trace
+  397  ruby -v
+  398  bundler -v
+  399  yum list installed | grep Bundler
+  400  yum list installed | grep bundler
+  401  yum list installed | grep mysql
+  402  rubygems -v
+  403  ruby -v
+  404  rails -v
+  405  gem -v
+  406  gem list
+  407  gem -v
+  408  rails -v
+  409  exit
+  410  who
+  411  uptime
+  412  ls /usr/share/puppet-dashboard/
+  413  cd /usr/share/puppet-dashboard/
+  414  pwd
+  415  rake RAILS_ENV=production db:migrate
+  416   cd config/
+  417  ls
+  418  vim database.yml
+  419  vim /etc/my.cnf
+  420  service mysqld restart
+  421  mysql
+  422  cd /usr/share/puppet-dashboard/
+  423  ls
+  424  gem list
+  425  puppet-master --version
+  426  puppet --version
+  427  puppet master --version
+  428  rpm -qa | grep puppet
+  429  puppet agent --version
+  430  locate config.ru
+  431  ruby --version
+  432  service puppet status
+  433   puppet resource package nginx
+  434  puppet cert list
+  435  service puppetmaster status
+  436  rvm list rubies
+  437  rubygems --version
+  438  yum list installed | grep puppet
+  439  yum list installed | grep rubygems
+  440  rvm --version
+  441  rvm list ruby
+  442  rvm list rubies
+  443  rvm list default
+  444  rpm -qa | grep ruby
+  445  ruby --version
+  446  gem -v
+  447  rake gems:refresh_specs
+  448  which rake
+  449  locate config/environment.rb
+  450  cd config/
+  451  ls
+  452  vim environment.rb
+  453  gem -v
+  454  pwd
+  455  cd ..
+  456  ruby setup.rb
+  457  rails -v
+  458  which rails
+  459  ryby -v
+  460  ruby -v
+  461  gem --version
+  462  gem list
+  463  gem install rails
+  464  gem install --no-document rails
+  465  rails -v
+  466  which rails
+  467  rake gems:refresh_specs
+  468  gem list
+  469  gem remove rails
+  470  gem remove --no-document rails
+  471  gem mremove  rails
+  472  gem uninstall rails
+  473  gem list
+  474  rake gems:refresh_specs
+  475  gem install --no-document rails
+  476  gem install --no-document bundler
+  477  bundler -v
+  478  rvm install --no-document 2.3.1
+  479  rvm install --no-rdoc --no-ri 2.3.1
+  480  rvm install --no-ri 2.3.1
+  481  rvm install 2.3.1
+  482  ruby -v
+  483  rvm list rubies
+  484  gem install --no-document bundler
+  485  bundler -v
+  486  rake gems:refresh_specs
+  487  gem -v
+  488  gem uninstall rails
+  489  rvm install 2.3.1
+  490  rvm reinstall 2.3.1
+  491  gem install --no-document bundler
+  492  bundle update --local
+  493  gem update --no-document bundler --local
+  494  gem update bundler
+  495  update bundler
+  496  bundle update --local
+  497  gem list
+  498  bundle install --local --no-prune
+  499  bundle env
+  500  rake gems:refresh_specs
+  501  rake gems:refresh_specs --trace
+  502  rpm -qa | grep ruby
+  503  yum list installed | grep rubygems
+  504  rvm install rubygems 1.8.2 --force
+  505  yum list installed | grep rubygems
+  506  rpm -qa | grep ruby
+  507  rvm list rubies
+  508  rvm uninstall 2.3.1
+  509  rvm list rubies
+  510  rvm install rubygems 1.8.2 --force
+  511  rvm install 1.9.3-p327
+  512  rvm install rubygems 1.8.2 --force
+  513  rvm list rubies
+  514  rpm -qa | grep ruby
+  515  ruby -v
+  516  rails -v
+  517  yum list installed | grep rubygems
+  518  rake gems:refresh_specs
+  519  rails -v
+  520  gem uninstall rails
+  521  gem list -d rails
+  522  gem install --no-document rails
+  523  gem install --no-ro rails
+  524  gem install --no-ri rails
+  525  gem install --no-rdoc --no-ri rails
+  526  rails -v
+  527  gem install rails
+  528  rake RAILS_ENV=production db:migrate
+  529  gem update
+  530  gem list
+  531  rails -v
+  532  gem uninstall rails -v 5.1.4
+  533  gem install rails
+  534  gem install rails -v 4.2.4
+  535  gem install rails -v 4.0.0
+  536  sudo gem cleanup
+  537  gem install rails -v 3.2.13
+  538  gem list
+  539  rails -v
+  540  gem install rails -v 3.2.0
+  541  gem install rails -v 3.1.0
+  542  gem install rails -v 3.0.0
+  543  rails -v
+  544  gem install rails
+  545  gem install rails -v 2.0.0
+  546  rails -v
+  547  rake RAILS_ENV=production db:migrate
+  548   gem install mysql
+  549  yum install mysql-server
+  550  mysql
+  551  rake RAILS_ENV=production db:migrate
+  552  rvm get head
+  553  rvm reload
+  554  rvm -v
+  555  rvm reset
+  556  rvm -v
+  557  which bundle
+  558  gem install bundler
+  559  which bundle
+  560  rake RAILS_ENV=production db:migrate
+  561  sudo gem cleanup
+  562  rake RAILS_ENV=production db:migrate
+  563  rails -v
+  564  gem list
+  565  rails -v
+  566  gem uninstall rails -v 5.1.4
+  567  rails -v
+  568  rake RAILS_ENV=production db:migrate
+  569  gem uninstall rails -v 5.1.4
+  570  gem list -d rails
+  571  rake gems:refresh_specs
+  572  ruby -v
+  573  rvm list rubies
+  574  gem uninstall rails
+  575  rvm uninstall 2.2.4p230
+  576  ruby -v
+  577  sudo gem cleanup
+  578  rake gems:refresh_specs
+  579  gem install rails -v 2.0.0
+  580  gem install rails -v 3.0.0
+  581  gem install --no-ri --no-rdoc rails -v 3.0.0
+  582  rails -v
+  583  ruby -v
+  584  rvm uninstall 2.2.4p230
+  585  rake RAILS_ENV=production db:migrate
+  586  rvm install rubygems 1.8.2 --force
+  587  rvm install 1.9.3-p327
+  588  rvm reinstall 1.9.3-p327
+  589  rvm install rubygems 1.8.2 --force
+  590  rake RAILS_ENV=production db:migrate
+  591  rake gems:refresh_specs
+  592  rake RAILS_ENV=production db:migrate
+  593  rake RAILS_ENV=production db:migrate --trace
+  594  ruby -v
+  595  gem -v
+  596  rails -v
+  597  ls /usr/local/mysql/bin/
+  598  ls /usr/local/mysql/
+  599  ls /usr/local/mysql
+  600  ls -lah /usr/local/mysql/bin/
+  601  ls -lah /usr/local/
+  602  locate /mysql
+  603  gem install mysql
+  604  rake gems:refresh_specs
+  605  rake RAILS_ENV=production db:migrate
+  606  rails -v
+  607  aptitude install redmine-mysql
+  608  sudo aptitude install redmine-mysql
+  609  rvm install rubygems 1.8.25 --force
+  610  rails -v
+  611  ruby -v
+  612  gem list
+  613  rake RAILS_ENV=production db:migrate
+  614  rvm list rubies
+  615  rubygems -v
+  616  yum list installed | grep rubygems
+  617  gem update --system 1.8.25
+  618  gem install mysql
+  619  sudo gem cleanup
+  620  rake RAILS_ENV=production db:migrate
+  621  gem update
+  622  gem -v
+  623  ruby -v
+  624  rvm list rubies
+  625  rails -v
+  626  rake RAILS_ENV=production db:migrate
+  627  which mysql_config
+  628  ls -lah /usr/local/lib/ruby/gems/
+  629  gem -v
+  630  yum list installed | grep rubygems
+  631  rake RAILS_ENV=production db:migrate
+  632  rails -v
+  633  gem -v
+  634  rvm list rubies
+  635  ruby -v
+  636  yum list installed | grep rubygems
+  637  ls -lah /usr/local/lib/ruby/gems/
+  638  cd 2.2.0
+  639  ls -lah /usr/local/lib/ruby/gems/2.2.0/
+  640  cd gems
+  641  ls -lah /usr/local/lib/ruby/gems/2.2.0/gems/
+  642  which mysql_config
+  643  gem install mysql
+  644  pwd
+  645  cd /usr/local/lib/ruby/gems/2.2.0/gems/
+  646  pwd
+  647  cd rails-3.0.0
+  648  ls
+  649  ls /bin/
+  650  cd ..
+  651  pwd
+  652  mysql -v
+  653  ls /opt/local/include/
+  654  ls /opt/local/
+  655  ls -lah /opt/local/include
+  656  ls -lah /opt/
+  657  ls -lah /usr/bin/mysql_config
+  658  cd /usr/share/puppet-dashboard
+  659  pwd
+  660  gem install mysql -- --with-mysql-config=/usr/bin/mysql_config
+  661  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/bin/
+  662  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/bin/ruby 
+  663  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/
+  664  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/share/
+  665  ls -lah /usr/local/rvm/rubies/ruby-1.9.3-p327/lib/
+  666  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1
+  667  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/
+  668  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/mysql/
+  669  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/
+  670  cd /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1
+  671  pwd
+  672  ls -l
+  673  locate *.c
+  674  locate mysql.c
+  675  ls -l
+  676  ls -lah /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/
+  677  cd /usr/share/puppet-dashboard
+  678  pwd
+  679  cp -R /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1  /usr/local/lib/ruby/gems/2.2.0/gems/
+  680  cd /usr/local/lib/ruby/gems/2.2.0/gems/
+  681  ls -l
+  682  cd /usr/share/puppet-dashboard
+  683  rake RAILS_ENV=production db:migrate
+  684  gem install mysql
+  685  ls -lah /usr/local/
+  686  ls -lah /usr/local/lib/
+  687  ls -lah /usr/local/rvm/
+  688  ls -lah /usr/local/rvm/gems/
+  689  ls -lah /usr/local/lib/
+  690  ls -lah /usr/local/lib/ruby/
+  691  ls -lah /usr/local/lib/ruby/gems/
+  692  ls -lah /usr/local/lib/ruby/gems/2.2.0/
+  693  ls -lah /usr/local/lib/ruby/gems/2.2.0/gems/
+  694  ls -lah /usr/local/lib/ruby/gems/2.2.0/gems/mysql-2.9.1/
+  695  pwd
+  696  cd /usr/local/rvm/gems/ruby-1.9.3-p327/gems/mysql-2.9.1/lib/
+  697  ls
+  698  ls -l
+  699  ruby ./mysql.rb 
+  700  cd /usr/share/puppet-dashboard
+  701  rake RAILS_ENV=production db:migrate
+  702  gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
+  703  gem list
+  704  rake db:create
+  705  locate Gemfile
+  706  gem update --include-dependencies --system
+  707  rake RAILS_ENV=production db:migrate
+  708  ruby -v
+  709  rails -v
+  710  gem -v
+  711  gem install mysql
+  712  gem -v
+  713  gem uninstall --version 2.7.5
+  714  gem cleanup
+  715  gem list
+  716  gem -v
+  717  rake gems:refresh_specs
+  718  gem uninstall --version 2.7.5
+  719  gem uninstall rjb --version '>1.3.4'
+  720  gem uninstall --version '>1.3.4'
+  721  gem uninstall --version '2.7.5'
+  722  gem uninstall gem --version '2.7.5'
+  723  gem -v
+  724  gem cleanup --dryrun
+  725  gem cleanup
+  726  gem cleanup -d
+  727  gem uninstall --all
+  728  y
+  729  gem list
+  730  gem -v
+  731  gem uninstall --all
+  732  gem cleanup -d
+  733  gem cleanup
+  734  gem uninstall --version '2.7.5'
+  735  gem cleanup --dryrun
+  736  rake gems:refresh_specs
+  737  gem uninstall rails
+  738  rvm reinstall 1.9.3-p327
+  739  rvm install rubygems 1.8.2 --force
+  740  rake gems:refresh_specs
+  741  rake RAILS_ENV=production db:migrate
+  742  ifconfig
+  743  who
+  744  rvm list rubies
+  745  hostname
+  746  ls -lah /etc/httpd/conf.d/puppet.conf 
+  747  vi /etc/httpd/conf.d/puppet.conf
+  748  cat /etc/httpd/conf.d/puppet.conf
+  749  who
+  750  ifconfig
+  751  vi /etc/hosts
+  752  uname -r
+  753  uptime
+  754  date
+  755  exit
+  756  su -
+  757  exit
+  758  ifconfig
+  759  who
+  760  vim /etc/hosts
+  761  sudo su -
+  762  logout
+  763  ls
+  764  pwd
+  765  iwconfig
+  766  sudo service httpd restart
+  767  pwd
+  768  ls -lah
+  769  vi /etc/hosts
+  770  hostname
+  771  ifconfig
+  772  vi /etc/hosts
+  773  pwd
+  774  ls
+  775  locate chef-starter.zip
+  776  yum -y install mlocate
+  777  locate chef-starter.zip
+  778  locate . chef-starter.zip
+  779  locate . chef-starter.zip |grep zip
+  780  locate chef-starter.zip
+  781  mlocate chef-starter.zip
+  782  pwd
+  783  cd /home/Master/
+  784  cd Downloads/
+  785  ls
+  786  tar xvzf chef-starter.zip 
+  787  who
+  788  unzip chef-starter.zip 
+  789  ls
+  790  pwd
+  791  ls
+  792  cd Downloads/
+  793  ls
+  794  who
+  795  pwd
+  796  ls
+  797  su -
+  798  ls
+  799  pwd
+  800  ifconfig
+  801  su -
+  802  pwd
+  803  ls
+  804  tar xvzf chef-starter.zip 
+  805  unzip chef-starter.zip 
+  806  ls -lah
+  807  cd chef-repo/
+  808  ls
+  809  uname -r
+  810  pwd
+  811  cd ..
+  812  pwd
+  813  rpm -ivh /root/Downloads/chefdk-2.5.3-1.el6.x86_64.rpm 
+  814  ls -l /opt/chefdk/
+  815  pwd
+  816  check verify
+  817  chef verify
+  818  which ruby
+  819  chef --version
+  820  chef shell-init bash
+  821  pwd
+  822  cd ~/chef-repo
+  823  knife client list
+  824  knife ssl fetch
+  825  ls -l /root/chef-repo/.chef/trusted_certs
+  826  cat /root/chef-repo/.chef/trusted_certs/centos_example_com.crt
+  827  ls -l /root/chef-repo/.chef/trusted_certs/
+  828  knife client list
+  829  ls -l
+  830  cd ..
+  831  pwd
+  832  yum install -y wget curl git
+  833  chef --version
+  834  chef verify
+  835  ls
+  836  cd chef-repo/
+  837  pwd
+  838  mkdir -p ~/chef-repo/.chef
+  839  ls
+  840  ls -lah
+  841  date
+  842  cd ~/chef-repo/.chef
+  843  ls
+  844  cd trusted_certs/
+  845  ls
+  846  cd ..
+  847  vi chef-validator.pem
+  848  vi ovm-validator.pem
+  849  ls
+  850  pwd
+  851  cd ..
+  852  pwd
+  853  ls
+  854  ls -lah
+  855  knife client lis
+  856  knife client list
+  857  cd ~
+  858  pwd
+  859  unzip chef-starter.zip
+  860  cd ~/chef-repo
+  861  knife client list
+  862  ls -l /root/chef-repo/.chef/trusted_certs
+  863  knife client list
+  864  knife configure -i
+  865  cat ~/.chef/knife.rb
+  866  ls
+  867  ls -lah
+  868  cat .chef/knife.rb 
+  869  knife configure -i
+  870  knife client list
+  871  pwd
+  872  chef --version
+  873  chef shell-init bash
+  874  knife client list
+  875  knife ssl fetch
+  876  knife user list
+  877  knife ssl fetch
+  878  knife client list
+  879  knife configure --initial
+  880  cd ..
+  881  pwd
+  882  chef --version
+  883  chef verify
+  884  yum install git
+  885  git --version
+  886  ifconfig
+  887  system
+  888  nmcli device status
+  889  ip addr show
+  890  setup
+  891  pwd
+  892  mkdir GitProject
+  893  cd GitProject
+  894  git init
+  895  ls -a
+  896  git status
+  897  cat sample.txt
+  898  vi sample.txt
+  899  cat sample.txt
+  900  git add sample.txt
+  901  git status
+  902  git commite -m "created newfile"
+  903  git commit -m "created newfile"
+  904  git log
+  905  git log --oneline
+  906  git show 5df1659
+  907  cd
+  908  pwd
+  909  ls -lah
+  910  cd Downloads/
+  911  ls -lah
+  912  tar -zxvf gitkraken-amd64.tar.gz 
+  913  ls -lah
+  914  sudo rsync -va --delete-after gitkraken/ /opt/GitKraken/
+  915  cd /opt/GitKraken
+  916  ls
+  917  ./gitkraken
+  918  cd
+  919  pwd
+  920  cd Downloads/
+  921  ls -lah
+  922  cd gitkraken
+  923  ls
+  924  use gitkraken 
+  925  ls -lah
+  926  cd
+  927  pwd
+  928  cd Downloads/
+  929  ls -lah
+  930  yum install CycligentGitTool-0.5.2-linux-x64.rpm
+  931  ls -lah
+  932  unzip GitEye-2.1.0-linux.x86_64.zip
+  933  ls
+  934  cd Giteyes/
+  935  ls
+  936  unzip GitEye-2.1.0-linux.x86_64.zip
+  937  cd
+  938  pwd
+  939  ls -lah
+  940  unzip chef-starter.zip 
+  941  ls -lah
+  942  cd chef-repo/
+  943  ls -la
+  944  knife client list
+  945  chef-client -v
+  946  curl -L https://www.opscode.com/chef/install.sh | bash
+  947  cd ..
+  948  pwd
+  949  curl -L https://www.opscode.com/chef/install.sh | bash
+  950  cd chef-repo/
+  951  knife client list
+  952  knife ssl fetch
+  953  ls -l /root/chef-repo/.chef/trusted_certs
+  954  cd ..
+  955  cd Downloads/
+  956  ls -lah 
+  957  yum -y install chefdk-2.5.3-1.el6.x86_64.rpm
+  958  cd ..
+  959  cd chef-repo/
+  960  knife ssl fetch
+  961  knife client list
+  962  knife ssl fetch
+  963  cd ..
+  964  yum remove chef
+  965  yum remove chefdk-2.5.3-1.el6.x86_64.rpm
+  966  yum list installed chef
+  967  yum list installed chef*
+  968  yum list installed
+  969  yum list installed|grep chef
+  970  yum remove chefdk.x86_64
+  971  ls -lah
+  972  pwd
+  973  unzip chef-starter.zip
+  974  cd ~/chef-repo
+  975  knife client list
+  976  knife ssl fetch
+  977  cd ..
+  978  cd Downloads/
+  979  ls -lah *.rpm
+  980  rpm -ivh chefdk-2.5.3-1.el6.x86_64.rpm
+  981  cd ..
+  982  cd chef-repo/
+  983  cd ..
+  984  chef verify
+  985  chef --version
+  986  yum install -y chef
+  987  chef verify
+  988  yum install berks
+  989  chef shell-init bash
+  990  cd chef-repo/
+  991  chef shell-init bash
+  992  chef verify
+  993  knife client list
+  994  chef verify
+  995  knife ssl fetch
+  996  knife client list
+  997  restart
+  998  init 6
+  999  cd ..
+ 1000  ls -l
+ 1001  cd GitProject/
+ 1002  git status
+ 1003  history
+[root@puppet GitProject]# git show 5df1659
+commit 5df1659ce8fe0898ceec1d26e6b46b1138798e5d
+Author: root <root@puppet.mydomain.local>
+Date:   Fri Apr 13 16:43:57 2018 +0530
+
+    created newfile
+
+diff --git a/sample.txt b/sample.txt
+new file mode 100644
+index 0000000..6c12b55
+--- /dev/null
++++ b/sample.txt
+@@ -0,0 +1,2 @@
++abhishek mittal
++Jegan R
+[root@puppet GitProject]# git status
+# On branch master
+nothing to commit (working directory clean)
+[root@puppet GitProject]# ls
+sample.txt
+You have new mail in /var/spool/mail/root
+[root@puppet GitProject]# pwd
+/root/GitProject
+[root@puppet GitProject]# ls -l
+total 4
+-rw-r--r--. 1 root root 24 Apr 13 16:42 sample.txt
+[root@puppet GitProject]# ls -lah
+total 16K
+drwxr-xr-x.  3 root root   4.0K Apr 13 16:42 .
+dr-xr-x---. 35 root Master 4.0K Apr 13 20:09 ..
+drwxr-xr-x.  8 root root   4.0K Apr 13 16:43 .git
+-rw-r--r--.  1 root root     24 Apr 13 16:42 sample.txt
+[root@puppet GitProject]# service start sshd
+start: unrecognized service
+You have new mail in /var/spool/mail/root
+[root@puppet GitProject]# 
+

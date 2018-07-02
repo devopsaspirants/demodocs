@@ -1,0 +1,22 @@
+---
+
+- hosts : test-servers
+  
+  tasks :
+   - name : Install yum with dnf
+     dnf  : name=yum state=installed
+
+   - name : install nginx
+     yum  : pkg=nginx state=installed
+
+     notify:
+       - start nginx
+
+   - name : Install the nginx package
+     yum  : name=nginx state=present
+     become: yes
+
+  handlers :
+   - name : start nginx
+     service : name=nginx state=started
+   

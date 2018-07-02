@@ -1,0 +1,98 @@
+[fedora26@localhost ~]$ locate sshd_config
+/etc/ssh/sshd_config
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/inspec-2.1.30/docs/resources/sshd_config.md.erb
+/usr/share/man/man5/sshd_config.5.gz
+[fedora26@localhost ~]$ vi /etc/ssh/sshd_config
+[fedora26@localhost ~]$ su -
+Password: 
+[root@localhost ~]# vi /etc/ssh/sshd_config
+[root@localhost ~]# vi /etc/ssh/sshd_config
+[root@localhost ~]# systemctl restart sshd.service 
+[root@localhost ~]# systemctl sshd.service status
+Unknown operation sshd.service.
+[root@localhost ~]# systemctl status sshd.service 
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Sat 2018-04-21 12:09:25 IST; 21s ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 31892 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─31892 /usr/sbin/sshd -D
+
+Apr 21 12:09:25 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Apr 21 12:09:25 localhost.localdomain sshd[31892]: Server listening on 0.0.0.0 port 22.
+Apr 21 12:09:25 localhost.localdomain sshd[31892]: Server listening on :: port 22.
+Apr 21 12:09:25 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+[root@localhost ~]# systemctl reload sshd.service
+[root@localhost ~]# systemctl status sshd.service 
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Sat 2018-04-21 12:09:25 IST; 2 days ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+  Process: 31901 ExecReload=/bin/kill -HUP $MAINPID (code=exited, status=0/SUCCESS)
+ Main PID: 31892 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─31892 /usr/sbin/sshd -D
+
+Apr 21 12:09:25 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Apr 21 12:09:25 localhost.localdomain sshd[31892]: Server listening on 0.0.0.0 port 22.
+Apr 21 12:09:25 localhost.localdomain sshd[31892]: Server listening on :: port 22.
+Apr 21 12:09:25 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+Apr 21 12:10:25 localhost.localdomain systemd[1]: Reloading OpenSSH server daemon.
+Apr 21 12:10:25 localhost.localdomain sshd[31892]: Received SIGHUP; restarting.
+Apr 21 12:10:25 localhost.localdomain systemd[1]: Reloaded OpenSSH server daemon.
+Apr 21 12:10:25 localhost.localdomain sshd[31892]: Server listening on 0.0.0.0 port 22.
+Apr 21 12:10:25 localhost.localdomain sshd[31892]: Server listening on :: port 22.
+[root@localhost ~]# systemctl reload sshd.service
+[root@localhost ~]# systemctl start sshd.service 
+[root@localhost ~]# systemctl stop sshd.service 
+[root@localhost ~]# systemctl reload sshd.service
+sshd.service is not active, cannot reload.
+[root@localhost ~]# systemctl restart sshd.service
+[root@localhost ~]# systemctl status sshd.service 
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Mon 2018-04-23 16:34:51 IST; 5s ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 32217 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─32217 /usr/sbin/sshd -D
+
+Apr 23 16:34:51 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Apr 23 16:34:51 localhost.localdomain sshd[32217]: Server listening on 0.0.0.0 port 22.
+Apr 23 16:34:51 localhost.localdomain sshd[32217]: Server listening on :: port 22.
+Apr 23 16:34:51 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+[root@localhost ~]# systemctl enable sshd.service 
+Created symlink /etc/systemd/system/multi-user.target.wants/sshd.service → /usr/lib/systemd/system/sshd.service.
+[root@localhost ~]# systemctl reload sshd.service
+[root@localhost ~]# systemctl restart sshd.service
+[root@localhost ~]# systemctl status sshd.service 
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2018-04-23 16:35:24 IST; 2s ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+  Process: 32245 ExecReload=/bin/kill -HUP $MAINPID (code=exited, status=0/SUCCESS)
+ Main PID: 32249 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─32249 /usr/sbin/sshd -D
+
+Apr 23 16:35:24 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Apr 23 16:35:24 localhost.localdomain sshd[32249]: Server listening on 0.0.0.0 port 22.
+Apr 23 16:35:24 localhost.localdomain sshd[32249]: Server listening on :: port 22.
+Apr 23 16:35:24 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+[root@localhost ~]# systemctl reload sshd.service
+[root@localhost ~]# ls /etc/ssh/sshd_config
+/etc/ssh/sshd_config
+[root@localhost ~]# ls -l /etc/ssh/sshd_config
+-rw-------. 1 root root 3852 Apr 21 12:08 /etc/ssh/sshd_config
+[root@localhost ~]# vi /etc/ssh/sshd_config
+[root@localhost ~]# 
+

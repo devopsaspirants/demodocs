@@ -1,0 +1,11 @@
+
+Ansible Node Machine IP root@192.168.33.140
+192.168.33.140
+
+now it is 192.168.126.198
+
+
+Ansible Host Machine : root@192.168.33.145 is now
+
+Ansible Host Machine is installed on CentOS 6.9 this is 
+Puppetmaster machine  root@192.168.33.133

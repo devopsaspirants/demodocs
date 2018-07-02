@@ -1,0 +1,1377 @@
+[fedora26@localhost ~]$ history
+    1  iwconfig
+    2  lspci | grep -i wireless
+    3  iwconfig
+    4  lspci | grep -i wireless
+    5  iwconfig
+    6  ifconfig
+    7  pwd
+    8  ls
+    9  su -
+   10  passwd
+   11  su -
+   12  /sbin/reboot -f
+   13  sudo su -
+   14  su -
+   15  locate sshd_config
+   16  vi /etc/ssh/sshd_config
+   17  su -
+   18  sudo su -
+   19  yum install -y ruby
+   20  sudo yum install -y ruby
+   21  which ruby
+   22  curl -L https://www.chef.io/chef/install.sh 
+   23  ls
+   24  pwd
+   25  ls
+   26  cd Downloads/
+   27  ls
+   28  ls -l
+   29  rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+   30  cd ..
+   31  cd Downloads/
+   32  sudo rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+   33  cd ..
+   34  curl -L https://www.chef.io/chef/install.sh | sudo bash
+   35  sudo curl -L https://www.chef.io/chef/install.sh | sudo bash
+   36  chef-client
+   37  pwd
+   38  ls
+   39  cd etc
+   40  cd /etc/
+   41  ls
+   42  ls -lart | grep -i chef
+   43  cd /opt
+   44  ls
+   45  cd chef/
+   46  ls
+   47  cd bin
+   48  ls
+   49  cat chef-client 
+   50  ls
+   51  pwd
+   52  cd /
+   53  cd etc/opt/chef
+   54  pwd
+   55  cd /home
+   56  ls
+   57  cd fedora26
+   58  ls
+   59  ifconfig
+   60  sevii
+   61  service sshd status
+   62  vi /etc/ssh
+   63  vi /etc/ssh/sshd_config 
+   64  su -
+   65  who
+   66  pwd
+   67  sudo su -
+   68  su -
+   69  who
+   70  su -
+   71  who
+   72  visudo
+   73  sudo visudo
+   74  exit
+   75  visudo
+   76  gpasswd wheel -a fedora26
+   77  sudo gpasswd wheel -a fedora26
+   78  visudo
+   79  gpasswd wheel -a fedora26
+   80  sudo gpasswd wheel -a fedora26
+   81  sudo su -
+   82  visudo
+   83  gpasswd wheel -a fedora26
+   84  sudo visudo
+   85  su -
+   86  exit
+   87  yum -y install httpd
+   88  su -
+   89  ls /etc/httpd/conf/httpd.conf
+   90  vi /etc/httpd/conf/httpd.conf
+   91  netstat -l
+   92  semanage port -l | grep http_port_t
+   93  netstat -pat | grep httpd
+   94  su -
+   95  history
+   96  systemctl status httpd.service
+   97  systemctl reload httpd.service
+   98  systemctl enable httpd.service
+   99  systemctl reload httpd.service
+  100  systemctl restart httpd.service
+  101  systemctl status httpd.service
+  102  sudo dnf install httpd
+  103  systemctl status httpd.service
+  104  systemctl restart httpd.service
+  105  ls /etc/apache2/httpd.conf
+  106  sudo ls /etc/apache2/httpd.conf
+  107  sudo su -
+  108  su -
+  109  init 6
+  110  ifconfig -a
+  111  history
+  112  systemctl status httpd.service
+  113  hostname
+  114  systemctl list-units |grep network
+  115  ls -l /etc/sysconfig/network-scripts/
+  116  sudo su -
+  117  init 3
+  118  sudo su -
+  119  pwd
+  120  ifconfig 
+  121  date
+  122  service ntpd status
+  123  systemctl status httpd.service
+  124  systemctl status ntpd.service
+  125  systemctl status ntp.service
+  126  systemctl status ntpd.service 
+  127  history |grep nyp
+  128  history |grep ntp
+  129  history |grep date
+  130  ping 192.168.33.145
+  131  service status nginix
+  132  systemctl status nginx.service 
+  133  systemctl start nginx.service 
+  134  sudo systemctl restart nginx
+  135  su -
+  136  hostname
+  137  ifconfig
+  138  rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+  139  yum update -y
+  140  su -
+  141  ls
+  142  pwd
+  143  sudo su -
+  144  rpmquery chef
+  145  chef-server-ctl status
+  146  su -
+  147  ip addr show
+  148  knife bootstrap 192.168.33.140 --sudo  -x root -P root@123 -N "server2" -r "recipe[sample1]"
+  149  sudo knife bootstrap 192.168.33.140 --sudo  -x root -P root@123 -N "server2" -r "recipe[sample1]"
+  150  ip addr show
+  151  su -
+  152  history
+  153  systemctl start httpd.service
+  154  sudo systemctl start httpd.service
+  155  sudo systemctl status httpd.service
+  156  sudo dnf install httpd
+  157  systemctl status httpd.service
+  158  sudo ls /etc/apache2/httpd.conf
+  159  pwd
+  160  sudo /sbin/service httpd restart
+  161  ps -ef | grep https
+  162  ps -ef | grep httpd
+  163  systemctl start httpd
+  164  systemctl status httpd
+  165  yum install httpd
+  166  sudo yum install httpd
+  167  cd root
+  168  cd \
+  169  pwd
+  170  cd ~
+  171  ls -a
+  172  cd ..
+  173  pwd
+  174  ls -a  /sbin/
+  175  /sbin/service httpd restart
+  176  /sbin/service httpd.service restart
+  177  apachectl start
+  178  pwd
+  179  cd root
+  180  su -
+  181  history
+  182  sudo rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+  183  su -
+  184  history
+  185  su -
+  186  history
+[fedora26@localhost ~]$ su -
+Password: 
+[root@localhost ~]# systemctl start httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1393/nginx: master  
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1267/beam.smp       
+[root@localhost ~]# systemctl enable httpd.service
+[root@localhost ~]# nginx -t -c /etc/nginx/nginx.conf
+bash: nginx: command not found...
+Install package 'nginx' to provide command 'nginx'? [N/y] y            
+
+
+ * Waiting in queue... 
+ * Loading list of packages.... 
+The following packages have to be installed:
+ nginx-1:1.12.1-1.fc26.x86_64	A high performance web server and reverse proxy server
+Proceed with changes? [N/y] y
+
+
+ * Waiting in queue... 
+ * Waiting for authentication... 
+ * Waiting in queue... 
+ * Downloading packages... 
+ * Requesting data... 
+ * Testing changes... 
+ * Installing packages... 
+nginx: [emerg] open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:30
+nginx: configuration file /etc/nginx/nginx.conf test failed
+
+[root@localhost ~]# nginx -t -c /etc/nginx/nginx.conf
+nginx: [emerg] open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:30
+nginx: configuration file /etc/nginx/nginx.conf test failed
+[root@localhost ~]# lsof -i:80
+COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+nginx   1393    root   16u  IPv4  30340      0t0  TCP *:http (LISTEN)
+nginx   1799 opscode   16u  IPv4  30340      0t0  TCP *:http (LISTEN)
+nginx   1800 opscode   16u  IPv4  30340      0t0  TCP *:http (LISTEN)
+nginx   1801 opscode   16u  IPv4  30340      0t0  TCP *:http (LISTEN)
+nginx   1802 opscode   16u  IPv4  30340      0t0  TCP *:http (LISTEN)
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# lsof -i:80
+COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+nginx   23738    root   16u  IPv4  66259      0t0  TCP *:http (LISTEN)
+nginx   23741 opscode   16u  IPv4  66259      0t0  TCP *:http (LISTEN)
+nginx   23742 opscode   16u  IPv4  66259      0t0  TCP *:http (LISTEN)
+nginx   23743 opscode   16u  IPv4  66259      0t0  TCP *:http (LISTEN)
+nginx   23744 opscode   16u  IPv4  66259      0t0  TCP *:http (LISTEN)
+[root@localhost ~]# nginx -t -c /etc/nginx/nginx.conf
+nginx: [emerg] open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:30
+nginx: configuration file /etc/nginx/nginx.conf test failed
+[root@localhost ~]# netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      23738/nginx: master 
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1267/beam.smp       
+[root@localhost ~]# chef-server-ctl status
+run: bookshelf: (pid 1477) 3048s; run: log: (pid 1231) 3049s
+run: nginx: (pid 23738) 1897s; run: log: (pid 1228) 3049s
+run: oc_bifrost: (pid 1678) 3047s; run: log: (pid 1233) 3049s
+run: oc_id: (pid 1263) 3049s; run: log: (pid 23727) 1897s
+run: opscode-erchef: (pid 1267) 3048s; run: log: (pid 1230) 3049s
+run: opscode-expander: (pid 1261) 3049s; run: log: (pid 1234) 3049s
+run: opscode-solr4: (pid 20878) 1934s; run: log: (pid 1226) 3049s
+run: postgresql: (pid 23723) 1897s; run: log: (pid 1232) 3049s
+run: rabbitmq: (pid 1268) 3048s; run: log: (pid 1227) 3049s
+run: redis_lb: (pid 20933) 1932s; run: log: (pid 1236) 3049s
+[root@localhost ~]# chef-server-ctl test
+Configuring logging...
+Creating platform...
+Configured server URL: https://localhost
+Configured base resource URL: https://localhost
+Creating org pedant_testorg_localhost_24501
+Validating Org Creation
+Run options: include {:focus=>true, :smoke=>true}
+
+All examples were filtered out; ignoring {:focus=>true, :smoke=>true}
+.................................
+
+Finished in 1.37 seconds (files took 3.34 seconds to load)
+33 examples, 0 failures
+
+Starting Pedant Run: 2018-06-20 11:58:55 UTC
+ _______  _______  _______  _______  _______  ______   _______
+|       ||       ||       ||       ||       ||      | |       |
+|   _   ||    _  ||  _____||       ||   _   ||  _    ||    ___|
+|  | |  ||   |_| || |_____ |       ||  | |  || | |   ||   |___
+|  |_|  ||    ___||_____  ||      _||  |_|  || |_|   ||    ___|
+|       ||   |     _____| ||     |_ |       ||       ||   |___
+|_______||___|    |_______||_______||_______||______| |_______|
+
+     _______  _______  ______   _______  __    _  _______
+    |       ||       ||      | |   _   ||  |  | ||       |
+    |    _  ||    ___||  _    ||  |_|  ||   |_| ||_     _|
+    |   |_| ||   |___ | | |   ||       ||       |  |   |
+    |    ___||    ___|| |_|   ||       ||  _    |  |   |
+    |   |    |   |___ |       ||   _   || | |   |  |   |
+    |___|    |_______||______| |__| |__||_|  |__|  |___|
+
+                    "Accuracy Over Tact"
+
+                  === Testing Environment ===
+                 Config File: /var/opt/opscode/oc-chef-pedant/etc/pedant_config.rb
+       HTTP Traffic Log File: /var/log/opscode/oc-chef-pedant/http-traffic.log
+
+Running tests from the following directories:
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api
+/opt/opscode/embedded/service/oc-chef-pedant/spec/running_configs
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api/knife/nodes/delete_spec.rb:33: warning: key :stderr is duplicated and overwritten on line 34
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api/knife/roles/delete_spec.rb:33: warning: key :stderr is duplicated and overwritten on line 34
+Run options:
+  include {:focus=>true, :smoke=>true}
+  exclude {:intermittent_failure=>true, :cleanup=>true}
+
+ACL API
+Creating org test-org-24501_18255121
+  /users/<name>/_acl endpoint
+    /users/<user>/_acl/read endpoint
+      PUT /users/<user>/_acl/read
+        admin user
+          can modify ACL
+        default normal user
+          returns 403
+  /organizations/_acl endpoint
+    GET /organizations/_acl
+      with modified ACLs
+        when normal client granted all permissions except GRANT
+          returns 403
+        when normal client granted GRANT permission
+          can get ACL
+  /organizations/_acl/read endpoint
+    PUT /organizations/_acl/read
+      with modified ACLs
+        when normal user granted GRANT permission
+          can modify ACL
+  /<type>/<name>/_acl endpoint
+    for cookbook_artifacts type
+      /cookbook_artifacts/<name>/_acl/update endpoint
+        PUT /cookbook_artifacts/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for clients type
+      /clients/<name>/_acl/update endpoint
+        PUT /clients/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for data type
+      /data/<name>/_acl/update endpoint
+        PUT /data/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for nodes type
+      /nodes/<name>/_acl/update endpoint
+        PUT /nodes/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for roles type
+      /roles/<name>/_acl/update endpoint
+        PUT /roles/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for environments type
+      /environments/<name>/_acl/update endpoint
+        PUT /environments/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for cookbooks type
+      /cookbooks/<name>/_acl/update endpoint
+        PUT /cookbooks/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for policies type
+      /policies/<name>/_acl/update endpoint
+        PUT /policies/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for policy_groups type
+      /policy_groups/<name>/_acl/update endpoint
+        PUT /policy_groups/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+Deleting organization test-org-24501_18255121 ...
+
+opscode-account user association
+  user not in org
+    can be invited to the org by an admin
+      unless the user is already in the org
+      and the invite can be rescinded
+      and a rescinded invite can't be rescinded again
+      and once an the invite is rescinded it can't be accepted
+      and once an the invite is rescinded it can't be rejected.
+      and can't be invited twice
+      and can reject an invite
+      deleting an invite via the /users path is not accepted
+      and can accept an invite
+      and can reject an invite, after which they cannot access things in the org
+      and can only response with 'accept' or 'reject'
+      and get set up properly
+      after a user is deleted from an org
+        they do not have access to view members of that org
+        they do not have access to attempt to view themselves in an org
+        an org admin no longer sees them in the org
+        admin attempting to delete this user from the org results in a 404
+      and a valid invite is issued
+        an org admin cannot accept that invite on behalf of the user
+        the global superuser can accept the invite on behalf of the user
+      when the inviting admin
+        is removed from admins group, invites issued by that admin cannot be accepted
+        is removed from the org, invites issued by that admin cannot be accepted (PENDING: Known failure: passes w/ 200 b/c no USAG cleanup performed for deleted user)
+        is removed from the system, invites issued by that admin can't by accepted (PENDING: Known failure: passes w/ 200 b/c no USAG or other group cleanup performed for deleted user)
+      OC-11708 - when last updator of users group is dissociated
+        can accept the invite
+      belonging to another org as well
+Creating org pedant-otherorg-24501
+Deleting organization pedant-otherorg-24501 ...
+        can accept an invite, even when they belong to another org
+  /organizations/<org>/users endpoint
+    GET /organizations/<org>/users
+      admin user
+        can get org users
+      default normal user
+        can get org users
+  /organizations/<org>/users/<name>
+    GET /organizations/<org>/users/<name>
+      admin user
+        can get user
+      default normal user
+        can get self
+    DELETE /organizations/<org>/users/<name>
+      admin user
+        can delete user
+
+opscode-account containers
+  /containers endpoint
+    GET /containers
+      admin user
+        can get containers
+      outside user
+        returns 403
+    POST /containers
+      permissions
+        admin user
+          can create container
+        outside user
+          returns 403
+  /containers/<name> endpoint
+    GET /containers/<name>
+      admin user
+        can get container
+      outside user
+        returns 403
+    DELETE /containers/<name>
+      admin user
+        can delete container
+      outside user
+        returns 403
+
+opscode-account groups
+  /groups endpoint
+    GET /groups
+      admin user
+        can get groups
+      outside user
+        returns 403
+    POST /groups
+      permissions
+        admin user
+          can create group
+        outside user
+          returns 403
+  /groups/<name> endpoint
+Creating org test-org-33559306
+    GET /groups/<name>
+      admin user
+        can get group
+      outside user
+        returns 403
+    DELETE /groups/<name>
+      admin user
+        can delete group
+      outside user
+        returns 403
+    PUT /groups/<name>
+      permissions
+        normal user with update ACE
+          can update group
+        normal user without update ACE
+          returns 403
+Deleting organization test-org-33559306 ...
+
+authenticate_user
+  POST /authenticate_user
+    with correct credentials
+      superuser user returns 200 ("OK")
+      admin/different user returns 403 ("Forbidden")
+      non-admin/same user returns 403 ("Forbidden")
+      invalid user returns 401 ("Unauthorized")
+    with invalid username
+      superuser returns 401 ("Unauthorized")
+    with incorrect password
+      superuser returns 401 ("Unauthorized")
+
+Client API endpoint
+  GET /clients
+    as an admin user
+      with an operational server
+        should respond with 200 OK
+
+Cookbook Artifacts API endpoint
+  PUT /cookbook_artifacts/<name>/<version> [create]
+    with a basic cookbook
+      creates a basic cookbook_artifact
+
+Cookbook Artifacts API endpoint
+  DELETE /cookbook_artifacts/<name>/<version>
+    for existing cookbooks
+      when deleting existent version of an existing cookbook
+        should cleanup unused checksum data in s3/bookshelf
+
+Cookbook Artifacts API endpoint
+  GET /cookbook_artifacts
+    with no cookbook artifacts on the server
+      responds with 200
+
+Cookbook Artifacts API endpoint
+  PUT /cookbook_artifacts/<name>/<version> [update]
+    as admin user
+      should respond with 409 Conflict
+
+Cookbooks API endpoint
+  PUT /cookbooks/<name>/<version> [create]
+    with a basic cookbook
+      creates a basic cookbook
+
+Cookbooks API endpoint
+  DELETE /cookbooks/<name>/<version>
+    for existing cookbooks
+      when deleting existent version of an existing cookbook
+        should cleanup unused checksum data in s3/bookshelf
+
+Cookbooks API endpoint
+  GET /cookbooks
+    with an operational server
+      should respond with 200 OK
+
+Cookbooks API endpoint
+  PUT /cookbooks/<name>/<version> [update]
+    as admin user
+      should respond with 200 Ok
+
+Cookbook Versions API endpoint, GET
+  with cookbooks on the server
+    when requesting the 'latest' Cookbook version
+      should respond with 200 OK and the latest cookbook version
+
+Data Bag API endpoint
+  with no data bags
+    a request to /data
+      POST
+        with a canonical payload
+          behaves like a successful data bag POST
+            returns success
+            creates the data bag
+  with data bags
+    that have no items
+      a request to /data/<bag>
+        POST
+          various good inputs to create a data bag item
+            with JUST an ID
+              behaves like a successful data bag item POST
+                returns success
+                creates the resource
+    that have items
+      a request to /data/<bag>
+        GET
+          shows a full data bag
+        DELETE
+          deletes a bag AND ALL THE ITEMS
+      a request to /data/<bag>/<item>
+        GET
+          shows the complete item
+        PUT
+          with various correct inputs to update a data bag item
+            with normal input
+              behaves like a successful data bag item PUT
+                returns success
+                updates the data bag item
+        DELETE
+          deletes the item
+
+Depsolver API endpoint
+  POST /environments/:env/cookbook_versions
+    success cases
+      returns 200 with a minimal good cookbook
+
+/environments/ENVIRONMENT/cookbooks API endpoint
+  with multiple versions of multiple cookbooks
+    with no environment constraints
+      from a non-default environment
+        when fetching cookbooks
+          should respond with 200 OK and latest versions of ALL cookbooks
+
+Environments API Endpoint
+  POST /environments
+    with no additional environments
+      when creating a valid environment
+        should respond with 201 Created and a correct path
+        should persist the environment
+
+Environments API Endpoint
+  with non-default environments in the organization
+    DELETE /environments/<name>
+      with an existing environment
+        should respond with 200 OK
+
+Environments API Endpoint
+  GET /environments
+    with an operational server
+      should respond with 200 OK
+  GET /environments/_default
+    with an operational server
+      should respond with 200 OK
+  GET /environments/<name>
+    with an existing environment
+      should respond with 200 OK and the environment
+
+/environments/ENVIRONMENT/recipes API endpoint
+  with multiple versions of multiple cookbooks
+    with no environment constraints
+      when fetching recipes from a non-default environment
+        should respond with 200 OK and recipes from the latest version of all cookbooks within the environment
+      when fetching recipes from _default environment
+        should respond with 200 OK and recipes from the latest version of all cookbooks within the environment
+
+Environments API Endpoint
+  GET /environments/<name>/roles
+    within a non-default environment
+      with an existing role
+        should respond with 200 OK and the role
+
+Environments API Endpoint
+  with non-default environments in the organization
+    PUT /environments/<name>
+      with a valid update
+        should respond with 200 OK
+
+Testing the Nodes API endpoint
+  GET /nodes/<name>
+    for an existing node
+      returns a 200 and the node
+  POST /nodes
+    without existing node name
+      should respond with 201 Created
+  PUT /nodes/<name>
+    with existing node
+      with a canonical payload
+        updates the node
+  using DELETE
+    to a node that already exists
+      succeeds
+
+Testing the Roles API endpoint
+  making a request to /roles
+    using POST
+      for a role that does not exist
+        should respond with 201 and the correct path
+        should persist the role
+  making a request to /roles/<role>
+    using GET
+      to a role that exists
+        succeeds
+    using PUT
+      to a role that exists
+        with canonical payload
+          should respond with 200 and the updated role body
+          should actually update the role
+    using DELETE
+      to an existing role
+        should respond with 201 and the deleted role body
+        should actually delete the role
+  making a request to /roles/<role>/environments/<environment>
+    using GET
+      with the default environment
+        with an already existing role
+          responds with 200 and the role's run list
+
+Sandboxes API Endpoint
+  Sandboxes Endpoint, POST
+    when creating a new sandbox
+      should respond with 201 Created
+  Sandboxes Endpoint, PUT
+    when committing a sandbox after uploading files
+      should respond with 200 OK
+
+Search API endpoint
+  /search/environment
+    GET
+      when searching for a single environment by name
+        should have more than just the target of our environment search on the system
+        should return status code 200 and a single environment
+    POST
+      targeted toward many environments with body of {"possibly_nested"=>["default_attributes", "top", "middle", "bottom"], "the_name"=>["name"], "not_found"=>["foo", "bar", "baz", "totally_not_a_real_field"], "empty"=>[]}
+        should succeed, and return multiple environments
+  /search/node
+    GET
+      when searching for a single node by name
+        should have more than just the target of our node search on the system
+        should return status code 200 and a single node
+    POST
+      targeted toward many nodes with body of {"possibly_nested"=>["top", "middle", "bottom"], "the_name"=>["name"], "not_found"=>["foo", "bar", "baz", "totally_not_a_real_field"], "empty"=>[]}
+        should succeed, and return multiple nodes
+  /search/role
+    GET
+      when searching for a single role by name
+        should have more than just the target of our role search on the system
+        should return status code 200 and a single role
+    POST
+      targeted toward many roles with body of {"possibly_nested"=>["override_attributes", "top", "middle", "bottom"], "the_name"=>["name"], "not_found"=>["foo", "bar", "baz", "totally_not_a_real_field"], "empty"=>[]}
+        should succeed, and return multiple roles
+  /search/client
+    GET
+      searching by name
+        returns the correct client
+    POST
+      targeted toward many clients with body of {"possibly_nested"=>["validator"], "the_name"=>["name"], "not_found"=>["foo", "bar", "baz", "totally_not_a_real_field"], "empty"=>[]}
+        should succeed, and return multiple clients
+  /search/<data_bag>
+    using GET
+      an existing data bag
+        a query that should succeed
+          should succeed
+        with nested keys (CHEF-3975)
+          when searching a nested key
+            should succeed
+    using POST
+      for an existing data bag
+        a partial search
+          should succeed
+        with nested keys (CHEF-3975)
+          when searching a nested key
+            should succeed
+
+Server API Versioning
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api/server_api_version_spec.rb:9: warning: constant ::Fixnum is deprecated
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api/server_api_version_spec.rb:10: warning: constant ::Fixnum is deprecated
+  GET /server_api_version should respond with valid current server api version data
+  version validation should occur before most other validation
+    invalid method should fail for version, not method
+    invalid content should fail for version, not content
+  any request should validate requested server api version
+    and it should reply with the error message as specified in the RFC
+    and rejects when version is not a number
+    and rejects when version is higher than what's supported
+    and rejects when version is lower than what's supported
+    and accepts when version is exactly the minimum of what's supported
+    and accepts when version is exactly the maximum of what's supported
+    and accepts when it's in valid range of what's supported
+    and accept it when it's not specified
+
+/_stats API endpoint
+  returns a list of collected statistics
+  returns json when ?format=json
+  returns prometheus output ?format=text
+
+users
+  /users endpoint
+    GET /users
+      superuser
+        can get all users
+        returns no users when filtering by non-existing email
+        returns a single user when filtering by that user's email address
+        saml user
+          returns no users when filtering by non-existing external_authentication_uid
+          returns a single user when filtering by that user's external_authentication_uid
+      admin user
+        returns 403
+    POST /users
+      superuser
+        can create new user
+      admin user
+        returns 403
+  /users/<name> endpoint
+    PUT /users/<name>
+      superuser
+        can modify user
+        authenticating after updates
+          when password is unchanged
+            can authenticate as the modified user when password has not been changed.
+      admin user
+        returns 403
+Deleting organization pedant_testorg_localhost_24501 ...
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) opscode-account user association user not in org can be invited to the org by an admin when the inviting admin is removed from the org, invites issued by that admin cannot be accepted
+     # Known failure: passes w/ 200 b/c no USAG cleanup performed for deleted user
+     # ./spec/api/account/account_association_spec.rb:662
+
+  2) opscode-account user association user not in org can be invited to the org by an admin when the inviting admin is removed from the system, invites issued by that admin can't by accepted
+     # Known failure: passes w/ 200 b/c no USAG or other group cleanup performed for deleted user
+     # ./spec/api/account/account_association_spec.rb:671
+
+
+Finished in 2 minutes 4.6 seconds (files took 6.75 seconds to load)
+161 examples, 0 failures, 2 pending
+
+[root@localhost ~]# chef-server-ctl status
+-bash: /usr/bin/chef-server-ctl: No such file or directory
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      23738/nginx: master 
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1267/beam.smp       
+[root@localhost ~]# 
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# rpm -ivh /home/fedora26/Downloads/chef-14.0.202-1.el6.x86_64.rpm 
+warning: /home/fedora26/Downloads/chef-14.0.202-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+Preparing...                          ################################# [100%]
+	package chef-14.2.0-1.el6.x86_64 (which is newer than chef-14.0.202-1.el6.x86_64) is already installed
+	file /opt/chef/LICENSE from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/LICENSES/openssl-fips-license.html from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-apply from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-client from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-resource-inspector from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-shell from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-solo from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/knife from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/ohai from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/bin/inspec from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libarchive.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libbz2.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libcrypto.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libexslt.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libffi.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libltdl.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/liblzma.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libssl.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libxml2.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libxslt.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libyaml.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libz.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/doc/nokogiri-1.8.2/ri/ext/nokogiri/page-Makefile.ri from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/binding_of_caller-0.8.0/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/byebug-10.0.2/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/debug_inspector-0.0.3/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/ffi-yajl-2.3.1/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/libyajl2-1.2.0/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/nokogiri-1.8.2/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/ruby-prof-0.17.0/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/ruby-prof-0.17.0/mkmf.log from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/ruby-shadow-2.5.0/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/byebug-10.0.2/ext/byebug/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/dlopen/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/encoder/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/parser/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/nokogiri-1.8.2/ext/nokogiri/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ruby-prof-0.17.0/ext/ruby_prof/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ruby-shadow-2.5.0/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/specifications/default/bigdecimal-1.3.4.gemspec from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/specifications/default/fiddle-1.0.0.gemspec from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/specifications/default/ipaddr-1.2.0.gemspec from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/version-manifest.json from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/version-manifest.txt from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+[root@localhost ~]# rpm -ivh /home/fedora26/Downloads/chef-14.0.202-1.el6.x86_64.rpm 
+warning: /home/fedora26/Downloads/chef-14.0.202-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+Preparing...                          ################################# [100%]
+	package chef-14.2.0-1.el6.x86_64 (which is newer than chef-14.0.202-1.el6.x86_64) is already installed
+	file /opt/chef/LICENSE from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/LICENSES/openssl-fips-license.html from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-apply from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-client from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-resource-inspector from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-shell from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/chef-solo from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/knife from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/bin/ohai from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/bin/inspec from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libarchive.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libbz2.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libcrypto.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libexslt.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libffi.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libltdl.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/liblzma.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libssl.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libxml2.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libxslt.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libyaml.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/libz.a from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/doc/nokogiri-1.8.2/ri/ext/nokogiri/page-Makefile.ri from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/binding_of_caller-0.8.0/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/byebug-10.0.2/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/debug_inspector-0.0.3/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/ffi-yajl-2.3.1/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/libyajl2-1.2.0/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/nokogiri-1.8.2/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/ruby-prof-0.17.0/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/ruby-prof-0.17.0/mkmf.log from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/extensions/x86_64-linux/2.5.0/ruby-shadow-2.5.0/gem_make.out from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/byebug-10.0.2/ext/byebug/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/dlopen/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/encoder/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/parser/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/nokogiri-1.8.2/ext/nokogiri/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ruby-prof-0.17.0/ext/ruby_prof/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ruby-shadow-2.5.0/Makefile from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/specifications/default/bigdecimal-1.3.4.gemspec from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/specifications/default/fiddle-1.0.0.gemspec from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/embedded/lib/ruby/gems/2.5.0/specifications/default/ipaddr-1.2.0.gemspec from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/version-manifest.json from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+	file /opt/chef/version-manifest.txt from install of chef-14.0.202-1.el6.x86_64 conflicts with file from package chef-14.2.0-1.el6.x86_64
+[root@localhost ~]# vi /etc/httpd/conf/httpd.conf
+[root@localhost ~]# vi /etc/httpd/conf/httpd.conf
+[root@localhost ~]# systemctl enable httpd.service
+[root@localhost ~]# systemctl reload httpd.service
+httpd.service is not active, cannot reload.
+[root@localhost ~]# systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost ~]# ls /etc/apache2/httpd.conf
+ls: cannot access '/etc/apache2/httpd.conf': No such file or directory
+[root@localhost ~]# systemctl list-units |grep network
+  fedora-import-state.service                                                                              loaded active exited    Import network configuration from initramfs                                                                      
+● network.service                                                                                          loaded failed failed    LSB: Bring up/down networking                                                                                    
+  network-online.target                                                                                    loaded active active    Network is Online                                                                                                
+  network-pre.target                                                                                       loaded active active    Network (Pre)                                                                                                    
+  network.target                                                                                           loaded active active    Network                                                                                                          
+[root@localhost ~]# service ntpd status
+Redirecting to /bin/systemctl status ntpd.service
+Unit ntpd.service could not be found.
+[root@localhost ~]# systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Wed 2018-06-20 18:41:30 IST; 1min 27s ago
+     Docs: man:httpd.service(8)
+  Process: 29562 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 29562 (code=exited, status=1/FAILURE)
+   Status: "Reading configuration..."
+
+Jun 20 18:41:30 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 20 18:41:30 localhost.localdomain httpd[29562]: (98)Address already in use: AH00072: make_sock: could not bind to a
+Jun 20 18:41:30 localhost.localdomain httpd[29562]: (98)Address already in use: AH00072: make_sock: could not bind to a
+Jun 20 18:41:30 localhost.localdomain httpd[29562]: no listening sockets available, shutting down
+Jun 20 18:41:30 localhost.localdomain httpd[29562]: AH00015: Unable to open logs
+Jun 20 18:41:30 localhost.localdomain systemd[1]: httpd.service: Main process exited, code=exited, status=1/FAILURE
+Jun 20 18:41:30 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Jun 20 18:41:30 localhost.localdomain systemd[1]: httpd.service: Unit entered failed state.
+Jun 20 18:41:30 localhost.localdomain systemd[1]: httpd.service: Failed with result 'exit-code'.
+
+[root@localhost ~]# /sbin/service httpd.service restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# yum -y install epel-release
+Last metadata expiration check: 2:03:18 ago on Wed 20 Jun 2018 04:43:10 PM IST.
+No match for argument: epel-release
+Error: Unable to find a match
+[root@localhost ~]# 
+
+[fedora26@localhost Downloads]$ sudo dnf list available | cat -n | grep -i chef-server
+[fedora26@localhost Downloads]$ sudo dnf list available | grep -i chef-server
+[fedora26@localhost Downloads]$ sudo dnf list available | grep -i chef-server*
+[fedora26@localhost Downloads]$ sudo dnf list available | cat -n
+     1	Last metadata expiration check: 1:03:17 ago on Wed 20 Jun 2018 04:43:10 PM IST.
+     2	Available Packages
+     3	0ad.x86_64                               0.0.22-1.fc26                   updates
+     4	0ad-data.noarch                          0.0.22-1.fc26                   updates
+
+==========================================================================================
+
+[fedora26@localhost Downloads]$ ls -l
+total 322620
+-rw-rw-r--. 1 fedora26 fedora26  59003776 Apr 17 20:12 chef-14.0.202-1.el6.x86_64.rpm
+-rw-rw-r--. 1 fedora26 fedora26 271347292 Apr 23 18:56 chef-server-core-12.17.33-1.el7.x86_64.rpm
+[fedora26@localhost Downloads]$ cd ..
+[fedora26@localhost ~]$ pwd
+/home/fedora26
+[fedora26@localhost ~]$ chef-client -v
+Chef: 14.2.0
+[fedora26@localhost ~]$ rpm -qa chef-server
+[fedora26@localhost ~]$ /sbin/service httpd.service restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost ~]$ sudo systemctl status sshd.service
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2018-06-20 16:37:33 IST; 1h 39min ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 1208 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─1208 /usr/sbin/sshd -D
+
+Jun 20 16:37:33 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Jun 20 16:37:33 localhost.localdomain sshd[1208]: Server listening on 0.0.0.0 port 22.
+Jun 20 16:37:33 localhost.localdomain sshd[1208]: Server listening on :: port 22.
+Jun 20 16:37:33 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+[fedora26@localhost ~]$ sudo systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Wed 2018-06-20 18:16:15 IST; 36s ago
+     Docs: man:httpd.service(8)
+  Process: 28805 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 28805 (code=exited, status=1/FAILURE)
+   Status: "Reading configuration..."
+
+Jun 20 18:16:14 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 20 18:16:15 localhost.localdomain httpd[28805]: (13)Permission denied: AH00072: make_sock: could not bind to addres
+Jun 20 18:16:15 localhost.localdomain httpd[28805]: (13)Permission denied: AH00072: make_sock: could not bind to addres
+Jun 20 18:16:15 localhost.localdomain httpd[28805]: no listening sockets available, shutting down
+Jun 20 18:16:15 localhost.localdomain httpd[28805]: AH00015: Unable to open logs
+Jun 20 18:16:15 localhost.localdomain systemd[1]: httpd.service: Main process exited, code=exited, status=1/FAILURE
+Jun 20 18:16:15 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Jun 20 18:16:15 localhost.localdomain systemd[1]: httpd.service: Unit entered failed state.
+Jun 20 18:16:15 localhost.localdomain systemd[1]: httpd.service: Failed with result 'exit-code'.
+
+[fedora26@localhost ~]$ sudo systemctl start httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost ~]$ sudo /sbin/service httpd.service restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost ~]$ ps -ef | grep httpd
+fedora26  28925   3126  0 18:17 pts/1    00:00:00 grep --color=auto httpd
+[fedora26@localhost ~]$ sudo /sbin/service httpd restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost ~]$ sudo knife bootstrap 192.168.33.140 --sudo  -x root -P root@123 -N "server2" -r "recipe[sample1]"
+WARNING: No knife configuration file found. See https://docs.chef.io/config_rb_knife.html for details.
+ERROR: ArgumentError: Cannot sign the request without a client name, check that :node_name is assigned
+[fedora26@localhost ~]$ chef-server-ctl status
+bash: /usr/bin/chef-server-ctl: No such file or directory
+[fedora26@localhost ~]$ pwd
+/home/fedora26
+[fedora26@localhost ~]$ cd Downloads/
+[fedora26@localhost Downloads]$ ls -l
+total 322620
+-rw-rw-r--. 1 fedora26 fedora26  59003776 Apr 17 20:12 chef-14.0.202-1.el6.x86_64.rpm
+-rw-rw-r--. 1 fedora26 fedora26 271347292 Apr 23 18:56 chef-server-core-12.17.33-1.el7.x86_64.rpm
+[fedora26@localhost Downloads]$ pwd
+/home/fedora26/Downloads
+[fedora26@localhost Downloads]$ chef -client
+bash: chef: command not found...
+^C
+[fedora26@localhost Downloads]$ chef-client
+Starting Chef Client, version 14.2.0
+[2018-06-20T18:33:30+05:30] WARN: Failed to read the private key /etc/chef/client.pem: #<Errno::EACCES: Permission denied @ rb_sysopen - /etc/chef/client.pem>
+
+================================================================================
+Chef encountered an error attempting to create the client "server2"
+================================================================================
+
+Private Key Not Found:
+----------------------
+Your private key could not be loaded. If the key file exists, ensure that it is
+readable by chef-client.
+
+Relevant Config Settings:
+-------------------------
+validation_key "/etc/chef/validation.pem"
+
+System Info:
+------------
+chef_version=14.2.0
+ruby=ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+program_name=/usr/bin/chef-client
+executable=/opt/chef/bin/chef-client
+
+
+Running handlers:
+[2018-06-20T18:33:30+05:30] ERROR: Running exception handlers
+Running handlers complete
+[2018-06-20T18:33:30+05:30] ERROR: Exception handlers complete
+Chef Client failed. 0 resources updated in 04 seconds
+[2018-06-20T18:33:30+05:30] FATAL: Stacktrace dumped to /home/fedora26/.chef/cache/chef-stacktrace.out
+[2018-06-20T18:33:30+05:30] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+[2018-06-20T18:33:30+05:30] FATAL: Chef::Exceptions::PrivateKeyMissing: I cannot read /etc/chef/client.pem, which you told me to use to sign requests!
+[fedora26@localhost Downloads]$ sudo yum -y install epel-release
+Last metadata expiration check: 2:03:29 ago on Wed 20 Jun 2018 04:43:10 PM IST.
+No match for argument: epel-release
+Error: Unable to find a match
+[fedora26@localhost Downloads]$ 
+[fedora26@localhost Downloads]$ 
+[fedora26@localhost Downloads]$ 
+[fedora26@localhost Downloads]$ ls -l /etc/chef/
+total 20
+-rw-r--r--. 1 root root   36 Apr 23 16:53 chef_guid
+-rw-------. 1 root root 1680 Jun 19 21:14 client.pem
+-rw-r--r--. 1 root root  184 Jun 19 21:14 client.rb
+-rw-r--r--. 1 root root   33 Jun 19 21:14 first-boot.json
+drwxr-xr-x. 2 root root 4096 Jun 19 21:12 trusted_certs
+[fedora26@localhost Downloads]$ cat /etc/chef/first-boot.json 
+{"run_list":["recipe[sample1]"]}
+[fedora26@localhost Downloads]$ 
+
+  185  su -
+  186  sudo yum install -y ruby
+  187  cd Downloads/
+  188  ls
+  189  sudo rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+  190  cd ..
+  191  pwd
+  192  sudo systemctl start sshd.service
+  193  sudo systemctl status sshd.service
+  194  hostname
+  195  sudo chef-client -v
+  196  chef-client -v
+  197  rpm -ivh /home/fedora26/Downloads/chef-server-core-12.17.33-1.el7.x86_64.rpm
+  198  sudo rpm -ivh /home/fedora26/Downloads/chef-server-core-12.17.33-1.el7.x86_64.rpm
+  199  chef-server-ctl reconfigure
+  200  sudo chef-server-ctl reconfigure
+  201  sudo systemctl status sshd.service
+  202  sudo rpm -e /home/fedora26/Downloads/chef-server-core-12.17.33-1.el7.x86_64.rpm
+  203  rpmquery /home/fedora26/Downloads/chef-server-core-12.17.33-1.el7.x86_64.rpm
+  204  cd /home/fedora26/Downloads/
+  205  pwd
+  206  ls
+  207  rpm -e chef-server-core-12.17.33-1.el7.x86_64.rpm
+  208  sudo rpm -e chef-server-core-12.17.33-1.el7.x86_64.rpm
+  209  su -\
+  210  su -
+  211  ls -l
+  212  sudo rpm -i chef-server-core-12.17.33-1.el7.x86_64.rpm
+  213  sudo rpm -e chef-server-core-12.17.33-1.el7.x86_64.rpm
+  214  sudo yum installed list chef-server-core-12.17.33-1.el7.x86_64.rpm
+  215  rpm -qa | grep -i chef-server
+  216  sudo rpm -e `rpm -qa | grep -i chef-server `
+  217  sudo rpm -e `rpm -qa | grep -i chef-server-core-12.17.33-1.el7.x86_64.rpm `
+  218  sudo rpm -e `rpm -qa | grep -i chef-server-core-12.17.33-1.el7.x86_64 `
+  219  sudo dnf remove chef-server-core-12.17.33-1.el7.x86_64.rpm
+  220  sudo dnf list available | cat -n
+  221  sudo dnf list available | cat -n | grep -i chef-server
+  222  sudo dnf list available | grep -i chef-server
+  223  sudo dnf list available | grep -i chef-server*
+  224  sudo dnf list available | cat -n
+  225  sudo rpm -e `rpm -qa | grep -i chef-server `
+  226  sudo rpm -e chef-server-core-12.17.33-1.el7.x86_64.rpm
+  227  pwd
+  228  cd ~
+  229  pwd
+  230  ls
+  231  sudo su -
+  232  pwd
+  233  rpm -qa chef-server
+  234  sudo dnf list available | grep -i chef-server
+  235  rpm -qa | grep -i chef-server
+  236  cd Downloads/
+  237  rpm -qa | grep -i chef-server
+  238  sudo dnf list available | grep -i chef-server
+  239  sudo rpm -e `rpm -qa | grep -i chef-server `
+  240  rpm -qa | grep -i chef-server
+  241  sudo rpm -i chef-server-core-12.17.33-1.el7.x86_64.rpm
+  242  sudo rpm -e chef-server-core-12.17.33-1.el7.x86_64.rpm
+  243  sudo yum install yumex
+  244  sudo dnf install yumex-dnf
+  245  sudo rpm -e chef-server-core-12.17.33-1.el7.x86_64.rpm
+  246  rpm -qa | grep -i chef-server
+  247  ip addr show
+  248  chef-client -v
+  249  curl -L https://www.chef.io/chef/install.sh
+  250  ls -l
+  251  cd ..
+  252  pwd
+  253  chef-client -v
+  254  rpm -qa chef-server
+  255  /sbin/service httpd.service restart
+  256  sudo systemctl status sshd.service
+  257  sudo systemctl status httpd.service
+  258  sudo systemctl start httpd.service
+  259  sudo /sbin/service httpd.service restart
+  260  ps -ef | grep httpd
+  261  sudo /sbin/service httpd restart
+  262  sudo knife bootstrap 192.168.33.140 --sudo  -x root -P root@123 -N "server2" -r "recipe[sample1]"
+  263  chef-server-ctl status
+  264  pwd
+  265  cd Downloads/
+  266  ls -l
+  267  pwd
+  268  chef -client
+  269  chef-client
+  270  sudo yum -y install epel-release
+  271  ls -l /etc/chef/
+  272  cat /etc/chef/first-boot.json 
+  273  history
+[fedora26@localhost Downloads]$ 
+[fedora26@localhost ~]$ sudo netstat -ntlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 192.168.124.1:53        0.0.0.0:*               LISTEN      1349/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1205/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      1848/cupsd          
+tcp6       0      0 :::81                   :::*                    LISTEN      2792/httpd          
+tcp6       0      0 :::22                   :::*                    LISTEN      1205/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      1848/cupsd          
+tcp6       0      0 :::443                  :::*                    LISTEN      2792/httpd  
+
+
+[fedora26@localhost ~]$ service sshd status
+Redirecting to /bin/systemctl status sshd.service
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2018-06-20 20:05:34 IST; 53s ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 1205 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─1205 /usr/sbin/sshd -D
+
+Jun 20 20:05:34 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Jun 20 20:05:34 localhost.localdomain sshd[1205]: Server listening on 0.0.0.0 port 22.
+Jun 20 20:05:34 localhost.localdomain sshd[1205]: Server listening on :: port 22.
+Jun 20 20:05:34 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+[fedora26@localhost ~]$ service httpd status
+Redirecting to /bin/systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2018-06-20 20:05:35 IST; 1min 3s ago
+     Docs: man:httpd.service(8)
+ Main PID: 1204 (/usr/sbin/httpd)
+   Status: "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec"
+    Tasks: 48 (limit: 19660)
+   CGroup: /system.slice/httpd.service
+           ├─1204 /usr/sbin/httpd -DFOREGROUND
+           ├─1241 /usr/sbin/httpd -DFOREGROUND
+           ├─1242 /usr/sbin/httpd -DFOREGROUND
+           ├─1243 /usr/sbin/httpd -DFOREGROUND
+           ├─1245 /usr/sbin/httpd -DFOREGROUND
+           ├─1246 /usr/sbin/httpd -DFOREGROUND
+           └─1247 /usr/sbin/httpd -DFOREGROUND
+
+Jun 20 20:05:34 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 20 20:05:35 localhost.localdomain systemd[1]: Started The Apache HTTP Server.
+[fedora26@localhost ~]$ who
+fedora26 tty1         2018-06-20 20:05 (/dev/tty1)
+[fedora26@localhost ~]$ vi /etc/httpd/conf/httpd.conf
+[fedora26@localhost ~]$ netstat -pat | grep httpd
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+^C
+[fedora26@localhost ~]$ sudo netstat -pat | grep httpd
+
+tcp6       0      0 [::]:81                 [::]:*                  LISTEN      1204/httpd          
+tcp6       0      0 [::]:https              [::]:*                  LISTEN      1204/httpd          
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2018-06-20 20:05:35 IST; 2min 50s ago
+     Docs: man:httpd.service(8)
+ Main PID: 1204 (/usr/sbin/httpd)
+   Status: "Total requests: 3; Idle/Busy workers 100/0;Requests/sec: 0.0178; Bytes served/sec:  13 B/sec"
+    Tasks: 48 (limit: 19660)
+   CGroup: /system.slice/httpd.service
+           ├─1204 /usr/sbin/httpd -DFOREGROUND
+           ├─1241 /usr/sbin/httpd -DFOREGROUND
+           ├─1242 /usr/sbin/httpd -DFOREGROUND
+           ├─1243 /usr/sbin/httpd -DFOREGROUND
+           ├─1245 /usr/sbin/httpd -DFOREGROUND
+           ├─1246 /usr/sbin/httpd -DFOREGROUND
+           └─1247 /usr/sbin/httpd -DFOREGROUND
+
+Jun 20 20:05:34 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 20 20:05:35 localhost.localdomain systemd[1]: Started The Apache HTTP Server.
+[fedora26@localhost ~]$ sudo ls /etc/apache2/httpd.conf
+ls: cannot access '/etc/apache2/httpd.conf': No such file or directory
+[fedora26@localhost ~]$ systemctl list-units |grep network
+  fedora-import-state.service                                                                              loaded active exited    Import network configuration from initramfs                                                                      
+● network.service                                                                                          loaded failed failed    LSB: Bring up/down networking                                                                                    
+  network-online.target                                                                                    loaded active active    Network is Online                                                                                                
+  network-pre.target                                                                                       loaded active active    Network (Pre)                                                                                                    
+  network.target                                                                                           loaded active active    Network                                                                                                          
+
+[fedora26@localhost ~]$ date
+Wed Jun 20 20:09:49 IST 2018
+[fedora26@localhost ~]$ service status nginix
+The service command supports only basic LSB actions (start, stop, restart, try-restart, reload, force-reload, status). For other actions, please try to use systemctl.
+[fedora26@localhost ~]$ systemctl status nginx.service
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+[fedora26@localhost ~]$ rpmquery chef
+chef-14.2.0-1.el6.x86_64
+[fedora26@localhost ~]$ chef-server-ctl status
+bash: chef-server-ctl: command not found...
+[fedora26@localhost ~]$ hostname
+localhost.localdomain
+[fedora26@localhost ~]$ sudo systemctl status nginx.service
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+[fedora26@localhost ~]$ sudo rpm -qa | grep -i chef-server
+[fedora26@localhost ~]$ ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:50:56:2e:06:dd brd ff:ff:ff:ff:ff:ff
+    inet 192.168.33.140/24 brd 192.168.33.255 scope global dynamic ens33
+       valid_lft 1411sec preferred_lft 1411sec
+    inet6 fe80::4b88:dd56:39bd:7ee1/64 scope link 
+       valid_lft forever preferred_lft forever
+3: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:78:21:fc brd ff:ff:ff:ff:ff:ff
+    inet 192.168.124.1/24 brd 192.168.124.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+4: virbr0-nic: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel master virbr0 state DOWN group default qlen 1000
+    link/ether 52:54:00:78:21:fc brd ff:ff:ff:ff:ff:ff
+[fedora26@localhost ~]$ sudo systemctl status sshd.service
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2018-06-20 20:05:34 IST; 6min ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 1205 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─1205 /usr/sbin/sshd -D
+
+Jun 20 20:05:34 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Jun 20 20:05:34 localhost.localdomain sshd[1205]: Server listening on 0.0.0.0 port 22.
+Jun 20 20:05:34 localhost.localdomain sshd[1205]: Server listening on :: port 22.
+Jun 20 20:05:34 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+[fedora26@localhost ~]$ sudo netstat -pat | grep sshd
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN      1205/sshd           
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN      1205/sshd           
+[fedora26@localhost ~]$ sudo /sbin/service httpd.service restart
+Redirecting to /bin/systemctl restart httpd.service
+[fedora26@localhost ~]$ sudo systemctl restart httpd.service
+[fedora26@localhost ~]$ systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2018-06-20 20:13:32 IST; 13s ago
+     Docs: man:httpd.service(8)
+ Main PID: 2792 (/usr/sbin/httpd)
+   Status: "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec"
+    Tasks: 48 (limit: 19660)
+   CGroup: /system.slice/httpd.service
+           ├─2792 /usr/sbin/httpd -DFOREGROUND
+           ├─2794 /usr/sbin/httpd -DFOREGROUND
+           ├─2795 /usr/sbin/httpd -DFOREGROUND
+           ├─2796 /usr/sbin/httpd -DFOREGROUND
+           ├─2798 /usr/sbin/httpd -DFOREGROUND
+           ├─2804 /usr/sbin/httpd -DFOREGROUND
+           └─2824 /usr/sbin/httpd -DFOREGROUND
+
+Jun 20 20:13:32 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 20 20:13:32 localhost.localdomain systemd[1]: Started The Apache HTTP Server.
+[fedora26@localhost ~]$ sudo netstat -pat | grep httpd
+tcp6       0      0 [::]:81                 [::]:*                  LISTEN      2792/httpd          
+tcp6       0      0 [::]:https              [::]:*                  LISTEN      2792/httpd          
+[fedora26@localhost ~]$ sudo netstat -ntlp | grep :80
+[fedora26@localhost ~]$ sudo netstat -ntlp | grep :81
+tcp6       0      0 :::81                   :::*                    LISTEN      2792/httpd          
+[fedora26@localhost ~]$ sudo netstat -ntlp | grep :8080
+[fedora26@localhost ~]$ sudo netstat -ntlp | grep :22
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1205/sshd           
+tcp6       0      0 :::22                   :::*                    LISTEN      1205/sshd           
+[fedora26@localhost ~]$ 
+
+

@@ -1,0 +1,1536 @@
+[fedora26@localhost ~]$ history
+    1  iwconfig
+    2  lspci | grep -i wireless
+    3  iwconfig
+    4  lspci | grep -i wireless
+    5  iwconfig
+    6  ifconfig
+    7  pwd
+    8  ls
+    9  su -
+   10  passwd
+   11  su -
+   12  /sbin/reboot -f
+   13  sudo su -
+   14  su -
+   15  locate sshd_config
+   16  vi /etc/ssh/sshd_config
+   17  su -
+   18  sudo su -
+   19  yum install -y ruby
+   20  sudo yum install -y ruby
+   21  which ruby
+   22  curl -L https://www.chef.io/chef/install.sh 
+   23  ls
+   24  pwd
+   25  ls
+   26  cd Downloads/
+   27  ls
+   28  ls -l
+   29  rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+   30  cd ..
+   31  cd Downloads/
+   32  sudo rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+   33  cd ..
+   34  curl -L https://www.chef.io/chef/install.sh | sudo bash
+   35  sudo curl -L https://www.chef.io/chef/install.sh | sudo bash
+   36  chef-client
+   37  pwd
+   38  ls
+   39  cd etc
+   40  cd /etc/
+   41  ls
+   42  ls -lart | grep -i chef
+   43  cd /opt
+   44  ls
+   45  cd chef/
+   46  ls
+   47  cd bin
+   48  ls
+   49  cat chef-client 
+   50  ls
+   51  pwd
+   52  cd /
+   53  cd etc/opt/chef
+   54  pwd
+   55  cd /home
+   56  ls
+   57  cd fedora26
+   58  ls
+   59  ifconfig
+   60  sevii
+   61  service sshd status
+   62  vi /etc/ssh
+   63  vi /etc/ssh/sshd_config 
+   64  su -
+   65  who
+   66  pwd
+   67  sudo su -
+   68  su -
+   69  who
+   70  su -
+   71  who
+   72  visudo
+   73  sudo visudo
+   74  exit
+   75  visudo
+   76  gpasswd wheel -a fedora26
+   77  sudo gpasswd wheel -a fedora26
+   78  visudo
+   79  gpasswd wheel -a fedora26
+   80  sudo gpasswd wheel -a fedora26
+   81  sudo su -
+   82  visudo
+   83  gpasswd wheel -a fedora26
+   84  sudo visudo
+   85  su -
+   86  exit
+   87  yum -y install httpd
+   88  su -
+   89  ls /etc/httpd/conf/httpd.conf
+   90  vi /etc/httpd/conf/httpd.conf
+   91  netstat -l
+   92  semanage port -l | grep http_port_t
+   93  netstat -pat | grep httpd
+   94  su -
+   95  history
+   96  systemctl status httpd.service
+   97  systemctl reload httpd.service
+   98  systemctl enable httpd.service
+   99  systemctl reload httpd.service
+  100  systemctl restart httpd.service
+  101  systemctl status httpd.service
+  102  sudo dnf install httpd
+  103  systemctl status httpd.service
+  104  systemctl restart httpd.service
+  105  ls /etc/apache2/httpd.conf
+  106  sudo ls /etc/apache2/httpd.conf
+  107  sudo su -
+  108  su -
+  109  init 6
+  110  ifconfig -a
+  111  history
+  112  systemctl status httpd.service
+  113  hostname
+  114  systemctl list-units |grep network
+  115  ls -l /etc/sysconfig/network-scripts/
+  116  sudo su -
+  117  init 3
+  118  sudo su -
+  119  pwd
+  120  ifconfig 
+  121  date
+  122  service ntpd status
+  123  systemctl status httpd.service
+  124  systemctl status ntpd.service
+  125  systemctl status ntp.service
+  126  systemctl status ntpd.service 
+  127  history |grep nyp
+  128  history |grep ntp
+  129  history |grep date
+  130  ping 192.168.33.145
+  131  service status nginix
+  132  systemctl status nginx.service 
+  133  systemctl start nginx.service 
+  134  sudo systemctl restart nginx
+  135  su -
+  136  hostname
+  137  ifconfig
+  138  rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+  139  yum update -y
+  140  su -
+  141  ls
+  142  pwd
+  143  sudo su -
+  144  rpmquery chef
+  145  chef-server-ctl status
+  146  su -
+  147  history
+[fedora26@localhost ~]$ history
+    1  iwconfig
+    2  lspci | grep -i wireless
+    3  iwconfig
+    4  lspci | grep -i wireless
+    5  iwconfig
+    6  ifconfig
+    7  pwd
+    8  ls
+    9  su -
+   10  passwd
+   11  su -
+   12  /sbin/reboot -f
+   13  sudo su -
+   14  su -
+   15  locate sshd_config
+   16  vi /etc/ssh/sshd_config
+   17  su -
+   18  sudo su -
+   19  yum install -y ruby
+   20  sudo yum install -y ruby
+   21  which ruby
+   22  curl -L https://www.chef.io/chef/install.sh 
+   23  ls
+   24  pwd
+   25  ls
+   26  cd Downloads/
+   27  ls
+   28  ls -l
+   29  rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+   30  cd ..
+   31  cd Downloads/
+   32  sudo rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+   33  cd ..
+   34  curl -L https://www.chef.io/chef/install.sh | sudo bash
+   35  sudo curl -L https://www.chef.io/chef/install.sh | sudo bash
+   36  chef-client
+   37  pwd
+   38  ls
+   39  cd etc
+   40  cd /etc/
+   41  ls
+   42  ls -lart | grep -i chef
+   43  cd /opt
+   44  ls
+   45  cd chef/
+   46  ls
+   47  cd bin
+   48  ls
+   49  cat chef-client 
+   50  ls
+   51  pwd
+   52  cd /
+   53  cd etc/opt/chef
+   54  pwd
+   55  cd /home
+   56  ls
+   57  cd fedora26
+   58  ls
+   59  ifconfig
+   60  sevii
+   61  service sshd status
+   62  vi /etc/ssh
+   63  vi /etc/ssh/sshd_config 
+   64  su -
+   65  who
+   66  pwd
+   67  sudo su -
+   68  su -
+   69  who
+   70  su -
+   71  who
+   72  visudo
+   73  sudo visudo
+   74  exit
+   75  visudo
+   76  gpasswd wheel -a fedora26
+   77  sudo gpasswd wheel -a fedora26
+   78  visudo
+   79  gpasswd wheel -a fedora26
+   80  sudo gpasswd wheel -a fedora26
+   81  sudo su -
+   82  visudo
+   83  gpasswd wheel -a fedora26
+   84  sudo visudo
+   85  su -
+   86  exit
+   87  yum -y install httpd
+   88  su -
+   89  ls /etc/httpd/conf/httpd.conf
+   90  vi /etc/httpd/conf/httpd.conf
+   91  netstat -l
+   92  semanage port -l | grep http_port_t
+   93  netstat -pat | grep httpd
+   94  su -
+   95  history
+   96  systemctl status httpd.service
+   97  systemctl reload httpd.service
+   98  systemctl enable httpd.service
+   99  systemctl reload httpd.service
+  100  systemctl restart httpd.service
+  101  systemctl status httpd.service
+  102  sudo dnf install httpd
+  103  systemctl status httpd.service
+  104  systemctl restart httpd.service
+  105  ls /etc/apache2/httpd.conf
+  106  sudo ls /etc/apache2/httpd.conf
+  107  sudo su -
+  108  su -
+  109  init 6
+  110  ifconfig -a
+  111  history
+  112  systemctl status httpd.service
+  113  hostname
+  114  systemctl list-units |grep network
+  115  ls -l /etc/sysconfig/network-scripts/
+  116  sudo su -
+  117  init 3
+  118  sudo su -
+  119  pwd
+  120  ifconfig 
+  121  date
+  122  service ntpd status
+  123  systemctl status httpd.service
+  124  systemctl status ntpd.service
+  125  systemctl status ntp.service
+  126  systemctl status ntpd.service 
+  127  history |grep nyp
+  128  history |grep ntp
+  129  history |grep date
+  130  ping 192.168.33.145
+  131  service status nginix
+  132  systemctl status nginx.service 
+  133  systemctl start nginx.service 
+  134  sudo systemctl restart nginx
+  135  su -
+  136  hostname
+  137  ifconfig
+  138  rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+  139  yum update -y
+  140  su -
+  141  ls
+  142  pwd
+  143  sudo su -
+  144  rpmquery chef
+  145  chef-server-ctl status
+  146  su -
+  147  history
+[fedora26@localhost ~]$ systemctl start httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost ~]$ sudo systemctl start httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost ~]$ sudo systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Tue 2018-06-19 21:26:16 IST; 7s ago
+     Docs: man:httpd.service(8)
+  Process: 18405 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 18405 (code=exited, status=1/FAILURE)
+   Status: "Reading configuration..."
+
+Jun 19 21:26:16 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 19 21:26:16 localhost.localdomain httpd[18405]: (98)Address already in use: AH00072: make_sock: could not bind to ad
+Jun 19 21:26:16 localhost.localdomain httpd[18405]: (98)Address already in use: AH00072: make_sock: could not bind to ad
+Jun 19 21:26:16 localhost.localdomain httpd[18405]: no listening sockets available, shutting down
+Jun 19 21:26:16 localhost.localdomain httpd[18405]: AH00015: Unable to open logs
+Jun 19 21:26:16 localhost.localdomain systemd[1]: httpd.service: Main process exited, code=exited, status=1/FAILURE
+Jun 19 21:26:16 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Jun 19 21:26:16 localhost.localdomain systemd[1]: httpd.service: Unit entered failed state.
+Jun 19 21:26:16 localhost.localdomain systemd[1]: httpd.service: Failed with result 'exit-code'.
+
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ sudo dnf install httpd
+Last metadata expiration check: 3:22:06 ago on Tue 19 Jun 2018 06:05:08 PM IST.
+Package httpd-2.4.29-1.fc26.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[fedora26@localhost ~]$ systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Tue 2018-06-19 21:26:16 IST; 1min 30s ago
+     Docs: man:httpd.service(8)
+  Process: 18405 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 18405 (code=exited, status=1/FAILURE)
+   Status: "Reading configuration..."
+
+Jun 19 21:26:16 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 19 21:26:16 localhost.localdomain httpd[18405]: (98)Address already in use: AH00072: make_sock: could not bind to ad
+Jun 19 21:26:16 localhost.localdomain httpd[18405]: (98)Address already in use: AH00072: make_sock: could not bind to ad
+Jun 19 21:26:16 localhost.localdomain httpd[18405]: no listening sockets available, shutting down
+Jun 19 21:26:16 localhost.localdomain httpd[18405]: AH00015: Unable to open logs
+Jun 19 21:26:16 localhost.localdomain systemd[1]: httpd.service: Main process exited, code=exited, status=1/FAILURE
+Jun 19 21:26:16 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Jun 19 21:26:16 localhost.localdomain systemd[1]: httpd.service: Unit entered failed state.
+Jun 19 21:26:16 localhost.localdomain systemd[1]: httpd.service: Failed with result 'exit-code'.
+
+[fedora26@localhost ~]$ sudo ls /etc/apache2/httpd.conf
+ls: cannot access '/etc/apache2/httpd.conf': No such file or directory
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ pwd
+/home/fedora26
+[fedora26@localhost ~]$ sudo /sbin/service httpd restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost ~]$ ps -ef | grep https
+fedora26  18916  10631  0 21:32 pts/1    00:00:00 grep --color=auto https
+[fedora26@localhost ~]$ ps -ef | grep httpd
+fedora26  18930  10631  0 21:33 pts/1    00:00:00 grep --color=auto httpd
+[fedora26@localhost ~]$ system
+system-config-abrt              systemd-escape                  systemd-resolve
+systemctl                       systemd-firstboot               systemd-run
+systemd-analyze                 systemd-hwdb                    systemd-socket-activate
+systemd-ask-password            systemd-inhibit                 systemd-stdio-bridge
+systemd-cat                     systemd-machine-id-setup        systemd-sysusers
+systemd-cgls                    systemd-mount                   systemd-tmpfiles
+systemd-cgtop                   systemd-notify                  systemd-tty-ask-password-agent
+systemd-delta                   systemd-nspawn                  systemd-umount
+systemd-detect-virt             systemd-path                    
+[fedora26@localhost ~]$ systemctl start httpd
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost ~]$ systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Tue 2018-06-19 21:33:21 IST; 21s ago
+     Docs: man:httpd.service(8)
+  Process: 18982 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 18982 (code=exited, status=1/FAILURE)
+   Status: "Reading configuration..."
+
+Jun 19 21:33:21 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 19 21:33:21 localhost.localdomain httpd[18982]: (98)Address already in use: AH00072: make_sock: could not bind to ad
+Jun 19 21:33:21 localhost.localdomain httpd[18982]: (98)Address already in use: AH00072: make_sock: could not bind to ad
+Jun 19 21:33:21 localhost.localdomain httpd[18982]: no listening sockets available, shutting down
+Jun 19 21:33:21 localhost.localdomain httpd[18982]: AH00015: Unable to open logs
+Jun 19 21:33:21 localhost.localdomain systemd[1]: httpd.service: Main process exited, code=exited, status=1/FAILURE
+Jun 19 21:33:21 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Jun 19 21:33:21 localhost.localdomain systemd[1]: httpd.service: Unit entered failed state.
+Jun 19 21:33:21 localhost.localdomain systemd[1]: httpd.service: Failed with result 'exit-code'.
+...skipping...
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Tue 2018-06-19 21:33:21 IST; 21s ago
+     Docs: man:httpd.service(8)
+  Process: 18982 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 18982 (code=exited, status=1/FAILURE)
+   Status: "Reading configuration..."
+
+Jun 19 21:33:21 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 19 21:33:21 localhost.localdomain httpd[18982]: (98)Address already in use: AH00072: make_sock: could not bind to ad
+Jun 19 21:33:21 localhost.localdomain httpd[18982]: (98)Address already in use: AH00072: make_sock: could not bind to ad
+Jun 19 21:33:21 localhost.localdomain httpd[18982]: no listening sockets available, shutting down
+Jun 19 21:33:21 localhost.localdomain httpd[18982]: AH00015: Unable to open logs
+Jun 19 21:33:21 localhost.localdomain systemd[1]: httpd.service: Main process exited, code=exited, status=1/FAILURE
+Jun 19 21:33:21 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Jun 19 21:33:21 localhost.localdomain systemd[1]: httpd.service: Unit entered failed state.
+Jun 19 21:33:21 localhost.localdomain systemd[1]: httpd.service: Failed with result 'exit-code'.
+~
+~
+~
+~
+~
+~
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  &pattern          *  Display only matching lines
+        ---------------------------------------------------
+
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ yum install httpd
+Error: This command has to be run under the root user.
+[fedora26@localhost ~]$ sudo yum install httpd
+Last metadata expiration check: 3:29:14 ago on Tue 19 Jun 2018 06:05:08 PM IST.
+Package httpd-2.4.29-1.fc26.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[fedora26@localhost ~]$ cd root
+bash: cd: root: No such file or directory
+[fedora26@localhost ~]$ cd \
+> ^C
+[fedora26@localhost ~]$ pwd
+/home/fedora26
+[fedora26@localhost ~]$ cd ~
+[fedora26@localhost ~]$ ls -a
+.                                          .bash_profile  .dbus      .gnupg                       .mozilla  Templates
+..                                         .bashrc        Desktop    .gvfs                        Music     Videos
+Ansible-Node-Machine-IP-192.168.33.13.txt  .cache         Documents  History-commands-fedora.txt  Pictures
+.bash_history                              .chef          Downloads  .ICEauthority                .pki
+.bash_logout                               .config        .esd_auth  .local                       Public
+[fedora26@localhost ~]$ cd ..
+[fedora26@localhost home]$ cd ..
+[fedora26@localhost /]$ pwd
+/
+[fedora26@localhost /]$ ls -a  /sbin/
+.                        fcgistarter                            lvmconfig                   rtmon
+..                       fcnsq                                  lvmdiskscan                 rtpr
+abrt-auto-reporting      fcoeadm                                lvmdump                     rtstat
+abrt-configuration       fcoemon                                lvmetad                     runlevel
+abrtd                    fcping                                 lvmpolld                    runuser
+abrt-dbus                fcrls                                  lvmsadc                     sa
+abrt-harvest-pstoreoops  fdformat                               lvmsar                      safe_finger
+abrt-harvest-vmcore      fdisk                                  lvreduce                    saslauthd
+abrt-install-ccpp-hook   filefrag                               lvremove                    sasldblistusers2
+abrt-server              findfs                                 lvrename                    saslpasswd2
+accept                   fipvlan                                lvresize                    sedispatch
+accessdb                 firewalld                              lvs                         sefcontext_compile
+accton                   fixfiles                               lvscan                      selabel_digest
+adcli                    fixparts                               make-bcache                 selabel_lookup
+addgnupghome             foomatic-addpjloptions                 makedumpfile                selabel_lookup_best_match
+addpart                  foomatic-cleanupdrivers                matchpathcon                selabel_partial_match
+adduser                  foomatic-extract-text                  mcelog                      selinuxconlist
+adsl-start               foomatic-fix-xml                       mdadm                       selinuxdefcon
+adsl-stop                foomatic-getpjloptions                 mdmon                       selinuxenabled
+agetty                   foomatic-kitload                       memtest-setup               selinuxexeccon
+alsabat-test.sh          foomatic-nonumericalids                mii-diag                    selinux_restorecon
+alsactl                  foomatic-preferred-driver              mii-tool                    semanage
+alsa-info.sh             foomatic-printermap-to-gutenprint-xml  mkdict                      semodule
+alternatives             foomatic-replaceoldprinterids          mkdosfs                     service
+anaconda                 fsadm                                  mkdumprd                    sestatus
+anacron                  fsck                                   mke2fs                      setcap
+apachectl                fsck.btrfs                             mkfs                        setenforce
+applygnupgdefaults       fsck.cramfs                            mkfs.btrfs                  setfiles
+arp                      fsck.ext2                              mkfs.cramfs                 setpci
+arpd                     fsck.ext3                              mkfs.ext2                   setquota
+arping                   fsck.ext4                              mkfs.ext3                   setregdomain
+atd                      fsck.fat                               mkfs.ext4                   setroubleshootd
+atrun                    fsck.hfs                               mkfs.fat                    setsebool
+audispd                  fsck.hfsplus                           mkfs.hfsplus                setup
+auditctl                 fsck.minix                             mkfs.minix                  sfdisk
+auditd                   fsck.msdos                             mkfs.msdos                  sgdisk
+augenrules               fsck.ntfs                              mkfs.ntfs                   sgpio
+aureport                 fsck.vfat                              mkfs.vfat                   sheep
+ausearch                 fsck.xfs                               mkfs.xfs                    sheepfs
+authconfig               fsfreeze                               mkhomedir_helper            shepherd
+autrace                  fstrim                                 mklost+found                showmount
+avahi-daemon             fuse2fs                                mkntfs                      shutdown
+avcstat                  fuser                                  mkswap                      skdump
+badblocks                g13-syshelp                            ModemManager                sktest
+bcache-status            gdisk                                  modinfo                     slattach
+bcache-super-show        gdm                                    modprobe                    sln
+biosdecode               genhomedircon                          mount.cifs                  smartctl
+blkdeactivate            genhostid                              mount.fuse                  smartd
+blkdiscard               genl                                   mount.glusterfs             sm-notify
+blkid                    genrandom                              mount.lowntfs-3g            sosreport
+blkmapd                  getcap                                 mount.nfs                   spice-vdagentd
+blkzone                  getenforce                             mount.nfs4                  squid
+blockdev                 getpcaps                               mount.ntfs                  ss
+brctl                    getsebool                              mount.ntfs-3g               sshd
+bridge                   glibc_post_upgrade.x86_64              mount.ntfs-fuse             sss_cache
+btrfs                    gluster                                mountstats                  sssd
+btrfsck                  glusterfs                              mount.zfs                   start-statd
+btrfs-convert            glusterfsd                             mpathconf                   suexec
+btrfs-debug-tree         groupadd                               mpathpersist                sulogin
+btrfs-find-root          groupdel                               mtr                         sushell
+btrfs-image              groupmems                              multipath                   swaplabel
+btrfs-map-logical        groupmod                               multipathd                  swapoff
+btrfs-select-super       grpck                                  named-checkzone             swapon
+btrfstune                grpconv                                named-compilezone           switcheroo-control
+btrfs-zero-log           grpunconv                              nameif                      switch_root
+build-locale-archive     grub2-bios-setup                       netreport                   sysctl
+cacertdir_rehash         grub2-get-kernel-settings              NetworkManager              sys-unconfig
+cache_check              grub2-install                          new-kernel-pkg              tc
+cache_dump               grub2-macbless                         new-memtest-pkg             tcpd
+cache_metadata_size      grub2-mkconfig                         newusers                    tcpdmatch
+cache_repair             grub2-ofpathname                       nfbpf_compile               tcpdump
+cache_restore            grub2-probe                            nfsdcltrack                 tcpslice
+capsh                    grub2-reboot                           nfsidmap                    tcsd
+cbq                      grub2-rpm-sort                         nfsiostat                   telinit
+cfdisk                   grub2-set-default                      nfsstat                     testsaslauthd
+cgdisk                   grub2-setpassword                      nginx                       thin_check
+chat                     grub2-sparc64-setup                    nologin                     thin_delta
+chcpu                    grubby                                 nsec3hash                   thin_dump
+chgpasswd                gssproxy                               nstat                       thin_ls
+chkconfig                halt                                   ntfsclone                   thin_metadata_size
+chpasswd                 handle-sshpw                           ntfscp                      thin_repair
+chronyd                  hardlink                               ntfslabel                   thin_restore
+chroot                   hfs-bless                              ntfsresize                  thin_rmap
+cifs.idmap               htcacheclean                           ntfsundelete                thin_trim
+cifs.upcall              httpd                                  openconnect                 timedatex
+clock                    hwclock                                openvpn                     tipc
+clockdiff                hypervfcopyd                           osd_login                   tracepath
+consoletype              hypervkvpd                             ownership                   tracepath6
+convertquota             hypervvssd                             packer                      try-from
+corosync                 iconvconfig                            pam_console_apply           tsig-keygen
+corosync-cfgtool         iconvconfig.x86_64                     pam_tally2                  tune2fs
+corosync-cmapctl         ifcfg                                  pam_timestamp_check         udevadm
+corosync-cpgtool         ifconfig                               parted                      umount.nfs
+corosync-keygen          ifdown                                 partprobe                   umount.nfs4
+corosync-notifyd         ifenslave                              partx                       umount.udisks2
+corosync-quorumtool      ifrename                               pcscd                       unix_chkpwd
+cracklib-check           ifstat                                 pdata_tools                 unix_update
+cracklib-format          ifup                                   pidof                       update-alternatives
+cracklib-packer          iio-sensor-proxy                       ping                        update-pciids
+cracklib-unpacker        init                                   ping6                       update-smart-drivedb
+crda                     insmod                                 pivot_root                  usb_modeswitch
+create-cracklib-dict     install-info                           plipconfig                  usb_modeswitch_dispatcher
+crond                    installkernel                          pluginviewer                usbmuxd
+cryptsetup               ip                                     plymouthd                   useradd
+ctrlaltdel               ip6tables                              plymouth-set-default-theme  userdel
+ctstat                   ip6tables-restore                      poweroff                    userhelper
+cupsaccept               ip6tables-restore-translate            pppd                        usermod
+cupsaddsmb               ip6tables-save                         pppdump                     usernetctl
+cups-browsed             ip6tables-translate                    pppoe                       vconfig
+cupsctl                  ipmaddr                                pppoe-connect               vdptool
+cupsd                    ipset                                  pppoe-discovery             vgcfgbackup
+cupsdisable              iptables                               pppoe-relay                 vgcfgrestore
+cupsenable               iptables-apply                         pppoe-server                vgchange
+cupsfilter               iptables-restore                       pppoe-setup                 vgck
+cups-genppd.5.2          iptables-restore-translate             pppoe-sniff                 vgconvert
+cups-genppdupdate        iptables-save                          pppoe-start                 vgcreate
+cupsreject               iptables-translate                     pppoe-status                vgdisplay
+dcbtool                  iptstate                               pppoe-stop                  vgexport
+ddns-confgen             iptunnel                               pppstats                    vgextend
+debugfs                  irqbalance                             ppp-watch                   vgimport
+delpart                  isc-hmac-fixup                         pptp                        vgimportclone
+depmod                   iscsiadm                               pvchange                    vgmerge
+devlink                  iscsid                                 pvck                        vgmknodes
+dhclient                 iscsi-iname                            pvcreate                    vgreduce
+dhclient-script          iscsistart                             pvdisplay                   vgremove
+dm_dso_reg_tool          iscsiuio                               pvmove                      vgrename
+dmeventd                 iw                                     pvremove                    vgs
+dmevent_tool             iwconfig                               pvresize                    vgscan
+dmidecode                iwevent                                pvs                         vgsplit
+dmraid                   iwgetid                                pvscan                      via_regs_dump
+dmraid.static            iwlist                                 pwck                        vigr
+dmsetup                  iwpriv                                 pwconv                      vipw
+dmstats                  iwspy                                  pwhistory_helper            virtlockd
+dnsmasq                  kdump                                  pwunconv                    virtlogd
+dnssec-checkds           kexec                                  qb-blackbox                 visudo
+dnssec-coverage          key.dns_resolver                       quot                        vmcore-dmesg
+dnssec-dsfromkey         kpartx                                 quotacheck                  vpddecode
+dnssec-importkey         lchage                                 quotaoff                    vpnc
+dnssec-keyfromlabel      ldattach                               quotaon                     vpnc-disconnect
+dnssec-keygen            ldconfig                               quotastats                  weak-modules
+dnssec-keymgr            lgroupadd                              radvd                       wipefs
+dnssec-revoke            lgroupdel                              radvdump                    wpa_cli
+dnssec-settime           lgroupmod                              raid-check                  wpa_passphrase
+dnssec-signzone          libvirtd                               rdisc                       wpa_supplicant
+dnssec-verify            lid                                    rdistd                      xfs_admin
+dosfsck                  liveinst                               readprofile                 xfs_bmap
+dosfslabel               lldpad                                 realm                       xfs_copy
+dump-acct                lldptool                               reboot                      xfs_db
+dumpe2fs                 lnewusers                              regdbdump                   xfs_estimate
+dump-utmp                lnstat                                 reject                      xfs_freeze
+e2freefrag               load_policy                            repquota                    xfs_fsr
+e2fsck                   lockdev                                request-key                 xfs_growfs
+e2image                  logrotate                              resize2fs                   xfs_info
+e2label                  logsave                                resizepart                  xfs_io
+e2undo                   losetup                                restorecon                  xfs_logprint
+e4crypt                  lpadmin                                restorecon_xattr            xfs_mdrestore
+e4defrag                 lpasswd                                rmmod                       xfs_metadump
+eapol_test               lpc                                    rngd                        xfs_mkfile
+ebtables                 lpc.cups                               rotatelogs                  xfs_ncheck
+ebtables-restore         lpinfo                                 route                       xfs_quota
+ebtables-save            lpmove                                 routef                      xfs_repair
+edquota                  lsmod                                  routel                      xfs_rtcp
+efibootdump              lspci                                  rpcbind                     xqmstats
+efibootmgr               luseradd                               rpcdebug                    xtables-multi
+era_check                luserdel                               rpc.gssd                    zdb
+era_dump                 lusermod                               rpc.idmapd                  zdump
+era_invalidate           lvchange                               rpcinfo                     zfs
+era_restore              lvconvert                              rpc.mountd                  zfs-fuse
+ether-wake               lvcreate                               rpc.nfsd                    zfs-fuse-helper
+ethtool                  lvdisplay                              rpc.statd                   zic
+exportfs                 lvextend                               rsyslogd                    zpool
+extlinux                 lvm                                    rtacct                      zramctl
+faillock                 lvmchange                              rtcwake                     zstreamdump
+fatlabel                 lvmconf                                rtkitctl                    ztest
+[fedora26@localhost /]$ /sbin/service httpd restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost /]$ /sbin/service httpd.service restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost /]$ apachectl start
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[fedora26@localhost /]$ pwd
+/
+[fedora26@localhost /]$ cd root
+bash: cd: root: Permission denied
+[fedora26@localhost /]$ su -
+Password: 
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# apachectl start
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost ~]# /sbin/service httpd restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost ~]# cd ..
+[root@localhost /]# /sbin/service httpd restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost /]# systemctl status nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Tue 2018-06-19 12:09:34 IST; 9h ago
+ Main PID: 1293 (nginx)
+    Tasks: 5 (limit: 19660)
+   CGroup: /system.slice/nginx.service
+           ├─1293 nginx: master process /usr/sbin/nginx
+           ├─1294 nginx: worker process
+           ├─1295 nginx: worker process
+           ├─1296 nginx: worker process
+           └─1297 nginx: worker process
+
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 12:09:34 localhost.localdomain nginx[1292]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+lines 1-18/18 (END)
+^C[root@localhost /]ps -ef | grep nginx
+root       1279   1260  0 18:40 ?        00:00:10 runsv nginx
+root       1293      1  0 18:40 ?        00:00:00 nginx: master process /usr/sbin/nginx
+nginx      1294   1293  0 18:40 ?        00:00:00 nginx: worker process
+nginx      1295   1293  0 18:40 ?        00:00:00 nginx: worker process
+nginx      1296   1293  0 18:40 ?        00:00:00 nginx: worker process
+nginx      1297   1293  0 18:40 ?        00:00:00 nginx: worker process
+opscode    1308   1279  0 18:40 ?        00:00:02 svlogd -tt /var/log/opscode/nginx
+root      19833   1279  4 21:40 ?        00:00:00 /opt/opscode/embedded/sbin/nginx -c /var/opt/opscode/nginx/etc/nginx.conf
+root      19836  19607  0 21:40 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost /]# systemctl stop nginx
+[root@localhost /]# systemctl status nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: inactive (dead) since Tue 2018-06-19 21:41:21 IST; 3s ago
+ Main PID: 1293 (code=exited, status=0/SUCCESS)
+
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 12:09:34 localhost.localdomain nginx[1292]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopping The nginx HTTP and reverse proxy server...
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopped The nginx HTTP and reverse proxy server.
+
+[root@localhost /]# /sbin/service httpd restart
+Redirecting to /bin/systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost /]# 
+[root@localhost /]# 
+[root@localhost /]# systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost /]# systemctl enable httpd.service
+[root@localhost /]# systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost /]# runlevel
+N 5
+[root@localhost /]# systemctl list-units |grep network
+  fedora-import-state.service                                                                              loaded active exited    Import network configuration from initramfs                                                                      
+● network.service                                                                                          loaded failed failed    LSB: Bring up/down networking                                                                                    
+  network-online.target                                                                                    loaded active active    Network is Online                                                                                                
+  network-pre.target                                                                                       loaded active active    Network (Pre)                                                                                                    
+  network.target                                                                                           loaded active active    Network                                                                                                          
+[root@localhost /]# ls -l /etc/sysconfig/network-scripts/
+total 232
+-rw-------. 1 root root   312 Jun  7 21:01 ifcfg-ens33
+-rw-------. 1 root root   329 May 21 17:33 ifcfg-ens33.bak
+-rw-r--r--. 1 root root   254 May 25  2017 ifcfg-lo
+-rw-r--r--. 1 root root   324 Apr 23 18:34 ifcfg-Profile_1
+lrwxrwxrwx. 1 root root    24 May 26  2017 ifdown -> ../../../usr/sbin/ifdown
+-rwxr-xr-x. 1 root root   654 May 25  2017 ifdown-bnep
+-rwxr-xr-x. 1 root root  6569 May 25  2017 ifdown-eth
+-rwxr-xr-x. 1 root root   781 May 25  2017 ifdown-ippp
+-rwxr-xr-x. 1 root root  4540 May 25  2017 ifdown-ipv6
+lrwxrwxrwx. 1 root root    11 May 26  2017 ifdown-isdn -> ifdown-ippp
+-rwxr-xr-x. 1 root root  1768 May 25  2017 ifdown-post
+-rwxr-xr-x. 1 root root  1068 Feb 11  2017 ifdown-ppp
+-rwxr-xr-x. 1 root root   870 May 25  2017 ifdown-routes
+-rwxr-xr-x. 1 root root  1456 May 25  2017 ifdown-sit
+-rwxr-xr-x. 1 root root  1621 Mar 17  2017 ifdown-Team
+-rwxr-xr-x. 1 root root  1556 Mar 17  2017 ifdown-TeamPort
+-rwxr-xr-x. 1 root root  1462 May 25  2017 ifdown-tunnel
+lrwxrwxrwx. 1 root root    22 May 26  2017 ifup -> ../../../usr/sbin/ifup
+-rwxr-xr-x. 1 root root 12312 May 25  2017 ifup-aliases
+-rwxr-xr-x. 1 root root   910 May 25  2017 ifup-bnep
+-rwxr-xr-x. 1 root root 12680 May 25  2017 ifup-eth
+-rwxr-xr-x. 1 root root 12075 May 25  2017 ifup-ippp
+-rwxr-xr-x. 1 root root 11893 May 25  2017 ifup-ipv6
+lrwxrwxrwx. 1 root root     9 May 26  2017 ifup-isdn -> ifup-ippp
+-rwxr-xr-x. 1 root root   650 May 25  2017 ifup-plip
+-rwxr-xr-x. 1 root root  1064 May 25  2017 ifup-plusb
+-rwxr-xr-x. 1 root root  3433 May 25  2017 ifup-post
+-rwxr-xr-x. 1 root root  4154 Feb 11  2017 ifup-ppp
+-rwxr-xr-x. 1 root root  2001 May 25  2017 ifup-routes
+-rwxr-xr-x. 1 root root  3303 May 25  2017 ifup-sit
+-rwxr-xr-x. 1 root root  1755 Mar 17  2017 ifup-Team
+-rwxr-xr-x. 1 root root  1876 Mar 17  2017 ifup-TeamPort
+-rwxr-xr-x. 1 root root  2711 May 25  2017 ifup-tunnel
+-rwxr-xr-x. 1 root root  1836 May 25  2017 ifup-wireless
+-rwxr-xr-x. 1 root root  5419 May 25  2017 init.ipv6-global
+-rw-r--r--. 1 root root 19062 May 25  2017 network-functions
+-rw-r--r--. 1 root root 31027 May 25  2017 network-functions-ipv6
+[root@localhost /]# pwd
+/
+[root@localhost /]# ls -l /etc/httpd/conf/config.d
+ls: cannot access '/etc/httpd/conf/config.d': No such file or directory
+[root@localhost /]# ls
+bin  boot  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@localhost /]# cd /etc/httpd/conf/
+[root@localhost conf]# ls
+httpd.conf  magic
+[root@localhost conf]# ls -a
+.  ..  httpd.conf  magic
+[root@localhost conf]# cd /root
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# ls -ltr /etc/httpd/conf/
+total 28
+-rw-r--r--. 1 root root 13077 Oct 25  2017 magic
+-rw-r--r--. 1 root root 11746 Apr 23 22:11 httpd.conf
+[root@localhost ~]# cat /etc/httpd/conf/httpd.conf |more
+#
+# This is the main Apache HTTP server configuration file.  It contains the
+# configuration directives that give the server its instructions.
+# See <URL:http://httpd.apache.org/docs/2.4/> for detailed information.
+# In particular, see 
+# <URL:http://httpd.apache.org/docs/2.4/mod/directives.html>
+# for a discussion of each configuration directive.
+#
+# Do NOT simply read the instructions in here without understanding
+# what they do.  They're here only as hints or reminders.  If you are unsure
+# consult the online docs. You have been warned.  
+#
+# Configuration and logfile names: If the filenames you specify for many
+# of the server's control files begin with "/" (or "drive:/" for Win32), the
+# server will use that explicit path.  If the filenames do *not* begin
+# with "/", the value of ServerRoot is prepended -- so 'log/access_log'
+# with ServerRoot set to '/www' will be interpreted by the
+# server as '/www/log/access_log', where as '/log/access_log' will be
+# interpreted as '/log/access_log'.
+
+#
+# ServerRoot: The top of the directory tree under which the server's
+# configuration, error, and log files are kept.
+#
+# Do not add a slash at the end of the directory path.  If you point
+# ServerRoot at a non-local disk, be sure to specify a local disk on the
+# Mutex directive, if file-based mutexes are used.  If you wish to share the
+# same ServerRoot for multiple httpd daemons, you will need to change at
+# least PidFile.
+#
+ServerRoot "/etc/httpd"
+
+#
+# Listen: Allows you to bind Apache to specific IP addresses and/or
+# ports, instead of the default. See also the <VirtualHost>
+# directive.
+#
+# Change this to Listen on specific IP addresses as shown below to 
+# prevent Apache from glomming onto all bound IP addresses.
+#
+#Listen 12.34.56.78:80
+Listen 80
+
+#
+# Dynamic Shared Object (DSO) Support
+#
+# To be able to use the functionality of a module which was built as a DSO you
+# have to place corresponding `LoadModule' lines at this location so the
+# directives contained in it are actually available _before_ they are used.
+# Statically compiled modules (those listed by `httpd -l') do not need
+# to be loaded here.
+#
+# Example:
+# LoadModule foo_module modules/mod_foo.so
+#
+Include conf.modules.d/*.conf
+
+#
+# If you wish httpd to run as a different user or group, you must run
+# httpd as root initially and it will switch.  
+#
+# User/Group: The name (or #number) of the user/group to run httpd as.
+# It is usually good practice to create a dedicated user and group for
+# running httpd, as with most system services.
+#
+User apache
+Group apache
+
+# 'Main' server configuration
+#
+# The directives in this section set up the values used by the 'main'
+# server, which responds to any requests that aren't handled by a
+# <VirtualHost> definition.  These values also provide defaults for
+# any <VirtualHost> containers you may define later in the file.
+#
+# All of these directives may appear inside <VirtualHost> containers,
+# in which case these default settings will be overridden for the
+# virtual host being defined.
+#
+
+#
+# ServerAdmin: Your address, where problems with the server should be
+# e-mailed.  This address appears on some server-generated pages, such
+# as error documents.  e.g. admin@your-domain.com
+#
+ServerAdmin root@localhost
+
+#
+# ServerName gives the name and port that the server uses to identify itself.
+# This can often be determined automatically, but we recommend you specify
+# it explicitly to prevent problems during startup.
+#
+# If your host doesn't have a registered DNS name, enter its IP address here.
+#
+ServerName 127.0.0.1:80
+
+#
+# Deny access to the entirety of your server's filesystem. You must
+# explicitly permit access to web content directories in other 
+# <Directory> blocks below.
+#
+<Directory />
+    AllowOverride none
+    Require all denied
+</Directory>
+
+#
+# Note that from this point forward you must specifically allow
+# particular features to be enabled - so if something's not working as
+# you might expect, make sure that you have specifically enabled it
+# below.
+#
+
+#
+# DocumentRoot: The directory out of which you will serve your
+# documents. By default, all requests are taken from this directory, but
+# symbolic links and aliases may be used to point to other locations.
+#
+DocumentRoot "/var/www/html"
+
+#
+# Relax access to content within /var/www.
+#
+<Directory "/var/www">
+    AllowOverride None
+    # Allow open access:
+    Require all granted
+</Directory>
+
+# Further relax access to the default document root:
+<Directory "/var/www/html">
+    #
+    # Possible values for the Options directive are "None", "All",
+    # or any combination of:
+    #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+    #
+    # Note that "MultiViews" must be named *explicitly* --- "Options All"
+    # doesn't give it to you.
+    #
+    # The Options directive is both complicated and important.  Please see
+    # http://httpd.apache.org/docs/2.4/mod/core.html#options
+    # for more information.
+    #
+    Options Indexes FollowSymLinks
+
+    #
+    # AllowOverride controls what directives may be placed in .htaccess files.
+    # It can be "All", "None", or any combination of the keywords:
+    #   Options FileInfo AuthConfig Limit
+    #
+    AllowOverride None
+
+    #
+    # Controls who can get stuff from this server.
+    #
+    Require all granted
+</Directory>
+
+#
+# DirectoryIndex: sets the file that Apache will serve if a directory
+# is requested.
+#
+<IfModule dir_module>
+    DirectoryIndex index.html
+</IfModule>
+
+#
+# The following lines prevent .htaccess and .htpasswd files from being 
+# viewed by Web clients. 
+#
+<Files ".ht*">
+    Require all denied
+</Files>
+
+#
+# ErrorLog: The location of the error log file.
+# If you do not specify an ErrorLog directive within a <VirtualHost>
+# container, error messages relating to that virtual host will be
+# logged here.  If you *do* define an error logfile for a <VirtualHost>
+# container, that host's errors will be logged there and not here.
+#
+ErrorLog "logs/error_log"
+
+#
+# LogLevel: Control the number of messages logged to the error_log.
+# Possible values include: debug, info, notice, warn, error, crit,
+# alert, emerg.
+#
+LogLevel warn
+
+<IfModule log_config_module>
+    #
+    # The following directives define some format nicknames for use with
+    # a CustomLog directive (see below).
+    #
+    LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+    LogFormat "%h %l %u %t \"%r\" %>s %b" common
+
+    <IfModule logio_module>
+      # You need to enable mod_logio.c to use %I and %O
+      LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %I %O" combinedio
+    </IfModule>
+
+    #
+    # The location and format of the access logfile (Common Logfile Format).
+    # If you do not define any access logfiles within a <VirtualHost>
+    # container, they will be logged here.  Contrariwise, if you *do*
+    # define per-<VirtualHost> access logfiles, transactions will be
+    # logged therein and *not* in this file.
+    #
+    #CustomLog "logs/access_log" common
+
+    #
+    # If you prefer a logfile with access, agent, and referer information
+    # (Combined Logfile Format) you can use the following directive.
+    #
+    CustomLog "logs/access_log" combined
+</IfModule>
+
+<IfModule alias_module>
+    #
+    # Redirect: Allows you to tell clients about documents that used to 
+    # exist in your server's namespace, but do not anymore. The client 
+    # will make a new request for the document at its new location.
+    # Example:
+    # Redirect permanent /foo http://www.example.com/bar
+
+    #
+    # Alias: Maps web paths into filesystem paths and is used to
+    # access content that does not live under the DocumentRoot.
+    # Example:
+    # Alias /webpath /full/filesystem/path
+    #
+    # If you include a trailing / on /webpath then the server will
+    # require it to be present in the URL.  You will also likely
+    # need to provide a <Directory> section to allow access to
+    # the filesystem path.
+
+    #
+    # ScriptAlias: This controls which directories contain server scripts. 
+    # ScriptAliases are essentially the same as Aliases, except that
+    # documents in the target directory are treated as applications and
+    # run by the server when requested rather than as documents sent to the
+    # client.  The same rules about trailing "/" apply to ScriptAlias
+    # directives as to Alias.
+    #
+    ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
+
+</IfModule>
+
+#
+# "/var/www/cgi-bin" should be changed to whatever your ScriptAliased
+# CGI directory exists, if you have that configured.
+#
+<Directory "/var/www/cgi-bin">
+    AllowOverride None
+    Options None
+    Require all granted
+</Directory>
+
+<IfModule mime_module>
+    #
+    # TypesConfig points to the file containing the list of mappings from
+    # filename extension to MIME-type.
+    #
+    TypesConfig /etc/mime.types
+
+    #
+    # AddType allows you to add to or override the MIME configuration
+    # file specified in TypesConfig for specific file types.
+    #
+    #AddType application/x-gzip .tgz
+    #
+    # AddEncoding allows you to have certain browsers uncompress
+    # information on the fly. Note: Not all browsers support this.
+    #
+    #AddEncoding x-compress .Z
+    #AddEncoding x-gzip .gz .tgz
+    #
+    # If the AddEncoding directives above are commented-out, then you
+    # probably should define those extensions to indicate media types:
+    #
+    AddType application/x-compress .Z
+    AddType application/x-gzip .gz .tgz
+
+    #
+    # AddHandler allows you to map certain file extensions to "handlers":
+    # actions unrelated to filetype. These can be either built into the server
+    # or added with the Action directive (see below)
+    #
+    # To use CGI scripts outside of ScriptAliased directories:
+    # (You will also need to add "ExecCGI" to the "Options" directive.)
+    #
+    #AddHandler cgi-script .cgi
+
+    # For type maps (negotiated resources):
+    #AddHandler type-map var
+
+    #
+    # Filters allow you to process content before it is sent to the client.
+    #
+    # To parse .shtml files for server-side includes (SSI):
+    # (You will also need to add "Includes" to the "Options" directive.)
+    #
+    AddType text/html .shtml
+    AddOutputFilter INCLUDES .shtml
+</IfModule>
+
+#
+# Specify a default charset for all content served; this enables
+# interpretation of all content as UTF-8 by default.  To use the 
+# default browser choice (ISO-8859-1), or to allow the META tags
+# in HTML content to override this choice, comment out this
+# directive:
+#
+AddDefaultCharset UTF-8
+
+<IfModule mime_magic_module>
+    #
+    # The mod_mime_magic module allows the server to use various hints from the
+    # contents of the file itself to determine its type.  The MIMEMagicFile
+    # directive tells the module where the hint definitions are located.
+    #
+    MIMEMagicFile conf/magic
+</IfModule>
+
+#
+# Customizable error responses come in three flavors:
+# 1) plain text 2) local redirects 3) external redirects
+#
+# Some examples:
+#ErrorDocument 500 "The server made a boo boo."
+#ErrorDocument 404 /missing.html
+#ErrorDocument 404 "/cgi-bin/missing_handler.pl"
+#ErrorDocument 402 http://www.example.com/subscription_info.html
+#
+
+#
+# EnableMMAP and EnableSendfile: On systems that support it, 
+# memory-mapping or the sendfile syscall may be used to deliver
+# files.  This usually improves server performance, but must
+# be turned off when serving from networked-mounted 
+# filesystems or if support for these functions is otherwise
+# broken on your system.
+# Defaults if commented: EnableMMAP On, EnableSendfile Off
+#
+#EnableMMAP off
+EnableSendfile on
+
+# Supplemental configuration
+#
+# Load config files in the "/etc/httpd/conf.d" directory, if any.
+IncludeOptional conf.d/*.conf
+[root@localhost ~]#   dnf install httpd
+Last metadata expiration check: 3:45:21 ago on Tue 19 Jun 2018 06:05:08 PM IST.
+Package httpd-2.4.29-1.fc26.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@localhost ~]# systemctl start httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost ~]# netstat -punta | grep LISTEN
+tcp        0      0 127.0.0.1:5672          0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:25672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:33387         0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9999          0.0.0.0:*               LISTEN      19888/nginx: master 
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      19888/nginx: master 
+tcp        0      0 0.0.0.0:9680            0.0.0.0:*               LISTEN      19888/nginx: master 
+tcp        0      0 127.0.0.1:4369          0.0.0.0:*               LISTEN      1547/epmd           
+tcp        0      0 0.0.0.0:9683            0.0.0.0:*               LISTEN      19888/nginx: master 
+tcp        0      0 192.168.124.1:53        0.0.0.0:*               LISTEN      1645/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1266/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      2739/cupsd          
+tcp        0      0 127.0.0.1:9463          0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp        0      0 127.0.0.1:15672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      1544/postgres       
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      19888/nginx: master 
+tcp        0      0 127.0.0.1:16379         0.0.0.0:*               LISTEN      1840/redis-server 1 
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:33793         0.0.0.0:*               LISTEN      1856/beam.smp       
+tcp        0      0 127.0.0.1:4321          0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN      1688/rails master - 
+tcp        0      0 127.0.0.1:44899         0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:37635         0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp6       0      0 :::22                   :::*                    LISTEN      1266/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      2739/cupsd          
+tcp6       0      0 127.0.0.1:8983          :::*                    LISTEN      1545/java           
+tcp6       0      0 ::1:5432                :::*                    LISTEN      1544/postgres       
+[root@localhost ~]# 
+[root@localhost ~]# ls -l /etc/nginx/conf.d/ 
+total 0
+[root@localhost ~]# cd /etc/nginx/
+[root@localhost nginx]# ls
+conf.d        fastcgi.conf.default    koi-utf     mime.types.default  scgi_params          uwsgi_params.default
+default.d     fastcgi_params          koi-win     nginx.conf          scgi_params.default  win-utf
+fastcgi.conf  fastcgi_params.default  mime.types  nginx.conf.default  uwsgi_params
+[root@localhost nginx]# cat nginx.conf | more
+# For more information on configuration, see:
+#   * Official English Documentation: http://nginx.org/en/docs/
+#   * Official Russian Documentation: http://nginx.org/ru/docs/
+
+user nginx;
+worker_processes auto;
+error_log /var/log/nginx/error.log;
+pid /run/nginx.pid;
+
+# Load dynamic modules. See /usr/share/doc/nginx/README.dynamic.
+include /usr/share/nginx/modules/*.conf;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile            on;
+    tcp_nopush          on;
+    tcp_nodelay         on;
+    keepalive_timeout   65;
+    types_hash_max_size 2048;
+
+    include             /etc/nginx/mime.types;
+    default_type        application/octet-stream;
+
+    # Load modular configuration files from the /etc/nginx/conf.d directory.
+    # See http://nginx.org/en/docs/ngx_core_module.html#include
+    # for more information.
+    include /etc/nginx/conf.d/*.conf;
+
+    server {
+        listen       80 default_server;
+        listen       [::]:80 default_server;
+        server_name  _;
+        root         /usr/share/nginx/html;
+
+        # Load configuration files for the default server block.
+        include /etc/nginx/default.d/*.conf;
+
+        location / {
+        }
+
+        error_page 404 /404.html;
+            location = /40x.html {
+        }
+
+        error_page 500 502 503 504 /50x.html;
+            location = /50x.html {
+        }
+    }
+
+# Settings for a TLS enabled server.
+#
+#    server {
+#        listen       443 ssl http2 default_server;
+#        listen       [::]:443 ssl http2 default_server;
+#        server_name  _;
+#        root         /usr/share/nginx/html;
+#
+#        ssl_certificate "/etc/pki/nginx/server.crt";
+#        ssl_certificate_key "/etc/pki/nginx/private/server.key";
+#        ssl_session_cache shared:SSL:1m;
+#        ssl_session_timeout  10m;
+#        ssl_ciphers PROFILE=SYSTEM;
+#        ssl_prefer_server_ciphers on;
+#
+#        # Load configuration files for the default server block.
+#        include /etc/nginx/default.d/*.conf;
+#
+#        location / {
+#        }
+#
+#        error_page 404 /404.html;
+#            location = /40x.html {
+#        }
+#
+#        error_page 500 502 503 504 /50x.html;
+#            location = /50x.html {
+#        }
+#    }
+
+}
+
+[root@localhost nginx]#  cd ..
+[root@localhost etc]# cd ..
+[root@localhost /]# pwd
+/
+[root@localhost /]# ps -ef |grep nginx
+root       1279   1260  0 18:40 ?        00:00:10 runsv nginx
+opscode    1308   1279  0 18:40 ?        00:00:02 svlogd -tt /var/log/opscode/nginx
+root      19888   1279  0 21:41 ?        00:00:00 nginx: master process /opt/opscode/embedded/sbin/nginx -c /var/opt/opscode/nginx/etc/nginx.conf
+opscode   19895  19888  0 21:41 ?        00:00:00 nginx: worker process
+opscode   19896  19888  0 21:41 ?        00:00:00 nginx: worker process
+opscode   19897  19888  0 21:41 ?        00:00:00 nginx: worker process
+opscode   19898  19888  0 21:41 ?        00:00:00 nginx: worker process
+opscode   19899  19888  0 21:41 ?        00:00:00 nginx: cache manager process
+root      20358  19607  0 22:00 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost /]# kill -9 19888
+[root@localhost /]# ps -ef |grep nginx
+root       1279   1260  0 18:40 ?        00:00:10 runsv nginx
+opscode    1308   1279  0 18:40 ?        00:00:02 svlogd -tt /var/log/opscode/nginx
+opscode   19895      1  0 21:41 ?        00:00:00 nginx: worker process
+opscode   19896      1  0 21:41 ?        00:00:00 nginx: worker process
+opscode   19897      1  0 21:41 ?        00:00:00 nginx: worker process
+opscode   19898      1  0 21:41 ?        00:00:00 nginx: worker process
+opscode   19899      1  0 21:41 ?        00:00:00 nginx: cache manager process
+root      20391   1279 14 22:01 ?        00:00:00 /opt/opscode/embedded/sbin/nginx -c /var/opt/opscode/nginx/etc/nginx.conf
+root      20394  19607  0 22:01 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost /]# netstat -punta | grep LISTEN
+tcp        0      0 127.0.0.1:5672          0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:25672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:33387         0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9999          0.0.0.0:*               LISTEN      19895/nginx: worker 
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      19895/nginx: worker 
+tcp        0      0 0.0.0.0:9680            0.0.0.0:*               LISTEN      19895/nginx: worker 
+tcp        0      0 127.0.0.1:4369          0.0.0.0:*               LISTEN      1547/epmd           
+tcp        0      0 0.0.0.0:9683            0.0.0.0:*               LISTEN      19895/nginx: worker 
+tcp        0      0 192.168.124.1:53        0.0.0.0:*               LISTEN      1645/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1266/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      2739/cupsd          
+tcp        0      0 127.0.0.1:9463          0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp        0      0 127.0.0.1:15672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      1544/postgres       
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      19895/nginx: worker 
+tcp        0      0 127.0.0.1:16379         0.0.0.0:*               LISTEN      1840/redis-server 1 
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:33793         0.0.0.0:*               LISTEN      1856/beam.smp       
+tcp        0      0 127.0.0.1:4321          0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN      1688/rails master - 
+tcp        0      0 127.0.0.1:44899         0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:37635         0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp6       0      0 :::22                   :::*                    LISTEN      1266/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      2739/cupsd          
+tcp6       0      0 127.0.0.1:8983          :::*                    LISTEN      1545/java           
+tcp6       0      0 ::1:5432                :::*                    LISTEN      1544/postgres       
+[root@localhost /]# kill -9 19895
+[root@localhost /]# netstat -punta | grep LISTEN
+tcp        0      0 127.0.0.1:5672          0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:25672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:33387         0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9999          0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 0.0.0.0:9680            0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 127.0.0.1:4369          0.0.0.0:*               LISTEN      1547/epmd           
+tcp        0      0 0.0.0.0:9683            0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 192.168.124.1:53        0.0.0.0:*               LISTEN      1645/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1266/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      2739/cupsd          
+tcp        0      0 127.0.0.1:9463          0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp        0      0 127.0.0.1:15672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      1544/postgres       
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 127.0.0.1:16379         0.0.0.0:*               LISTEN      1840/redis-server 1 
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:33793         0.0.0.0:*               LISTEN      1856/beam.smp       
+tcp        0      0 127.0.0.1:4321          0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN      1688/rails master - 
+tcp        0      0 127.0.0.1:44899         0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:37635         0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp6       0      0 :::22                   :::*                    LISTEN      1266/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      2739/cupsd          
+tcp6       0      0 127.0.0.1:8983          :::*                    LISTEN      1545/java           
+tcp6       0      0 ::1:5432                :::*                    LISTEN      1544/postgres       
+[root@localhost /]# systemctl status nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: inactive (dead) since Tue 2018-06-19 21:41:21 IST; 21min ago
+ Main PID: 1293 (code=exited, status=0/SUCCESS)
+
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 12:09:34 localhost.localdomain nginx[1292]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopping The nginx HTTP and reverse proxy server...
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopped The nginx HTTP and reverse proxy server.
+
+[root@localhost /]# systemctl stop nginx.service
+[root@localhost /]# systemctl disable nginx.service
+Removed /etc/systemd/system/multi-user.target.wants/nginx.service.
+[root@localhost /]# systemctl status nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 12:09:34 localhost.localdomain nginx[1292]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopping The nginx HTTP and reverse proxy server...
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopped The nginx HTTP and reverse proxy server.
+...skipping...
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 12:09:34 localhost.localdomain nginx[1292]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopping The nginx HTTP and reverse proxy server...
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopped The nginx HTTP and reverse proxy server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-12/12 (END)
+[root@localhost /]# systemctl stop nginx.service
+[root@localhost /]# systemctl status nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 12:09:34 localhost.localdomain nginx[1292]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopping The nginx HTTP and reverse proxy server...
+Jun 19 21:41:21 localhost.localdomain systemd[1]: Stopped The nginx HTTP and reverse proxy server.
+
+[root@localhost /]# netstat -punta | grep LISTEN
+tcp        0      0 127.0.0.1:5672          0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:25672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:33387         0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9999          0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 0.0.0.0:9680            0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 127.0.0.1:4369          0.0.0.0:*               LISTEN      1547/epmd           
+tcp        0      0 0.0.0.0:9683            0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 192.168.124.1:53        0.0.0.0:*               LISTEN      1645/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1266/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      2739/cupsd          
+tcp        0      0 127.0.0.1:9463          0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp        0      0 127.0.0.1:15672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      1544/postgres       
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      19896/nginx: worker 
+tcp        0      0 127.0.0.1:16379         0.0.0.0:*               LISTEN      1840/redis-server 1 
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:33793         0.0.0.0:*               LISTEN      1856/beam.smp       
+tcp        0      0 127.0.0.1:4321          0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN      1688/rails master - 
+tcp        0      0 127.0.0.1:44899         0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:37635         0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp6       0      0 :::22                   :::*                    LISTEN      1266/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      2739/cupsd          
+tcp6       0      0 127.0.0.1:8983          :::*                    LISTEN      1545/java           
+tcp6       0      0 ::1:5432                :::*                    LISTEN      1544/postgres       
+[root@localhost /]# kill -9 19896
+[root@localhost /]# netstat -punta | grep LISTEN
+tcp        0      0 127.0.0.1:5672          0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:25672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:33387         0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9999          0.0.0.0:*               LISTEN      19897/nginx: worker 
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      19897/nginx: worker 
+tcp        0      0 0.0.0.0:9680            0.0.0.0:*               LISTEN      19897/nginx: worker 
+tcp        0      0 127.0.0.1:4369          0.0.0.0:*               LISTEN      1547/epmd           
+tcp        0      0 0.0.0.0:9683            0.0.0.0:*               LISTEN      19897/nginx: worker 
+tcp        0      0 192.168.124.1:53        0.0.0.0:*               LISTEN      1645/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1266/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      2739/cupsd          
+tcp        0      0 127.0.0.1:9463          0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp        0      0 127.0.0.1:15672         0.0.0.0:*               LISTEN      1332/beam.smp       
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      1544/postgres       
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      19897/nginx: worker 
+tcp        0      0 127.0.0.1:16379         0.0.0.0:*               LISTEN      1840/redis-server 1 
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:33793         0.0.0.0:*               LISTEN      1856/beam.smp       
+tcp        0      0 127.0.0.1:4321          0.0.0.0:*               LISTEN      1839/beam.smp       
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN      1688/rails master - 
+tcp        0      0 127.0.0.1:44899         0.0.0.0:*               LISTEN      1334/beam.smp       
+tcp        0      0 127.0.0.1:37635         0.0.0.0:*               LISTEN      1321/beam.smp       
+tcp6       0      0 :::22                   :::*                    LISTEN      1266/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      2739/cupsd          
+tcp6       0      0 127.0.0.1:8983          :::*                    LISTEN      1545/java           
+tcp6       0      0 ::1:5432                :::*                    LISTEN      1544/postgres       
+[root@localhost /]# systemctl enable nginx.service
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+[root@localhost /]# systemctl restart nginx.service
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl  status nginx.service" and "journalctl  -xe" for details.
+[root@localhost /]# systemctl restart nginx
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl  status nginx.service" and "journalctl  -xe" for details.
+[root@localhost /]# systemctl start nginx
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl  status nginx.service" and "journalctl  -xe" for details.
+[root@localhost /]# ^C
+[root@localhost /]# pwd
+/
+[root@localhost /]# systemctl enable nginx.service
+[root@localhost /]# systemctl start nginx.service
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl  status nginx.service" and "journalctl  -xe" for details.
+[root@localhost /]# 
+

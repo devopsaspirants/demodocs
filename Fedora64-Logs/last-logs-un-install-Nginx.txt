@@ -1,0 +1,2157 @@
+[fedora26@localhost ~]$ su -
+Password: 
+[root@localhost ~]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Tue 2018-06-19 22:10:48 IST; 1min 25s ago
+     Docs: man:httpd.service(8)
+  Process: 1221 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 1221 (code=exited, status=1/FAILURE)
+   Status: "Reading configuration..."
+
+Jun 19 22:10:47 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Jun 19 22:10:48 localhost.localdomain httpd[1221]: (13)Permission denied: AH00072: make_sock: could not bind to address 
+Jun 19 22:10:48 localhost.localdomain httpd[1221]: (13)Permission denied: AH00072: make_sock: could not bind to address 
+Jun 19 22:10:48 localhost.localdomain httpd[1221]: no listening sockets available, shutting down
+Jun 19 22:10:48 localhost.localdomain httpd[1221]: AH00015: Unable to open logs
+Jun 19 22:10:48 localhost.localdomain systemd[1]: httpd.service: Main process exited, code=exited, status=1/FAILURE
+Jun 19 22:10:48 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Jun 19 22:10:48 localhost.localdomain systemd[1]: httpd.service: Unit entered failed state.
+Jun 19 22:10:48 localhost.localdomain systemd[1]: httpd.service: Failed with result 'exit-code'.
+
+[root@localhost ~]# systemctl status nginx.service
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Tue 2018-06-19 22:10:48 IST; 1min 51s ago
+  Process: 1257 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+  Process: 1240 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+  Process: 1222 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+ Main PID: 1258 (nginx)
+    Tasks: 5 (limit: 19660)
+   CGroup: /system.slice/nginx.service
+           ├─1258 nginx: master process /usr/sbin/nginx
+           ├─1259 nginx: worker process
+           ├─1260 nginx: worker process
+           ├─1261 nginx: worker process
+           └─1262 nginx: worker process
+
+Jun 19 22:10:47 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 22:10:47 localhost.localdomain nginx[1240]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 22:10:47 localhost.localdomain nginx[1240]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 22:10:47 localhost.localdomain nginx[1240]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 22:10:48 localhost.localdomain nginx[1257]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 22:10:48 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+
+[root@localhost ~]# service status nginix
+The service command supports only basic LSB actions (start, stop, restart, try-restart, reload, force-reload, status). For other actions, please try to use systemctl.
+[root@localhost ~]# systemctl status nginx.service
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Tue 2018-06-19 22:10:48 IST; 3min 23s ago
+  Process: 1257 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+  Process: 1240 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+  Process: 1222 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+ Main PID: 1258 (nginx)
+    Tasks: 5 (limit: 19660)
+   CGroup: /system.slice/nginx.service
+           ├─1258 nginx: master process /usr/sbin/nginx
+           ├─1259 nginx: worker process
+           ├─1260 nginx: worker process
+           ├─1261 nginx: worker process
+           └─1262 nginx: worker process
+
+Jun 19 22:10:47 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 22:10:47 localhost.localdomain nginx[1240]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 22:10:47 localhost.localdomain nginx[1240]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 22:10:47 localhost.localdomain nginx[1240]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 22:10:48 localhost.localdomain nginx[1257]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 22:10:48 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+
+[root@localhost ~]# netstat -punta | grep LISTEN
+tcp        0      0 127.0.0.1:40039         0.0.0.0:*               LISTEN      1292/beam.smp       
+tcp        0      0 127.0.0.1:36615         0.0.0.0:*               LISTEN      1290/beam.smp       
+tcp        0      0 127.0.0.1:5672          0.0.0.0:*               LISTEN      1294/beam.smp       
+tcp        0      0 127.0.0.1:25672         0.0.0.0:*               LISTEN      1294/beam.smp       
+tcp        0      0 127.0.0.1:9999          0.0.0.0:*               LISTEN      3411/nginx          
+tcp        0      0 127.0.0.1:42095         0.0.0.0:*               LISTEN      1288/beam.smp       
+tcp        0      0 0.0.0.0:9680            0.0.0.0:*               LISTEN      3411/nginx          
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1258/nginx: master  
+tcp        0      0 127.0.0.1:4369          0.0.0.0:*               LISTEN      1435/epmd           
+tcp        0      0 0.0.0.0:9683            0.0.0.0:*               LISTEN      3411/nginx          
+tcp        0      0 192.168.124.1:53        0.0.0.0:*               LISTEN      1534/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1235/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      2778/cupsd          
+tcp        0      0 127.0.0.1:9463          0.0.0.0:*               LISTEN      1288/beam.smp       
+tcp        0      0 127.0.0.1:15672         0.0.0.0:*               LISTEN      1294/beam.smp       
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      1286/postgres       
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      3411/nginx          
+tcp        0      0 127.0.0.1:16379         0.0.0.0:*               LISTEN      1291/redis-server 1 
+tcp        0      0 127.0.0.1:46047         0.0.0.0:*               LISTEN      1293/beam.smp       
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1293/beam.smp       
+tcp        0      0 127.0.0.1:4321          0.0.0.0:*               LISTEN      1290/beam.smp       
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN      1413/rails master - 
+tcp6       0      0 :::80                   :::*                    LISTEN      1258/nginx: master  
+tcp6       0      0 :::22                   :::*                    LISTEN      1235/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      2778/cupsd          
+tcp6       0      0 127.0.0.1:8983          :::*                    LISTEN      1411/java           
+tcp6       0      0 ::1:5432                :::*                    LISTEN      1286/postgres       
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# systemctl stop nginx.service
+[root@localhost ~]# systemctl disable nginx.service
+Removed /etc/systemd/system/multi-user.target.wants/nginx.service.
+[root@localhost ~]# systemctl status nginx.service
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+
+Jun 19 22:10:47 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 22:10:47 localhost.localdomain nginx[1240]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 22:10:47 localhost.localdomain nginx[1240]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 22:10:47 localhost.localdomain nginx[1240]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 22:10:48 localhost.localdomain nginx[1257]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 22:10:48 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+Jun 19 22:15:11 localhost.localdomain systemd[1]: Stopping The nginx HTTP and reverse proxy server...
+Jun 19 22:15:11 localhost.localdomain systemd[1]: Stopped The nginx HTTP and reverse proxy server.
+
+[root@localhost ~]# rm -rf /etc/nginx
+[root@localhost ~]# rm -rf /var/log/nginx
+[root@localhost ~]# rm -rf /var/cache/nginx/
+[root@localhost ~]# rm -rf /usr/lib/systemd/system/nginx.service
+[root@localhost ~]# systemctl status nginx.service
+Unit nginx.service could not be found.
+[root@localhost ~]# netstat -punta | grep LISTEN
+tcp        0      0 127.0.0.1:40039         0.0.0.0:*               LISTEN      1292/beam.smp       
+tcp        0      0 127.0.0.1:36615         0.0.0.0:*               LISTEN      1290/beam.smp       
+tcp        0      0 127.0.0.1:5672          0.0.0.0:*               LISTEN      1294/beam.smp       
+tcp        0      0 127.0.0.1:25672         0.0.0.0:*               LISTEN      1294/beam.smp       
+tcp        0      0 127.0.0.1:9999          0.0.0.0:*               LISTEN      3448/nginx: master  
+tcp        0      0 127.0.0.1:42095         0.0.0.0:*               LISTEN      1288/beam.smp       
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      3448/nginx: master  
+tcp        0      0 0.0.0.0:9680            0.0.0.0:*               LISTEN      3448/nginx: master  
+tcp        0      0 127.0.0.1:4369          0.0.0.0:*               LISTEN      1435/epmd           
+tcp        0      0 0.0.0.0:9683            0.0.0.0:*               LISTEN      3448/nginx: master  
+tcp        0      0 192.168.124.1:53        0.0.0.0:*               LISTEN      1534/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1235/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      2778/cupsd          
+tcp        0      0 127.0.0.1:9463          0.0.0.0:*               LISTEN      1288/beam.smp       
+tcp        0      0 127.0.0.1:15672         0.0.0.0:*               LISTEN      1294/beam.smp       
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      1286/postgres       
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      3448/nginx: master  
+tcp        0      0 127.0.0.1:16379         0.0.0.0:*               LISTEN      1291/redis-server 1 
+tcp        0      0 127.0.0.1:46047         0.0.0.0:*               LISTEN      1293/beam.smp       
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1293/beam.smp       
+tcp        0      0 127.0.0.1:4321          0.0.0.0:*               LISTEN      1290/beam.smp       
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN      1413/rails master - 
+tcp6       0      0 :::22                   :::*                    LISTEN      1235/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      2778/cupsd          
+tcp6       0      0 127.0.0.1:8983          :::*                    LISTEN      1411/java           
+tcp6       0      0 ::1:5432                :::*                    LISTEN      1286/postgres       
+[root@localhost ~]# kill -9 3448
+[root@localhost ~]# netstat -punta | grep LISTEN
+tcp        0      0 127.0.0.1:40039         0.0.0.0:*               LISTEN      1292/beam.smp       
+tcp        0      0 127.0.0.1:36615         0.0.0.0:*               LISTEN      1290/beam.smp       
+tcp        0      0 127.0.0.1:5672          0.0.0.0:*               LISTEN      1294/beam.smp       
+tcp        0      0 127.0.0.1:25672         0.0.0.0:*               LISTEN      1294/beam.smp       
+tcp        0      0 127.0.0.1:9999          0.0.0.0:*               LISTEN      3454/nginx: worker  
+tcp        0      0 127.0.0.1:42095         0.0.0.0:*               LISTEN      1288/beam.smp       
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      3454/nginx: worker  
+tcp        0      0 0.0.0.0:9680            0.0.0.0:*               LISTEN      3454/nginx: worker  
+tcp        0      0 127.0.0.1:4369          0.0.0.0:*               LISTEN      1435/epmd           
+tcp        0      0 0.0.0.0:9683            0.0.0.0:*               LISTEN      3454/nginx: worker  
+tcp        0      0 192.168.124.1:53        0.0.0.0:*               LISTEN      1534/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1235/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      2778/cupsd          
+tcp        0      0 127.0.0.1:9463          0.0.0.0:*               LISTEN      1288/beam.smp       
+tcp        0      0 127.0.0.1:15672         0.0.0.0:*               LISTEN      1294/beam.smp       
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      1286/postgres       
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      3454/nginx: worker  
+tcp        0      0 127.0.0.1:16379         0.0.0.0:*               LISTEN      1291/redis-server 1 
+tcp        0      0 127.0.0.1:46047         0.0.0.0:*               LISTEN      1293/beam.smp       
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1293/beam.smp       
+tcp        0      0 127.0.0.1:4321          0.0.0.0:*               LISTEN      1290/beam.smp       
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN      1413/rails master - 
+tcp6       0      0 :::22                   :::*                    LISTEN      1235/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      2778/cupsd          
+tcp6       0      0 127.0.0.1:8983          :::*                    LISTEN      1411/java           
+tcp6       0      0 ::1:5432                :::*                    LISTEN      1286/postgres       
+[root@localhost ~]# rm -f -R /usr/local/nginx && rm -f /usr/local/sbin/nginx
+[root@localhost ~]# update-rc.d -f nginx disable
+bash: update-rc.d: command not found...
+[root@localhost ~]# fuser 8080/tcp
+[root@localhost ~]# lsof -i:80
+COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+nginx   3454 opscode   19u  IPv4  46530      0t0  TCP *:http (LISTEN)
+nginx   3455 opscode   19u  IPv4  46530      0t0  TCP *:http (LISTEN)
+nginx   3456 opscode   19u  IPv4  46530      0t0  TCP *:http (LISTEN)
+nginx   3457 opscode   19u  IPv4  46530      0t0  TCP *:http (LISTEN)
+[root@localhost ~]# lsof -i:8080
+[root@localhost ~]# lsof -i:8080
+[root@localhost ~]# lsof -i:80
+COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+nginx   3454 opscode   19u  IPv4  46530      0t0  TCP *:http (LISTEN)
+nginx   3455 opscode   19u  IPv4  46530      0t0  TCP *:http (LISTEN)
+nginx   3456 opscode   19u  IPv4  46530      0t0  TCP *:http (LISTEN)
+nginx   3457 opscode   19u  IPv4  46530      0t0  TCP *:http (LISTEN)
+[root@localhost ~]# kill $(lsof -t -i:80)
+[root@localhost ~]# lsof -i:80
+COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+nginx   3792    root   16u  IPv4  58591      0t0  TCP *:http (LISTEN)
+nginx   3797 opscode   16u  IPv4  58591      0t0  TCP *:http (LISTEN)
+nginx   3798 opscode   16u  IPv4  58591      0t0  TCP *:http (LISTEN)
+nginx   3799 opscode   16u  IPv4  58591      0t0  TCP *:http (LISTEN)
+nginx   3800 opscode   16u  IPv4  58591      0t0  TCP *:http (LISTEN)
+[root@localhost ~]# kill -9 $(lsof -t -i:80)
+[root@localhost ~]# lsof -i:80
+COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+nginx   3812    root   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+nginx   3814 opscode   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+nginx   3815 opscode   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+nginx   3816 opscode   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+nginx   3817 opscode   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+[root@localhost ~]# systemctl stop nginx.service
+Failed to stop nginx.service: Unit nginx.service not loaded.
+[root@localhost ~]# systemctl stop nginx.service
+Failed to stop nginx.service: Unit nginx.service not loaded.
+[root@localhost ~]# curl -L https://www.chef.io/chef/install.sh
+#!/bin/sh
+# WARNING: REQUIRES /bin/sh
+#
+# - must run on /bin/sh on solaris 9
+# - must run on /bin/sh on AIX 6.x
+#
+# Copyright:: Copyright (c) 2010-2015 Chef Software, Inc.
+# License:: Apache License, Version 2.0
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# helpers.sh
+############
+# This section has some helper functions to make life easier.
+#
+# Outputs:
+# $tmp_dir: secure-ish temp directory that can be used during installation.
+############
+
+# Check whether a command exists - returns 0 if it does, 1 if it does not
+exists() {
+  if command -v $1 >/dev/null 2>&1
+  then
+    return 0
+  else
+    return 1
+  fi
+}
+
+# Output the instructions to report bug about this script
+report_bug() {
+  echo "Version: $version"
+  echo ""
+  echo "Please file a Bug Report at https://github.com/chef/omnitruck/issues/new"
+  echo "Alternatively, feel free to open a Support Ticket at https://www.chef.io/support/tickets"
+  echo "More Chef support resources can be found at https://www.chef.io/support"
+  echo ""
+  echo "Please include as many details about the problem as possible i.e., how to reproduce"
+  echo "the problem (if possible), type of the Operating System and its version, etc.,"
+  echo "and any other relevant details that might help us with troubleshooting."
+  echo ""
+}
+
+checksum_mismatch() {
+  echo "Package checksum mismatch!"
+  report_bug
+  exit 1
+}
+
+unable_to_retrieve_package() {
+  echo "Unable to retrieve a valid package!"
+  report_bug
+  echo "Metadata URL: $metadata_url"
+  if test "x$download_url" != "x"; then
+    echo "Download URL: $download_url"
+  fi
+  if test "x$stderr_results" != "x"; then
+    echo "\nDEBUG OUTPUT FOLLOWS:\n$stderr_results"
+  fi
+  exit 1
+}
+
+http_404_error() {
+  echo "Omnitruck artifact does not exist for version $version on platform $platform"
+  echo ""
+  echo "Either this means:"
+  echo "   - We do not support $platform"
+  echo "   - We do not have an artifact for $version"
+  echo ""
+  echo "This is often the latter case due to running a prerelease or RC version of chef"
+  echo "or a gem version which was only pushed to rubygems and not omnitruck."
+  echo ""
+  echo "You may be able to set your knife[:bootstrap_version] to the most recent stable"
+  echo "release of Chef to fix this problem (or the most recent stable major version number)."
+  echo ""
+  echo "In order to test the version parameter, adventurous users may take the Metadata URL"
+  echo "below and modify the '&v=<number>' parameter until you successfully get a URL that"
+  echo "does not 404 (e.g. via curl or wget).  You should be able to use '&v=11' or '&v=12'"
+  echo "succesfully."
+  echo ""
+  echo "If you cannot fix this problem by setting the bootstrap_version, it probably means"
+  echo "that $platform is not supported."
+  echo ""
+  # deliberately do not call report_bug to suppress bug report noise.
+  echo "Metadata URL: $metadata_url"
+  if test "x$download_url" != "x"; then
+    echo "Download URL: $download_url"
+  fi
+  if test "x$stderr_results" != "x"; then
+    echo "\nDEBUG OUTPUT FOLLOWS:\n$stderr_results"
+  fi
+  exit 1
+}
+
+capture_tmp_stderr() {
+  # spool up /tmp/stderr from all the commands we called
+  if test -f "$tmp_dir/stderr"; then
+    output=`cat $tmp_dir/stderr`
+    stderr_results="${stderr_results}\nSTDERR from $1:\n\n$output\n"
+    rm $tmp_dir/stderr
+  fi
+}
+
+# do_wget URL FILENAME
+do_wget() {
+  echo "trying wget..."
+  wget --user-agent="User-Agent: mixlib-install/3.10.0" -O "$2" "$1" 2>$tmp_dir/stderr
+  rc=$?
+  # check for 404
+  grep "ERROR 404" $tmp_dir/stderr 2>&1 >/dev/null
+  if test $? -eq 0; then
+    echo "ERROR 404"
+    http_404_error
+  fi
+
+  # check for bad return status or empty output
+  if test $rc -ne 0 || test ! -s "$2"; then
+    capture_tmp_stderr "wget"
+    return 1
+  fi
+
+  return 0
+}
+
+# do_curl URL FILENAME
+do_curl() {
+  echo "trying curl..."
+  curl -A "User-Agent: mixlib-install/3.10.0" --retry 5 -sL -D $tmp_dir/stderr "$1" > "$2"
+  rc=$?
+  # check for 404
+  grep "404 Not Found" $tmp_dir/stderr 2>&1 >/dev/null
+  if test $? -eq 0; then
+    echo "ERROR 404"
+    http_404_error
+  fi
+
+  # check for bad return status or empty output
+  if test $rc -ne 0 || test ! -s "$2"; then
+    capture_tmp_stderr "curl"
+    return 1
+  fi
+
+  return 0
+}
+
+# do_fetch URL FILENAME
+do_fetch() {
+  echo "trying fetch..."
+  fetch --user-agent="User-Agent: mixlib-install/3.10.0" -o "$2" "$1" 2>$tmp_dir/stderr
+  # check for bad return status
+  test $? -ne 0 && return 1
+  return 0
+}
+
+# do_perl URL FILENAME
+do_perl() {
+  echo "trying perl..."
+  perl -e 'use LWP::Simple; getprint($ARGV[0]);' "$1" > "$2" 2>$tmp_dir/stderr
+  rc=$?
+  # check for 404
+  grep "404 Not Found" $tmp_dir/stderr 2>&1 >/dev/null
+  if test $? -eq 0; then
+    echo "ERROR 404"
+    http_404_error
+  fi
+
+  # check for bad return status or empty output
+  if test $rc -ne 0 || test ! -s "$2"; then
+    capture_tmp_stderr "perl"
+    return 1
+  fi
+
+  return 0
+}
+
+# do_python URL FILENAME
+do_python() {
+  echo "trying python..."
+  python -c "import sys,urllib2; sys.stdout.write(urllib2.urlopen(urllib2.Request(sys.argv[1], headers={ 'User-Agent': 'mixlib-install/3.10.0' })).read())" "$1" > "$2" 2>$tmp_dir/stderr
+  rc=$?
+  # check for 404
+  grep "HTTP Error 404" $tmp_dir/stderr 2>&1 >/dev/null
+  if test $? -eq 0; then
+    echo "ERROR 404"
+    http_404_error
+  fi
+
+  # check for bad return status or empty output
+  if test $rc -ne 0 || test ! -s "$2"; then
+    capture_tmp_stderr "python"
+    return 1
+  fi
+  return 0
+}
+
+# returns 0 if checksums match
+do_checksum() {
+  if exists sha256sum; then
+    echo "Comparing checksum with sha256sum..."
+    checksum=`sha256sum $1 | awk '{ print $1 }'`
+    return `test "x$checksum" = "x$2"`
+  elif exists shasum; then
+    echo "Comparing checksum with shasum..."
+    checksum=`shasum -a 256 $1 | awk '{ print $1 }'`
+    return `test "x$checksum" = "x$2"`
+  else
+    echo "WARNING: could not find a valid checksum program, pre-install shasum or sha256sum in your O/S image to get valdation..."
+    return 0
+  fi
+}
+
+# do_download URL FILENAME
+do_download() {
+  echo "downloading $1"
+  echo "  to file $2"
+
+  url=`echo $1`
+  if test "x$platform" = "xsolaris2"; then
+    if test "x$platform_version" = "x5.9" -o "x$platform_version" = "x5.10"; then
+      # solaris 9 lacks openssl, solaris 10 lacks recent enough credentials - your base O/S is completely insecure, please upgrade
+      url=`echo $url | sed -e 's/https/http/'`
+    fi
+  fi
+
+  # we try all of these until we get success.
+  # perl, in particular may be present but LWP::Simple may not be installed
+
+  if exists wget; then
+    do_wget $url $2 && return 0
+  fi
+
+  if exists curl; then
+    do_curl $url $2 && return 0
+  fi
+
+  if exists fetch; then
+    do_fetch $url $2 && return 0
+  fi
+
+  if exists perl; then
+    do_perl $url $2 && return 0
+  fi
+
+  if exists python; then
+    do_python $url $2 && return 0
+  fi
+
+  unable_to_retrieve_package
+}
+
+# install_file TYPE FILENAME
+# TYPE is "rpm", "deb", "solaris", "sh", etc.
+install_file() {
+  echo "Installing $project $version"
+  case "$1" in
+    "rpm")
+      if test "x$platform" = "xnexus" || test "x$platform" = "xios_xr"; then
+        echo "installing with yum..."
+        yum install -yv "$2"
+      else
+        echo "installing with rpm..."
+        rpm -Uvh --oldpackage --replacepkgs "$2"
+      fi
+      ;;
+    "deb")
+      echo "installing with dpkg..."
+      dpkg -i "$2"
+      ;;
+    "bff")
+      echo "installing with installp..."
+      installp -aXYgd "$2" all
+      ;;
+    "solaris")
+      echo "installing with pkgadd..."
+      echo "conflict=nocheck" > $tmp_dir/nocheck
+      echo "action=nocheck" >> $tmp_dir/nocheck
+      echo "mail=" >> $tmp_dir/nocheck
+      pkgrm -a $tmp_dir/nocheck -n $project >/dev/null 2>&1 || true
+      pkgadd -G -n -d "$2" -a $tmp_dir/nocheck $project
+      ;;
+    "pkg")
+      echo "installing with installer..."
+      cd / && /usr/sbin/installer -pkg "$2" -target /
+      ;;
+    "dmg")
+      echo "installing dmg file..."
+      hdiutil detach "/Volumes/chef_software" >/dev/null 2>&1 || true
+      hdiutil attach "$2" -mountpoint "/Volumes/chef_software"
+      cd / && /usr/sbin/installer -pkg `find "/Volumes/chef_software" -name \*.pkg` -target /
+      hdiutil detach "/Volumes/chef_software"
+      ;;
+    "sh" )
+      echo "installing with sh..."
+      sh "$2"
+      ;;
+    "p5p" )
+      echo "installing p5p package..."
+      pkg install -g "$2" $project
+      ;;
+    *)
+      echo "Unknown filetype: $1"
+      report_bug
+      exit 1
+      ;;
+  esac
+  if test $? -ne 0; then
+    echo "Installation failed"
+    report_bug
+    exit 1
+  fi
+}
+
+if test "x$TMPDIR" = "x"; then
+  tmp="/tmp"
+else
+  tmp=$TMPDIR
+fi
+# secure-ish temp dir creation without having mktemp available (DDoS-able but not expliotable)
+tmp_dir="$tmp/install.sh.$$"
+(umask 077 && mkdir $tmp_dir) || exit 1
+
+############
+# end of helpers.sh
+############
+
+
+# script_cli_parameters.sh
+############
+# This section reads the CLI parameters for the install script and translates
+#   them to the local parameters to be used later by the script.
+#
+# Outputs:
+# $version: Requested version to be installed.
+# $channel: Channel to install the product from
+# $project: Project to be installed
+# $cmdline_filename: Name of the package downloaded on local disk.
+# $cmdline_dl_dir: Name of the directory downloaded package will be saved to on local disk.
+# $install_strategy: Method of package installations. default strategy is to always install upon exec. Set to "once" to skip if project is installed
+# $download_url_override: Install package downloaded from a direct URL.
+# $checksum: SHA256 for download_url_override file (optional)
+############
+
+# Defaults
+channel="stable"
+project="chef"
+
+while getopts pnv:c:f:P:d:s:l:a opt
+do
+  case "$opt" in
+
+    v)  version="$OPTARG";;
+    c)  channel="$OPTARG";;
+    p)  channel="current";; # compat for prerelease option
+    n)  channel="current";; # compat for nightlies option
+    f)  cmdline_filename="$OPTARG";;
+    P)  project="$OPTARG";;
+    d)  cmdline_dl_dir="$OPTARG";;
+    s)  install_strategy="$OPTARG";;
+    l)  download_url_override="$OPTARG";;
+    a)  checksum="$OPTARG";;
+    \?)   # unknown flag
+      echo >&2 \
+      "usage: $0 [-P project] [-c release_channel] [-v version] [-f filename | -d download_dir] [-s install_strategy] [-l download_url_override] [-a checksum]"
+      exit 1;;
+  esac
+done
+
+shift `expr $OPTIND - 1`
+
+
+if test -d "/opt/$project" && test "x$install_strategy" = "xonce"; then
+  echo "$project installation detected"
+  echo "install_strategy set to 'once'"
+  echo "Nothing to install"
+  exit
+fi
+
+
+# platform_detection.sh
+############
+# This section makes platform detection compatible with omnitruck on the system
+#   it runs.
+#
+# Outputs:
+# $platform: Name of the platform.
+# $platform_version: Version of the platform.
+# $machine: System's architecture.
+############
+
+#
+# Platform and Platform Version detection
+#
+# NOTE: This should now match ohai platform and platform_version matching.
+# do not invented new platform and platform_version schemas, just make this behave
+# like what ohai returns as platform and platform_version for the server.
+#
+# ALSO NOTE: Do not mangle platform or platform_version here.  It is less error
+# prone and more future-proof to do that in the server, and then all omnitruck clients
+# will 'inherit' the changes (install.sh is not the only client of the omnitruck
+# endpoint out there).
+#
+
+machine=`uname -m`
+os=`uname -s`
+
+if test -f "/etc/lsb-release" && grep -q DISTRIB_ID /etc/lsb-release && ! grep -q wrlinux /etc/lsb-release; then
+  platform=`grep DISTRIB_ID /etc/lsb-release | cut -d "=" -f 2 | tr '[A-Z]' '[a-z]'`
+  platform_version=`grep DISTRIB_RELEASE /etc/lsb-release | cut -d "=" -f 2`
+
+  if test "$platform" = "\"cumulus linux\""; then
+    platform="cumulus_linux"
+  elif test "$platform" = "\"cumulus networks\""; then
+    platform="cumulus_networks"
+  fi
+
+elif test -f "/etc/debian_version"; then
+  platform="debian"
+  platform_version=`cat /etc/debian_version`
+elif test -f "/etc/Eos-release"; then
+  # EOS may also contain /etc/redhat-release so this check must come first.
+  platform=arista_eos
+  platform_version=`awk '{print $4}' /etc/Eos-release`
+  machine="i386"
+elif test -f "/etc/redhat-release"; then
+  platform=`sed 's/^\(.\+\) release.*/\1/' /etc/redhat-release | tr '[A-Z]' '[a-z]'`
+  platform_version=`sed 's/^.\+ release \([.0-9]\+\).*/\1/' /etc/redhat-release`
+
+  # If /etc/redhat-release exists, we act like RHEL by default
+  if test "$platform" = "fedora"; then
+    # FIXME: stop remapping fedora to el
+    # FIXME: remove client side platform_version mangling and hard coded yolo
+    # Change platform version for use below.
+    platform_version="6.0"
+  fi
+
+  if test "$platform" = "xenserver"; then
+    # Current XenServer 6.2 is based on CentOS 5, platform is not reset to "el" server should hanlde response
+    platform="xenserver"
+  else
+    # FIXME: use "redhat"
+    platform="el"
+  fi
+
+elif test -f "/etc/system-release"; then
+  platform=`sed 's/^\(.\+\) release.\+/\1/' /etc/system-release | tr '[A-Z]' '[a-z]'`
+  platform_version=`sed 's/^.\+ release \([.0-9]\+\).*/\1/' /etc/system-release | tr '[A-Z]' '[a-z]'`
+  # amazon is built off of fedora, so act like RHEL
+  # Version 1. Example: Amazon Linux AMI release 2017.09
+  if test "$platform" = "amazon linux ami"; then
+    platform="el"
+    platform_version="6.0"
+  # Version 2. Example: Amazon Linux release 2.0 (2017.12)
+  elif test "$platform" = "amazon linux"; then
+    platform="el"
+    platform_version="7.0"
+  fi
+# Apple OS X
+elif test -f "/usr/bin/sw_vers"; then
+  platform="mac_os_x"
+  # Matching the tab-space with sed is error-prone
+  platform_version=`sw_vers | awk '/^ProductVersion:/ { print $2 }' | cut -d. -f1,2`
+
+  # x86_64 Apple hardware often runs 32-bit kernels (see OHAI-63)
+  x86_64=`sysctl -n hw.optional.x86_64`
+  if test $x86_64 -eq 1; then
+    machine="x86_64"
+  fi
+elif test -f "/etc/release"; then
+  machine=`/usr/bin/uname -p`
+  if grep -q SmartOS /etc/release; then
+    platform="smartos"
+    platform_version=`grep ^Image /etc/product | awk '{ print $3 }'`
+  else
+    platform="solaris2"
+    platform_version=`/usr/bin/uname -r`
+  fi
+elif test -f "/etc/SuSE-release"; then
+  if grep -q 'Enterprise' /etc/SuSE-release;
+  then
+      platform="sles"
+      platform_version=`awk '/^VERSION/ {V = $3}; /^PATCHLEVEL/ {P = $3}; END {print V "." P}' /etc/SuSE-release`
+  else
+      platform="suse"
+      platform_version=`awk '/^VERSION =/ { print $3 }' /etc/SuSE-release`
+  fi
+elif test "x$os" = "xFreeBSD"; then
+  platform="freebsd"
+  platform_version=`uname -r | sed 's/-.*//'`
+elif test "x$os" = "xAIX"; then
+  platform="aix"
+  platform_version="`uname -v`.`uname -r`"
+  machine="powerpc"
+elif test -f "/etc/os-release"; then
+  . /etc/os-release
+  if test "x$CISCO_RELEASE_INFO" != "x"; then
+    . $CISCO_RELEASE_INFO
+  fi
+
+  platform=$ID
+  platform_version=$VERSION
+fi
+
+if test "x$platform" = "x"; then
+  echo "Unable to determine platform version!"
+  report_bug
+  exit 1
+fi
+
+#
+# NOTE: platform manging in the install.sh is DEPRECATED
+#
+# - install.sh should be true to ohai and should not remap
+#   platform or platform versions.
+#
+# - remapping platform and mangling platform version numbers is
+#   now the complete responsibility of the server-side endpoints
+#
+
+major_version=`echo $platform_version | cut -d. -f1`
+case $platform in
+  # FIXME: should remove this case statement completely
+  "el")
+    # FIXME:  "el" is deprecated, should use "redhat"
+    platform_version=$major_version
+    ;;
+  "debian")
+    if test "x$major_version" = "x5"; then
+      # This is here for potential back-compat.
+      # We do not have 5 in versions we publish for anymore but we
+      # might have it for earlier versions.
+      platform_version="6"
+    else
+      platform_version=$major_version
+    fi
+    ;;
+  "freebsd")
+    platform_version=$major_version
+    ;;
+  "sles")
+    platform_version=$major_version
+    ;;
+  "suse")
+    platform_version=$major_version
+    ;;
+esac
+
+# normalize the architecture we detected
+case $machine in
+  "x86_64"|"amd64"|"x64")
+    machine="x86_64"
+    ;;
+  "i386"|"i86pc"|"x86"|"i686")
+    machine="i386"
+    ;;
+  "sparc"|"sun4u"|"sun4v")
+    machine="sparc"
+    ;;
+esac
+
+if test "x$platform_version" = "x"; then
+  echo "Unable to determine platform version!"
+  report_bug
+  exit 1
+fi
+
+if test "x$platform" = "xsolaris2"; then
+  # hack up the path on Solaris to find wget, pkgadd
+  PATH=/usr/sfw/bin:/usr/sbin:$PATH
+  export PATH
+fi
+
+echo "$platform $platform_version $machine"
+
+############
+# end of platform_detection.sh
+############
+
+
+# All of the download utilities in this script load common proxy env vars.
+# If variables are set they will override any existing env vars.
+# Otherwise, default proxy env vars will be loaded by the respective
+# download utility.
+
+if test "x$https_proxy" != "x"; then
+  echo "setting https_proxy: $https_proxy"
+  export HTTPS_PROXY=$https_proxy
+  export https_proxy=$https_proxy
+fi
+
+if test "x$http_proxy" != "x"; then
+  echo "setting http_proxy: $http_proxy"
+  export HTTP_PROXY=$http_proxy
+  export http_proxy=$http_proxy
+fi
+
+if test "x$ftp_proxy" != "x"; then
+  echo "setting ftp_proxy: $ftp_proxy"
+  export FTP_PROXY=$ftp_proxy
+  export ftp_proxy=$ftp_proxy
+fi
+
+if test "x$no_proxy" != "x"; then
+  echo "setting no_proxy: $no_proxy"
+  export NO_PROXY=$no_proxy
+  export no_proxy=$no_proxy
+fi
+
+
+# fetch_metadata.sh
+############
+# This section calls omnitruck to get the information about the build to be
+#   installed.
+#
+# Inputs:
+# $channel:
+# $project:
+# $version:
+# $platform:
+# $platform_version:
+# $machine:
+# $tmp_dir:
+#
+# Outputs:
+# $download_url:
+# $sha256:
+############
+
+if test "x$download_url_override" = "x"; then
+  echo "Getting information for $project $channel $version for $platform..."
+
+  metadata_filename="$tmp_dir/metadata.txt"
+  metadata_url="https://omnitruck-direct.chef.io/$channel/$project/metadata?v=$version&p=$platform&pv=$platform_version&m=$machine"
+
+  do_download "$metadata_url"  "$metadata_filename"
+
+  cat "$metadata_filename"
+
+  echo ""
+  # check that all the mandatory fields in the downloaded metadata are there
+  if grep '^url' $metadata_filename > /dev/null && grep '^sha256' $metadata_filename > /dev/null; then
+    echo "downloaded metadata file looks valid..."
+  else
+    echo "downloaded metadata file is corrupted or an uncaught error was encountered in downloading the file..."
+    # this generally means one of the download methods downloaded a 404 or something like that and then reported a successful exit code,
+    # and this should be fixed in the function that was doing the download.
+    report_bug
+    exit 1
+  fi
+
+  download_url=`awk '$1 == "url" { print $2 }' "$metadata_filename"`
+  sha256=`awk '$1 == "sha256" { print $2 }' "$metadata_filename"`
+else
+  download_url=$download_url_override
+  # Set sha256 to empty string if checksum not set
+  sha256=${checksum=""}
+fi
+
+############
+# end of fetch_metadata.sh
+############
+
+
+# fetch_package.sh
+############
+# This section fetchs a package from $download_url and verifies its metadata.
+#
+# Inputs:
+# $download_url:
+# $tmp_dir:
+# Optional Inputs:
+# $cmdline_filename: Name of the package downloaded on local disk.
+# $cmdline_dl_dir: Name of the directory downloaded package will be saved to on local disk.
+#
+# Outputs:
+# $download_filename: Name of the downloaded file on local disk.
+# $filetype: Type of the file downloaded.
+############
+
+filename=`echo $download_url | sed -e 's/^.*\///'`
+filetype=`echo $filename | sed -e 's/^.*\.//'`
+
+# use either $tmp_dir, the provided directory (-d) or the provided filename (-f)
+if test "x$cmdline_filename" != "x"; then
+  download_filename="$cmdline_filename"
+elif test "x$cmdline_dl_dir" != "x"; then
+  download_filename="$cmdline_dl_dir/$filename"
+else
+  download_filename="$tmp_dir/$filename"
+fi
+
+# ensure the parent directory where to download the installer always exists
+download_dir=`dirname $download_filename`
+(umask 077 && mkdir -p $download_dir) || exit 1
+
+# check if we have that file locally available and if so verify the checksum
+# Use cases
+# 1) metadata - new download
+# 2) metadata - cached download when cmdline_dl_dir set
+# 3) url override - no checksum new download
+# 4) url override - with checksum new download
+# 5) url override - with checksum cached download when cmdline_dl_dir set
+
+cached_file_available="false"
+verify_checksum="true"
+
+if test -f $download_filename; then
+  echo "$download_filename exists"
+  cached_file_available="true"
+fi
+
+if test "x$download_url_override" != "x"; then
+  echo "Download URL override specified"
+  if test "x$cached_file_available" = "xtrue"; then
+    echo "Verifying local file"
+    if test "x$sha256" = "x"; then
+      echo "Checksum not specified, ignoring existing file"
+      cached_file_available="false" # download new file
+      verify_checksum="false" # no checksum to compare after download
+    elif do_checksum "$download_filename" "$sha256"; then
+      echo "Checksum match, using existing file"
+      cached_file_available="true" # don't need to download file
+      verify_checksum="false" # don't need to checksum again
+    else
+      echo "Checksum mismatch, ignoring existing file"
+      cached_file_available="false" # download new file
+      verify_checksum="true" # checksum new downloaded file
+    fi
+  else
+    echo "$download_filename not found"
+    cached_file_available="false" # download new file
+    if test "x$sha256" = "x"; then
+      verify_checksum="false" # no checksum to compare after download
+    else
+      verify_checksum="true" # checksum new downloaded file
+    fi
+  fi
+fi
+
+if test "x$cached_file_available" != "xtrue"; then
+  do_download "$download_url" "$download_filename"
+fi
+
+if test "x$verify_checksum" = "xtrue"; then
+  do_checksum "$download_filename" "$sha256" || checksum_mismatch
+fi
+
+############
+# end of fetch_package.sh
+############
+
+
+# install_package.sh
+############
+# Installs a package and removed the temp directory.
+#
+# Inputs:
+# $download_filename: Name of the file to be installed.
+# $filetype: Type of the file to be installed.
+# $version: The version requested. Used only for warning user if not set.
+############
+
+if test "x$version" = "x" -a "x$CI" != "xtrue"; then
+  echo
+  echo "WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING"
+  echo
+  echo "You are installing an omnibus package without a version pin.  If you are installing"
+  echo "on production servers via an automated process this is DANGEROUS and you will"
+  echo "be upgraded without warning on new releases, even to new major releases."
+  echo "Letting the version float is only appropriate in desktop, test, development or"
+  echo "CI/CD environments."
+  echo
+  echo "WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING"
+  echo
+fi
+
+install_file $filetype "$download_filename"
+
+if test "x$tmp_dir" != "x"; then
+  rm -r "$tmp_dir"
+fi
+
+############
+# end of install_package.sh
+############
+[root@localhost ~]# curl -L https://www.chef.io/chef/install.sh | sudo bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 23436  100 23436    0     0  21037      0  0:00:01  0:00:01 --:--:-- 21056
+el 6 x86_64
+Getting information for chef stable  for el...
+downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=&p=el&pv=6&m=x86_64
+  to file /tmp/install.sh.3896/metadata.txt
+trying wget...
+sha1	189b8c0161f89d612dbefc08ccd2683a398f4dc3
+sha256	4e6b27362e7a14944cf2208910bcb297915400835e0df56d40a60a354fab17e9
+url	https://packages.chef.io/files/stable/chef/14.2.0/el/6/chef-14.2.0-1.el6.x86_64.rpm
+version	14.2.0
+downloaded metadata file looks valid...
+downloading https://packages.chef.io/files/stable/chef/14.2.0/el/6/chef-14.2.0-1.el6.x86_64.rpm
+  to file /tmp/install.sh.3896/chef-14.2.0-1.el6.x86_64.rpm
+trying wget...
+Comparing checksum with sha256sum...
+
+WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+
+You are installing an omnibus package without a version pin.  If you are installing
+on production servers via an automated process this is DANGEROUS and you will
+be upgraded without warning on new releases, even to new major releases.
+Letting the version float is only appropriate in desktop, test, development or
+CI/CD environments.
+
+WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+
+Installing chef 
+installing with rpm...
+warning: /tmp/install.sh.3896/chef-14.2.0-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:chef-14.2.0-1.el6                ################################# [ 50%]
+Thank you for installing Chef!
+Cleaning up / removing...
+   2:chef-14.0.202-1.el6              ################################# [100%]
+[root@localhost ~]# chef-client
+Starting Chef Client, version 14.2.0
+[2018-06-19T22:29:45+05:30] WARN: Using deprecated positional arguments for sign(), please update to keyword arguments (from /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.2.0/lib/chef/http/authenticator.rb:114)
+[2018-06-19T22:29:46+05:30] WARN: Using deprecated positional arguments for sign(), please update to keyword arguments (from /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.2.0/lib/chef/http/authenticator.rb:114)
+[2018-06-19T22:29:48+05:30] WARN: Using deprecated positional arguments for sign(), please update to keyword arguments (from /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.2.0/lib/chef/http/authenticator.rb:114)
+resolving cookbooks for run list: ["sample1"]
+[2018-06-19T22:29:49+05:30] WARN: Using deprecated positional arguments for sign(), please update to keyword arguments (from /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.2.0/lib/chef/http/authenticator.rb:114)
+Synchronizing Cookbooks:
+  - sample1 (0.2.0)
+Installing Cookbook Gems:
+Compiling Cookbooks...
+[2018-06-19T22:29:51+05:30] WARN: Using deprecated positional arguments for sign(), please update to keyword arguments (from /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.2.0/lib/chef/http/authenticator.rb:114)
+Converging 3 resources
+Recipe: sample1::default
+  * dnf_package[httpd] action install (up to date)
+  * service[httpd] action start
+    
+    ================================================================================
+    Error executing action `start` on resource 'service[httpd]'
+    ================================================================================
+    
+    Mixlib::ShellOut::ShellCommandFailed
+    ------------------------------------
+    Expected process to exit with [0], but received '1'
+    ---- Begin output of /usr/bin/systemctl --system start httpd ----
+    STDOUT: 
+    STDERR: Job for httpd.service failed because the control process exited with error code.
+    See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+    ---- End output of /usr/bin/systemctl --system start httpd ----
+    Ran /usr/bin/systemctl --system start httpd returned 1
+    
+    Resource Declaration:
+    ---------------------
+    # In /var/chef/cache/cookbooks/sample1/recipes/default.rb
+    
+     11: service 'httpd' do
+     12:        action :start       
+     13:         
+     14: end
+     15: 
+    
+    Compiled Resource:
+    ------------------
+    # Declared in /var/chef/cache/cookbooks/sample1/recipes/default.rb:11:in `from_file'
+    
+    service("httpd") do
+      action [:start]
+      default_guard_interpreter :default
+      service_name "httpd"
+      enabled nil
+      running nil
+      masked nil
+      pattern "httpd"
+      declared_type :service
+      cookbook_name "sample1"
+      recipe_name "default"
+    end
+    
+    System Info:
+    ------------
+    chef_version=14.2.0
+    platform=fedora
+    platform_version=26
+    ruby=ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+    program_name=/usr/bin/chef-client
+    executable=/opt/chef/bin/chef-client
+    
+
+Running handlers:
+[2018-06-19T22:29:56+05:30] ERROR: Running exception handlers
+Running handlers complete
+[2018-06-19T22:29:56+05:30] ERROR: Exception handlers complete
+Chef Client failed. 0 resources updated in 16 seconds
+[2018-06-19T22:29:56+05:30] WARN: Using deprecated positional arguments for sign(), please update to keyword arguments (from /opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.2.0/lib/chef/http/authenticator.rb:114)
+[2018-06-19T22:29:59+05:30] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+[2018-06-19T22:29:59+05:30] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+[2018-06-19T22:29:59+05:30] FATAL: Mixlib::ShellOut::ShellCommandFailed: service[httpd] (sample1::default line 11) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+---- Begin output of /usr/bin/systemctl --system start httpd ----
+STDOUT: 
+STDERR: Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+---- End output of /usr/bin/systemctl --system start httpd ----
+Ran /usr/bin/systemctl --system start httpd returned 1
+[root@localhost ~]# sudo netstat -ntlp | grep :8080
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      3812/nginx: master  
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1293/beam.smp       
+[root@localhost ~]# systemctl status sshd.service
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Tue 2018-06-19 22:10:47 IST; 19min ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 1235 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─1235 /usr/sbin/sshd -D
+
+Jun 19 22:10:47 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Jun 19 22:10:47 localhost.localdomain sshd[1235]: Server listening on 0.0.0.0 port 22.
+Jun 19 22:10:47 localhost.localdomain sshd[1235]: Server listening on :: port 22.
+Jun 19 22:10:47 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+[root@localhost ~]# vi /etc/ssh/sshd_config
+[root@localhost ~]# systemctl status nginx.service
+Unit nginx.service could not be found.
+[root@localhost ~]# lsof -i:80
+COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+nginx   3812    root   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+nginx   3814 opscode   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+nginx   3815 opscode   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+nginx   3816 opscode   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+nginx   3817 opscode   16u  IPv4  58652      0t0  TCP *:http (LISTEN)
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      3812/nginx: master  
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1293/beam.smp       
+[root@localhost ~]# kill -TERM 3812
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+\\tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      4580/nginx: master  
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1293/beam.smp       
+[root@localhost ~]# yum -y install httpd
+Last metadata expiration check: 0:41:06 ago on Tue 19 Jun 2018 09:51:10 PM IST.
+Package httpd-2.4.29-1.fc26.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@localhost ~]# dnf install nginx
+Last metadata expiration check: 0:41:22 ago on Tue 19 Jun 2018 09:51:10 PM IST.
+Package nginx-1:1.12.1-1.fc26.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@localhost ~]# systemctl status nginx.service 
+Unit nginx.service could not be found.
+[root@localhost ~]# systemctl start nginx.service
+Failed to start nginx.service: Unit nginx.service not found.
+[root@localhost ~]# systemctl restart nginx
+Failed to restart nginx.service: Unit nginx.service not found.
+[root@localhost ~]# chef-server-ctl status
+run: bookshelf: (pid 1290) 1382s; run: log: (pid 1246) 1383s
+run: nginx: (pid 4580) 116s; run: log: (pid 1252) 1383s
+run: oc_bifrost: (pid 1288) 1382s; run: log: (pid 1251) 1383s
+run: oc_id: (pid 1413) 1382s; run: log: (pid 1241) 1383s
+run: opscode-erchef: (pid 1293) 1382s; run: log: (pid 1249) 1383s
+run: opscode-expander: (pid 1412) 1382s; run: log: (pid 1244) 1383s
+run: opscode-solr4: (pid 1411) 1382s; run: log: (pid 1243) 1383s
+run: postgresql: (pid 1286) 1382s; run: log: (pid 1250) 1383s
+run: rabbitmq: (pid 1294) 1382s; run: log: (pid 1247) 1383s
+run: redis_lb: (pid 1291) 1382s; run: log: (pid 1245) 1383s
+[root@localhost ~]# yum install nginx
+Last metadata expiration check: 0:47:24 ago on Tue 19 Jun 2018 09:51:10 PM IST.
+Package nginx-1:1.12.1-1.fc26.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@localhost ~]# yum -y install epel-release
+Last metadata expiration check: 0:47:30 ago on Tue 19 Jun 2018 09:51:10 PM IST.
+No match for argument: epel-release
+Error: Unable to find a match
+[root@localhost ~]# /etc/init.d/nginx start
+-bash: /etc/init.d/nginx: No such file or directory
+[root@localhost ~]# chkconfig --list nginx
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service nginx: No such file or directory
+[root@localhost ~]# rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+Retrieving http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+warning: /var/tmp/rpm-tmp.2xNKlB: Header V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY
+error: Failed dependencies:
+	fedora-release conflicts with epel-release-6-8.noarch
+[root@localhost ~]# yum update -y
+Last metadata expiration check: 0:56:30 ago on Tue 19 Jun 2018 09:51:10 PM IST.
+Dependencies resolved.
+========================================================================================================================
+ Package                                  Arch             Version                              Repository         Size
+========================================================================================================================
+Upgrading:
+ LibRaw                                   x86_64           0.18.11-1.fc26                       updates           349 k
+ copy-jdk-configs                         noarch           3.3-9.fc26                           updates            24 k
+ dhcp-client                              x86_64           12:4.3.5-11.fc26                     updates           308 k
+ dhcp-common                              noarch           12:4.3.5-11.fc26                     updates           199 k
+ dhcp-libs                                x86_64           12:4.3.5-11.fc26                     updates           139 k
+ evince                                   x86_64           3.24.2-3.fc26                        updates           2.6 M
+ evince-djvu                              x86_64           3.24.2-3.fc26                        updates            55 k
+ evince-libs                              x86_64           3.24.2-3.fc26                        updates           364 k
+ evince-nautilus                          x86_64           3.24.2-3.fc26                        updates            44 k
+ firefox                                  x86_64           60.0-4.fc26                          updates            90 M
+ firewalld                                noarch           0.4.4.5-4.fc26                       updates           478 k
+ firewalld-filesystem                     noarch           0.4.4.5-4.fc26                       updates            71 k
+ glusterfs                                x86_64           3.10.12-1.fc26                       updates           545 k
+ glusterfs-api                            x86_64           3.10.12-1.fc26                       updates            99 k
+ glusterfs-cli                            x86_64           3.10.12-1.fc26                       updates           206 k
+ glusterfs-client-xlators                 x86_64           3.10.12-1.fc26                       updates           861 k
+ glusterfs-fuse                           x86_64           3.10.12-1.fc26                       updates           144 k
+ glusterfs-libs                           x86_64           3.10.12-1.fc26                       updates           389 k
+ google-noto-emoji-color-fonts            noarch           20180508-1.fc26                      updates           6.4 M
+ google-noto-emoji-fonts                  noarch           20180508-1.fc26                      updates           294 k
+ hplip                                    x86_64           3.18.4-2.fc26                        updates            16 M
+ hplip-common                             x86_64           3.18.4-2.fc26                        updates           107 k
+ hplip-libs                               x86_64           3.18.4-2.fc26                        updates           194 k
+ httpd                                    x86_64           2.4.33-4.fc26                        updates           1.3 M
+ httpd-filesystem                         noarch           2.4.33-4.fc26                        updates            28 k
+ httpd-manual                             noarch           2.4.33-4.fc26                        updates           2.4 M
+ httpd-tools                              x86_64           2.4.33-4.fc26                        updates            90 k
+ hwdata                                   noarch           0.312-1.fc26                         updates           1.5 M
+ iptables                                 x86_64           1.6.2-3.fc26                         updates           443 k
+ iptables-libs                            x86_64           1.6.2-3.fc26                         updates            89 k
+ kernel-headers                           x86_64           4.16.11-100.fc26                     updates           1.2 M
+ krb5-libs                                x86_64           1.15.2-8.fc26                        updates           800 k
+ libetonyek                               x86_64           0.1.8-1.fc26                         updates           776 k
+ libipa_hbac                              x86_64           1.16.1-4.fc26                        updates            85 k
+ libmwaw                                  x86_64           0.3.14-1.fc26                        updates           2.6 M
+ libnfs                                   x86_64           1.11.0-1.fc26                        updates            95 k
+ libpsl                                   x86_64           0.18.0-2.fc26                        updates            50 k
+ libsane-hpaio                            x86_64           3.18.4-2.fc26                        updates           124 k
+ libsss_autofs                            x86_64           1.16.1-4.fc26                        updates            87 k
+ libsss_certmap                           x86_64           1.16.1-4.fc26                        updates           114 k
+ libsss_idmap                             x86_64           1.16.1-4.fc26                        updates            90 k
+ libsss_nss_idmap                         x86_64           1.16.1-4.fc26                        updates            96 k
+ libsss_sudo                              x86_64           1.16.1-4.fc26                        updates            85 k
+ libstaroffice                            x86_64           0.0.6-1.fc26                         updates           836 k
+ libwps                                   x86_64           0.4.9-1.fc26                         updates           823 k
+ mod_ssl                                  x86_64           1:2.4.33-4.fc26                      updates           116 k
+ net-tools                                x86_64           2.0-0.45.20160912git.fc26            updates           311 k
+ nss                                      x86_64           3.36.1-1.0.fc26                      updates           846 k
+ nss-softokn                              x86_64           3.36.1-1.0.fc26                      updates           388 k
+ nss-softokn-freebl                       x86_64           3.36.1-1.0.fc26                      updates           232 k
+ nss-sysinit                              x86_64           3.36.1-1.0.fc26                      updates            62 k
+ nss-tools                                x86_64           3.36.1-1.0.fc26                      updates           516 k
+ nss-util                                 x86_64           3.36.1-1.0.fc26                      updates            88 k
+ open-vm-tools                            x86_64           10.2.5-2.fc26                        updates           666 k
+ open-vm-tools-desktop                    x86_64           10.2.5-2.fc26                        updates           162 k
+ osinfo-db                                noarch           20180514-1.fc26                      updates           149 k
+ perl-Digest-SHA                          x86_64           1:6.02-1.fc26                        updates            63 k
+ php                                      x86_64           7.1.17-1.fc26                        updates           2.8 M
+ php-cli                                  x86_64           7.1.17-1.fc26                        updates           4.2 M
+ php-common                               x86_64           7.1.17-1.fc26                        updates           1.0 M
+ php-json                                 x86_64           7.1.17-1.fc26                        updates            70 k
+ php-ldap                                 x86_64           7.1.17-1.fc26                        updates            77 k
+ php-mysqlnd                              x86_64           7.1.17-1.fc26                        updates           239 k
+ php-pdo                                  x86_64           7.1.17-1.fc26                        updates           134 k
+ publicsuffix-list-dafsa                  noarch           20180419-1.fc26                      updates            47 k
+ python2                                  x86_64           2.7.15-1.fc26                        updates            99 k
+ python2-libs                             x86_64           2.7.15-1.fc26                        updates           6.3 M
+ python2-pip                              noarch           9.0.3-2.fc26                         updates           2.0 M
+ python3-firewall                         noarch           0.4.4.5-4.fc26                       updates           360 k
+ python3-pip                              noarch           9.0.3-2.fc26                         updates           1.9 M
+ python3-sssdconfig                       noarch           1.16.1-4.fc26                        updates           103 k
+ python3-urllib3                          noarch           1.20-3.fc26                          updates           153 k
+ qt5-qtdeclarative                        x86_64           5.9.4-3.fc26                         updates           3.2 M
+ rsyslog                                  x86_64           8.35.0-2.fc26                        updates           664 k
+ ruby                                     x86_64           2.4.4-88.fc26                        updates            79 k
+ ruby-irb                                 noarch           2.4.4-88.fc26                        updates            96 k
+ ruby-libs                                x86_64           2.4.4-88.fc26                        updates           2.8 M
+ rubygem-bigdecimal                       x86_64           1.3.2-88.fc26                        updates            90 k
+ rubygem-did_you_mean                     x86_64           1.1.0-88.fc26                        updates            82 k
+ rubygem-io-console                       x86_64           0.4.6-88.fc26                        updates            60 k
+ rubygem-openssl                          x86_64           2.0.7-88.fc26                        updates           177 k
+ rubygem-psych                            x86_64           2.2.2-88.fc26                        updates            89 k
+ rubygems                                 noarch           2.6.14.1-88.fc26                     updates           293 k
+ sssd                                     x86_64           1.16.1-4.fc26                        updates            77 k
+ sssd-ad                                  x86_64           1.16.1-4.fc26                        updates           205 k
+ sssd-client                              x86_64           1.16.1-4.fc26                        updates           142 k
+ sssd-common                              x86_64           1.16.1-4.fc26                        updates           1.3 M
+ sssd-common-pac                          x86_64           1.16.1-4.fc26                        updates           148 k
+ sssd-ipa                                 x86_64           1.16.1-4.fc26                        updates           296 k
+ sssd-krb5                                x86_64           1.16.1-4.fc26                        updates           119 k
+ sssd-krb5-common                         x86_64           1.16.1-4.fc26                        updates           153 k
+ sssd-ldap                                x86_64           1.16.1-4.fc26                        updates           170 k
+ sssd-nfs-idmap                           x86_64           1.16.1-4.fc26                        updates            83 k
+ sssd-proxy                               x86_64           1.16.1-4.fc26                        updates           112 k
+ vim-minimal                              x86_64           2:8.0.1806-1.fc26                    updates           566 k
+ webkitgtk4                               x86_64           2.20.2-1.fc26                        updates            13 M
+ webkitgtk4-jsc                           x86_64           2.20.2-1.fc26                        updates           4.6 M
+ webkitgtk4-plugin-process-gtk2           x86_64           2.20.2-1.fc26                        updates            10 M
+ wget                                     x86_64           1.19.5-1.fc26                        updates           725 k
+ xdg-utils                                noarch           1.1.3-1.fc26                         updates            83 k
+ xen-libs                                 x86_64           4.8.3-5.fc26                         updates           657 k
+ xen-licenses                             x86_64           4.8.3-5.fc26                         updates           118 k
+Installing dependencies:
+ kernel                                   x86_64           4.16.11-100.fc26                     updates            74 k
+ kernel-core                              x86_64           4.16.11-100.fc26                     updates            23 M
+ kernel-modules                           x86_64           4.16.11-100.fc26                     updates            27 M
+ kernel-modules-extra                     x86_64           4.16.11-100.fc26                     updates           2.2 M
+
+Transaction Summary
+========================================================================================================================
+Install    4 Packages
+Upgrade  102 Packages
+
+Total download size: 249 M
+Downloading Packages:
+(1/106): ruby-irb-2.4.3-87.fc26_2.4.4-88.fc26.noarch.drpm                                57 kB/s |  56 kB     00:00    
+(2/106): rubygem-bigdecimal-1.3.0-87.fc26_1.3.2-88.fc26.x86_64.drpm                      53 kB/s |  57 kB     00:01    
+(3/106): rubygem-did_you_mean-1.1.0-87.fc26_1.1.0-88.fc26.x86_64.drpm                   161 kB/s |  56 kB     00:00    
+[DRPM 1/7] ruby-irb-2.4.3-87.fc26_2.4.4-88.fc26.noarch.drpm: done                                                      
+[DRPM 2/7] rubygem-bigdecimal-1.3.0-87.fc26_1.3.2-88.fc26.x86_64.drpm: done                                            
+(4/106): rubygem-openssl-2.0.5-87.fc26_2.0.7-88.fc26.x86_64.drpm                        233 kB/s |  87 kB     00:00    
+(5/106): rubygem-psych-2.2.2-87.fc26_2.2.2-88.fc26.x86_64.drpm                          234 kB/s |  58 kB     00:00    
+[DRPM 3/7] rubygem-did_you_mean-1.1.0-87.fc26_1.1.0-88.fc26.x86_64.drpm: done                                          
+[DRPM 4/7] rubygem-openssl-2.0.5-87.fc26_2.0.7-88.fc26.x86_64.drpm: done                                               
+(6/106): rubygems-2.6.14.1-87.fc26_2.6.14.1-88.fc26.noarch.drpm                         311 kB/s |  77 kB     00:00    
+(7/106): kernel-4.16.11-100.fc26.x86_64.rpm                                             268 kB/s |  74 kB     00:00    
+(8/106): ruby-libs-2.4.3-87.fc26_2.4.4-88.fc26.x86_64.drpm                              242 kB/s | 464 kB     00:01    
+[DRPM 5/7] rubygem-psych-2.2.2-87.fc26_2.2.2-88.fc26.x86_64.drpm: done                                                 
+(9/106): kernel-modules-extra-4.16.11-100.fc26.x86_64.rpm                               213 kB/s | 2.2 MB     00:10    
+(10/106): LibRaw-0.18.11-1.fc26.x86_64.rpm                                              412 kB/s | 349 kB     00:00    
+(11/106): copy-jdk-configs-3.3-9.fc26.noarch.rpm                                        229 kB/s |  24 kB     00:00    
+(12/106): dhcp-client-4.3.5-11.fc26.x86_64.rpm                                          445 kB/s | 308 kB     00:00    
+(13/106): dhcp-common-4.3.5-11.fc26.noarch.rpm                                          419 kB/s | 199 kB     00:00    
+(14/106): dhcp-libs-4.3.5-11.fc26.x86_64.rpm                                            415 kB/s | 139 kB     00:00    
+(15/106): evince-3.24.2-3.fc26.x86_64.rpm                                               576 kB/s | 2.6 MB     00:04    
+(16/106): evince-libs-3.24.2-3.fc26.x86_64.rpm                                          552 kB/s | 364 kB     00:00    
+(17/106): evince-nautilus-3.24.2-3.fc26.x86_64.rpm                                      156 kB/s |  44 kB     00:00    
+(18/106): evince-djvu-3.24.2-3.fc26.x86_64.rpm                                          241 kB/s |  55 kB     00:00    
+(19/106): kernel-core-4.16.11-100.fc26.x86_64.rpm                                       477 kB/s |  23 MB     00:50    
+(20/106): kernel-modules-4.16.11-100.fc26.x86_64.rpm                                    542 kB/s |  27 MB     00:50    
+(21/106): nss-softokn-3.36.1-1.0.fc26.x86_64.rpm                                        474 kB/s | 388 kB     00:00    
+(22/106): nss-3.36.1-1.0.fc26.x86_64.rpm                                                502 kB/s | 846 kB     00:01    
+(23/106): nss-util-3.36.1-1.0.fc26.x86_64.rpm                                           344 kB/s |  88 kB     00:00    
+(24/106): nss-softokn-freebl-3.36.1-1.0.fc26.x86_64.rpm                                 426 kB/s | 232 kB     00:00    
+(25/106): nss-sysinit-3.36.1-1.0.fc26.x86_64.rpm                                        243 kB/s |  62 kB     00:00    
+(26/106): nss-tools-3.36.1-1.0.fc26.x86_64.rpm                                          476 kB/s | 516 kB     00:01    
+(27/106): firewalld-filesystem-0.4.4.5-4.fc26.noarch.rpm                                298 kB/s |  71 kB     00:00    
+(28/106): firewalld-0.4.4.5-4.fc26.noarch.rpm                                           453 kB/s | 478 kB     00:01    
+(29/106): python3-firewall-0.4.4.5-4.fc26.noarch.rpm                                    464 kB/s | 360 kB     00:00    
+(30/106): glusterfs-3.10.12-1.fc26.x86_64.rpm                                           499 kB/s | 545 kB     00:01    
+(31/106): glusterfs-libs-3.10.12-1.fc26.x86_64.rpm                                      469 kB/s | 389 kB     00:00    
+(32/106): glusterfs-api-3.10.12-1.fc26.x86_64.rpm                                       398 kB/s |  99 kB     00:00    
+(33/106): glusterfs-fuse-3.10.12-1.fc26.x86_64.rpm                                      408 kB/s | 144 kB     00:00    
+(34/106): glusterfs-cli-3.10.12-1.fc26.x86_64.rpm                                       430 kB/s | 206 kB     00:00    
+(35/106): glusterfs-client-xlators-3.10.12-1.fc26.x86_64.rpm                            528 kB/s | 861 kB     00:01    
+(36/106): google-noto-emoji-fonts-20180508-1.fc26.noarch.rpm                            164 kB/s | 294 kB     00:01    
+(37/106): google-noto-emoji-color-fonts-20180508-1.fc26.noarch.rpm                      497 kB/s | 6.4 MB     00:13    
+(38/106): hplip-libs-3.18.4-2.fc26.x86_64.rpm                                           414 kB/s | 194 kB     00:00    
+(39/106): hplip-common-3.18.4-2.fc26.x86_64.rpm                                         275 kB/s | 107 kB     00:00    
+(40/106): libsane-hpaio-3.18.4-2.fc26.x86_64.rpm                                        332 kB/s | 124 kB     00:00    
+(41/106): httpd-2.4.33-4.fc26.x86_64.rpm                                                552 kB/s | 1.3 MB     00:02    
+(42/106): httpd-filesystem-2.4.33-4.fc26.noarch.rpm                                     224 kB/s |  28 kB     00:00    
+(43/106): httpd-tools-2.4.33-4.fc26.x86_64.rpm                                           90 kB/s |  90 kB     00:01    
+(44/106): mod_ssl-2.4.33-4.fc26.x86_64.rpm                                              255 kB/s | 116 kB     00:00    
+(45/106): httpd-manual-2.4.33-4.fc26.noarch.rpm                                         460 kB/s | 2.4 MB     00:05    
+(46/106): hwdata-0.312-1.fc26.noarch.rpm                                                549 kB/s | 1.5 MB     00:02    
+(47/106): iptables-1.6.2-3.fc26.x86_64.rpm                                              542 kB/s | 443 kB     00:00    
+(48/106): iptables-libs-1.6.2-3.fc26.x86_64.rpm                                         397 kB/s |  89 kB     00:00    
+(49/106): kernel-headers-4.16.11-100.fc26.x86_64.rpm                                    530 kB/s | 1.2 MB     00:02    
+(50/106): krb5-libs-1.15.2-8.fc26.x86_64.rpm                                            551 kB/s | 800 kB     00:01    
+(51/106): libetonyek-0.1.8-1.fc26.x86_64.rpm                                            561 kB/s | 776 kB     00:01    
+(52/106): libipa_hbac-1.16.1-4.fc26.x86_64.rpm                                          392 kB/s |  85 kB     00:00    
+(53/106): hplip-3.18.4-2.fc26.x86_64.rpm                                                526 kB/s |  16 MB     00:30    
+(54/106): sssd-1.16.1-4.fc26.x86_64.rpm                                                 322 kB/s |  77 kB     00:00    
+(55/106): sssd-ipa-1.16.1-4.fc26.x86_64.rpm                                             504 kB/s | 296 kB     00:00    
+(56/106): sssd-common-pac-1.16.1-4.fc26.x86_64.rpm                                      417 kB/s | 148 kB     00:00    
+(57/106): sssd-krb5-common-1.16.1-4.fc26.x86_64.rpm                                     248 kB/s | 153 kB     00:00    
+(58/106): python3-sssdconfig-1.16.1-4.fc26.noarch.rpm                                   247 kB/s | 103 kB     00:00    
+(59/106): sssd-ad-1.16.1-4.fc26.x86_64.rpm                                              321 kB/s | 205 kB     00:00    
+(60/106): sssd-common-1.16.1-4.fc26.x86_64.rpm                                          564 kB/s | 1.3 MB     00:02    
+(61/106): sssd-krb5-1.16.1-4.fc26.x86_64.rpm                                            252 kB/s | 119 kB     00:00    
+(62/106): sssd-ldap-1.16.1-4.fc26.x86_64.rpm                                            456 kB/s | 170 kB     00:00    
+(63/106): libsss_idmap-1.16.1-4.fc26.x86_64.rpm                                         408 kB/s |  90 kB     00:00    
+(64/106): sssd-client-1.16.1-4.fc26.x86_64.rpm                                          285 kB/s | 142 kB     00:00    
+(65/106): sssd-proxy-1.16.1-4.fc26.x86_64.rpm                                           503 kB/s | 112 kB     00:00    
+(66/106): libnfs-1.11.0-1.fc26.x86_64.rpm                                               116 kB/s |  95 kB     00:00    
+(67/106): libpsl-0.18.0-2.fc26.x86_64.rpm                                               246 kB/s |  50 kB     00:00    
+(68/106): libsss_autofs-1.16.1-4.fc26.x86_64.rpm                                        291 kB/s |  87 kB     00:00    
+(69/106): libsss_certmap-1.16.1-4.fc26.x86_64.rpm                                       244 kB/s | 114 kB     00:00    
+(70/106): libsss_nss_idmap-1.16.1-4.fc26.x86_64.rpm                                     311 kB/s |  96 kB     00:00    
+(71/106): libsss_sudo-1.16.1-4.fc26.x86_64.rpm                                          295 kB/s |  85 kB     00:00    
+(72/106): libstaroffice-0.0.6-1.fc26.x86_64.rpm                                         433 kB/s | 836 kB     00:01    
+(73/106): libwps-0.4.9-1.fc26.x86_64.rpm                                                516 kB/s | 823 kB     00:01    
+(74/106): libmwaw-0.3.14-1.fc26.x86_64.rpm                                              391 kB/s | 2.6 MB     00:06    
+(75/106): net-tools-2.0-0.45.20160912git.fc26.x86_64.rpm                                510 kB/s | 311 kB     00:00    
+(76/106): open-vm-tools-desktop-10.2.5-2.fc26.x86_64.rpm                                503 kB/s | 162 kB     00:00    
+(77/106): osinfo-db-20180514-1.fc26.noarch.rpm                                          430 kB/s | 149 kB     00:00    
+(78/106): perl-Digest-SHA-6.02-1.fc26.x86_64.rpm                                        266 kB/s |  63 kB     00:00    
+(79/106): open-vm-tools-10.2.5-2.fc26.x86_64.rpm                                        544 kB/s | 666 kB     00:01    
+(80/106): php-7.1.17-1.fc26.x86_64.rpm                                                  612 kB/s | 2.8 MB     00:04    
+(81/106): php-common-7.1.17-1.fc26.x86_64.rpm                                           577 kB/s | 1.0 MB     00:01    
+(82/106): php-json-7.1.17-1.fc26.x86_64.rpm                                             291 kB/s |  70 kB     00:00    
+(83/106): php-pdo-7.1.17-1.fc26.x86_64.rpm                                              378 kB/s | 134 kB     00:00    
+(84/106): php-ldap-7.1.17-1.fc26.x86_64.rpm                                             369 kB/s |  77 kB     00:00    
+(85/106): php-cli-7.1.17-1.fc26.x86_64.rpm                                              577 kB/s | 4.2 MB     00:07    
+(86/106): publicsuffix-list-dafsa-20180419-1.fc26.noarch.rpm                            350 kB/s |  47 kB     00:00    
+(87/106): python2-2.7.15-1.fc26.x86_64.rpm                                              286 kB/s |  99 kB     00:00    
+(88/106): php-mysqlnd-7.1.17-1.fc26.x86_64.rpm                                          110 kB/s | 239 kB     00:02    
+(89/106): python2-pip-9.0.3-2.fc26.noarch.rpm                                           526 kB/s | 2.0 MB     00:03    
+(90/106): python3-pip-9.0.3-2.fc26.noarch.rpm                                           572 kB/s | 1.9 MB     00:03    
+(91/106): python3-urllib3-1.20-3.fc26.noarch.rpm                                        323 kB/s | 153 kB     00:00    
+(92/106): python2-libs-2.7.15-1.fc26.x86_64.rpm                                         564 kB/s | 6.3 MB     00:11    
+(93/106): rsyslog-8.35.0-2.fc26.x86_64.rpm                                              538 kB/s | 664 kB     00:01    
+(94/106): ruby-2.4.4-88.fc26.x86_64.rpm                                                 355 kB/s |  79 kB     00:00    
+(95/106): rubygem-io-console-0.4.6-88.fc26.x86_64.rpm                                   470 kB/s |  60 kB     00:00    
+(96/106): sssd-nfs-idmap-1.16.1-4.fc26.x86_64.rpm                                       408 kB/s |  83 kB     00:00    
+(97/106): vim-minimal-8.0.1806-1.fc26.x86_64.rpm                                        535 kB/s | 566 kB     00:01    
+(98/106): qt5-qtdeclarative-5.9.4-3.fc26.x86_64.rpm                                     583 kB/s | 3.2 MB     00:05    
+(99/106): webkitgtk4-jsc-2.20.2-1.fc26.x86_64.rpm                                       401 kB/s | 4.6 MB     00:11    
+(100/106): webkitgtk4-2.20.2-1.fc26.x86_64.rpm                                          555 kB/s |  13 MB     00:24    
+(101/106): wget-1.19.5-1.fc26.x86_64.rpm                                                562 kB/s | 725 kB     00:01    
+(102/106): xdg-utils-1.1.3-1.fc26.noarch.rpm                                            373 kB/s |  83 kB     00:00    
+(103/106): xen-libs-4.8.3-5.fc26.x86_64.rpm                                             573 kB/s | 657 kB     00:01    
+(104/106): xen-licenses-4.8.3-5.fc26.x86_64.rpm                                         539 kB/s | 118 kB     00:00    
+(105/106): webkitgtk4-plugin-process-gtk2-2.20.2-1.fc26.x86_64.rpm                      617 kB/s |  10 MB     00:16    
+(106/106): firefox-60.0-4.fc26.x86_64.rpm                                               556 kB/s |  90 MB     02:46    
+[DRPM 6/7] rubygems-2.6.14.1-87.fc26_2.6.14.1-88.fc26.noarch.drpm: done                                                
+[DRPM 7/7] ruby-libs-2.4.3-87.fc26_2.4.4-88.fc26.x86_64.drpm: done                                                     
+------------------------------------------------------------------------------------------------------------------------
+Total                                                                                   1.3 MB/s | 246 MB     03:09     
+Delta RPMs reduced 249.1 MB of updates to 246.4 MB (1.1% saved)
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Running scriptlet: firefox-60.0-4.fc26.x86_64                                                                     1/1 
+  Running scriptlet: copy-jdk-configs-3.3-9.fc26.noarch                                                             1/1 
+  Preparing        :                                                                                                1/1 
+  Running scriptlet: nss-util-3.36.1-1.0.fc26.x86_64                                                                1/1 
+  Upgrading        : nss-util-3.36.1-1.0.fc26.x86_64                                                              1/208 
+  Running scriptlet: nss-util-3.36.1-1.0.fc26.x86_64                                                              1/208 
+  Upgrading        : krb5-libs-1.15.2-8.fc26.x86_64                                                               2/208 
+  Running scriptlet: krb5-libs-1.15.2-8.fc26.x86_64                                                               2/208 
+  Upgrading        : ruby-libs-2.4.4-88.fc26.x86_64                                                               3/208 
+  Running scriptlet: ruby-libs-2.4.4-88.fc26.x86_64                                                               3/208 
+  Upgrading        : libsss_idmap-1.16.1-4.fc26.x86_64                                                            4/208 
+  Running scriptlet: libsss_idmap-1.16.1-4.fc26.x86_64                                                            4/208 
+  Upgrading        : php-json-7.1.17-1.fc26.x86_64                                                                5/208 
+  Upgrading        : php-common-7.1.17-1.fc26.x86_64                                                              6/208 
+  Upgrading        : glusterfs-libs-3.10.12-1.fc26.x86_64                                                         7/208 
+  Running scriptlet: glusterfs-libs-3.10.12-1.fc26.x86_64                                                         7/208 
+  Running scriptlet: httpd-filesystem-2.4.33-4.fc26.noarch                                                        8/208 
+  Upgrading        : httpd-filesystem-2.4.33-4.fc26.noarch                                                        8/208 
+  Upgrading        : evince-libs-3.24.2-3.fc26.x86_64                                                             9/208 
+  Running scriptlet: evince-libs-3.24.2-3.fc26.x86_64                                                             9/208 
+  Installing       : kernel-core-4.16.11-100.fc26.x86_64                                                         10/208 
+  Running scriptlet: kernel-core-4.16.11-100.fc26.x86_64                                                         10/208 
+  Installing       : kernel-modules-4.16.11-100.fc26.x86_64                                                      11/208 
+  Running scriptlet: kernel-modules-4.16.11-100.fc26.x86_64                                                      11/208 
+  Upgrading        : glusterfs-3.10.12-1.fc26.x86_64                                                             12/208 
+  Running scriptlet: glusterfs-3.10.12-1.fc26.x86_64                                                             12/208 
+  Upgrading        : glusterfs-client-xlators-3.10.12-1.fc26.x86_64                                              13/208 
+  Upgrading        : python2-libs-2.7.15-1.fc26.x86_64                                                           14/208 
+  Running scriptlet: python2-libs-2.7.15-1.fc26.x86_64                                                           14/208 
+  Upgrading        : python2-pip-9.0.3-2.fc26.noarch                                                             15/208 
+  Upgrading        : python2-2.7.15-1.fc26.x86_64                                                                16/208 
+  Upgrading        : webkitgtk4-jsc-2.20.2-1.fc26.x86_64                                                         17/208 
+  Running scriptlet: webkitgtk4-jsc-2.20.2-1.fc26.x86_64                                                         17/208 
+  Upgrading        : evince-3.24.2-3.fc26.x86_64                                                                 18/208 
+  Running scriptlet: evince-3.24.2-3.fc26.x86_64                                                                 18/208 
+  Upgrading        : php-cli-7.1.17-1.fc26.x86_64                                                                19/208 
+  Upgrading        : php-pdo-7.1.17-1.fc26.x86_64                                                                20/208 
+  Upgrading        : rubygem-openssl-2.0.7-88.fc26.x86_64                                                        21/208 
+  Upgrading        : rubygem-psych-2.2.2-88.fc26.x86_64                                                          22/208 
+  Upgrading        : rubygems-2.6.14.1-88.fc26.noarch                                                            23/208 
+  Upgrading        : nss-softokn-freebl-3.36.1-1.0.fc26.x86_64                                                   24/208 
+  Upgrading        : nss-softokn-3.36.1-1.0.fc26.x86_64                                                          25/208 
+  Running scriptlet: nss-softokn-3.36.1-1.0.fc26.x86_64                                                          25/208 
+  Upgrading        : nss-sysinit-3.36.1-1.0.fc26.x86_64                                                          26/208 
+  Upgrading        : nss-3.36.1-1.0.fc26.x86_64                                                                  27/208 
+  Running scriptlet: nss-3.36.1-1.0.fc26.x86_64                                                                  27/208 
+  Upgrading        : libsss_certmap-1.16.1-4.fc26.x86_64                                                         28/208 
+  Running scriptlet: libsss_certmap-1.16.1-4.fc26.x86_64                                                         28/208 
+  Upgrading        : xen-licenses-4.8.3-5.fc26.x86_64                                                            29/208 
+  Upgrading        : publicsuffix-list-dafsa-20180419-1.fc26.noarch                                              30/208 
+  Upgrading        : libpsl-0.18.0-2.fc26.x86_64                                                                 31/208 
+  Running scriptlet: libpsl-0.18.0-2.fc26.x86_64                                                                 31/208 
+  Upgrading        : wget-1.19.5-1.fc26.x86_64                                                                   32/208 
+  Running scriptlet: wget-1.19.5-1.fc26.x86_64                                                                   32/208 
+  Upgrading        : open-vm-tools-10.2.5-2.fc26.x86_64                                                          33/208 
+  Running scriptlet: open-vm-tools-10.2.5-2.fc26.x86_64                                                          33/208 
+  Upgrading        : libsss_nss_idmap-1.16.1-4.fc26.x86_64                                                       34/208 
+  Running scriptlet: libsss_nss_idmap-1.16.1-4.fc26.x86_64                                                       34/208 
+  Upgrading        : sssd-client-1.16.1-4.fc26.x86_64                                                            35/208 
+  Running scriptlet: sssd-client-1.16.1-4.fc26.x86_64                                                            35/208 
+  Upgrading        : sssd-common-1.16.1-4.fc26.x86_64                                                            36/208 
+  Running scriptlet: sssd-common-1.16.1-4.fc26.x86_64                                                            36/208 
+  Upgrading        : sssd-krb5-common-1.16.1-4.fc26.x86_64                                                       37/208 
+  Upgrading        : sssd-common-pac-1.16.1-4.fc26.x86_64                                                        38/208 
+  Upgrading        : sssd-ad-1.16.1-4.fc26.x86_64                                                                39/208 
+  Upgrading        : sssd-krb5-1.16.1-4.fc26.x86_64                                                              40/208 
+  Upgrading        : sssd-ldap-1.16.1-4.fc26.x86_64                                                              41/208 
+  Upgrading        : python3-sssdconfig-1.16.1-4.fc26.noarch                                                     42/208 
+  Upgrading        : libipa_hbac-1.16.1-4.fc26.x86_64                                                            43/208 
+  Running scriptlet: libipa_hbac-1.16.1-4.fc26.x86_64                                                            43/208 
+  Upgrading        : sssd-ipa-1.16.1-4.fc26.x86_64                                                               44/208 
+  Upgrading        : iptables-libs-1.6.2-3.fc26.x86_64                                                           45/208 
+  Upgrading        : iptables-1.6.2-3.fc26.x86_64                                                                46/208 
+  Running scriptlet: iptables-1.6.2-3.fc26.x86_64                                                                46/208 
+  Upgrading        : hwdata-0.312-1.fc26.noarch                                                                  47/208 
+  Upgrading        : httpd-tools-2.4.33-4.fc26.x86_64                                                            48/208 
+  Upgrading        : httpd-2.4.33-4.fc26.x86_64                                                                  49/208 
+  Running scriptlet: httpd-2.4.33-4.fc26.x86_64                                                                  49/208 
+  Upgrading        : hplip-common-3.18.4-2.fc26.x86_64                                                           50/208 
+  Upgrading        : hplip-libs-3.18.4-2.fc26.x86_64                                                             51/208 
+  Running scriptlet: hplip-libs-3.18.4-2.fc26.x86_64                                                             51/208 
+  Upgrading        : python3-firewall-0.4.4.5-4.fc26.noarch                                                      52/208 
+  Upgrading        : firewalld-filesystem-0.4.4.5-4.fc26.noarch                                                  53/208 
+  Upgrading        : dhcp-libs-12:4.3.5-11.fc26.x86_64                                                           54/208 
+  Running scriptlet: dhcp-libs-12:4.3.5-11.fc26.x86_64                                                           54/208 
+  Upgrading        : dhcp-common-12:4.3.5-11.fc26.noarch                                                         55/208 
+  Upgrading        : dhcp-client-12:4.3.5-11.fc26.x86_64                                                         56/208 
+  Upgrading        : firewalld-0.4.4.5-4.fc26.noarch                                                             57/208 
+  Running scriptlet: firewalld-0.4.4.5-4.fc26.noarch                                                             57/208 
+  Upgrading        : hplip-3.18.4-2.fc26.x86_64                                                                  58/208 
+  Running scriptlet: hplip-3.18.4-2.fc26.x86_64                                                                  58/208 
+  Upgrading        : libsane-hpaio-3.18.4-2.fc26.x86_64                                                          59/208 
+  Upgrading        : mod_ssl-1:2.4.33-4.fc26.x86_64                                                              60/208 
+  Running scriptlet: mod_ssl-1:2.4.33-4.fc26.x86_64                                                              60/208 
+  Upgrading        : httpd-manual-2.4.33-4.fc26.noarch                                                           61/208 
+  Upgrading        : php-7.1.17-1.fc26.x86_64                                                                    62/208 
+  Upgrading        : osinfo-db-20180514-1.fc26.noarch                                                            63/208 
+  Upgrading        : sssd-1.16.1-4.fc26.x86_64                                                                   64/208 
+  Upgrading        : sssd-proxy-1.16.1-4.fc26.x86_64                                                             65/208 
+  Upgrading        : open-vm-tools-desktop-10.2.5-2.fc26.x86_64                                                  66/208 
+  Upgrading        : xen-libs-4.8.3-5.fc26.x86_64                                                                67/208 
+  Running scriptlet: xen-libs-4.8.3-5.fc26.x86_64                                                                67/208 
+  Upgrading        : firefox-60.0-4.fc26.x86_64                                                                  68/208 
+  Running scriptlet: firefox-60.0-4.fc26.x86_64                                                                  68/208 
+  Upgrading        : nss-tools-3.36.1-1.0.fc26.x86_64                                                            69/208 
+  Upgrading        : rubygem-bigdecimal-1.3.2-88.fc26.x86_64                                                     70/208 
+  Upgrading        : rubygem-did_you_mean-1.1.0-88.fc26.x86_64                                                   71/208 
+  Upgrading        : rubygem-io-console-0.4.6-88.fc26.x86_64                                                     72/208 
+  Upgrading        : php-mysqlnd-7.1.17-1.fc26.x86_64                                                            73/208 
+  Upgrading        : evince-nautilus-3.24.2-3.fc26.x86_64                                                        74/208 
+  Upgrading        : webkitgtk4-2.20.2-1.fc26.x86_64                                                             75/208 
+  Running scriptlet: webkitgtk4-2.20.2-1.fc26.x86_64                                                             75/208 
+  Upgrading        : webkitgtk4-plugin-process-gtk2-2.20.2-1.fc26.x86_64                                         76/208 
+  Upgrading        : glusterfs-fuse-3.10.12-1.fc26.x86_64                                                        77/208 
+  Upgrading        : glusterfs-api-3.10.12-1.fc26.x86_64                                                         78/208 
+  Running scriptlet: glusterfs-api-3.10.12-1.fc26.x86_64                                                         78/208 
+  Installing       : kernel-4.16.11-100.fc26.x86_64                                                              79/208 
+  Installing       : kernel-modules-extra-4.16.11-100.fc26.x86_64                                                80/208 
+  Running scriptlet: kernel-modules-extra-4.16.11-100.fc26.x86_64                                                80/208 
+  Upgrading        : evince-djvu-3.24.2-3.fc26.x86_64                                                            81/208 
+  Upgrading        : glusterfs-cli-3.10.12-1.fc26.x86_64                                                         82/208 
+  Upgrading        : php-ldap-7.1.17-1.fc26.x86_64                                                               83/208 
+  Upgrading        : ruby-2.4.4-88.fc26.x86_64                                                                   84/208 
+  Upgrading        : ruby-irb-2.4.4-88.fc26.noarch                                                               85/208 
+  Upgrading        : xdg-utils-1.1.3-1.fc26.noarch                                                               86/208 
+  Upgrading        : vim-minimal-2:8.0.1806-1.fc26.x86_64                                                        87/208 
+  Upgrading        : sssd-nfs-idmap-1.16.1-4.fc26.x86_64                                                         88/208 
+  Upgrading        : rsyslog-8.35.0-2.fc26.x86_64                                                                89/208 
+  Running scriptlet: rsyslog-8.35.0-2.fc26.x86_64                                                                89/208 
+  Upgrading        : qt5-qtdeclarative-5.9.4-3.fc26.x86_64                                                       90/208 
+  Running scriptlet: qt5-qtdeclarative-5.9.4-3.fc26.x86_64                                                       90/208 
+  Upgrading        : python3-urllib3-1.20-3.fc26.noarch                                                          91/208 
+  Upgrading        : python3-pip-9.0.3-2.fc26.noarch                                                             92/208 
+  Upgrading        : perl-Digest-SHA-1:6.02-1.fc26.x86_64                                                        93/208 
+  Upgrading        : net-tools-2.0-0.45.20160912git.fc26.x86_64                                                  94/208 
+  Running scriptlet: net-tools-2.0-0.45.20160912git.fc26.x86_64                                                  94/208 
+  Upgrading        : libwps-0.4.9-1.fc26.x86_64                                                                  95/208 
+  Running scriptlet: libwps-0.4.9-1.fc26.x86_64                                                                  95/208 
+  Upgrading        : libstaroffice-0.0.6-1.fc26.x86_64                                                           96/208 
+  Running scriptlet: libstaroffice-0.0.6-1.fc26.x86_64                                                           96/208 
+  Upgrading        : libsss_sudo-1.16.1-4.fc26.x86_64                                                            97/208 
+  Running scriptlet: libsss_sudo-1.16.1-4.fc26.x86_64                                                            97/208 
+  Upgrading        : libsss_autofs-1.16.1-4.fc26.x86_64                                                          98/208 
+  Upgrading        : libnfs-1.11.0-1.fc26.x86_64                                                                 99/208 
+  Running scriptlet: libnfs-1.11.0-1.fc26.x86_64                                                                 99/208 
+  Upgrading        : libmwaw-0.3.14-1.fc26.x86_64                                                               100/208 
+  Running scriptlet: libmwaw-0.3.14-1.fc26.x86_64                                                               100/208 
+  Upgrading        : libetonyek-0.1.8-1.fc26.x86_64                                                             101/208 
+  Running scriptlet: libetonyek-0.1.8-1.fc26.x86_64                                                             101/208 
+  Upgrading        : kernel-headers-4.16.11-100.fc26.x86_64                                                     102/208 
+  Upgrading        : google-noto-emoji-fonts-20180508-1.fc26.noarch                                             103/208 
+  Upgrading        : google-noto-emoji-color-fonts-20180508-1.fc26.noarch                                       104/208 
+  Upgrading        : copy-jdk-configs-3.3-9.fc26.noarch                                                         105/208 
+  Upgrading        : LibRaw-0.18.11-1.fc26.x86_64                                                               106/208 
+  Running scriptlet: LibRaw-0.18.11-1.fc26.x86_64                                                               106/208 
+  Cleanup          : sssd-1.16.1-2.fc26.x86_64                                                                  107/208 
+  Running scriptlet: firewalld-0.4.4.5-1.fc26.noarch                                                            108/208 
+  Cleanup          : firewalld-0.4.4.5-1.fc26.noarch                                                            108/208 
+  Running scriptlet: firewalld-0.4.4.5-1.fc26.noarch                                                            108/208 
+  Cleanup          : rubygem-did_you_mean-1.1.0-87.fc26.x86_64                                                  109/208 
+  Cleanup          : hplip-3.18.3-2.fc26.x86_64                                                                 110/208 
+  Cleanup          : dhcp-client-12:4.3.5-10.fc26.x86_64                                                        111/208 
+  Cleanup          : ruby-irb-2.4.3-87.fc26.noarch                                                              112/208 
+  Cleanup          : osinfo-db-20180311-1.fc26.noarch                                                           113/208 
+  Cleanup          : httpd-manual-2.4.29-1.fc26.noarch                                                          114/208 
+  Cleanup          : libsane-hpaio-3.18.3-2.fc26.x86_64                                                         115/208 
+  Cleanup          : hplip-libs-3.18.3-2.fc26.x86_64                                                            116/208 
+  Running scriptlet: hplip-libs-3.18.3-2.fc26.x86_64                                                            116/208 
+  Cleanup          : hplip-common-3.18.3-2.fc26.x86_64                                                          117/208 
+  Cleanup          : hwdata-0.311-1.fc26.noarch                                                                 118/208 
+  Cleanup          : dhcp-common-12:4.3.5-10.fc26.noarch                                                        119/208 
+  Cleanup          : dhcp-libs-12:4.3.5-10.fc26.x86_64                                                          120/208 
+  Running scriptlet: dhcp-libs-12:4.3.5-10.fc26.x86_64                                                          120/208 
+  Cleanup          : firewalld-filesystem-0.4.4.5-1.fc26.noarch                                                 121/208 
+  Cleanup          : python3-firewall-0.4.4.5-1.fc26.noarch                                                     122/208 
+  Cleanup          : python3-sssdconfig-1.16.1-2.fc26.noarch                                                    123/208 
+  Cleanup          : xdg-utils-1.1.1-5.fc26.noarch                                                              124/208 
+  Cleanup          : python3-urllib3-1.20-2.fc26.noarch                                                         125/208 
+  Cleanup          : python3-pip-9.0.3-1.fc26.noarch                                                            126/208 
+  Cleanup          : kernel-headers-4.15.17-200.fc26.x86_64                                                     127/208 
+  Cleanup          : google-noto-emoji-fonts-20180307-1.fc26.noarch                                             128/208 
+  Cleanup          : google-noto-emoji-color-fonts-20180307-1.fc26.noarch                                       129/208 
+  Cleanup          : copy-jdk-configs-3.3-5.fc26.noarch                                                         130/208 
+  Cleanup          : sssd-ipa-1.16.1-2.fc26.x86_64                                                              131/208 
+  Cleanup          : sssd-ad-1.16.1-2.fc26.x86_64                                                               132/208 
+  Cleanup          : sssd-ldap-1.16.1-2.fc26.x86_64                                                             133/208 
+  Cleanup          : sssd-common-pac-1.16.1-2.fc26.x86_64                                                       134/208 
+  Cleanup          : sssd-krb5-1.16.1-2.fc26.x86_64                                                             135/208 
+  Cleanup          : sssd-proxy-1.16.1-2.fc26.x86_64                                                            136/208 
+  Cleanup          : php-7.1.16-1.fc26.x86_64                                                                   137/208 
+  Cleanup          : nss-tools-3.36.0-1.0.fc26.x86_64                                                           138/208 
+  Cleanup          : mod_ssl-1:2.4.29-1.fc26.x86_64                                                             139/208 
+  Cleanup          : glusterfs-api-3.10.11-1.fc26.x86_64                                                        140/208 
+  Running scriptlet: glusterfs-api-3.10.11-1.fc26.x86_64                                                        140/208 
+  Cleanup          : glusterfs-fuse-3.10.11-1.fc26.x86_64                                                       141/208 
+  Running scriptlet: firefox-59.0.2-1.fc26.x86_64                                                               142/208 
+  Cleanup          : firefox-59.0.2-1.fc26.x86_64                                                               142/208 
+  Running scriptlet: firefox-59.0.2-1.fc26.x86_64                                                               142/208 
+  Running scriptlet: httpd-2.4.29-1.fc26.x86_64                                                                 143/208 
+  Cleanup          : httpd-2.4.29-1.fc26.x86_64                                                                 143/208 
+  Running scriptlet: httpd-2.4.29-1.fc26.x86_64                                                                 143/208 
+  Cleanup          : php-cli-7.1.16-1.fc26.x86_64                                                               144/208 
+  Cleanup          : sssd-krb5-common-1.16.1-2.fc26.x86_64                                                      145/208 
+  Running scriptlet: sssd-common-1.16.1-2.fc26.x86_64                                                           146/208 
+  Cleanup          : sssd-common-1.16.1-2.fc26.x86_64                                                           146/208 
+  Running scriptlet: sssd-common-1.16.1-2.fc26.x86_64                                                           146/208 
+  Cleanup          : libsss_certmap-1.16.1-2.fc26.x86_64                                                        147/208 
+  Running scriptlet: libsss_certmap-1.16.1-2.fc26.x86_64                                                        147/208 
+  Cleanup          : nss-sysinit-3.36.0-1.0.fc26.x86_64                                                         148/208 
+  Cleanup          : nss-3.36.0-1.0.fc26.x86_64                                                                 149/208 
+  Running scriptlet: nss-3.36.0-1.0.fc26.x86_64                                                                 149/208 
+  Cleanup          : nss-softokn-3.36.0-1.0.fc26.x86_64                                                         150/208 
+  Running scriptlet: nss-softokn-3.36.0-1.0.fc26.x86_64                                                         150/208 
+  Running scriptlet: sssd-client-1.16.1-2.fc26.x86_64                                                           151/208 
+  Cleanup          : sssd-client-1.16.1-2.fc26.x86_64                                                           151/208 
+  Running scriptlet: sssd-client-1.16.1-2.fc26.x86_64                                                           151/208 
+  Cleanup          : python2-pip-9.0.3-1.fc26.noarch                                                            152/208 
+  Cleanup          : python2-2.7.14-7.fc26.x86_64                                                               153/208 
+  Cleanup          : rubygem-io-console-0.4.6-87.fc26.x86_64                                                    154/208 
+  Cleanup          : rubygem-bigdecimal-1.3.0-87.fc26.x86_64                                                    155/208 
+  Cleanup          : rubygem-openssl-2.0.5-87.fc26.x86_64                                                       156/208 
+  Cleanup          : rubygem-psych-2.2.2-87.fc26.x86_64                                                         157/208 
+  Cleanup          : rubygems-2.6.14.1-87.fc26.noarch                                                           158/208 
+  Cleanup          : evince-nautilus-3.24.2-2.fc26.x86_64                                                       159/208 
+  Cleanup          : evince-3.24.2-2.fc26.x86_64                                                                160/208 
+  Running scriptlet: evince-3.24.2-2.fc26.x86_64                                                                160/208 
+  Cleanup          : nss-softokn-freebl-3.36.0-1.0.fc26.x86_64                                                  161/208 
+  Cleanup          : glusterfs-3.10.11-1.fc26.x86_64                                                            162/208 
+  Running scriptlet: glusterfs-3.10.11-1.fc26.x86_64                                                            162/208 
+  Cleanup          : glusterfs-client-xlators-3.10.11-1.fc26.x86_64                                             163/208 
+  Running scriptlet: wget-1.19.4-1.fc26.x86_64                                                                  164/208 
+  Cleanup          : wget-1.19.4-1.fc26.x86_64                                                                  164/208 
+  Cleanup          : libpsl-0.18.0-1.fc26.x86_64                                                                165/208 
+  Running scriptlet: libpsl-0.18.0-1.fc26.x86_64                                                                165/208 
+  Cleanup          : iptables-1.6.1-2.fc26.x86_64                                                               166/208 
+  Running scriptlet: iptables-1.6.1-2.fc26.x86_64                                                               166/208 
+  Cleanup          : xen-libs-4.8.3-3.fc26.x86_64                                                               167/208 
+  Running scriptlet: xen-libs-4.8.3-3.fc26.x86_64                                                               167/208 
+  Cleanup          : webkitgtk4-plugin-process-gtk2-2.20.1-1.fc26.x86_64                                        168/208 
+  Cleanup          : webkitgtk4-2.20.1-1.fc26.x86_64                                                            169/208 
+  Running scriptlet: webkitgtk4-2.20.1-1.fc26.x86_64                                                            169/208 
+  Cleanup          : ruby-2.4.3-87.fc26.x86_64                                                                  170/208 
+  Cleanup          : php-mysqlnd-7.1.16-1.fc26.x86_64                                                           171/208 
+  Cleanup          : php-pdo-7.1.16-1.fc26.x86_64                                                               172/208 
+  Cleanup          : php-ldap-7.1.16-1.fc26.x86_64                                                              173/208 
+  Cleanup          : php-json-7.1.16-1.fc26.x86_64                                                              174/208 
+  Cleanup          : php-common-7.1.16-1.fc26.x86_64                                                            175/208 
+  Cleanup          : open-vm-tools-desktop-10.2.0-3.fc26.x86_64                                                 176/208 
+  Cleanup          : glusterfs-cli-3.10.11-1.fc26.x86_64                                                        177/208 
+  Cleanup          : evince-djvu-3.24.2-2.fc26.x86_64                                                           178/208 
+  Cleanup          : xen-licenses-4.8.3-3.fc26.x86_64                                                           179/208 
+  Cleanup          : publicsuffix-list-dafsa-20180328-1.fc26.noarch                                             180/208 
+  Cleanup          : httpd-filesystem-2.4.29-1.fc26.noarch                                                      181/208 
+  Cleanup          : evince-libs-3.24.2-2.fc26.x86_64                                                           182/208 
+  Running scriptlet: evince-libs-3.24.2-2.fc26.x86_64                                                           182/208 
+  Cleanup          : glusterfs-libs-3.10.11-1.fc26.x86_64                                                       183/208 
+  Running scriptlet: glusterfs-libs-3.10.11-1.fc26.x86_64                                                       183/208 
+  Running scriptlet: open-vm-tools-10.2.0-3.fc26.x86_64                                                         184/208 
+  Cleanup          : open-vm-tools-10.2.0-3.fc26.x86_64                                                         184/208 
+  Running scriptlet: open-vm-tools-10.2.0-3.fc26.x86_64                                                         184/208 
+  Cleanup          : ruby-libs-2.4.3-87.fc26.x86_64                                                             185/208 
+  Running scriptlet: ruby-libs-2.4.3-87.fc26.x86_64                                                             185/208 
+  Cleanup          : webkitgtk4-jsc-2.20.1-1.fc26.x86_64                                                        186/208 
+  Running scriptlet: webkitgtk4-jsc-2.20.1-1.fc26.x86_64                                                        186/208 
+  Cleanup          : iptables-libs-1.6.1-2.fc26.x86_64                                                          187/208 
+  Cleanup          : nss-util-3.36.0-1.0.fc26.x86_64                                                            188/208 
+  Running scriptlet: nss-util-3.36.0-1.0.fc26.x86_64                                                            188/208 
+  Cleanup          : python2-libs-2.7.14-7.fc26.x86_64                                                          189/208 
+  Running scriptlet: python2-libs-2.7.14-7.fc26.x86_64                                                          189/208 
+  Cleanup          : krb5-libs-1.15.2-7.fc26.x86_64                                                             190/208 
+  Running scriptlet: krb5-libs-1.15.2-7.fc26.x86_64                                                             190/208 
+  Cleanup          : libsss_idmap-1.16.1-2.fc26.x86_64                                                          191/208 
+  Running scriptlet: libsss_idmap-1.16.1-2.fc26.x86_64                                                          191/208 
+  Cleanup          : libsss_nss_idmap-1.16.1-2.fc26.x86_64                                                      192/208 
+  Running scriptlet: libsss_nss_idmap-1.16.1-2.fc26.x86_64                                                      192/208 
+  Cleanup          : httpd-tools-2.4.29-1.fc26.x86_64                                                           193/208 
+  Cleanup          : libipa_hbac-1.16.1-2.fc26.x86_64                                                           194/208 
+  Running scriptlet: libipa_hbac-1.16.1-2.fc26.x86_64                                                           194/208 
+  Cleanup          : vim-minimal-2:8.0.1666-1.fc26.x86_64                                                       195/208 
+  Cleanup          : sssd-nfs-idmap-1.16.1-2.fc26.x86_64                                                        196/208 
+  Running scriptlet: rsyslog-8.32.0-1.fc26.x86_64                                                               197/208 
+  Cleanup          : rsyslog-8.32.0-1.fc26.x86_64                                                               197/208 
+  Running scriptlet: rsyslog-8.32.0-1.fc26.x86_64                                                               197/208 
+  Cleanup          : qt5-qtdeclarative-5.9.4-2.fc26.x86_64                                                      198/208 
+  Running scriptlet: qt5-qtdeclarative-5.9.4-2.fc26.x86_64                                                      198/208 
+  Cleanup          : perl-Digest-SHA-1:6.01-1.fc26.x86_64                                                       199/208 
+  Cleanup          : net-tools-2.0-0.44.20160912git.fc26.x86_64                                                 200/208 
+  Cleanup          : libwps-0.4.8-1.fc26.x86_64                                                                 201/208 
+  Running scriptlet: libwps-0.4.8-1.fc26.x86_64                                                                 201/208 
+  Cleanup          : libstaroffice-0.0.5-1.fc26.x86_64                                                          202/208 
+  Running scriptlet: libstaroffice-0.0.5-1.fc26.x86_64                                                          202/208 
+  Cleanup          : libsss_sudo-1.16.1-2.fc26.x86_64                                                           203/208 
+  Running scriptlet: libsss_sudo-1.16.1-2.fc26.x86_64                                                           203/208 
+  Cleanup          : libsss_autofs-1.16.1-2.fc26.x86_64                                                         204/208 
+  Cleanup          : libnfs-1.9.8-3.fc26.x86_64                                                                 205/208 
+  Running scriptlet: libnfs-1.9.8-3.fc26.x86_64                                                                 205/208 
+  Cleanup          : libmwaw-0.3.13-1.fc26.x86_64                                                               206/208 
+  Running scriptlet: libmwaw-0.3.13-1.fc26.x86_64                                                               206/208 
+  Cleanup          : libetonyek-0.1.7-1.fc26.x86_64                                                             207/208 
+  Running scriptlet: libetonyek-0.1.7-1.fc26.x86_64                                                             207/208 
+  Cleanup          : LibRaw-0.18.8-1.fc26.x86_64                                                                208/208 
+  Running scriptlet: LibRaw-0.18.8-1.fc26.x86_64                                                                208/208 
+  Running scriptlet: kernel-core-4.16.11-100.fc26.x86_64                                                        208/208 
+  Running scriptlet: evince-3.24.2-3.fc26.x86_64                                                                208/208 
+  Running scriptlet: sssd-common-1.16.1-4.fc26.x86_64                                                           208/208 
+  Running scriptlet: httpd-2.4.33-4.fc26.x86_64                                                                 208/208 
+  Running scriptlet: firewalld-0.4.4.5-4.fc26.noarch                                                            208/208 
+  Running scriptlet: firefox-60.0-4.fc26.x86_64                                                                 208/208 
+  Running scriptlet: copy-jdk-configs-3.3-9.fc26.noarch                                                         208/208 
+  Running scriptlet: LibRaw-0.18.8-1.fc26.x86_64                                                                208/208 
+Running as unit: run-rb43c859442254283ad397d82c88a814d.service
+Running as unit: run-r75e5668204d24f89ae18f1c838af6f1e.service
+  Verifying        : kernel-4.16.11-100.fc26.x86_64                                                               1/208 
+  Verifying        : kernel-core-4.16.11-100.fc26.x86_64                                                          2/208 
+  Verifying        : kernel-modules-4.16.11-100.fc26.x86_64                                                       3/208 
+  Verifying        : kernel-modules-extra-4.16.11-100.fc26.x86_64                                                 4/208 
+  Verifying        : LibRaw-0.18.11-1.fc26.x86_64                                                                 5/208 
+  Verifying        : copy-jdk-configs-3.3-9.fc26.noarch                                                           6/208 
+  Verifying        : dhcp-client-12:4.3.5-11.fc26.x86_64                                                          7/208 
+  Verifying        : dhcp-common-12:4.3.5-11.fc26.noarch                                                          8/208 
+  Verifying        : dhcp-libs-12:4.3.5-11.fc26.x86_64                                                            9/208 
+  Verifying        : evince-3.24.2-3.fc26.x86_64                                                                 10/208 
+  Verifying        : evince-libs-3.24.2-3.fc26.x86_64                                                            11/208 
+  Verifying        : evince-nautilus-3.24.2-3.fc26.x86_64                                                        12/208 
+  Verifying        : evince-djvu-3.24.2-3.fc26.x86_64                                                            13/208 
+  Verifying        : firefox-60.0-4.fc26.x86_64                                                                  14/208 
+  Verifying        : nss-3.36.1-1.0.fc26.x86_64                                                                  15/208 
+  Verifying        : nss-softokn-3.36.1-1.0.fc26.x86_64                                                          16/208 
+  Verifying        : nss-util-3.36.1-1.0.fc26.x86_64                                                             17/208 
+  Verifying        : nss-softokn-freebl-3.36.1-1.0.fc26.x86_64                                                   18/208 
+  Verifying        : nss-tools-3.36.1-1.0.fc26.x86_64                                                            19/208 
+  Verifying        : nss-sysinit-3.36.1-1.0.fc26.x86_64                                                          20/208 
+  Verifying        : firewalld-0.4.4.5-4.fc26.noarch                                                             21/208 
+  Verifying        : firewalld-filesystem-0.4.4.5-4.fc26.noarch                                                  22/208 
+  Verifying        : python3-firewall-0.4.4.5-4.fc26.noarch                                                      23/208 
+  Verifying        : glusterfs-3.10.12-1.fc26.x86_64                                                             24/208 
+  Verifying        : glusterfs-libs-3.10.12-1.fc26.x86_64                                                        25/208 
+  Verifying        : glusterfs-fuse-3.10.12-1.fc26.x86_64                                                        26/208 
+  Verifying        : glusterfs-api-3.10.12-1.fc26.x86_64                                                         27/208 
+  Verifying        : glusterfs-client-xlators-3.10.12-1.fc26.x86_64                                              28/208 
+  Verifying        : glusterfs-cli-3.10.12-1.fc26.x86_64                                                         29/208 
+  Verifying        : google-noto-emoji-color-fonts-20180508-1.fc26.noarch                                        30/208 
+  Verifying        : google-noto-emoji-fonts-20180508-1.fc26.noarch                                              31/208 
+  Verifying        : hplip-3.18.4-2.fc26.x86_64                                                                  32/208 
+  Verifying        : hplip-libs-3.18.4-2.fc26.x86_64                                                             33/208 
+  Verifying        : hplip-common-3.18.4-2.fc26.x86_64                                                           34/208 
+  Verifying        : libsane-hpaio-3.18.4-2.fc26.x86_64                                                          35/208 
+  Verifying        : httpd-2.4.33-4.fc26.x86_64                                                                  36/208 
+  Verifying        : httpd-filesystem-2.4.33-4.fc26.noarch                                                       37/208 
+  Verifying        : httpd-tools-2.4.33-4.fc26.x86_64                                                            38/208 
+  Verifying        : mod_ssl-1:2.4.33-4.fc26.x86_64                                                              39/208 
+  Verifying        : httpd-manual-2.4.33-4.fc26.noarch                                                           40/208 
+  Verifying        : hwdata-0.312-1.fc26.noarch                                                                  41/208 
+  Verifying        : iptables-1.6.2-3.fc26.x86_64                                                                42/208 
+  Verifying        : iptables-libs-1.6.2-3.fc26.x86_64                                                           43/208 
+  Verifying        : kernel-headers-4.16.11-100.fc26.x86_64                                                      44/208 
+  Verifying        : krb5-libs-1.15.2-8.fc26.x86_64                                                              45/208 
+  Verifying        : libetonyek-0.1.8-1.fc26.x86_64                                                              46/208 
+  Verifying        : libipa_hbac-1.16.1-4.fc26.x86_64                                                            47/208 
+  Verifying        : sssd-ipa-1.16.1-4.fc26.x86_64                                                               48/208 
+  Verifying        : sssd-1.16.1-4.fc26.x86_64                                                                   49/208 
+  Verifying        : sssd-common-1.16.1-4.fc26.x86_64                                                            50/208 
+  Verifying        : sssd-common-pac-1.16.1-4.fc26.x86_64                                                        51/208 
+  Verifying        : sssd-krb5-common-1.16.1-4.fc26.x86_64                                                       52/208 
+  Verifying        : python3-sssdconfig-1.16.1-4.fc26.noarch                                                     53/208 
+  Verifying        : sssd-ad-1.16.1-4.fc26.x86_64                                                                54/208 
+  Verifying        : sssd-krb5-1.16.1-4.fc26.x86_64                                                              55/208 
+  Verifying        : sssd-ldap-1.16.1-4.fc26.x86_64                                                              56/208 
+  Verifying        : sssd-client-1.16.1-4.fc26.x86_64                                                            57/208 
+  Verifying        : libsss_idmap-1.16.1-4.fc26.x86_64                                                           58/208 
+  Verifying        : sssd-proxy-1.16.1-4.fc26.x86_64                                                             59/208 
+  Verifying        : libmwaw-0.3.14-1.fc26.x86_64                                                                60/208 
+  Verifying        : libnfs-1.11.0-1.fc26.x86_64                                                                 61/208 
+  Verifying        : libpsl-0.18.0-2.fc26.x86_64                                                                 62/208 
+  Verifying        : libsss_autofs-1.16.1-4.fc26.x86_64                                                          63/208 
+  Verifying        : libsss_certmap-1.16.1-4.fc26.x86_64                                                         64/208 
+  Verifying        : libsss_nss_idmap-1.16.1-4.fc26.x86_64                                                       65/208 
+  Verifying        : libsss_sudo-1.16.1-4.fc26.x86_64                                                            66/208 
+  Verifying        : libstaroffice-0.0.6-1.fc26.x86_64                                                           67/208 
+  Verifying        : libwps-0.4.9-1.fc26.x86_64                                                                  68/208 
+  Verifying        : net-tools-2.0-0.45.20160912git.fc26.x86_64                                                  69/208 
+  Verifying        : open-vm-tools-10.2.5-2.fc26.x86_64                                                          70/208 
+  Verifying        : open-vm-tools-desktop-10.2.5-2.fc26.x86_64                                                  71/208 
+  Verifying        : osinfo-db-20180514-1.fc26.noarch                                                            72/208 
+  Verifying        : perl-Digest-SHA-1:6.02-1.fc26.x86_64                                                        73/208 
+  Verifying        : php-7.1.17-1.fc26.x86_64                                                                    74/208 
+  Verifying        : php-cli-7.1.17-1.fc26.x86_64                                                                75/208 
+  Verifying        : php-common-7.1.17-1.fc26.x86_64                                                             76/208 
+  Verifying        : php-json-7.1.17-1.fc26.x86_64                                                               77/208 
+  Verifying        : php-pdo-7.1.17-1.fc26.x86_64                                                                78/208 
+  Verifying        : php-ldap-7.1.17-1.fc26.x86_64                                                               79/208 
+  Verifying        : php-mysqlnd-7.1.17-1.fc26.x86_64                                                            80/208 
+  Verifying        : publicsuffix-list-dafsa-20180419-1.fc26.noarch                                              81/208 
+  Verifying        : python2-2.7.15-1.fc26.x86_64                                                                82/208 
+  Verifying        : python2-libs-2.7.15-1.fc26.x86_64                                                           83/208 
+  Verifying        : python2-pip-9.0.3-2.fc26.noarch                                                             84/208 
+  Verifying        : python3-pip-9.0.3-2.fc26.noarch                                                             85/208 
+  Verifying        : python3-urllib3-1.20-3.fc26.noarch                                                          86/208 
+  Verifying        : qt5-qtdeclarative-5.9.4-3.fc26.x86_64                                                       87/208 
+  Verifying        : rsyslog-8.35.0-2.fc26.x86_64                                                                88/208 
+  Verifying        : ruby-2.4.4-88.fc26.x86_64                                                                   89/208 
+  Verifying        : ruby-libs-2.4.4-88.fc26.x86_64                                                              90/208 
+  Verifying        : ruby-irb-2.4.4-88.fc26.noarch                                                               91/208 
+  Verifying        : rubygem-bigdecimal-1.3.2-88.fc26.x86_64                                                     92/208 
+  Verifying        : rubygem-did_you_mean-1.1.0-88.fc26.x86_64                                                   93/208 
+  Verifying        : rubygem-io-console-0.4.6-88.fc26.x86_64                                                     94/208 
+  Verifying        : rubygem-openssl-2.0.7-88.fc26.x86_64                                                        95/208 
+  Verifying        : rubygem-psych-2.2.2-88.fc26.x86_64                                                          96/208 
+  Verifying        : rubygems-2.6.14.1-88.fc26.noarch                                                            97/208 
+  Verifying        : sssd-nfs-idmap-1.16.1-4.fc26.x86_64                                                         98/208 
+  Verifying        : vim-minimal-2:8.0.1806-1.fc26.x86_64                                                        99/208 
+  Verifying        : webkitgtk4-2.20.2-1.fc26.x86_64                                                            100/208 
+  Verifying        : webkitgtk4-jsc-2.20.2-1.fc26.x86_64                                                        101/208 
+  Verifying        : webkitgtk4-plugin-process-gtk2-2.20.2-1.fc26.x86_64                                        102/208 
+  Verifying        : wget-1.19.5-1.fc26.x86_64                                                                  103/208 
+  Verifying        : xdg-utils-1.1.3-1.fc26.noarch                                                              104/208 
+  Verifying        : xen-libs-4.8.3-5.fc26.x86_64                                                               105/208 
+  Verifying        : xen-licenses-4.8.3-5.fc26.x86_64                                                           106/208 
+  Verifying        : python2-libs-2.7.14-7.fc26.x86_64                                                          107/208 
+  Verifying        : python2-pip-9.0.3-1.fc26.noarch                                                            108/208 
+  Verifying        : libipa_hbac-1.16.1-2.fc26.x86_64                                                           109/208 
+  Verifying        : evince-3.24.2-2.fc26.x86_64                                                                110/208 
+  Verifying        : evince-djvu-3.24.2-2.fc26.x86_64                                                           111/208 
+  Verifying        : LibRaw-0.18.8-1.fc26.x86_64                                                                112/208 
+  Verifying        : evince-libs-3.24.2-2.fc26.x86_64                                                           113/208 
+  Verifying        : evince-nautilus-3.24.2-2.fc26.x86_64                                                       114/208 
+  Verifying        : iptables-1.6.1-2.fc26.x86_64                                                               115/208 
+  Verifying        : iptables-libs-1.6.1-2.fc26.x86_64                                                          116/208 
+  Verifying        : vim-minimal-2:8.0.1666-1.fc26.x86_64                                                       117/208 
+  Verifying        : python3-firewall-0.4.4.5-1.fc26.noarch                                                     118/208 
+  Verifying        : libmwaw-0.3.13-1.fc26.x86_64                                                               119/208 
+  Verifying        : mod_ssl-1:2.4.29-1.fc26.x86_64                                                             120/208 
+  Verifying        : firefox-59.0.2-1.fc26.x86_64                                                               121/208 
+  Verifying        : firewalld-0.4.4.5-1.fc26.noarch                                                            122/208 
+  Verifying        : firewalld-filesystem-0.4.4.5-1.fc26.noarch                                                 123/208 
+  Verifying        : libnfs-1.9.8-3.fc26.x86_64                                                                 124/208 
+  Verifying        : webkitgtk4-2.20.1-1.fc26.x86_64                                                            125/208 
+  Verifying        : webkitgtk4-jsc-2.20.1-1.fc26.x86_64                                                        126/208 
+  Verifying        : webkitgtk4-plugin-process-gtk2-2.20.1-1.fc26.x86_64                                        127/208 
+  Verifying        : wget-1.19.4-1.fc26.x86_64                                                                  128/208 
+  Verifying        : python3-pip-9.0.3-1.fc26.noarch                                                            129/208 
+  Verifying        : net-tools-2.0-0.44.20160912git.fc26.x86_64                                                 130/208 
+  Verifying        : xdg-utils-1.1.1-5.fc26.noarch                                                              131/208 
+  Verifying        : xen-libs-4.8.3-3.fc26.x86_64                                                               132/208 
+  Verifying        : xen-licenses-4.8.3-3.fc26.x86_64                                                           133/208 
+  Verifying        : libpsl-0.18.0-1.fc26.x86_64                                                                134/208 
+  Verifying        : nss-3.36.0-1.0.fc26.x86_64                                                                 135/208 
+  Verifying        : kernel-headers-4.15.17-200.fc26.x86_64                                                     136/208 
+  Verifying        : nss-softokn-3.36.0-1.0.fc26.x86_64                                                         137/208 
+  Verifying        : nss-softokn-freebl-3.36.0-1.0.fc26.x86_64                                                  138/208 
+  Verifying        : nss-sysinit-3.36.0-1.0.fc26.x86_64                                                         139/208 
+  Verifying        : nss-tools-3.36.0-1.0.fc26.x86_64                                                           140/208 
+  Verifying        : nss-util-3.36.0-1.0.fc26.x86_64                                                            141/208 
+  Verifying        : python3-sssdconfig-1.16.1-2.fc26.noarch                                                    142/208 
+  Verifying        : open-vm-tools-10.2.0-3.fc26.x86_64                                                         143/208 
+  Verifying        : open-vm-tools-desktop-10.2.0-3.fc26.x86_64                                                 144/208 
+  Verifying        : python3-urllib3-1.20-2.fc26.noarch                                                         145/208 
+  Verifying        : krb5-libs-1.15.2-7.fc26.x86_64                                                             146/208 
+  Verifying        : osinfo-db-20180311-1.fc26.noarch                                                           147/208 
+  Verifying        : glusterfs-3.10.11-1.fc26.x86_64                                                            148/208 
+  Verifying        : glusterfs-api-3.10.11-1.fc26.x86_64                                                        149/208 
+  Verifying        : glusterfs-cli-3.10.11-1.fc26.x86_64                                                        150/208 
+  Verifying        : glusterfs-client-xlators-3.10.11-1.fc26.x86_64                                             151/208 
+  Verifying        : glusterfs-fuse-3.10.11-1.fc26.x86_64                                                       152/208 
+  Verifying        : glusterfs-libs-3.10.11-1.fc26.x86_64                                                       153/208 
+  Verifying        : qt5-qtdeclarative-5.9.4-2.fc26.x86_64                                                      154/208 
+  Verifying        : libsane-hpaio-3.18.3-2.fc26.x86_64                                                         155/208 
+  Verifying        : rsyslog-8.32.0-1.fc26.x86_64                                                               156/208 
+  Verifying        : ruby-2.4.3-87.fc26.x86_64                                                                  157/208 
+  Verifying        : ruby-irb-2.4.3-87.fc26.noarch                                                              158/208 
+  Verifying        : ruby-libs-2.4.3-87.fc26.x86_64                                                             159/208 
+  Verifying        : rubygem-bigdecimal-1.3.0-87.fc26.x86_64                                                    160/208 
+  Verifying        : libsss_autofs-1.16.1-2.fc26.x86_64                                                         161/208 
+  Verifying        : libsss_certmap-1.16.1-2.fc26.x86_64                                                        162/208 
+  Verifying        : libsss_idmap-1.16.1-2.fc26.x86_64                                                          163/208 
+  Verifying        : libsss_nss_idmap-1.16.1-2.fc26.x86_64                                                      164/208 
+  Verifying        : libsss_sudo-1.16.1-2.fc26.x86_64                                                           165/208 
+  Verifying        : libstaroffice-0.0.5-1.fc26.x86_64                                                          166/208 
+  Verifying        : perl-Digest-SHA-1:6.01-1.fc26.x86_64                                                       167/208 
+  Verifying        : rubygem-did_you_mean-1.1.0-87.fc26.x86_64                                                  168/208 
+  Verifying        : rubygem-io-console-0.4.6-87.fc26.x86_64                                                    169/208 
+  Verifying        : rubygem-openssl-2.0.5-87.fc26.x86_64                                                       170/208 
+  Verifying        : rubygem-psych-2.2.2-87.fc26.x86_64                                                         171/208 
+  Verifying        : rubygems-2.6.14.1-87.fc26.noarch                                                           172/208 
+  Verifying        : copy-jdk-configs-3.3-5.fc26.noarch                                                         173/208 
+  Verifying        : google-noto-emoji-color-fonts-20180307-1.fc26.noarch                                       174/208 
+  Verifying        : google-noto-emoji-fonts-20180307-1.fc26.noarch                                             175/208 
+  Verifying        : php-7.1.16-1.fc26.x86_64                                                                   176/208 
+  Verifying        : php-cli-7.1.16-1.fc26.x86_64                                                               177/208 
+  Verifying        : php-common-7.1.16-1.fc26.x86_64                                                            178/208 
+  Verifying        : php-json-7.1.16-1.fc26.x86_64                                                              179/208 
+  Verifying        : php-ldap-7.1.16-1.fc26.x86_64                                                              180/208 
+  Verifying        : php-mysqlnd-7.1.16-1.fc26.x86_64                                                           181/208 
+  Verifying        : php-pdo-7.1.16-1.fc26.x86_64                                                               182/208 
+  Verifying        : sssd-1.16.1-2.fc26.x86_64                                                                  183/208 
+  Verifying        : libetonyek-0.1.7-1.fc26.x86_64                                                             184/208 
+  Verifying        : sssd-client-1.16.1-2.fc26.x86_64                                                           185/208 
+  Verifying        : sssd-common-1.16.1-2.fc26.x86_64                                                           186/208 
+  Verifying        : sssd-common-pac-1.16.1-2.fc26.x86_64                                                       187/208 
+  Verifying        : sssd-ipa-1.16.1-2.fc26.x86_64                                                              188/208 
+  Verifying        : sssd-ad-1.16.1-2.fc26.x86_64                                                               189/208 
+  Verifying        : libwps-0.4.8-1.fc26.x86_64                                                                 190/208 
+  Verifying        : sssd-krb5-common-1.16.1-2.fc26.x86_64                                                      191/208 
+  Verifying        : sssd-krb5-1.16.1-2.fc26.x86_64                                                             192/208 
+  Verifying        : sssd-ldap-1.16.1-2.fc26.x86_64                                                             193/208 
+  Verifying        : dhcp-client-12:4.3.5-10.fc26.x86_64                                                        194/208 
+  Verifying        : dhcp-common-12:4.3.5-10.fc26.noarch                                                        195/208 
+  Verifying        : dhcp-libs-12:4.3.5-10.fc26.x86_64                                                          196/208 
+  Verifying        : sssd-proxy-1.16.1-2.fc26.x86_64                                                            197/208 
+  Verifying        : sssd-nfs-idmap-1.16.1-2.fc26.x86_64                                                        198/208 
+  Verifying        : publicsuffix-list-dafsa-20180328-1.fc26.noarch                                             199/208 
+  Verifying        : hplip-3.18.3-2.fc26.x86_64                                                                 200/208 
+  Verifying        : hplip-common-3.18.3-2.fc26.x86_64                                                          201/208 
+  Verifying        : hplip-libs-3.18.3-2.fc26.x86_64                                                            202/208 
+  Verifying        : httpd-2.4.29-1.fc26.x86_64                                                                 203/208 
+  Verifying        : httpd-filesystem-2.4.29-1.fc26.noarch                                                      204/208 
+  Verifying        : httpd-manual-2.4.29-1.fc26.noarch                                                          205/208 
+  Verifying        : httpd-tools-2.4.29-1.fc26.x86_64                                                           206/208 
+  Verifying        : python2-2.7.14-7.fc26.x86_64                                                               207/208 
+  Verifying        : hwdata-0.311-1.fc26.noarch                                                                 208/208 
+
+Installed:
+  kernel.x86_64 4.16.11-100.fc26                          kernel-core.x86_64 4.16.11-100.fc26                          
+  kernel-modules.x86_64 4.16.11-100.fc26                  kernel-modules-extra.x86_64 4.16.11-100.fc26                 
+
+Upgraded:
+  LibRaw.x86_64 0.18.11-1.fc26                                copy-jdk-configs.noarch 3.3-9.fc26                        
+  dhcp-client.x86_64 12:4.3.5-11.fc26                         dhcp-common.noarch 12:4.3.5-11.fc26                       
+  dhcp-libs.x86_64 12:4.3.5-11.fc26                           evince.x86_64 3.24.2-3.fc26                               
+  evince-djvu.x86_64 3.24.2-3.fc26                            evince-libs.x86_64 3.24.2-3.fc26                          
+  evince-nautilus.x86_64 3.24.2-3.fc26                        firefox.x86_64 60.0-4.fc26                                
+  firewalld.noarch 0.4.4.5-4.fc26                             firewalld-filesystem.noarch 0.4.4.5-4.fc26                
+  glusterfs.x86_64 3.10.12-1.fc26                             glusterfs-api.x86_64 3.10.12-1.fc26                       
+  glusterfs-cli.x86_64 3.10.12-1.fc26                         glusterfs-client-xlators.x86_64 3.10.12-1.fc26            
+  glusterfs-fuse.x86_64 3.10.12-1.fc26                        glusterfs-libs.x86_64 3.10.12-1.fc26                      
+  google-noto-emoji-color-fonts.noarch 20180508-1.fc26        google-noto-emoji-fonts.noarch 20180508-1.fc26            
+  hplip.x86_64 3.18.4-2.fc26                                  hplip-common.x86_64 3.18.4-2.fc26                         
+  hplip-libs.x86_64 3.18.4-2.fc26                             httpd.x86_64 2.4.33-4.fc26                                
+  httpd-filesystem.noarch 2.4.33-4.fc26                       httpd-manual.noarch 2.4.33-4.fc26                         
+  httpd-tools.x86_64 2.4.33-4.fc26                            hwdata.noarch 0.312-1.fc26                                
+  iptables.x86_64 1.6.2-3.fc26                                iptables-libs.x86_64 1.6.2-3.fc26                         
+  kernel-headers.x86_64 4.16.11-100.fc26                      krb5-libs.x86_64 1.15.2-8.fc26                            
+  libetonyek.x86_64 0.1.8-1.fc26                              libipa_hbac.x86_64 1.16.1-4.fc26                          
+  libmwaw.x86_64 0.3.14-1.fc26                                libnfs.x86_64 1.11.0-1.fc26                               
+  libpsl.x86_64 0.18.0-2.fc26                                 libsane-hpaio.x86_64 3.18.4-2.fc26                        
+  libsss_autofs.x86_64 1.16.1-4.fc26                          libsss_certmap.x86_64 1.16.1-4.fc26                       
+  libsss_idmap.x86_64 1.16.1-4.fc26                           libsss_nss_idmap.x86_64 1.16.1-4.fc26                     
+  libsss_sudo.x86_64 1.16.1-4.fc26                            libstaroffice.x86_64 0.0.6-1.fc26                         
+  libwps.x86_64 0.4.9-1.fc26                                  mod_ssl.x86_64 1:2.4.33-4.fc26                            
+  net-tools.x86_64 2.0-0.45.20160912git.fc26                  nss.x86_64 3.36.1-1.0.fc26                                
+  nss-softokn.x86_64 3.36.1-1.0.fc26                          nss-softokn-freebl.x86_64 3.36.1-1.0.fc26                 
+  nss-sysinit.x86_64 3.36.1-1.0.fc26                          nss-tools.x86_64 3.36.1-1.0.fc26                          
+  nss-util.x86_64 3.36.1-1.0.fc26                             open-vm-tools.x86_64 10.2.5-2.fc26                        
+  open-vm-tools-desktop.x86_64 10.2.5-2.fc26                  osinfo-db.noarch 20180514-1.fc26                          
+  perl-Digest-SHA.x86_64 1:6.02-1.fc26                        php.x86_64 7.1.17-1.fc26                                  
+  php-cli.x86_64 7.1.17-1.fc26                                php-common.x86_64 7.1.17-1.fc26                           
+  php-json.x86_64 7.1.17-1.fc26                               php-ldap.x86_64 7.1.17-1.fc26                             
+  php-mysqlnd.x86_64 7.1.17-1.fc26                            php-pdo.x86_64 7.1.17-1.fc26                              
+  publicsuffix-list-dafsa.noarch 20180419-1.fc26              python2.x86_64 2.7.15-1.fc26                              
+  python2-libs.x86_64 2.7.15-1.fc26                           python2-pip.noarch 9.0.3-2.fc26                           
+  python3-firewall.noarch 0.4.4.5-4.fc26                      python3-pip.noarch 9.0.3-2.fc26                           
+  python3-sssdconfig.noarch 1.16.1-4.fc26                     python3-urllib3.noarch 1.20-3.fc26                        
+  qt5-qtdeclarative.x86_64 5.9.4-3.fc26                       rsyslog.x86_64 8.35.0-2.fc26                              
+  ruby.x86_64 2.4.4-88.fc26                                   ruby-irb.noarch 2.4.4-88.fc26                             
+  ruby-libs.x86_64 2.4.4-88.fc26                              rubygem-bigdecimal.x86_64 1.3.2-88.fc26                   
+  rubygem-did_you_mean.x86_64 1.1.0-88.fc26                   rubygem-io-console.x86_64 0.4.6-88.fc26                   
+  rubygem-openssl.x86_64 2.0.7-88.fc26                        rubygem-psych.x86_64 2.2.2-88.fc26                        
+  rubygems.noarch 2.6.14.1-88.fc26                            sssd.x86_64 1.16.1-4.fc26                                 
+  sssd-ad.x86_64 1.16.1-4.fc26                                sssd-client.x86_64 1.16.1-4.fc26                          
+  sssd-common.x86_64 1.16.1-4.fc26                            sssd-common-pac.x86_64 1.16.1-4.fc26                      
+  sssd-ipa.x86_64 1.16.1-4.fc26                               sssd-krb5.x86_64 1.16.1-4.fc26                            
+  sssd-krb5-common.x86_64 1.16.1-4.fc26                       sssd-ldap.x86_64 1.16.1-4.fc26                            
+  sssd-nfs-idmap.x86_64 1.16.1-4.fc26                         sssd-proxy.x86_64 1.16.1-4.fc26                           
+  vim-minimal.x86_64 2:8.0.1806-1.fc26                        webkitgtk4.x86_64 2.20.2-1.fc26                           
+  webkitgtk4-jsc.x86_64 2.20.2-1.fc26                         webkitgtk4-plugin-process-gtk2.x86_64 2.20.2-1.fc26       
+  wget.x86_64 1.19.5-1.fc26                                   xdg-utils.noarch 1.1.3-1.fc26                             
+  xen-libs.x86_64 4.8.3-5.fc26                                xen-licenses.x86_64 4.8.3-5.fc26                          
+
+Complete!
+[root@localhost ~]# systemctl enable httpd.service
+[root@localhost ~]# rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+Retrieving http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+warning: /var/tmp/rpm-tmp.FvHYBJ: Header V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY
+error: Failed dependencies:
+	fedora-release conflicts with epel-release-6-8.noarch
+[root@localhost ~]# systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      4580/nginx: master  
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1293/beam.smp       
+[root@localhost ~]# systemctl status nginx.service
+Unit nginx.service could not be found.
+[root@localhost ~]# systemctl start nginx.service
+Failed to start nginx.service: Unit nginx.service not found.
+[root@localhost ~]# nginx -t -c /etc/nginx/nginx.conf
+nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
+2018/06/19 22:56:34 [emerg] 44026#0: open() "/etc/nginx/nginx.conf" failed (2: No such file or directory)
+nginx: configuration file /etc/nginx/nginx.conf test failed
+[root@localhost ~]# ^C
+[root@localhost ~]# cat /var/log/nginx/error.log
+cat: /var/log/nginx/error.log: No such file or directory
+[root@localhost ~]# vi /var/log/nginx/error.log
+[root@localhost ~]# ls -l /var/log/nginx/error.log
+ls: cannot access '/var/log/nginx/error.log': No such file or directory
+[root@localhost ~]# yum install epel-release
+Last metadata expiration check: 1:07:23 ago on Tue 19 Jun 2018 09:51:10 PM IST.
+No match for argument: epel-release
+Error: Unable to find a match
+[root@localhost ~]# yum install nginx
+Last metadata expiration check: 1:07:26 ago on Tue 19 Jun 2018 09:51:10 PM IST.
+Package nginx-1:1.12.1-1.fc26.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@localhost ~]# systemctl -l enable nginx
+Failed to enable unit: Unit file nginx.service does not exist.
+[root@localhost ~]# systemctl -l start nginx
+Failed to start nginx.service: Unit nginx.service not found.
+[root@localhost ~]# vi /etc/yum.repos.d/nginx.repo
+[root@localhost ~]# sudo nginx
+nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
+2018/06/19 23:01:48 [emerg] 44160#0: open() "/etc/nginx/nginx.conf" failed (2: No such file or directory)
+[root@localhost ~]# yum remove nginx
+Dependencies resolved.
+========================================================================================================================
+ Package                  Arch                      Version                            Repository                  Size
+========================================================================================================================
+Removing:
+ nginx                    x86_64                    1:1.12.1-1.fc26                    @System                    1.5 M
+
+Transaction Summary
+========================================================================================================================
+Remove  1 Package
+
+Freed space: 1.5 M
+Is this ok [y/N]: y
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                1/1 
+  Running scriptlet: nginx-1:1.12.1-1.fc26.x86_64                                                                   1/1 
+  Erasing          : nginx-1:1.12.1-1.fc26.x86_64                                                                   1/1 
+warning: file /var/log/nginx: remove failed: No such file or directory
+warning: file /usr/lib/systemd/system/nginx.service: remove failed: No such file or directory
+warning: file /etc/nginx/win-utf: remove failed: No such file or directory
+warning: file /etc/nginx/uwsgi_params.default: remove failed: No such file or directory
+warning: file /etc/nginx/uwsgi_params: remove failed: No such file or directory
+warning: file /etc/nginx/scgi_params.default: remove failed: No such file or directory
+warning: file /etc/nginx/scgi_params: remove failed: No such file or directory
+warning: file /etc/nginx/nginx.conf.default: remove failed: No such file or directory
+warning: file /etc/nginx/nginx.conf: remove failed: No such file or directory
+warning: file /etc/nginx/mime.types.default: remove failed: No such file or directory
+warning: file /etc/nginx/koi-win: remove failed: No such file or directory
+warning: file /etc/nginx/koi-utf: remove failed: No such file or directory
+warning: file /etc/nginx/fastcgi_params.default: remove failed: No such file or directory
+warning: file /etc/nginx/fastcgi_params: remove failed: No such file or directory
+warning: file /etc/nginx/fastcgi.conf.default: remove failed: No such file or directory
+warning: file /etc/nginx/fastcgi.conf: remove failed: No such file or directory
+  Running scriptlet: nginx-1:1.12.1-1.fc26.x86_64                                                                   1/1 
+Running as unit: run-rbbc05a1b983a4a5aba82557c3a4d965f.service
+  Verifying        : nginx-1:1.12.1-1.fc26.x86_64                                                                   1/1 
+
+Removed:
+  nginx.x86_64 1:1.12.1-1.fc26                                                                                          
+
+Complete!
+[root@localhost ~]# systemctl enable httpd.service
+[root@localhost ~]# systemctl restart httpd.service
+Job for httpd.service failed because the control process exited with error code.
+See "systemctl  status httpd.service" and "journalctl  -xe" for details.
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      4580/nginx: master  
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1293/beam.smp       
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      4580/nginx: master  
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      1293/beam.smp       
+[root@localhost ~]# kill -TERM 4580
+[root@localhost ~]# kill -TERM 1293
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      44514/nginx: master 
+[root@localhost ~]# kill -TERM 44514
+[root@localhost ~]# sudo netstat -ntlp | grep :80
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      44809/nginx: master 
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      44524/beam.smp      
+[root@localhost ~]# 
+

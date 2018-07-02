@@ -1,0 +1,399 @@
+[fedora26@localhost ~]$ history
+    1  iwconfig
+    2  lspci | grep -i wireless
+    3  iwconfig
+    4  lspci | grep -i wireless
+    5  iwconfig
+    6  ifconfig
+    7  pwd
+    8  ls
+    9  su -
+   10  passwd
+   11  su -
+   12  /sbin/reboot -f
+   13  sudo su -
+   14  su -
+   15  locate sshd_config
+   16  vi /etc/ssh/sshd_config
+   17  su -
+   18  sudo su -
+   19  yum install -y ruby
+   20  sudo yum install -y ruby
+   21  which ruby
+   22  curl -L https://www.chef.io/chef/install.sh 
+   23  ls
+   24  pwd
+   25  ls
+   26  cd Downloads/
+   27  ls
+   28  ls -l
+   29  rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+   30  cd ..
+   31  cd Downloads/
+   32  sudo rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+   33  cd ..
+   34  curl -L https://www.chef.io/chef/install.sh | sudo bash
+   35  sudo curl -L https://www.chef.io/chef/install.sh | sudo bash
+   36  chef-client
+   37  pwd
+   38  ls
+   39  cd etc
+   40  cd /etc/
+   41  ls
+   42  ls -lart | grep -i chef
+   43  cd /opt
+   44  ls
+   45  cd chef/
+   46  ls
+   47  cd bin
+   48  ls
+   49  cat chef-client 
+   50  ls
+   51  pwd
+   52  cd /
+   53  cd etc/opt/chef
+   54  pwd
+   55  cd /home
+   56  ls
+   57  cd fedora26
+   58  ls
+   59  ifconfig
+   60  sevii
+   61  service sshd status
+   62  vi /etc/ssh
+   63  vi /etc/ssh/sshd_config 
+   64  su -
+   65  who
+   66  pwd
+   67  sudo su -
+   68  su -
+   69  who
+   70  su -
+   71  who
+   72  visudo
+   73  sudo visudo
+   74  exit
+   75  visudo
+   76  gpasswd wheel -a fedora26
+   77  sudo gpasswd wheel -a fedora26
+   78  visudo
+   79  gpasswd wheel -a fedora26
+   80  sudo gpasswd wheel -a fedora26
+   81  sudo su -
+   82  visudo
+   83  gpasswd wheel -a fedora26
+   84  sudo visudo
+   85  su -
+   86  exit
+   87  yum -y install httpd
+   88  su -
+   89  ls /etc/httpd/conf/httpd.conf
+   90  vi /etc/httpd/conf/httpd.conf
+   91  netstat -l
+   92  semanage port -l | grep http_port_t
+   93  netstat -pat | grep httpd
+   94  su -
+   95  history
+   96  systemctl status httpd.service
+   97  systemctl reload httpd.service
+   98  systemctl enable httpd.service
+   99  systemctl reload httpd.service
+  100  systemctl restart httpd.service
+  101  systemctl status httpd.service
+  102  sudo dnf install httpd
+  103  systemctl status httpd.service
+  104  systemctl restart httpd.service
+  105  ls /etc/apache2/httpd.conf
+  106  sudo ls /etc/apache2/httpd.conf
+  107  sudo su -
+  108  su -
+  109  init 6
+  110  ifconfig -a
+  111  history
+  112  systemctl status httpd.service
+  113  hostname
+  114  systemctl list-units |grep network
+  115  ls -l /etc/sysconfig/network-scripts/
+  116  sudo su -
+  117  init 3
+  118  sudo su -
+  119  pwd
+  120  ifconfig 
+  121  date
+  122  service ntpd status
+  123  systemctl status httpd.service
+  124  systemctl status ntpd.service
+  125  systemctl status ntp.service
+  126  systemctl status ntpd.service 
+  127  history |grep nyp
+  128  history |grep ntp
+  129  history |grep date
+  130  ping 192.168.33.145
+  131  service status nginix
+  132  systemctl status nginx.service 
+  133  systemctl start nginx.service 
+  134  sudo systemctl restart nginx
+  135  su -
+  136  hostname
+  137  ifconfig
+  138  rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+  139  yum update -y
+  140  su -
+  141  ls
+  142  pwd
+  143  sudo su -
+  144  rpmquery chef
+  145  chef-server-ctl status
+  146  su -
+  147  history
+[fedora26@localhost ~]$ 
+
+
+[fedora26@localhost ~]$ ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:50:56:2e:06:dd brd ff:ff:ff:ff:ff:ff
+    inet 192.168.33.140/24 brd 192.168.33.255 scope global dynamic ens33
+       valid_lft 1763sec preferred_lft 1763sec
+    inet6 fe80::4b88:dd56:39bd:7ee1/64 scope link 
+       valid_lft forever preferred_lft forever
+3: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:78:21:fc brd ff:ff:ff:ff:ff:ff
+    inet 192.168.124.1/24 brd 192.168.124.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+4: virbr0-nic: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel master virbr0 state DOWN group default qlen 1000
+    link/ether 52:54:00:78:21:fc brd ff:ff:ff:ff:ff:ff
+[fedora26@localhost ~]$ knife bootstrap 192.168.33.140 --sudo  -x root -P root@123 -N "server2" -r "recipe[sample1]"
+WARNING: No knife configuration file found. See https://docs.chef.io/config_rb_knife.html for details.
+WARN: Failed to read the private key /etc/chef/client.pem: #<Errno::EACCES: Permission denied @ rb_sysopen - /etc/chef/client.pem>
+ERROR: Your private key could not be loaded from /etc/chef/client.pem
+Check your configuration file and ensure that your private key is readable
+[fedora26@localhost ~]$ sudo knife bootstrap 192.168.33.140 --sudo  -x root -P root@123 -N "server2" -r "recipe[sample1]"
+WARNING: No knife configuration file found. See https://docs.chef.io/config_rb_knife.html for details.
+ERROR: ArgumentError: Cannot sign the request without a client name, check that :node_name is assigned
+[fedora26@localhost ~]$ ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:50:56:2e:06:dd brd ff:ff:ff:ff:ff:ff
+    inet 192.168.33.140/24 brd 192.168.33.255 scope global dynamic ens33
+       valid_lft 1453sec preferred_lft 1453sec
+    inet6 fe80::4b88:dd56:39bd:7ee1/64 scope link 
+       valid_lft forever preferred_lft forever
+3: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:78:21:fc brd ff:ff:ff:ff:ff:ff
+    inet 192.168.124.1/24 brd 192.168.124.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+4: virbr0-nic: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel master virbr0 state DOWN group default qlen 1000
+    link/ether 52:54:00:78:21:fc brd ff:ff:ff:ff:ff:ff
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ su -
+Password: 
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# ls -a
+.                .ansible       .bash_profile  .config  Documents  .ICEauthority  Music     Public  .tcshrc
+..               .bash_history  .bashrc        .cshrc   Downloads  .local         Pictures  .rnd    Templates
+anaconda-ks.cfg  .bash_logout   .cache         Desktop  .esd_auth  .mozilla       .pki      .ssh    Videos
+[root@localhost ~]# ls -la
+total 112
+dr-xr-x---. 17 root root 4096 Apr 30 22:52 .
+dr-xr-xr-x. 18 root root 4096 Jul  6  2017 ..
+-rw-------.  1 root root 1345 Nov 27  2017 anaconda-ks.cfg
+drwx------.  3 root root 4096 Apr 30 22:52 .ansible
+-rw-------.  1 root root 7680 Jun 19 12:07 .bash_history
+-rw-r--r--.  1 root root   18 Feb 12  2017 .bash_logout
+-rw-r--r--.  1 root root  176 Feb 12  2017 .bash_profile
+-rw-r--r--.  1 root root  176 Feb 12  2017 .bashrc
+drwx------. 14 root root 4096 Apr 17 19:41 .cache
+drwxr-xr-x. 14 root root 4096 Apr 17 20:00 .config
+-rw-r--r--.  1 root root  100 Feb 12  2017 .cshrc
+drwxr-xr-x.  2 root root 4096 Apr 16 22:52 Desktop
+drwxr-xr-x.  2 root root 4096 Apr 16 22:52 Documents
+drwxr-xr-x.  2 root root 4096 Apr 16 22:52 Downloads
+-rw-------.  1 root root   16 Apr 16 22:52 .esd_auth
+-rw-------.  1 root root 1240 Apr 17 20:01 .ICEauthority
+drwx------.  3 root root 4096 Apr 16 22:52 .local
+drwxr-xr-x.  4 root root 4096 Apr 16 23:05 .mozilla
+drwxr-xr-x.  2 root root 4096 Apr 16 22:52 Music
+drwxr-xr-x.  2 root root 4096 Apr 16 22:52 Pictures
+drwxr-----.  3 root root 4096 Apr 17 20:01 .pki
+drwxr-xr-x.  2 root root 4096 Apr 16 22:52 Public
+-rw-------.  1 root root 1024 Apr 23 21:49 .rnd
+drwx------.  2 root root 4096 Apr 30 22:51 .ssh
+-rw-r--r--.  1 root root  129 Feb 12  2017 .tcshrc
+drwxr-xr-x.  2 root root 4096 Apr 16 22:52 Templates
+drwxr-xr-x.  2 root root 4096 Apr 16 22:52 Videos
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# vi /etc/ssh/sshd_config
+[root@localhost ~]# yum install list | grep -i ruby
+Error: Unable to find a match
+[root@localhost ~]# which ruby
+/usr/bin/ruby
+[root@localhost ~]# ruby --version
+ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]
+[root@localhost ~]# yum installed list | grep -i ruby
+No such command: installed. Please use /usr/bin/yum --help
+It could be a DNF plugin command, try: "dnf install 'dnf-command(installed)'"
+[root@localhost ~]# yum list installed | grep -i ruby
+ruby.x86_64                                2.4.3-87.fc26               @System  
+ruby-irb.noarch                            2.4.3-87.fc26               @System  
+ruby-libs.x86_64                           2.4.3-87.fc26               @System  
+rubygem-bigdecimal.x86_64                  1.3.0-87.fc26               @System  
+rubygem-did_you_mean.x86_64                1.1.0-87.fc26               @System  
+rubygem-io-console.x86_64                  0.4.6-87.fc26               @System  
+rubygem-json.x86_64                        2.1.0-100.fc26              @System  
+rubygem-openssl.x86_64                     2.0.5-87.fc26               @System  
+rubygem-psych.x86_64                       2.2.2-87.fc26               @System  
+rubygem-rdoc.noarch                        5.1.0-3.fc26                @System  
+rubygems.noarch                            2.6.14.1-87.fc26            @System  
+rubypick.noarch                            1.1.1-6.fc26                @System  
+[root@localhost ~]# chef-client -v
+Chef: 14.0.202
+[root@localhost ~]# ls -la etc/opt/chef
+ls: cannot access 'etc/opt/chef': No such file or directory
+[root@localhost ~]# ls -la /etc/opt/chef
+ls: cannot access '/etc/opt/chef': No such file or directory
+[root@localhost ~]# ls -la ~etc/opt/chef
+ls: cannot access '~etc/opt/chef': No such file or directory
+[root@localhost ~]# cd etc/opt/chef
+-bash: cd: etc/opt/chef: No such file or directory
+[root@localhost ~]# cd /
+[root@localhost /]# pwd
+/
+[root@localhost /]# ls -la /etc/opt/chef
+ls: cannot access '/etc/opt/chef': No such file or directory
+[root@localhost /]# ls -la etc/opt/chef
+ls: cannot access 'etc/opt/chef': No such file or directory
+[root@localhost /]# ls
+bin  boot  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@localhost /]# ls -la etc/op
+openldap/           openvpn/            opscode-analytics/  
+opensc-x86_64.conf  opscode/            opt/                
+[root@localhost /]# ls -la etc/opt/
+total 16
+drwxr-xr-x.   2 root root  4096 Feb 10  2017 .
+drwxr-xr-x. 141 root root 12288 Jun 19 19:42 ..
+[root@localhost /]# ls -la /etc/opt/
+bin/        etc/        lib64/      mnt/        root/       srv/        usr/        
+boot/       home/       lost+found/ opt/        run/        sys/        var/        
+dev/        lib/        media/      proc/       sbin/       tmp/        
+[root@localhost /]# ls -la etc/opt/
+total 16
+drwxr-xr-x.   2 root root  4096 Feb 10  2017 .
+drwxr-xr-x. 141 root root 12288 Jun 19 19:42 ..
+[root@localhost /]# service sshd status
+Redirecting to /bin/systemctl status sshd.service
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Tue 2018-06-19 12:09:34 IST; 7h ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 1266 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─1266 /usr/sbin/sshd -D
+
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Jun 19 12:09:34 localhost.localdomain sshd[1266]: Server listening on 0.0.0.0 port 22.
+Jun 19 12:09:34 localhost.localdomain sshd[1266]: Server listening on :: port 22.
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+Jun 19 12:30:22 localhost.localdomain sshd[5655]: Accepted publickey for root from 192.168.33.145 port 45498 ssh2: RSA S
+Jun 19 12:31:33 localhost.localdomain sshd[6121]: Accepted publickey for root from 192.168.33.145 port 45530 ssh2: RSA S
+
+[root@localhost /]# date
+Tue Jun 19 19:55:58 IST 2018
+[root@localhost /]# ls /etc/httpd/conf/httpd.conf
+/etc/httpd/conf/httpd.conf
+[root@localhost /]# vi /etc/httpd/conf/httpd.conf
+[root@localhost /]# netstat -pat | grep httpd
+[root@localhost /]# cd root
+[root@localhost ~]# ls
+anaconda-ks.cfg  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[root@localhost ~]# git --version
+git version 2.13.6
+[root@localhost ~]# which git
+/usr/bin/git
+[root@localhost ~]# yum list installed | grep -i git
+clucene-contribs-lib.x86_64                2.3.3.4-26.20130812.e8e3d20git.fc26
+clucene-core.x86_64                        2.3.3.4-26.20130812.e8e3d20git.fc26
+crontabs.noarch                            1.11-14.20150630git.fc26    @anaconda
+crypto-policies.noarch                     20170606-1.git7c32281.fc26  @anaconda
+dracut.x86_64                              046-8.git20180105.fc26      @System  
+dracut-config-rescue.x86_64                046-8.git20180105.fc26      @System  
+dracut-live.x86_64                         046-8.git20180105.fc26      @System  
+dracut-network.x86_64                      046-8.git20180105.fc26      @System  
+edk2-ovmf.noarch                           20170209git296153c5-3.fc26  @anaconda
+git.x86_64                                 2.13.6-3.fc26               @System  
+git-core.x86_64                            2.13.6-3.fc26               @System  
+git-core-doc.x86_64                        2.13.6-3.fc26               @System  
+hyperv-daemons.x86_64                      0-0.18.20170105git.fc26     @anaconda
+hyperv-daemons-license.noarch              0-0.18.20170105git.fc26     @anaconda
+hypervfcopyd.x86_64                        0-0.18.20170105git.fc26     @anaconda
+hypervkvpd.x86_64                          0-0.18.20170105git.fc26     @anaconda
+hypervvssd.x86_64                          0-0.18.20170105git.fc26     @anaconda
+ipxe-roms-qemu.noarch                      20161108-2.gitb991c67.fc26  @anaconda
+iscsi-initiator-utils.x86_64               6.2.0.874-3.git86e8892.fc26 @anaconda
+iscsi-initiator-utils-iscsiuio.x86_64      6.2.0.874-3.git86e8892.fc26 @anaconda
+libertas-usb8388-firmware.noarch           2:20180402-83.git8c1e439c.fc26
+libwsman1.x86_64                           2.6.3-2.git4391e5c.fc26     @anaconda
+linux-firmware.noarch                      20180402-83.git8c1e439c.fc26
+lldpad.x86_64                              1.0.1-6.git036e314.fc26     @anaconda
+lockdev.x86_64                             1.0.4-0.23.20111007git.fc26 @anaconda
+mobile-broadband-provider-info.noarch      1.20170105git-2.fc26        @anaconda
+net-tools.x86_64                           2.0-0.44.20160912git.fc26   @System  
+numad.x86_64                               0.5-22.20150602git.fc26     @anaconda
+openCOLLADA.x86_64                         0-28.gitcaad49c.fc26        @anaconda
+perl-Git.noarch                            2.13.6-3.fc26               @System  
+plymouth.x86_64                            0.9.3-0.7.20160620git0e65b86c.fc26
+plymouth-core-libs.x86_64                  0.9.3-0.7.20160620git0e65b86c.fc26
+plymouth-graphics-libs.x86_64              0.9.3-0.7.20160620git0e65b86c.fc26
+plymouth-plugin-label.x86_64               0.9.3-0.7.20160620git0e65b86c.fc26
+plymouth-plugin-two-step.x86_64            0.9.3-0.7.20160620git0e65b86c.fc26
+plymouth-scripts.x86_64                    0.9.3-0.7.20160620git0e65b86c.fc26
+plymouth-system-theme.x86_64               0.9.3-0.7.20160620git0e65b86c.fc26
+plymouth-theme-charge.x86_64               0.9.3-0.7.20160620git0e65b86c.fc26
+python3-iscsi-initiator-utils.x86_64       6.2.0.874-3.git86e8892.fc26 @anaconda
+virglrenderer.x86_64                       0.6.0-1.20170210git76b3da97b.fc26
+vpnc-script.noarch                         20140805-5.gitdf5808b.fc26  @anaconda
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# hostname
+localhost.localdomain
+[root@localhost ~]# service status nginix
+The service command supports only basic LSB actions (start, stop, restart, try-restart, reload, force-reload, status). For other actions, please try to use systemctl.
+[root@localhost ~]# systemctl status nginx.service
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Tue 2018-06-19 12:09:34 IST; 7h ago
+  Process: 1292 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+  Process: 1269 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+  Process: 1261 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+ Main PID: 1293 (nginx)
+    Tasks: 5 (limit: 19660)
+   CGroup: /system.slice/nginx.service
+           ├─1293 nginx: master process /usr/sbin/nginx
+           ├─1294 nginx: worker process
+           ├─1295 nginx: worker process
+           ├─1296 nginx: worker process
+           └─1297 nginx: worker process
+
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 19 12:09:34 localhost.localdomain nginx[1269]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 19 12:09:34 localhost.localdomain nginx[1292]: nginx: [warn] could not build optimal types_hash, you should increase
+Jun 19 12:09:34 localhost.localdomain systemd[1]: Started The nginx HTTP and reverse proxy server.
+
+[root@localhost ~]# 
+

@@ -1,0 +1,1269 @@
+[fedora26@localhost ~]$ sudo su -
+[root@localhost ~]# yum install -y ruby
+Last metadata expiration check: 0:00:00 ago on Tue 17 Apr 2018 08:06:21 PM IST.
+Dependencies resolved.
+============================================================================================
+ Package                      Arch           Version                  Repository       Size
+============================================================================================
+Installing dependencies:
+ libyaml                      x86_64         0.1.7-2.fc26             fedora           57 k
+ ruby                         x86_64         2.4.3-87.fc26            updates          79 k
+ ruby-irb                     noarch         2.4.3-87.fc26            updates          96 k
+ ruby-libs                    x86_64         2.4.3-87.fc26            updates         2.8 M
+ rubygem-openssl              x86_64         2.0.5-87.fc26            updates         177 k
+ rubygem-psych                x86_64         2.2.2-87.fc26            updates          88 k
+ rubypick                     noarch         1.1.1-6.fc26             fedora           10 k
+Installing weak dependencies:
+ rubygem-bigdecimal           x86_64         1.3.0-87.fc26            updates          90 k
+ rubygem-did_you_mean         x86_64         1.1.0-87.fc26            updates          82 k
+ rubygem-io-console           x86_64         0.4.6-87.fc26            updates          60 k
+ rubygem-rdoc                 noarch         5.1.0-2.fc26             updates         447 k
+ rubygems                     noarch         2.6.14.1-87.fc26         updates         293 k
+
+Transaction Summary
+============================================================================================
+Install  12 Packages
+
+Total download size: 4.2 M
+Installed size: 14 M
+Downloading Packages:
+(1/12): rubypick-1.1.1-6.fc26.noarch.rpm                                                                       28 kB/s |  10 kB     00:00    
+(2/12): ruby-2.4.3-87.fc26.x86_64.rpm                                                                          81 kB/s |  79 kB     00:00    
+(3/12): rubygem-openssl-2.0.5-87.fc26.x86_64.rpm                                                              412 kB/s | 177 kB     00:00    
+(4/12): rubygem-bigdecimal-1.3.0-87.fc26.x86_64.rpm                                                           359 kB/s |  90 kB     00:00    
+(5/12): rubygems-2.6.14.1-87.fc26.noarch.rpm                                                                  200 kB/s | 293 kB     00:01    
+(6/12): rubygem-did_you_mean-1.1.0-87.fc26.x86_64.rpm                                                         386 kB/s |  82 kB     00:00    
+[MIRROR] libyaml-0.1.7-2.fc26.x86_64.rpm: Status code: 404 for http://mirrors.piconets.webwerks.in/fedora-mirror/fedora/linux/releases/26/Everything/x86_64/os/Packages/l/libyaml-0.1.7-2.fc26.x86_64.rpm
+(7/12): rubygem-psych-2.2.2-87.fc26.x86_64.rpm                                                                299 kB/s |  88 kB     00:00    
+(8/12): rubygem-rdoc-5.1.0-2.fc26.noarch.rpm                                                                  478 kB/s | 447 kB     00:00    
+(9/12): ruby-irb-2.4.3-87.fc26.noarch.rpm                                                                     226 kB/s |  96 kB     00:00    
+(10/12): rubygem-io-console-0.4.6-87.fc26.x86_64.rpm                                                           84 kB/s |  60 kB     00:00    
+(11/12): libyaml-0.1.7-2.fc26.x86_64.rpm                                                                       19 kB/s |  57 kB     00:02    
+(12/12): ruby-libs-2.4.3-87.fc26.x86_64.rpm                                                                   481 kB/s | 2.8 MB     00:05    
+----------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                         504 kB/s | 4.2 MB     00:08     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                      1/1 
+  Installing       : ruby-libs-2.4.3-87.fc26.x86_64                                                                                      1/12 
+  Running scriptlet: ruby-libs-2.4.3-87.fc26.x86_64                                                                                      1/12 
+  Installing       : rubypick-1.1.1-6.fc26.noarch                                                                                        2/12 
+  Installing       : ruby-2.4.3-87.fc26.x86_64                                                                                           3/12 
+  Installing       : ruby-irb-2.4.3-87.fc26.noarch                                                                                       4/12 
+  Installing       : libyaml-0.1.7-2.fc26.x86_64                                                                                         5/12 
+  Running scriptlet: libyaml-0.1.7-2.fc26.x86_64                                                                                         5/12 
+  Installing       : rubygem-openssl-2.0.5-87.fc26.x86_64                                                                                6/12 
+  Installing       : rubygem-psych-2.2.2-87.fc26.x86_64                                                                                  7/12 
+  Installing       : rubygems-2.6.14.1-87.fc26.noarch                                                                                    8/12 
+  Installing       : rubygem-io-console-0.4.6-87.fc26.x86_64                                                                             9/12 
+  Installing       : rubygem-rdoc-5.1.0-2.fc26.noarch                                                                                   10/12 
+  Installing       : rubygem-bigdecimal-1.3.0-87.fc26.x86_64                                                                            11/12 
+  Installing       : rubygem-did_you_mean-1.1.0-87.fc26.x86_64                                                                          12/12 
+  Running scriptlet: rubygem-did_you_mean-1.1.0-87.fc26.x86_64                                                                          12/12 
+  Verifying        : ruby-2.4.3-87.fc26.x86_64                                                                                           1/12 
+  Verifying        : ruby-libs-2.4.3-87.fc26.x86_64                                                                                      2/12 
+  Verifying        : rubypick-1.1.1-6.fc26.noarch                                                                                        3/12 
+  Verifying        : rubygems-2.6.14.1-87.fc26.noarch                                                                                    4/12 
+  Verifying        : rubygem-openssl-2.0.5-87.fc26.x86_64                                                                                5/12 
+  Verifying        : rubygem-bigdecimal-1.3.0-87.fc26.x86_64                                                                             6/12 
+  Verifying        : rubygem-did_you_mean-1.1.0-87.fc26.x86_64                                                                           7/12 
+  Verifying        : rubygem-psych-2.2.2-87.fc26.x86_64                                                                                  8/12 
+  Verifying        : libyaml-0.1.7-2.fc26.x86_64                                                                                         9/12 
+  Verifying        : rubygem-rdoc-5.1.0-2.fc26.noarch                                                                                   10/12 
+  Verifying        : ruby-irb-2.4.3-87.fc26.noarch                                                                                      11/12 
+  Verifying        : rubygem-io-console-0.4.6-87.fc26.x86_64                                                                            12/12 
+
+Installed:
+  rubygem-bigdecimal.x86_64 1.3.0-87.fc26       rubygem-did_you_mean.x86_64 1.1.0-87.fc26       rubygem-io-console.x86_64 0.4.6-87.fc26      
+  rubygem-rdoc.noarch 5.1.0-2.fc26              rubygems.noarch 2.6.14.1-87.fc26                libyaml.x86_64 0.1.7-2.fc26                  
+  ruby.x86_64 2.4.3-87.fc26                     ruby-irb.noarch 2.4.3-87.fc26                   ruby-libs.x86_64 2.4.3-87.fc26               
+  rubygem-openssl.x86_64 2.0.5-87.fc26          rubygem-psych.x86_64 2.2.2-87.fc26              rubypick.noarch 1.1.1-6.fc26                 
+
+Complete!
+[root@localhost ~]# exit
+logout
+[fedora26@localhost ~]$ yum install -y ruby
+Error: This command has to be run under the root user.
+[fedora26@localhost ~]$ sudo yum install -y ruby
+Last metadata expiration check: 0:01:23 ago on Tue 17 Apr 2018 08:06:21 PM IST.
+Package ruby-2.4.3-87.fc26.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[fedora26@localhost ~]$ which ruby
+/usr/bin/ruby
+[fedora26@localhost ~]$ curl -L https://www.chef.io/chef/install.sh 
+#!/bin/sh
+# WARNING: REQUIRES /bin/sh
+#
+# - must run on /bin/sh on solaris 9
+# - must run on /bin/sh on AIX 6.x
+#
+# Copyright:: Copyright (c) 2010-2015 Chef Software, Inc.
+# License:: Apache License, Version 2.0
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# helpers.sh
+############
+# This section has some helper functions to make life easier.
+#
+# Outputs:
+# $tmp_dir: secure-ish temp directory that can be used during installation.
+############
+
+# Check whether a command exists - returns 0 if it does, 1 if it does not
+exists() {
+  if command -v $1 >/dev/null 2>&1
+  then
+    return 0
+  else
+    return 1
+  fi
+}
+
+# Output the instructions to report bug about this script
+report_bug() {
+  echo "Version: $version"
+  echo ""
+  echo "Please file a Bug Report at https://github.com/chef/omnitruck/issues/new"
+  echo "Alternatively, feel free to open a Support Ticket at https://www.chef.io/support/tickets"
+  echo "More Chef support resources can be found at https://www.chef.io/support"
+  echo ""
+  echo "Please include as many details about the problem as possible i.e., how to reproduce"
+  echo "the problem (if possible), type of the Operating System and its version, etc.,"
+  echo "and any other relevant details that might help us with troubleshooting."
+  echo ""
+}
+
+checksum_mismatch() {
+  echo "Package checksum mismatch!"
+  report_bug
+  exit 1
+}
+
+unable_to_retrieve_package() {
+  echo "Unable to retrieve a valid package!"
+  report_bug
+  echo "Metadata URL: $metadata_url"
+  if test "x$download_url" != "x"; then
+    echo "Download URL: $download_url"
+  fi
+  if test "x$stderr_results" != "x"; then
+    echo "\nDEBUG OUTPUT FOLLOWS:\n$stderr_results"
+  fi
+  exit 1
+}
+
+http_404_error() {
+  echo "Omnitruck artifact does not exist for version $version on platform $platform"
+  echo ""
+  echo "Either this means:"
+  echo "   - We do not support $platform"
+  echo "   - We do not have an artifact for $version"
+  echo ""
+  echo "This is often the latter case due to running a prerelease or RC version of chef"
+  echo "or a gem version which was only pushed to rubygems and not omnitruck."
+  echo ""
+  echo "You may be able to set your knife[:bootstrap_version] to the most recent stable"
+  echo "release of Chef to fix this problem (or the most recent stable major version number)."
+  echo ""
+  echo "In order to test the version parameter, adventurous users may take the Metadata URL"
+  echo "below and modify the '&v=<number>' parameter until you successfully get a URL that"
+  echo "does not 404 (e.g. via curl or wget).  You should be able to use '&v=11' or '&v=12'"
+  echo "succesfully."
+  echo ""
+  echo "If you cannot fix this problem by setting the bootstrap_version, it probably means"
+  echo "that $platform is not supported."
+  echo ""
+  # deliberately do not call report_bug to suppress bug report noise.
+  echo "Metadata URL: $metadata_url"
+  if test "x$download_url" != "x"; then
+    echo "Download URL: $download_url"
+  fi
+  if test "x$stderr_results" != "x"; then
+    echo "\nDEBUG OUTPUT FOLLOWS:\n$stderr_results"
+  fi
+  exit 1
+}
+
+capture_tmp_stderr() {
+  # spool up /tmp/stderr from all the commands we called
+  if test -f "$tmp_dir/stderr"; then
+    output=`cat $tmp_dir/stderr`
+    stderr_results="${stderr_results}\nSTDERR from $1:\n\n$output\n"
+    rm $tmp_dir/stderr
+  fi
+}
+
+# do_wget URL FILENAME
+do_wget() {
+  echo "trying wget..."
+  wget --user-agent="User-Agent: mixlib-install/3.9.0" -O "$2" "$1" 2>$tmp_dir/stderr
+  rc=$?
+  # check for 404
+  grep "ERROR 404" $tmp_dir/stderr 2>&1 >/dev/null
+  if test $? -eq 0; then
+    echo "ERROR 404"
+    http_404_error
+  fi
+
+  # check for bad return status or empty output
+  if test $rc -ne 0 || test ! -s "$2"; then
+    capture_tmp_stderr "wget"
+    return 1
+  fi
+
+  return 0
+}
+
+# do_curl URL FILENAME
+do_curl() {
+  echo "trying curl..."
+  curl -A "User-Agent: mixlib-install/3.9.0" --retry 5 -sL -D $tmp_dir/stderr "$1" > "$2"
+  rc=$?
+  # check for 404
+  grep "404 Not Found" $tmp_dir/stderr 2>&1 >/dev/null
+  if test $? -eq 0; then
+    echo "ERROR 404"
+    http_404_error
+  fi
+
+  # check for bad return status or empty output
+  if test $rc -ne 0 || test ! -s "$2"; then
+    capture_tmp_stderr "curl"
+    return 1
+  fi
+
+  return 0
+}
+
+# do_fetch URL FILENAME
+do_fetch() {
+  echo "trying fetch..."
+  fetch --user-agent="User-Agent: mixlib-install/3.9.0" -o "$2" "$1" 2>$tmp_dir/stderr
+  # check for bad return status
+  test $? -ne 0 && return 1
+  return 0
+}
+
+# do_perl URL FILENAME
+do_perl() {
+  echo "trying perl..."
+  perl -e 'use LWP::Simple; getprint($ARGV[0]);' "$1" > "$2" 2>$tmp_dir/stderr
+  rc=$?
+  # check for 404
+  grep "404 Not Found" $tmp_dir/stderr 2>&1 >/dev/null
+  if test $? -eq 0; then
+    echo "ERROR 404"
+    http_404_error
+  fi
+
+  # check for bad return status or empty output
+  if test $rc -ne 0 || test ! -s "$2"; then
+    capture_tmp_stderr "perl"
+    return 1
+  fi
+
+  return 0
+}
+
+# do_python URL FILENAME
+do_python() {
+  echo "trying python..."
+  python -c "import sys,urllib2; sys.stdout.write(urllib2.urlopen(urllib2.Request(sys.argv[1], headers={ 'User-Agent': 'mixlib-install/3.9.0' })).read())" "$1" > "$2" 2>$tmp_dir/stderr
+  rc=$?
+  # check for 404
+  grep "HTTP Error 404" $tmp_dir/stderr 2>&1 >/dev/null
+  if test $? -eq 0; then
+    echo "ERROR 404"
+    http_404_error
+  fi
+
+  # check for bad return status or empty output
+  if test $rc -ne 0 || test ! -s "$2"; then
+    capture_tmp_stderr "python"
+    return 1
+  fi
+  return 0
+}
+
+# returns 0 if checksums match
+do_checksum() {
+  if exists sha256sum; then
+    echo "Comparing checksum with sha256sum..."
+    checksum=`sha256sum $1 | awk '{ print $1 }'`
+    return `test "x$checksum" = "x$2"`
+  elif exists shasum; then
+    echo "Comparing checksum with shasum..."
+    checksum=`shasum -a 256 $1 | awk '{ print $1 }'`
+    return `test "x$checksum" = "x$2"`
+  else
+    echo "WARNING: could not find a valid checksum program, pre-install shasum or sha256sum in your O/S image to get valdation..."
+    return 0
+  fi
+}
+
+# do_download URL FILENAME
+do_download() {
+  echo "downloading $1"
+  echo "  to file $2"
+
+  url=`echo $1`
+  if test "x$platform" = "xsolaris2"; then
+    if test "x$platform_version" = "x5.9" -o "x$platform_version" = "x5.10"; then
+      # solaris 9 lacks openssl, solaris 10 lacks recent enough credentials - your base O/S is completely insecure, please upgrade
+      url=`echo $url | sed -e 's/https/http/'`
+    fi
+  fi
+
+  # we try all of these until we get success.
+  # perl, in particular may be present but LWP::Simple may not be installed
+
+  if exists wget; then
+    do_wget $url $2 && return 0
+  fi
+
+  if exists curl; then
+    do_curl $url $2 && return 0
+  fi
+
+  if exists fetch; then
+    do_fetch $url $2 && return 0
+  fi
+
+  if exists perl; then
+    do_perl $url $2 && return 0
+  fi
+
+  if exists python; then
+    do_python $url $2 && return 0
+  fi
+
+  unable_to_retrieve_package
+}
+
+# install_file TYPE FILENAME
+# TYPE is "rpm", "deb", "solaris", "sh", etc.
+install_file() {
+  echo "Installing $project $version"
+  case "$1" in
+    "rpm")
+      if test "x$platform" = "xnexus" || test "x$platform" = "xios_xr"; then
+        echo "installing with yum..."
+        yum install -yv "$2"
+      else
+        echo "installing with rpm..."
+        rpm -Uvh --oldpackage --replacepkgs "$2"
+      fi
+      ;;
+    "deb")
+      echo "installing with dpkg..."
+      dpkg -i "$2"
+      ;;
+    "bff")
+      echo "installing with installp..."
+      installp -aXYgd "$2" all
+      ;;
+    "solaris")
+      echo "installing with pkgadd..."
+      echo "conflict=nocheck" > $tmp_dir/nocheck
+      echo "action=nocheck" >> $tmp_dir/nocheck
+      echo "mail=" >> $tmp_dir/nocheck
+      pkgrm -a $tmp_dir/nocheck -n $project >/dev/null 2>&1 || true
+      pkgadd -G -n -d "$2" -a $tmp_dir/nocheck $project
+      ;;
+    "pkg")
+      echo "installing with installer..."
+      cd / && /usr/sbin/installer -pkg "$2" -target /
+      ;;
+    "dmg")
+      echo "installing dmg file..."
+      hdiutil detach "/Volumes/chef_software" >/dev/null 2>&1 || true
+      hdiutil attach "$2" -mountpoint "/Volumes/chef_software"
+      cd / && /usr/sbin/installer -pkg `find "/Volumes/chef_software" -name \*.pkg` -target /
+      hdiutil detach "/Volumes/chef_software"
+      ;;
+    "sh" )
+      echo "installing with sh..."
+      sh "$2"
+      ;;
+    "p5p" )
+      echo "installing p5p package..."
+      pkg install -g "$2" $project
+      ;;
+    *)
+      echo "Unknown filetype: $1"
+      report_bug
+      exit 1
+      ;;
+  esac
+  if test $? -ne 0; then
+    echo "Installation failed"
+    report_bug
+    exit 1
+  fi
+}
+
+if test "x$TMPDIR" = "x"; then
+  tmp="/tmp"
+else
+  tmp=$TMPDIR
+fi
+# secure-ish temp dir creation without having mktemp available (DDoS-able but not expliotable)
+tmp_dir="$tmp/install.sh.$$"
+(umask 077 && mkdir $tmp_dir) || exit 1
+
+############
+# end of helpers.sh
+############
+
+
+# script_cli_parameters.sh
+############
+# This section reads the CLI parameters for the install script and translates
+#   them to the local parameters to be used later by the script.
+#
+# Outputs:
+# $version: Requested version to be installed.
+# $channel: Channel to install the product from
+# $project: Project to be installed
+# $cmdline_filename: Name of the package downloaded on local disk.
+# $cmdline_dl_dir: Name of the directory downloaded package will be saved to on local disk.
+# $install_strategy: Method of package installations. default strategy is to always install upon exec. Set to "once" to skip if project is installed
+# $download_url_override: Install package downloaded from a direct URL.
+# $checksum: SHA256 for download_url_override file (optional)
+############
+
+# Defaults
+channel="stable"
+project="chef"
+
+while getopts pnv:c:f:P:d:s:l:a opt
+do
+  case "$opt" in
+
+    v)  version="$OPTARG";;
+    c)  channel="$OPTARG";;
+    p)  channel="current";; # compat for prerelease option
+    n)  channel="current";; # compat for nightlies option
+    f)  cmdline_filename="$OPTARG";;
+    P)  project="$OPTARG";;
+    d)  cmdline_dl_dir="$OPTARG";;
+    s)  install_strategy="$OPTARG";;
+    l)  download_url_override="$OPTARG";;
+    a)  checksum="$OPTARG";;
+    \?)   # unknown flag
+      echo >&2 \
+      "usage: $0 [-P project] [-c release_channel] [-v version] [-f filename | -d download_dir] [-s install_strategy] [-l download_url_override] [-a checksum]"
+      exit 1;;
+  esac
+done
+
+shift `expr $OPTIND - 1`
+
+
+if test -d "/opt/$project" && test "x$install_strategy" = "xonce"; then
+  echo "$project installation detected"
+  echo "install_strategy set to 'once'"
+  echo "Nothing to install"
+  exit
+fi
+
+
+# platform_detection.sh
+############
+# This section makes platform detection compatible with omnitruck on the system
+#   it runs.
+#
+# Outputs:
+# $platform: Name of the platform.
+# $platform_version: Version of the platform.
+# $machine: System's architecture.
+############
+
+#
+# Platform and Platform Version detection
+#
+# NOTE: This should now match ohai platform and platform_version matching.
+# do not invented new platform and platform_version schemas, just make this behave
+# like what ohai returns as platform and platform_version for the server.
+#
+# ALSO NOTE: Do not mangle platform or platform_version here.  It is less error
+# prone and more future-proof to do that in the server, and then all omnitruck clients
+# will 'inherit' the changes (install.sh is not the only client of the omnitruck
+# endpoint out there).
+#
+
+machine=`uname -m`
+os=`uname -s`
+
+if test -f "/etc/lsb-release" && grep -q DISTRIB_ID /etc/lsb-release && ! grep -q wrlinux /etc/lsb-release; then
+  platform=`grep DISTRIB_ID /etc/lsb-release | cut -d "=" -f 2 | tr '[A-Z]' '[a-z]'`
+  platform_version=`grep DISTRIB_RELEASE /etc/lsb-release | cut -d "=" -f 2`
+
+  if test "$platform" = "\"cumulus linux\""; then
+    platform="cumulus_linux"
+  elif test "$platform" = "\"cumulus networks\""; then
+    platform="cumulus_networks"
+  fi
+
+elif test -f "/etc/debian_version"; then
+  platform="debian"
+  platform_version=`cat /etc/debian_version`
+elif test -f "/etc/Eos-release"; then
+  # EOS may also contain /etc/redhat-release so this check must come first.
+  platform=arista_eos
+  platform_version=`awk '{print $4}' /etc/Eos-release`
+  machine="i386"
+elif test -f "/etc/redhat-release"; then
+  platform=`sed 's/^\(.\+\) release.*/\1/' /etc/redhat-release | tr '[A-Z]' '[a-z]'`
+  platform_version=`sed 's/^.\+ release \([.0-9]\+\).*/\1/' /etc/redhat-release`
+
+  # If /etc/redhat-release exists, we act like RHEL by default
+  if test "$platform" = "fedora"; then
+    # FIXME: stop remapping fedora to el
+    # FIXME: remove client side platform_version mangling and hard coded yolo
+    # Change platform version for use below.
+    platform_version="6.0"
+  fi
+
+  if test "$platform" = "xenserver"; then
+    # Current XenServer 6.2 is based on CentOS 5, platform is not reset to "el" server should hanlde response
+    platform="xenserver"
+  else
+    # FIXME: use "redhat"
+    platform="el"
+  fi
+
+elif test -f "/etc/system-release"; then
+  platform=`sed 's/^\(.\+\) release.\+/\1/' /etc/system-release | tr '[A-Z]' '[a-z]'`
+  platform_version=`sed 's/^.\+ release \([.0-9]\+\).*/\1/' /etc/system-release | tr '[A-Z]' '[a-z]'`
+  # amazon is built off of fedora, so act like RHEL
+  # Version 1. Example: Amazon Linux AMI release 2017.09
+  if test "$platform" = "amazon linux ami"; then
+    platform="el"
+    platform_version="6.0"
+  # Version 2. Example: Amazon Linux release 2.0 (2017.12)
+  elif test "$platform" = "amazon linux"; then
+    platform="el"
+    platform_version="7.0"
+  fi
+# Apple OS X
+elif test -f "/usr/bin/sw_vers"; then
+  platform="mac_os_x"
+  # Matching the tab-space with sed is error-prone
+  platform_version=`sw_vers | awk '/^ProductVersion:/ { print $2 }' | cut -d. -f1,2`
+
+  # x86_64 Apple hardware often runs 32-bit kernels (see OHAI-63)
+  x86_64=`sysctl -n hw.optional.x86_64`
+  if test $x86_64 -eq 1; then
+    machine="x86_64"
+  fi
+elif test -f "/etc/release"; then
+  machine=`/usr/bin/uname -p`
+  if grep -q SmartOS /etc/release; then
+    platform="smartos"
+    platform_version=`grep ^Image /etc/product | awk '{ print $3 }'`
+  else
+    platform="solaris2"
+    platform_version=`/usr/bin/uname -r`
+  fi
+elif test -f "/etc/SuSE-release"; then
+  if grep -q 'Enterprise' /etc/SuSE-release;
+  then
+      platform="sles"
+      platform_version=`awk '/^VERSION/ {V = $3}; /^PATCHLEVEL/ {P = $3}; END {print V "." P}' /etc/SuSE-release`
+  else
+      platform="suse"
+      platform_version=`awk '/^VERSION =/ { print $3 }' /etc/SuSE-release`
+  fi
+elif test "x$os" = "xFreeBSD"; then
+  platform="freebsd"
+  platform_version=`uname -r | sed 's/-.*//'`
+elif test "x$os" = "xAIX"; then
+  platform="aix"
+  platform_version="`uname -v`.`uname -r`"
+  machine="powerpc"
+elif test -f "/etc/os-release"; then
+  . /etc/os-release
+  if test "x$CISCO_RELEASE_INFO" != "x"; then
+    . $CISCO_RELEASE_INFO
+  fi
+
+  platform=$ID
+  platform_version=$VERSION
+fi
+
+if test "x$platform" = "x"; then
+  echo "Unable to determine platform version!"
+  report_bug
+  exit 1
+fi
+
+#
+# NOTE: platform manging in the install.sh is DEPRECATED
+#
+# - install.sh should be true to ohai and should not remap
+#   platform or platform versions.
+#
+# - remapping platform and mangling platform version numbers is
+#   now the complete responsibility of the server-side endpoints
+#
+
+major_version=`echo $platform_version | cut -d. -f1`
+case $platform in
+  # FIXME: should remove this case statement completely
+  "el")
+    # FIXME:  "el" is deprecated, should use "redhat"
+    platform_version=$major_version
+    ;;
+  "debian")
+    if test "x$major_version" = "x5"; then
+      # This is here for potential back-compat.
+      # We do not have 5 in versions we publish for anymore but we
+      # might have it for earlier versions.
+      platform_version="6"
+    else
+      platform_version=$major_version
+    fi
+    ;;
+  "freebsd")
+    platform_version=$major_version
+    ;;
+  "sles")
+    platform_version=$major_version
+    ;;
+  "suse")
+    platform_version=$major_version
+    ;;
+esac
+
+# normalize the architecture we detected
+case $machine in
+  "x86_64"|"amd64"|"x64")
+    machine="x86_64"
+    ;;
+  "i386"|"i86pc"|"x86"|"i686")
+    machine="i386"
+    ;;
+  "sparc"|"sun4u"|"sun4v")
+    machine="sparc"
+    ;;
+esac
+
+if test "x$platform_version" = "x"; then
+  echo "Unable to determine platform version!"
+  report_bug
+  exit 1
+fi
+
+if test "x$platform" = "xsolaris2"; then
+  # hack up the path on Solaris to find wget, pkgadd
+  PATH=/usr/sfw/bin:/usr/sbin:$PATH
+  export PATH
+fi
+
+echo "$platform $platform_version $machine"
+
+############
+# end of platform_detection.sh
+############
+
+
+# All of the download utilities in this script load common proxy env vars.
+# If variables are set they will override any existing env vars.
+# Otherwise, default proxy env vars will be loaded by the respective
+# download utility.
+
+if test "x$https_proxy" != "x"; then
+  echo "setting https_proxy: $https_proxy"
+  export HTTPS_PROXY=$https_proxy
+  export https_proxy=$https_proxy
+fi
+
+if test "x$http_proxy" != "x"; then
+  echo "setting http_proxy: $http_proxy"
+  export HTTP_PROXY=$http_proxy
+  export http_proxy=$http_proxy
+fi
+
+if test "x$ftp_proxy" != "x"; then
+  echo "setting ftp_proxy: $ftp_proxy"
+  export FTP_PROXY=$ftp_proxy
+  export ftp_proxy=$ftp_proxy
+fi
+
+if test "x$no_proxy" != "x"; then
+  echo "setting no_proxy: $no_proxy"
+  export NO_PROXY=$no_proxy
+  export no_proxy=$no_proxy
+fi
+
+
+# fetch_metadata.sh
+############
+# This section calls omnitruck to get the information about the build to be
+#   installed.
+#
+# Inputs:
+# $channel:
+# $project:
+# $version:
+# $platform:
+# $platform_version:
+# $machine:
+# $tmp_dir:
+#
+# Outputs:
+# $download_url:
+# $sha256:
+############
+
+if test "x$download_url_override" = "x"; then
+  echo "Getting information for $project $channel $version for $platform..."
+
+  metadata_filename="$tmp_dir/metadata.txt"
+  metadata_url="https://omnitruck-direct.chef.io/$channel/$project/metadata?v=$version&p=$platform&pv=$platform_version&m=$machine"
+
+  do_download "$metadata_url"  "$metadata_filename"
+
+  cat "$metadata_filename"
+
+  echo ""
+  # check that all the mandatory fields in the downloaded metadata are there
+  if grep '^url' $metadata_filename > /dev/null && grep '^sha256' $metadata_filename > /dev/null; then
+    echo "downloaded metadata file looks valid..."
+  else
+    echo "downloaded metadata file is corrupted or an uncaught error was encountered in downloading the file..."
+    # this generally means one of the download methods downloaded a 404 or something like that and then reported a successful exit code,
+    # and this should be fixed in the function that was doing the download.
+    report_bug
+    exit 1
+  fi
+
+  download_url=`awk '$1 == "url" { print $2 }' "$metadata_filename"`
+  sha256=`awk '$1 == "sha256" { print $2 }' "$metadata_filename"`
+else
+  download_url=$download_url_override
+  # Set sha256 to empty string if checksum not set
+  sha256=${checksum=""}
+fi
+
+############
+# end of fetch_metadata.sh
+############
+
+
+# fetch_package.sh
+############
+# This section fetchs a package from $download_url and verifies its metadata.
+#
+# Inputs:
+# $download_url:
+# $tmp_dir:
+# Optional Inputs:
+# $cmdline_filename: Name of the package downloaded on local disk.
+# $cmdline_dl_dir: Name of the directory downloaded package will be saved to on local disk.
+#
+# Outputs:
+# $download_filename: Name of the downloaded file on local disk.
+# $filetype: Type of the file downloaded.
+############
+
+filename=`echo $download_url | sed -e 's/^.*\///'`
+filetype=`echo $filename | sed -e 's/^.*\.//'`
+
+# use either $tmp_dir, the provided directory (-d) or the provided filename (-f)
+if test "x$cmdline_filename" != "x"; then
+  download_filename="$cmdline_filename"
+elif test "x$cmdline_dl_dir" != "x"; then
+  download_filename="$cmdline_dl_dir/$filename"
+else
+  download_filename="$tmp_dir/$filename"
+fi
+
+# ensure the parent directory where to download the installer always exists
+download_dir=`dirname $download_filename`
+(umask 077 && mkdir -p $download_dir) || exit 1
+
+# check if we have that file locally available and if so verify the checksum
+# Use cases
+# 1) metadata - new download
+# 2) metadata - cached download when cmdline_dl_dir set
+# 3) url override - no checksum new download
+# 4) url override - with checksum new download
+# 5) url override - with checksum cached download when cmdline_dl_dir set
+
+cached_file_available="false"
+verify_checksum="true"
+
+if test -f $download_filename; then
+  echo "$download_filename exists"
+  cached_file_available="true"
+fi
+
+if test "x$download_url_override" != "x"; then
+  echo "Download URL override specified"
+  if test "x$cached_file_available" = "xtrue"; then
+    echo "Verifying local file"
+    if test "x$sha256" = "x"; then
+      echo "Checksum not specified, ignoring existing file"
+      cached_file_available="false" # download new file
+      verify_checksum="false" # no checksum to compare after download
+    elif do_checksum "$download_filename" "$sha256"; then
+      echo "Checksum match, using existing file"
+      cached_file_available="true" # don't need to download file
+      verify_checksum="false" # don't need to checksum again
+    else
+      echo "Checksum mismatch, ignoring existing file"
+      cached_file_available="false" # download new file
+      verify_checksum="true" # checksum new downloaded file
+    fi
+  else
+    echo "$download_filename not found"
+    cached_file_available="false" # download new file
+    if test "x$sha256" = "x"; then
+      verify_checksum="false" # no checksum to compare after download
+    else
+      verify_checksum="true" # checksum new downloaded file
+    fi
+  fi
+fi
+
+if test "x$cached_file_available" != "xtrue"; then
+  do_download "$download_url" "$download_filename"
+fi
+
+if test "x$verify_checksum" = "xtrue"; then
+  do_checksum "$download_filename" "$sha256" || checksum_mismatch
+fi
+
+############
+# end of fetch_package.sh
+############
+
+
+# install_package.sh
+############
+# Installs a package and removed the temp directory.
+#
+# Inputs:
+# $download_filename: Name of the file to be installed.
+# $filetype: Type of the file to be installed.
+# $version: The version requested. Used only for warning user if not set.
+############
+
+if test "x$version" = "x" -a "x$CI" != "xtrue"; then
+  echo
+  echo "WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING"
+  echo
+  echo "You are installing an omnibus package without a version pin.  If you are installing"
+  echo "on production servers via an automated process this is DANGEROUS and you will"
+  echo "be upgraded without warning on new releases, even to new major releases."
+  echo "Letting the version float is only appropriate in desktop, test, development or"
+  echo "CI/CD environments."
+  echo
+  echo "WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING"
+  echo
+fi
+
+install_file $filetype "$download_filename"
+
+if test "x$tmp_dir" != "x"; then
+  rm -r "$tmp_dir"
+fi
+
+############
+# end of install_package.sh
+############
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[fedora26@localhost ~]$ pwd
+/home/fedora26
+[fedora26@localhost ~]$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[fedora26@localhost ~]$ cd Downloads/
+[fedora26@localhost Downloads]$ ls
+chef-14.0.202-1.el6.x86_64.rpm
+[fedora26@localhost Downloads]$ ls -l
+total 57628
+-rw-rw-r--. 1 fedora26 fedora26 59003776 Apr 17 20:12 chef-14.0.202-1.el6.x86_64.rpm
+[fedora26@localhost Downloads]$ rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+warning: chef-14.0.202-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+error: can't create transaction lock on /var/lib/rpm/.rpm.lock (Permission denied)
+[fedora26@localhost Downloads]$ rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+warning: chef-14.0.202-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+error: can't create transaction lock on /var/lib/rpm/.rpm.lock (Permission denied)
+[fedora26@localhost Downloads]$ cd ..
+[fedora26@localhost ~]$ cd Downloads/
+[fedora26@localhost Downloads]$ sudo rpm -ivh chef-14.0.202-1.el6.x86_64.rpm 
+warning: chef-14.0.202-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:chef-14.0.202-1.el6              ################################# [100%]
+Thank you for installing Chef!
+[fedora26@localhost Downloads]$ cd ..
+[fedora26@localhost ~]$ curl -L https://www.chef.io/chef/install.sh | sudo bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 23432  100 23432    0     0   8344      0  0:00:02  0:00:02 --:--:--  8341
+el 6 x86_64
+Getting information for chef stable  for el...
+downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=&p=el&pv=6&m=x86_64
+  to file /tmp/install.sh.30202/metadata.txt
+trying wget...
+sha1	1931ec3218bf44b66d13997cf81dcec5f703bea3
+sha256	39e852dfbc93d2f281f8102f72dd086a44cc9042b57e30c72795d47996ac7901
+url	https://packages.chef.io/files/stable/chef/14.0.202/el/6/chef-14.0.202-1.el6.x86_64.rpm
+version	14.0.202
+downloaded metadata file looks valid...
+downloading https://packages.chef.io/files/stable/chef/14.0.202/el/6/chef-14.0.202-1.el6.x86_64.rpm
+  to file /tmp/install.sh.30202/chef-14.0.202-1.el6.x86_64.rpm
+trying wget...
+^C
+[fedora26@localhost ~]$ sudo curl -L https://www.chef.io/chef/install.sh | sudo bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 23432  100 23432    0     0  17916      0  0:00:01  0:00:01 --:--:-- 17928
+el 6 x86_64
+Getting information for chef stable  for el...
+downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=&p=el&pv=6&m=x86_64
+  to file /tmp/install.sh.30247/metadata.txt
+trying wget...
+sha1	1931ec3218bf44b66d13997cf81dcec5f703bea3
+sha256	39e852dfbc93d2f281f8102f72dd086a44cc9042b57e30c72795d47996ac7901
+url	https://packages.chef.io/files/stable/chef/14.0.202/el/6/chef-14.0.202-1.el6.x86_64.rpm
+version	14.0.202
+downloaded metadata file looks valid...
+downloading https://packages.chef.io/files/stable/chef/14.0.202/el/6/chef-14.0.202-1.el6.x86_64.rpm
+  to file /tmp/install.sh.30247/chef-14.0.202-1.el6.x86_64.rpm
+trying wget...
+Comparing checksum with sha256sum...
+
+WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+
+You are installing an omnibus package without a version pin.  If you are installing
+on production servers via an automated process this is DANGEROUS and you will
+be upgraded without warning on new releases, even to new major releases.
+Letting the version float is only appropriate in desktop, test, development or
+CI/CD environments.
+
+WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+
+Installing chef 
+installing with rpm...
+warning: /tmp/install.sh.30247/chef-14.0.202-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:chef-14.0.202-1.el6              ################################# [100%]
+Thank you for installing Chef!
+[fedora26@localhost ~]$ chef-client
+[2018-04-21T11:34:20+05:30] WARN: *****************************************
+[2018-04-21T11:34:20+05:30] WARN: Did not find config file: /etc/chef/client.rb, using command line options.
+[2018-04-21T11:34:20+05:30] WARN: *****************************************
+Starting Chef Client, version 14.0.202
+
+Running handlers:
+[2018-04-21T11:34:24+05:30] ERROR: Running exception handlers
+Running handlers complete
+[2018-04-21T11:34:24+05:30] ERROR: Exception handlers complete
+Chef Client failed. 0 resources updated in 03 seconds
+[2018-04-21T11:34:24+05:30] FATAL: Stacktrace dumped to /home/fedora26/.chef/cache/chef-stacktrace.out
+[2018-04-21T11:34:24+05:30] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+[2018-04-21T11:34:24+05:30] FATAL: Errno::ENOENT: No such file or directory @ rb_sysopen - /etc/chef/chef_guid
+[fedora26@localhost ~]$ pwd
+/home/fedora26
+[fedora26@localhost ~]$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[fedora26@localhost ~]$ cd etc
+bash: cd: etc: No such file or directory
+[fedora26@localhost ~]$ cd /etc/
+[fedora26@localhost etc]$ ls
+abrt                     dleyna-server-service.conf  grub.d          logrotate.d               prelink.conf.d     ssl
+adjtime                  dnf                         gshadow         lvm                       printcap           sssd
+aliases                  dnsmasq.conf                gshadow-        machine-id                profile            statetab
+alsa                     dnsmasq.d                   gss             magic                     profile.d          statetab.d
+alternatives             dracut.conf                 gssproxy        mailcap                   protocols          subgid
+anacrontab               dracut.conf.d               highlight       makedumpfile.conf.sample  pulse              subgid-
+asound.conf              drirc                       host.conf       man_db.conf               qemu               subuid
+audisp                   e2fsck.conf                 hostname        mcelog                    radvd.conf         subuid-
+audit                    egl                         hosts           memtest86+.conf           rc0.d              sudoers
+avahi                    environment                 hosts.allow     mime.types                rc1.d              sudoers.d
+bash_completion.d        ethertypes                  hosts.deny      mke2fs.conf               rc2.d              sysconfig
+bashrc                   exports                     hp              modprobe.d                rc3.d              sysctl.conf
+binfmt.d                 exports.d                   httpd           modulefiles               rc4.d              sysctl.d
+bluetooth                extlinux.conf               idmapd.conf     modules-load.d            rc5.d              systemd
+brlapi.key               favicon.png                 init.d          motd                      rc6.d              system-release
+brltty                   fcoe                        inittab         mtab                      rc.d               system-release-cpe
+brltty.conf              fedora-release              inputrc         mtools.conf               redhat-release     tcsd.conf
+chkconfig.d              filesystems                 iproute2        multipath                 request-key.conf   terminfo
+chrony.conf              firefox                     iscsi           netconfig                 request-key.d      tmpfiles.d
+chrony.keys              firewalld                   issue           NetworkManager            resolv.conf        Trolltech.conf
+cifs-utils               flatpak                     issue.net       networks                  rpc                trusted-key.key
+corosync                 fonts                       java            nfs.conf                  rpm                udev
+cron.d                   foomatic                    jvm             nfsmount.conf             rwtab              udisks2
+cron.daily               fprintd.conf                jvm-commmon     nsswitch.conf             rwtab.d            updatedb.conf
+cron.deny                fstab                       jwhois.conf     nsswitch.conf.bak         rygel.conf         UPower
+cron.hourly              fuse.conf                   kdump.conf      openldap                  samba              usb_modeswitch.conf
+cron.monthly             fwupd                       kernel          openvpn                   sane.d             vconsole.conf
+crontab                  fwupd.conf                  krb5.conf       opt                       sasl2              vdpau_wrapper.cfg
+cron.weekly              gconf                       krb5.conf.d     os-release                scl                virc
+crypto-policies          gcrypt                      ld.so.cache     ostree                    security           vmware-tools
+crypttab                 gdbinit                     ld.so.conf      PackageKit                selinux            vpnc
+csh.cshrc                gdbinit.d                   ld.so.conf.d    pam.d                     services           wgetrc
+csh.login                gdm                         libaudit.conf   passwd                    sestatus.conf      wpa_supplicant
+cups                     geoclue                     libblockdev     passwd-                   setroubleshoot     wvdial.conf
+cupshelpers              ghostscript                 libibverbs.d    passwdqc.conf             setuptool.d        X11
+dbus-1                   glvnd                       libnl           pinforc                   sgml               xattr.conf
+dconf                    gnupg                       libreport       pkcs11                    shadow             xdg
+default                  GREP_COLORS                 libuser.conf    pki                       shadow-            xinetd.d
+depmod.d                 groff                       libvirt         plymouth                  shells             xml
+dhcp                     group                       locale.conf     pm                        skel               yum
+DIR_COLORS               group-                      localtime       polkit-1                  sos.conf           yum.repos.d
+DIR_COLORS.256color      grub2.cfg                   login.defs      popt.d                    speech-dispatcher
+DIR_COLORS.lightbgcolor  grub2-efi.cfg               logrotate.conf  ppp                       ssh
+[fedora26@localhost etc]$ ls -lart | grep -i chef
+[fedora26@localhost etc]$ cd /opt
+[fedora26@localhost opt]$ ls
+chef
+[fedora26@localhost opt]$ cd chef/
+[fedora26@localhost chef]$ ls
+bin  embedded  LICENSE  LICENSES  version-manifest.json  version-manifest.txt
+[fedora26@localhost chef]$ cd bin
+[fedora26@localhost bin]$ ls
+chef-apply  chef-client  chef-resource-inspector  chef-shell  chef-solo  knife  ohai
+[fedora26@localhost bin]$ cat chef-client 
+#!/opt/chef/embedded/bin/ruby --disable-gems
+#--APP_BUNDLER_BINSTUB_FORMAT_VERSION=1--
+ENV["GEM_HOME"] = ENV["GEM_PATH"] = nil unless ENV["APPBUNDLER_ALLOW_RVM"] == "true"
+require "rubygems"
+::Gem.clear_paths
+
+gem "chef-config", "= 14.0.202"
+gem "addressable", "= 2.4.0"
+gem "fuzzyurl", "= 0.9.0"
+gem "mixlib-config", "= 2.2.6"
+gem "tomlrb", "= 1.2.6"
+gem "mixlib-shellout", "= 2.3.2"
+gem "mixlib-cli", "= 1.7.0"
+gem "mixlib-log", "= 2.0.4"
+gem "mixlib-authentication", "= 2.0.0"
+gem "mixlib-archive", "= 0.4.1"
+gem "ohai", "= 14.0.29"
+gem "ffi", "= 1.9.23"
+gem "ffi-yajl", "= 2.3.1"
+gem "libyajl2", "= 1.2.0"
+gem "ipaddress", "= 0.8.3"
+gem "plist", "= 3.4.0"
+gem "systemu", "= 2.6.5"
+gem "wmi-lite", "= 1.0.0"
+gem "net-ssh", "= 4.2.0"
+gem "net-ssh-multi", "= 1.2.1"
+gem "net-ssh-gateway", "= 2.0.0"
+gem "net-sftp", "= 2.1.2"
+gem "highline", "= 1.7.10"
+gem "erubis", "= 2.7.0"
+gem "diff-lcs", "= 1.3"
+gem "chef-zero", "= 14.0.1"
+gem "hashie", "= 3.5.7"
+gem "rack", "= 2.0.4"
+gem "uuidtools", "= 2.1.5"
+gem "iniparse", "= 1.4.4"
+gem "iso8601", "= 0.9.1"
+gem "rspec-core", "= 3.7.1"
+gem "rspec-support", "= 3.7.1"
+gem "rspec-expectations", "= 3.7.0"
+gem "rspec-mocks", "= 3.7.0"
+gem "rspec_junit_formatter", "= 0.2.3"
+gem "builder", "= 3.2.3"
+gem "serverspec", "= 2.41.3"
+gem "multi_json", "= 1.13.1"
+gem "rspec", "= 3.7.0"
+gem "rspec-its", "= 1.2.0"
+gem "specinfra", "= 2.73.3"
+gem "net-scp", "= 1.2.1"
+gem "net-telnet", "= 0.1.1"
+gem "sfl", "= 2.3"
+gem "syslog-logger", "= 1.6.8"
+gem "proxifier", "= 1.0.3"
+gem "chef", "= 14.0.202"
+
+spec = Gem::Specification.find_by_name("chef", "= 14.0.202")
+bin_file = spec.bin_file("chef-client")
+
+Kernel.load(bin_file)
+[fedora26@localhost bin]$ ls
+chef-apply  chef-client  chef-resource-inspector  chef-shell  chef-solo  knife  ohai
+[fedora26@localhost bin]$ pwd
+/opt/chef/bin
+[fedora26@localhost bin]$ cd /
+[fedora26@localhost /]$ cd etc/opt/chef
+bash: cd: etc/opt/chef: No such file or directory
+[fedora26@localhost /]$ pwd
+/
+[fedora26@localhost /]$ cd /home
+[fedora26@localhost home]$ ls
+fedora26
+[fedora26@localhost home]$ cd fedora26
+[fedora26@localhost ~]$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[fedora26@localhost ~]$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1371  bytes 127001 (124.0 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1371  bytes 127001 (124.0 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.124.1  netmask 255.255.255.0  broadcast 192.168.124.255
+        ether 52:54:00:78:21:fc  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[fedora26@localhost ~]$ sevii
+bash: sevii: command not found...
+
+[fedora26@localhost ~]$ 
+[fedora26@localhost ~]$ service sshd status
+Redirecting to /bin/systemctl status sshd.service
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+[fedora26@localhost ~]$ vi /etc/ss
+ssh/  ssl/  sssd/ 
+[fedora26@localhost ~]$ vi /etc/ssh
+[fedora26@localhost ~]$ vi /etc/ssh/sshd_config 
+[fedora26@localhost ~]$ su -
+Password: 
+[root@localhost ~]# vi /etc/sshd/sshd_config
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# service sshd start
+Redirecting to /bin/systemctl start sshd.service
+[root@localhost ~]# vi /etc/sshd/sshd_config
+[root@localhost ~]# systemctrl start sshd.service
+bash: systemctrl: command not found...
+[root@localhost ~]# /bin/systemctrl start sshd.service
+-bash: /bin/systemctrl: No such file or directory
+[root@localhost ~]# systemctl start sshd.service
+[root@localhost ~]# service sshd start
+Redirecting to /bin/systemctl start sshd.service
+[root@localhost ~]# systemctl status sshd.service
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Sat 2018-04-21 12:03:53 IST; 2min 31s ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 31666 (sshd)
+    Tasks: 1 (limit: 19660)
+   CGroup: /system.slice/sshd.service
+           └─31666 /usr/sbin/sshd -D
+
+Apr 21 12:03:53 localhost.localdomain systemd[1]: Starting OpenSSH server daemon...
+Apr 21 12:03:53 localhost.localdomain sshd[31666]: Server listening on 0.0.0.0 port 22.
+Apr 21 12:03:53 localhost.localdomain sshd[31666]: Server listening on :: port 22.
+Apr 21 12:03:53 localhost.localdomain systemd[1]: Started OpenSSH server daemon.
+[root@localhost ~]# ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.33.131  netmask 255.255.255.0  broadcast 192.168.33.255
+        inet6 fe80::7e66:cc9d:3cf9:3438  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:d8:0a:46  txqueuelen 1000  (Ethernet)
+        RX packets 1052267  bytes 1272710466 (1.1 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 372557  bytes 23473872 (22.3 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2797  bytes 256369 (250.3 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2797  bytes 256369 (250.3 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.124.1  netmask 255.255.255.0  broadcast 192.168.124.255
+        ether 52:54:00:78:21:fc  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[root@localhost ~]# which ruby
+/usr/bin/ruby
+[root@localhost ~]# which chef
+/usr/bin/which: no chef in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin)
+[root@localhost ~]# hostname
+localhost.localdomain
+[root@localhost ~]# chef-client -v
+Chef: 14.0.202
+[root@localhost ~]# chef-client
+Starting Chef Client, version 14.0.202
+resolving cookbooks for run list: ["sample1"]
+Synchronizing Cookbooks:
+  - sample1 (0.2.0)
+Installing Cookbook Gems:
+Compiling Cookbooks...
+Converging 3 resources
+Recipe: sample1::default
+  * dnf_package[httpd] action install (up to date)
+  * service[httpd] action start (up to date)
+  * file[/var/www/html/index.html] action create (up to date)
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 0/3 resources updated in 18 seconds
+[root@localhost ~]# ls /var/www/html/index.html 
+/var/www/html/index.html
+[root@localhost ~]# cat /var/www/html/index.html 
+<html><body> Welcome to chef..</body></html>[root@localhost ~]# 
+[root@localhost ~]# ls /etc/chef/
+chef_guid  client.pem  client.rb  first-boot.json
+[root@localhost ~]# ls /var/chef/cache/cookbooks/
+sample1
+[root@localhost ~]# cd sample1
+-bash: cd: sample1: No such file or directory
+[root@localhost ~]# ls -l /var/chef/cache/cookbooks/
+total 4
+drwxr-xr-x. 3 root root 4096 Apr 23 16:53 sample1
+[root@localhost ~]# cd /var/chef/cache/cookbooks/sample1/
+[root@localhost sample1]# ls
+Berksfile  chefignore  metadata.rb  README.md  recipes
+[root@localhost sample1]# ls -l
+total 20
+-rw-------. 1 root root   77 Apr 23 16:53 Berksfile
+-rw-------. 1 root root 1133 Apr 23 16:53 chefignore
+-rw-------. 1 root root  758 Apr 23 16:53 metadata.rb
+
+-rw-------. 1 root root   55 Apr 23 16:53 README.md
+drwxr-xr-x. 2 root root 4096 Apr 23 16:53 recipes
+[root@localhost sample1]# 
+
+

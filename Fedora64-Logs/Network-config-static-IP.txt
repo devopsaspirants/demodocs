@@ -1,0 +1,92 @@
+[root@localhost ~]# cat /etc/sysconfig/network-scripts/ifcfg-ens33
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=dhcp
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens33
+UUID=1c263b38-55f4-3ef5-b2dc-9803779622be
+ONBOOT=yes
+AUTOCONNECT_PRIORITY=-999
+DEVICE=ens33
+[root@localhost ~]# 
+
+--------------------------------------Working one--------------------
+YPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=dhcp
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens33
+UUID=1c263b38-55f4-3ef5-b2dc-9803779622be
+ONBOOT=yes
+AUTOCONNECT_PRIORITY=-999
+DEVICE=ens33
+
+
+# systemctl restart network.service
+# systemctl restart NeworkManager.service
+
+
+[root@localhost ~]# ifconfig -a
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.33.139  netmask 255.255.255.0  broadcast 192.168.33.255
+        inet6 fe80::4b88:dd56:39bd:7ee1  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:2e:06:dd  txqueuelen 1000  (Ethernet)
+        RX packets 250  bytes 35226 (34.4 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 225  bytes 24513 (23.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+
+[root@localhost ~]# ifconfig -a
+ens33: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 00:0c:29:d8:0a:46  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+DEVICE=eth0
+BOOTPROTO=none
+ONBOOT=yes
+PREFIX=24
+IPADDR=10.0.1.27
+
+
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens33
+UUID=1c263b38-55f4-3ef5-b2dc-9803779622be
+ONBOOT=yes
+AUTOCONNECT_PRIORITY=-999
+DEVICE=ens33
+PREFIX=24
+IPADDR=192.168.33.131
+
+

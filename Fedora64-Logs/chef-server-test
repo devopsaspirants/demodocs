@@ -1,0 +1,583 @@
+[fedora26@localhost ~]$ visudo
+visudo: /etc/sudoers: Permission denied
+[fedora26@localhost ~]$ gpasswd wheel -a fedora26
+gpasswd: Permission denied.
+[fedora26@localhost ~]$ sudo visudo
+visudo: /etc/sudoers.tmp unchanged
+[fedora26@localhost ~]$ su -
+Password: 
+[root@localhost ~]# ls
+anaconda-ks.cfg  Documents  Music     Public     Videos
+Desktop          Downloads  Pictures  Templates
+[root@localhost ~]# chef-server-ctl status
+run: bookshelf: (pid 1372) 787s; run: log: (pid 905) 789s
+run: nginx: (pid 1006) 789s; run: log: (pid 888) 789s
+run: oc_bifrost: (pid 1327) 788s; run: log: (pid 907) 789s
+run: oc_id: (pid 996) 789s; run: log: (pid 882) 789s
+run: opscode-erchef: (pid 1032) 788s; run: log: (pid 902) 789s
+run: opscode-expander: (pid 994) 789s; run: log: (pid 883) 789s
+run: opscode-solr4: (pid 995) 789s; run: log: (pid 901) 789s
+run: postgresql: (pid 1328) 788s; run: log: (pid 906) 789s
+run: rabbitmq: (pid 1033) 788s; run: log: (pid 891) 789s
+run: redis_lb: (pid 1031) 788s; run: log: (pid 903) 789s
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# chef-server-ctl test
+Configuring logging...
+Creating platform...
+Configured server URL: https://localhost
+Configured base resource URL: https://localhost
+Creating org pedant_testorg_localhost_4713
+Validating Org Creation
+Run options: include {:focus=>true, :smoke=>true}
+
+All examples were filtered out; ignoring {:focus=>true, :smoke=>true}
+.................................
+
+Finished in 1.8 seconds (files took 6.46 seconds to load)
+33 examples, 0 failures
+
+Starting Pedant Run: 2018-04-23 14:34:33 UTC
+ _______  _______  _______  _______  _______  ______   _______
+|       ||       ||       ||       ||       ||      | |       |
+|   _   ||    _  ||  _____||       ||   _   ||  _    ||    ___|
+|  | |  ||   |_| || |_____ |       ||  | |  || | |   ||   |___
+|  |_|  ||    ___||_____  ||      _||  |_|  || |_|   ||    ___|
+|       ||   |     _____| ||     |_ |       ||       ||   |___
+|_______||___|    |_______||_______||_______||______| |_______|
+
+     _______  _______  ______   _______  __    _  _______
+    |       ||       ||      | |   _   ||  |  | ||       |
+    |    _  ||    ___||  _    ||  |_|  ||   |_| ||_     _|
+    |   |_| ||   |___ | | |   ||       ||       |  |   |
+    |    ___||    ___|| |_|   ||       ||  _    |  |   |
+    |   |    |   |___ |       ||   _   || | |   |  |   |
+    |___|    |_______||______| |__| |__||_|  |__|  |___|
+
+                    "Accuracy Over Tact"
+
+                  === Testing Environment ===
+                 Config File: /var/opt/opscode/oc-chef-pedant/etc/pedant_config.rb
+       HTTP Traffic Log File: /var/log/opscode/oc-chef-pedant/http-traffic.log
+
+Running tests from the following directories:
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api
+/opt/opscode/embedded/service/oc-chef-pedant/spec/running_configs
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api/knife/nodes/delete_spec.rb:33: warning: key :stderr is duplicated and overwritten on line 34
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api/knife/roles/delete_spec.rb:33: warning: key :stderr is duplicated and overwritten on line 34
+Run options:
+  include {:focus=>true, :smoke=>true}
+  exclude {:intermittent_failure=>true, :cleanup=>true}
+
+ACL API
+Creating org test-org-4713_72280036
+  /users/<name>/_acl endpoint
+    /users/<user>/_acl/read endpoint
+      PUT /users/<user>/_acl/read
+        admin user
+          can modify ACL
+        default normal user
+          returns 403
+  /organizations/_acl endpoint
+    GET /organizations/_acl
+      with modified ACLs
+        when normal client granted all permissions except GRANT
+          returns 403
+        when normal client granted GRANT permission
+          can get ACL
+  /organizations/_acl/read endpoint
+    PUT /organizations/_acl/read
+      with modified ACLs
+        when normal user granted GRANT permission
+          can modify ACL
+  /<type>/<name>/_acl endpoint
+    for cookbook_artifacts type
+      /cookbook_artifacts/<name>/_acl/update endpoint
+        PUT /cookbook_artifacts/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for clients type
+      /clients/<name>/_acl/update endpoint
+        PUT /clients/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for data type
+      /data/<name>/_acl/update endpoint
+        PUT /data/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for nodes type
+      /nodes/<name>/_acl/update endpoint
+        PUT /nodes/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for roles type
+      /roles/<name>/_acl/update endpoint
+        PUT /roles/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for environments type
+      /environments/<name>/_acl/update endpoint
+        PUT /environments/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for cookbooks type
+      /cookbooks/<name>/_acl/update endpoint
+        PUT /cookbooks/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for policies type
+      /policies/<name>/_acl/update endpoint
+        PUT /policies/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+    for policy_groups type
+      /policy_groups/<name>/_acl/update endpoint
+        PUT /policy_groups/<name>/_acl/update
+          normal user with all permissions except GRANT
+            returns 403
+          normal user with GRANT permission
+            can update ACL
+Deleting organization test-org-4713_72280036 ...
+
+opscode-account user association
+  user not in org
+    can be invited to the org by an admin
+      unless the user is already in the org
+      and the invite can be rescinded
+      and a rescinded invite can't be rescinded again
+      and once an the invite is rescinded it can't be accepted
+      and once an the invite is rescinded it can't be rejected.
+      and can't be invited twice
+      and can reject an invite
+      deleting an invite via the /users path is not accepted
+      and can accept an invite
+      and can reject an invite, after which they cannot access things in the org
+      and can only response with 'accept' or 'reject'
+      and get set up properly
+      after a user is deleted from an org
+        they do not have access to view members of that org
+        they do not have access to attempt to view themselves in an org
+        an org admin no longer sees them in the org
+        admin attempting to delete this user from the org results in a 404
+      and a valid invite is issued
+        an org admin cannot accept that invite on behalf of the user
+        the global superuser can accept the invite on behalf of the user
+      when the inviting admin
+        is removed from admins group, invites issued by that admin cannot be accepted
+        is removed from the org, invites issued by that admin cannot be accepted (PENDING: Known failure: passes w/ 200 b/c no USAG cleanup performed for deleted user)
+        is removed from the system, invites issued by that admin can't by accepted (PENDING: Known failure: passes w/ 200 b/c no USAG or other group cleanup performed for deleted user)
+      OC-11708 - when last updator of users group is dissociated
+        can accept the invite
+      belonging to another org as well
+Creating org pedant-otherorg-4713
+Deleting organization pedant-otherorg-4713 ...
+        can accept an invite, even when they belong to another org
+  /organizations/<org>/users endpoint
+    GET /organizations/<org>/users
+      admin user
+        can get org users
+      default normal user
+        can get org users
+  /organizations/<org>/users/<name>
+    GET /organizations/<org>/users/<name>
+      admin user
+        can get user
+      default normal user
+        can get self
+    DELETE /organizations/<org>/users/<name>
+      admin user
+        can delete user
+
+opscode-account containers
+  /containers endpoint
+    GET /containers
+      admin user
+        can get containers
+      outside user
+        returns 403
+    POST /containers
+      permissions
+        admin user
+          can create container
+        outside user
+          returns 403
+  /containers/<name> endpoint
+    GET /containers/<name>
+      admin user
+        can get container
+      outside user
+        returns 403
+    DELETE /containers/<name>
+      admin user
+        can delete container
+      outside user
+        returns 403
+
+opscode-account groups
+  /groups endpoint
+    GET /groups
+      admin user
+        can get groups
+      outside user
+        returns 403
+    POST /groups
+      permissions
+        admin user
+          can create group
+        outside user
+          returns 403
+  /groups/<name> endpoint
+Creating org test-org-76867577
+    GET /groups/<name>
+      admin user
+        can get group
+      outside user
+        returns 403
+    DELETE /groups/<name>
+      admin user
+        can delete group
+      outside user
+        returns 403
+    PUT /groups/<name>
+      permissions
+        normal user with update ACE
+          can update group
+        normal user without update ACE
+          returns 403
+Deleting organization test-org-76867577 ...
+
+authenticate_user
+  POST /authenticate_user
+    with correct credentials
+      superuser user returns 200 ("OK")
+      admin/different user returns 403 ("Forbidden")
+      non-admin/same user returns 403 ("Forbidden")
+      invalid user returns 401 ("Unauthorized")
+    with invalid username
+      superuser returns 401 ("Unauthorized")
+    with incorrect password
+      superuser returns 401 ("Unauthorized")
+
+Client API endpoint
+  GET /clients
+    as an admin user
+      with an operational server
+        should respond with 200 OK
+
+Cookbook Artifacts API endpoint
+  PUT /cookbook_artifacts/<name>/<version> [create]
+    with a basic cookbook
+      creates a basic cookbook_artifact
+
+Cookbook Artifacts API endpoint
+  DELETE /cookbook_artifacts/<name>/<version>
+    for existing cookbooks
+      when deleting existent version of an existing cookbook
+        should cleanup unused checksum data in s3/bookshelf
+
+Cookbook Artifacts API endpoint
+  GET /cookbook_artifacts
+    with no cookbook artifacts on the server
+      responds with 200
+
+Cookbook Artifacts API endpoint
+  PUT /cookbook_artifacts/<name>/<version> [update]
+    as admin user
+      should respond with 409 Conflict
+
+Cookbooks API endpoint
+  PUT /cookbooks/<name>/<version> [create]
+    with a basic cookbook
+      creates a basic cookbook
+
+Cookbooks API endpoint
+  DELETE /cookbooks/<name>/<version>
+    for existing cookbooks
+      when deleting existent version of an existing cookbook
+        should cleanup unused checksum data in s3/bookshelf
+
+Cookbooks API endpoint
+  GET /cookbooks
+    with an operational server
+      should respond with 200 OK
+
+Cookbooks API endpoint
+  PUT /cookbooks/<name>/<version> [update]
+    as admin user
+      should respond with 200 Ok
+
+Cookbook Versions API endpoint, GET
+  with cookbooks on the server
+    when requesting the 'latest' Cookbook version
+      should respond with 200 OK and the latest cookbook version
+
+Data Bag API endpoint
+  with no data bags
+    a request to /data
+      POST
+        with a canonical payload
+          behaves like a successful data bag POST
+            returns success
+            creates the data bag
+  with data bags
+    that have no items
+      a request to /data/<bag>
+        POST
+          various good inputs to create a data bag item
+            with JUST an ID
+              behaves like a successful data bag item POST
+                returns success
+                creates the resource
+    that have items
+      a request to /data/<bag>
+        GET
+          shows a full data bag
+        DELETE
+          deletes a bag AND ALL THE ITEMS
+      a request to /data/<bag>/<item>
+        GET
+          shows the complete item
+        PUT
+          with various correct inputs to update a data bag item
+            with normal input
+              behaves like a successful data bag item PUT
+                returns success
+                updates the data bag item
+        DELETE
+          deletes the item
+
+Depsolver API endpoint
+  POST /environments/:env/cookbook_versions
+    success cases
+      returns 200 with a minimal good cookbook
+
+/environments/ENVIRONMENT/cookbooks API endpoint
+  with multiple versions of multiple cookbooks
+    with no environment constraints
+      from a non-default environment
+        when fetching cookbooks
+          should respond with 200 OK and latest versions of ALL cookbooks
+
+Environments API Endpoint
+  POST /environments
+    with no additional environments
+      when creating a valid environment
+        should respond with 201 Created and a correct path
+        should persist the environment
+
+Environments API Endpoint
+  with non-default environments in the organization
+    DELETE /environments/<name>
+      with an existing environment
+        should respond with 200 OK
+
+Environments API Endpoint
+  GET /environments
+    with an operational server
+      should respond with 200 OK
+  GET /environments/_default
+    with an operational server
+      should respond with 200 OK
+  GET /environments/<name>
+    with an existing environment
+      should respond with 200 OK and the environment
+
+/environments/ENVIRONMENT/recipes API endpoint
+  with multiple versions of multiple cookbooks
+    with no environment constraints
+      when fetching recipes from a non-default environment
+        should respond with 200 OK and recipes from the latest version of all cookbooks within the environment
+      when fetching recipes from _default environment
+        should respond with 200 OK and recipes from the latest version of all cookbooks within the environment
+
+Environments API Endpoint
+  GET /environments/<name>/roles
+    within a non-default environment
+      with an existing role
+        should respond with 200 OK and the role
+
+Environments API Endpoint
+  with non-default environments in the organization
+    PUT /environments/<name>
+      with a valid update
+        should respond with 200 OK
+
+Testing the Nodes API endpoint
+  GET /nodes/<name>
+    for an existing node
+      returns a 200 and the node
+  POST /nodes
+    without existing node name
+      should respond with 201 Created
+  PUT /nodes/<name>
+    with existing node
+      with a canonical payload
+        updates the node
+  using DELETE
+    to a node that already exists
+      succeeds
+
+Testing the Roles API endpoint
+  making a request to /roles
+    using POST
+      for a role that does not exist
+        should respond with 201 and the correct path
+        should persist the role
+  making a request to /roles/<role>
+    using GET
+      to a role that exists
+        succeeds
+    using PUT
+      to a role that exists
+        with canonical payload
+          should respond with 200 and the updated role body
+          should actually update the role
+    using DELETE
+      to an existing role
+        should respond with 201 and the deleted role body
+        should actually delete the role
+  making a request to /roles/<role>/environments/<environment>
+    using GET
+      with the default environment
+        with an already existing role
+          responds with 200 and the role's run list
+
+Sandboxes API Endpoint
+  Sandboxes Endpoint, POST
+    when creating a new sandbox
+      should respond with 201 Created
+  Sandboxes Endpoint, PUT
+    when committing a sandbox after uploading files
+      should respond with 200 OK
+
+Search API endpoint
+  /search/environment
+    GET
+      when searching for a single environment by name
+        should have more than just the target of our environment search on the system
+        should return status code 200 and a single environment
+    POST
+      targeted toward many environments with body of {"possibly_nested"=>["default_attributes", "top", "middle", "bottom"], "the_name"=>["name"], "not_found"=>["foo", "bar", "baz", "totally_not_a_real_field"], "empty"=>[]}
+        should succeed, and return multiple environments
+  /search/node
+    GET
+      when searching for a single node by name
+        should have more than just the target of our node search on the system
+        should return status code 200 and a single node
+    POST
+      targeted toward many nodes with body of {"possibly_nested"=>["top", "middle", "bottom"], "the_name"=>["name"], "not_found"=>["foo", "bar", "baz", "totally_not_a_real_field"], "empty"=>[]}
+        should succeed, and return multiple nodes
+  /search/role
+    GET
+      when searching for a single role by name
+        should have more than just the target of our role search on the system
+        should return status code 200 and a single role
+    POST
+      targeted toward many roles with body of {"possibly_nested"=>["override_attributes", "top", "middle", "bottom"], "the_name"=>["name"], "not_found"=>["foo", "bar", "baz", "totally_not_a_real_field"], "empty"=>[]}
+        should succeed, and return multiple roles
+  /search/client
+    GET
+      searching by name
+        returns the correct client
+    POST
+      targeted toward many clients with body of {"possibly_nested"=>["validator"], "the_name"=>["name"], "not_found"=>["foo", "bar", "baz", "totally_not_a_real_field"], "empty"=>[]}
+        should succeed, and return multiple clients
+  /search/<data_bag>
+    using GET
+      an existing data bag
+        a query that should succeed
+          should succeed
+        with nested keys (CHEF-3975)
+          when searching a nested key
+            should succeed
+    using POST
+      for an existing data bag
+        a partial search
+          should succeed
+        with nested keys (CHEF-3975)
+          when searching a nested key
+            should succeed
+
+Server API Versioning
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api/server_api_version_spec.rb:9: warning: constant ::Fixnum is deprecated
+/opt/opscode/embedded/service/oc-chef-pedant/spec/api/server_api_version_spec.rb:10: warning: constant ::Fixnum is deprecated
+  GET /server_api_version should respond with valid current server api version data
+  version validation should occur before most other validation
+    invalid method should fail for version, not method
+    invalid content should fail for version, not content
+  any request should validate requested server api version
+    and it should reply with the error message as specified in the RFC
+    and rejects when version is not a number
+    and rejects when version is higher than what's supported
+    and rejects when version is lower than what's supported
+    and accepts when version is exactly the minimum of what's supported
+    and accepts when version is exactly the maximum of what's supported
+    and accepts when it's in valid range of what's supported
+    and accept it when it's not specified
+
+/_stats API endpoint
+  returns a list of collected statistics
+  returns json when ?format=json
+  returns prometheus output ?format=text
+
+users
+  /users endpoint
+    GET /users
+      superuser
+        can get all users
+        returns no users when filtering by non-existing email
+        returns a single user when filtering by that user's email address
+        saml user
+          returns no users when filtering by non-existing external_authentication_uid
+          returns a single user when filtering by that user's external_authentication_uid
+      admin user
+        returns 403
+    POST /users
+      superuser
+        can create new user
+      admin user
+        returns 403
+  /users/<name> endpoint
+    PUT /users/<name>
+      superuser
+        can modify user
+        authenticating after updates
+          when password is unchanged
+            can authenticate as the modified user when password has not been changed.
+      admin user
+        returns 403
+Deleting organization pedant_testorg_localhost_4713 ...
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) opscode-account user association user not in org can be invited to the org by an admin when the inviting admin is removed from the org, invites issued by that admin cannot be accepted
+     # Known failure: passes w/ 200 b/c no USAG cleanup performed for deleted user
+     # ./spec/api/account/account_association_spec.rb:662
+
+  2) opscode-account user association user not in org can be invited to the org by an admin when the inviting admin is removed from the system, invites issued by that admin can't by accepted
+     # Known failure: passes w/ 200 b/c no USAG or other group cleanup performed for deleted user
+     # ./spec/api/account/account_association_spec.rb:671
+
+
+Finished in 2 minutes 17.3 seconds (files took 10.12 seconds to load)
+161 examples, 0 failures, 2 pending
+
+[root@localhost ~]# 
+

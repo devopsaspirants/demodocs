@@ -1,0 +1,11 @@
+Latest Snapshot of CentOS6.9 Machine:-
++
+Installed Git
+Yum update and EPEL repository installed
+Installed Docker
+Installed JAVA JDK 1.8 i.e java8
+Install Tomcat 9
+Installed  JENKINS
++
+Jenkins fully configured with SLAVE Node SLAVE_1 puppetmaster
+

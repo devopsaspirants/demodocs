@@ -1,0 +1,32 @@
+[fedora26@localhost ~]$ sudo systemctl stop ntpd.service
+[fedora26@localhost ~]$ sudo ntpdate pool.ntp.org
+ 2 Jul 21:15:36 ntpdate[10679]: step time server 123.108.200.124 offset 1.571339 sec
+[fedora26@localhost ~]$ sudo systemctl start ntpd.service
+[fedora26@localhost ~]$ date
+Mon Jul  2 21:15:42 IST 2018
+
+
+
+[root@localhost ~]# date
+Mon Jul  2 00:26:29 IST 2018
+[root@localhost ~]# /etc/init.d/ntpd restart
+Shutting down ntpd:                                        [FAILED]
+Starting ntpd:                                             [  OK  ]
+[root@localhost ~]# /etc/init.d/ntpd restart
+Shutting down ntpd:                                        [  OK  ]
+Starting ntpd:                                             [  OK  ]
+[root@localhost ~]# date
+Mon Jul  2 00:26:58 IST 2018
+[root@localhost ~]# ntpdate pool.ntp.org
+ 2 Jul 00:27:09 ntpdate[50983]: the NTP socket is in use, exiting
+[root@localhost ~]# /etc/init.d/ntpd stop
+Shutting down ntpd:                                        [  OK  ]
+[root@localhost ~]# ntpdate pool.ntp.org
+ 2 Jul 21:12:03 ntpdate[50996]: step time server 139.59.82.60 offset 74680.509535 sec
+[root@localhost ~]# /etc/init.d/ntpd start
+Starting ntpd:                                             [  OK  ]
+[root@localhost ~]# ntpdate pool.ntp.org
+ 2 Jul 21:12:19 ntpdate[51009]: the NTP socket is in use, exiting
+[root@localhost ~]# date
+Mon Jul  2 21:12:24 IST 2018
+[root@localhost ~]# 

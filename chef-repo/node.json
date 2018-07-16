@@ -1,0 +1,3 @@
+{
+    "run_list": [ "recipe[demosolo1::default]" ]
+}
